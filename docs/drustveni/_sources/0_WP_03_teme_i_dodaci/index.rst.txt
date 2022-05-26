@@ -1,0 +1,10 @@
+==================
+WP-3 Теме и додаци
+==================
+
+.. toctree:: 
+    :maxdepth: 1
+
+    03a_teme_i_dodaci_citanje.rst
+    03b_teme_i_dodaci_pitanja.rst
+    03c_teme_i_dodaci_zadaci.rst

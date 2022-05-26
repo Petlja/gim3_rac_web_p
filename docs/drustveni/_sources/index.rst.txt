@@ -1,0 +1,37 @@
+======================================================================================
+Веб дизајн и готова веб дизајн решења за трећи разред гимназије друштвени и општи смер
+======================================================================================
+
+Шта ћете научити:
+    - Креирање веб страна помоћу готових веб решења, тј. система за управљање садржајем
+    - Основе језика HTML и CSS
+
+Потребно:
+    - Рачунар са савременим прегледачем (браузером)
+
+Садржај:
+    - WordPress
+    - HTML
+    - CSS
+
+
+.. toctree:: 
+    :hidden:
+    :maxdepth: 3
+
+    WP-1 WordPress - основе <0_WP_01_opste/index>
+    WP-2 Креирање садржаја у систему WordPress <0_WP_02_sadrzaj/index>
+    WP-3 Теме и додаци <0_WP_03_teme_i_dodaci/index>
+    HTML-1 HTML документи <1_HTML_01_HTML_dokumenti/index>
+    HTML-2 Форматирање текста <1_HTML_02_formatiranje_teksta/index>
+    HTML-3 Листе и табеле <1_HTML_03_liste_i_tabele/index>
+    HTML-4 Повезивање докумената <1_HTML_04_povezivanje_dokumenata/index>
+    HTML-5 Мултимедијални садржаји <1_HTML_05_multimedijalni_sadrzaji/index>
+    CSS-1 CSS стилови <2_CSS_01_CSS_stilovi/index>
+    CSS-2 CSS својства <2_CSS_02_CSS_svojstva/index>
+    CSS-3 CSS селектори <2_CSS_03_CSS_selektori/index>
+    CSS-4 Распоред елемената <2_CSS_04_raspored_elemenata/index>
+    B-1 Bootstrap библиотека <3_Bootstrap_01_biblioteka/index>
+    B-2 Bootstrap класе <3_Bootstrap_02_klase/index>
+    B-3 Bootstrap подршка компонентама <3_Bootstrap_03_komponente/index>
+    B-4 Bootstrap и распоређивање елемената <3_Bootstrap_04_raspored/index>

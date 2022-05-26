@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script>
+    function prikaz() {
+        let ime = document.querySelector(`#ime`).value;
+        let prezime = document.querySelector(`#prezime`).value;
+        let ocena = document.querySelector(`#ocena`).value;
+        let datum = document.querySelector(`#datum`).value;
+        alert(`${ime} ${prezime} је дана ${datum} добио оцену ${ocena}`);
+    }
+  </script>
+
+  </head>
+  <body>
+    <label for="ime">Име:</label><br>
+    <input type="text" id="ime" name="ime"><br>
+    
+    <label for="prezime">Презиме:</label><br>
+    <input type="text" id="prezime" name="prezime"><br>
+    
+    <label for="ocena">Оцена (између 1 и 5):</label><br>
+    <input type="number" id="ocena" name="ocena" min="1" max="5"><br>
+    
+    <label for="datum">Датум уноса:</label><br>
+    <input type="date" id="datum" name="datum"><br>
+    
+    <button onclick="prikaz()">Потврди</button>
+  </body>
+</html>

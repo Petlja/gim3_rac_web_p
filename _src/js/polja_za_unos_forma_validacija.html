@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script>
+    function prikaz() {
+        let ime = document.querySelector(`#ime`).value;
+        let prezime = document.querySelector(`#prezime`).value;
+        let godiste = document.querySelector(`#godina`).value;
+        let email = document.querySelector(`#email`).value;
+        alert(`Ваши подаци су\n\n` +
+            `Име: ${ime}\n` +
+            `Презиме: ${prezime}\n` + 
+            `Година рођења: ${godiste}\n` + 
+            `е-адреса: ${email}`);
+    }
+  </script>
+
+  </head>
+  <body>
+  <form action="#">
+    <label for="ime">Име:</label><br>
+      <input type="text" id="ime" name="ime"><br>
+    
+    <label for="prezime">Презиме:</label><br>
+      <input type="text" id="prezime" name="prezime"><br>
+    
+    <label for="godina">Година рођења:</label><br>
+      <input type="number" id="godina" name="godina" min="1900" max="2020"><br>
+    
+    <label for="email">е-адреса:</label><br>
+      <input type="email" id="email" name="email" required><br>
+    
+    <input type="reset" value="Обриши све">
+    <input type="submit" onclick="prikaz()" value="Потврди">
+  </form>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>Избор из Bootstrap листе</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function postavi(vrstaIvice) {
+            let omot = document.querySelector(`div#омот`);
+            omot.style.border = vrstaIvice;
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+<h2>Пример употребе Bootstrap листе</h2>
+  <div id="омот">
+    <p id="opis">Одаберите један од понуђених елемената из листе:</p>
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="border" data-toggle="dropdown">
+        Одаберите стил ивице:
+    </button>
+    <div class="dropdown-menu">
+        <button class="dropdown-item" onclick="postavi('solid')">Пуна</button>
+        <button class="dropdown-item" onclick="postavi('solid')">Пуна</button>
+        <button class="dropdown-item" onclick="postavi('dashed')">Испрекидана</button>
+        <button class="dropdown-item" onclick="postavi('dotted')">Тачкаста</button>
+        <div class="dropdown-divider"></div>
+        <button class="dropdown-item" onclick="postavi('double')">Двострука</button>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

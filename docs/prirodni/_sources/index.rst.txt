@@ -1,0 +1,35 @@
+===============================================================================
+Рачунарство и информатика за трећи разред гимназије - природно-математички смер
+===============================================================================
+
+Шта ћете научити:
+    - Основе језика HTML, CSS, и JavaScript
+
+Потребно:
+    - Рачунар са савременим прегледачем (браузером)
+
+Садржај:
+    - HTML
+    - CSS
+    - JavaScript
+
+
+.. toctree:: 
+    :hidden:
+    :maxdepth: 3
+
+    HTML-1 HTML документи <1_HTML_01_HTML_dokumenti/index>
+    HTML-2 Форматирање текста <1_HTML_02_formatiranje_teksta/index>
+    HTML-3 Листе и табеле <1_HTML_03_liste_i_tabele/index>
+    HTML-4 Повезивање докумената <1_HTML_04_povezivanje_dokumenata/index>
+    HTML-5 Мултимедијални садржаји <1_HTML_05_multimedijalni_sadrzaji/index>
+    CSS-1 CSS стилови <2_CSS_01_CSS_stilovi/index>
+    CSS-2 CSS својства <2_CSS_02_CSS_svojstva/index>
+    CSS-3 CSS селектори <2_CSS_03_CSS_selektori/index>
+    CSS-4 Распоред елемената <2_CSS_04_raspored_elemenata/index>
+    JS_1 Јава скрипт <4_JS_01_izvrsavanje/index>
+    JS_2 Променљиве и изрази <4_JS_02_promenljive_i_izrazi/index>
+    JS_3 Сложени типови података <4_JS_03_slozeni_tipovi_podataka/index>
+    JS_4 Функције, методе, догађаји <4_JS_04_funkcije_metode_dogadjaji/index>
+    JS_5 Веб интерфејс <4_JS_05_veb_interfejs/index>
+    JS_6 Контрола тока програма <4_JS_06_kontrola_toka/index>

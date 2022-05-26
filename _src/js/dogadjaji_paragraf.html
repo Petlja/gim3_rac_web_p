@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Догађаји</title>
+        <script>
+
+            function klik(element) {
+                alert(`Кликнули сте на параграф у коме пише "${element.innerText}"`);
+            }
+            
+            function prelazak(element) {
+                alert(`Прешли сте преко параграфа у коме пише "${element.innerText}"`);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h2>Пример дефинисања догађаја</h2>
+
+        <p onclick="klik(this)">Кликни на овај параграф.</p>
+        <p onmouseover="prelazak(this)">Пређи мишем преко овог параграфа.</p>
+        <p onclick="klik(this)" onmouseover="prelazak(this)">Кликни или пређи мишем преко овог параграфа.</p>
+     </body>
+</html>

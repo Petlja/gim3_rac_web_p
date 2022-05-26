@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bootstrap и распоређивање елемената &#8212; Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bootstrap и распоређивање елемената - питања" href="04b_bootstrap_raspored_pitanja.html" />
+    <link rel="prev" title="B-4 Bootstrap и распоређивање елемената" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="margin-left: 50%;margin-top: 5%;font-size: 20px;">
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_01_opste/index.html">WP-1 WordPress - основе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01a_cms_citanje.html">Готова решења за веб дизајн</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01b_wp_citanje.html">Основне компоненте система WordPress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01c_cms_wp_pitanja.html">CMS системи и WordPress - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_02_sadrzaj/index.html">WP-2 Креирање садржаја у систему WordPress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02a_wp_kreiranje_sadrzaja_citanje.html">Креирање садржаја</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02b_wp_kreiranje_sadrzaja_pitanja.html">Креирање садржаја - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02c_wp_kreiranje_sadrzaja_zadaci.html">Креирање садржаја - задатак</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/index.html">WP-3 Теме и додаци</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03a_teme_i_dodaci_citanje.html">Теме и додаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03b_teme_i_dodaci_pitanja.html">Теме и додаци - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03c_teme_i_dodaci_zadaci.html">Теме и додаци - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/index.html">HTML-1 HTML документи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01a_prikazivanje_html_citanje.html">Приказивање <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01b_elementi_html_citanje.html">Елементи <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01c_elementi_html_zadaci.html">Елементи <em>HTML</em> документа - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/index.html">HTML-2 Форматирање текста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02a_formatiranje_teksta_citanje.html">Форматирање текста</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02b_formatiranje_teksta_pitanja.html">Форматирање текста - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02c_formatiranje_teksta_zadaci.html">Форматирање текста - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/index.html">HTML-3 Листе и табеле</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03a_liste_citanje.html">Листе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03b_liste_pitanja.html">Листе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03c_liste_zadaci.html">Листе - задаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03d_tabele_citanje.html">Табеле</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03e_tabele_pitanja.html">Табеле - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03f_tabele_zadaci.html">Табеле - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/index.html">HTML-4 Повезивање докумената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04a_povezivanje_dokumenata_citanje.html">Повезивање докумената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04b_povezivanje_dokumenata_pitanja.html">Повезивање докумената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04c_povezivanje_dokumenata_zadaci.html">Повезивање докумената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/index.html">HTML-5 Мултимедијални садржаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05a_multimedija_citanje.html">Мултимедијални садржаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05b_multimedija_pitanja.html">Мултимедијални садржаји - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05c_multimedija_zadaci.html">Мултимедијални садржаји - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/index.html">CSS-1 CSS стилови</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html">CSS стилови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html">Стилизовање документа - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/index.html">CSS-2 CSS својства</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html">CSS својства</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html">CSS својства - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html">CSS својства - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_03_CSS_selektori/index.html">CSS-3 CSS селектори</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html">CSS селектори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html">CSS селектори - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html">CSS селектори - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/index.html">CSS-4 Распоред елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html">Распоред елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html">Распоред елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html">Распоред елемената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/index.html">B-1 Bootstrap библиотека</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01a_bootstrap_biblioteka_citanje.html">Bootstrap библиотека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01b_bootstrap_biblioteka_pitanja.html">Bootstrap библиотека - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_02_klase/index.html">B-2 Bootstrap класе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02a_bootstrap_klase_citanje.html">Bootstrap класе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02b_bootstrap_klase_pitanja.html">Bootstrap класе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02c_bootstrap_klase_zadaci.html">Bootstrap класе - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_03_komponente/index.html">B-3 Bootstrap подршка компонентама</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03a_bootstrap_komponente_citanje.html">Bootstrap подршка компонентама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03b_bootstrap_komponente_pitanja.html">Уграђене Bootstrap компоненте - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03c_bootstrap_komponente_zadaci.html">Уграђене Bootstrap компоненте - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">B-4 Bootstrap и распоређивање елемената</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><em>Bootstrap</em> и распоређивање елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04b_bootstrap_raspored_pitanja.html"><em>Bootstrap</em> и распоређивање елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c_bootstrap_raspored_zadaci.html"><em>Bootstrap</em> и распоређивање елемената - задаци</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+  </div>
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-10 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="bootstrap">
+<h1><em>Bootstrap</em> и распоређивање елемената<a class="headerlink" href="#bootstrap" title="Permalink to this headline">¶</a></h1>
+<p><em>Twitter Bootstrap</em> користи <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокове између осталог и као контејнере који дефинишу позиције елемената које садрже (што могу бити и други <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокови). У овом контексту, <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокове треба замислити као правоугаонике чија ширина се дефинише <em>CSS</em> класом (нпр. <code class="docutils literal notranslate"><span class="pre">col-1</span></code>, <code class="docutils literal notranslate"><span class="pre">col-2</span></code>, <code class="docutils literal notranslate"><span class="pre">col-3</span></code>, <code class="docutils literal notranslate"><span class="pre">col-4</span></code>, <code class="docutils literal notranslate"><span class="pre">col-6</span></code>, <code class="docutils literal notranslate"><span class="pre">col-8</span></code>), а чија висина зависи од количине текста и елемената садржаних у њему.</p>
+<p><em>Twitter Bootstrap</em> може да распореди елементе по контејнерима, који заузимају најмање дванаестину ширине стране:</p>
+<a class="reference internal image-reference" href="../_images/kontejneri.png"><img alt="../_images/kontejneri.png" class="align-center" src="../_images/kontejneri.png" style="width: 624px;" /></a>
+<p>Контејнери <code class="docutils literal notranslate"><span class="pre">col-1</span></code> су најужи и може се ставити 12 блокова ове ширине у један ред. Блокови различитих ширина се могу комбиновати у једном реду (на пример <code class="docutils literal notranslate"><span class="pre">col-4</span></code> и <code class="docutils literal notranslate"><span class="pre">col-8</span></code> у трећем реду), под условом да не пређу укупну ширину 12.
+У следећем примеру је приказан кôд реда који у себи има 3 <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блока исте ширине:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Први део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Други део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Трећи део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>У овом примеру ће <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокови заузети по трећину ширине стране (као <code class="docutils literal notranslate"><span class="pre">col-4</span></code> са горње слике), пошто ширине нису експлицитно наведене у <em>CSS</em> класама. У следећем коду је дефинисан ред у коме прва колона заузима 25% ширине, средња 50%, а последња 25%:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-3&quot;</span><span class="p">&gt;</span>Први део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-6&quot;</span><span class="p">&gt;</span>Други део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-3&quot;</span><span class="p">&gt;</span>Трећи део<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Оно што је битно у овом распореду је да је збир ширина у реду једнак 12, тј. 3+6+3. Ако збир не би био 12, <em>Twitter Bootstrap</em> би морао да остави додатно празно место са једне стране, чиме дизајн не би био симетричан.</p>
+<p><em>Twitter Bootstrap</em> има и посебне класе са префиксима <code class="docutils literal notranslate"><span class="pre">col-sm-</span></code>, <code class="docutils literal notranslate"><span class="pre">col-lg-</span></code> и слично. Више информација о овим класама се може наћи на сајтовима
+<a class="reference external" href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">Bootstrap</a> и
+<a class="reference external" href="https://www.w3schools.com/bootstrap4/">w3schools</a>.</p>
+<div class="section" id="id2">
+<h2>Распоред – Пример 1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Потребно је направити распоред <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокова који одговара следећој страни (без убацивања елемената у <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елементе):</p>
+<a class="reference internal image-reference" href="../_images/raspored1.png"><img alt="../_images/raspored1.png" class="align-center" src="../_images/raspored1.png" style="width: 624px;" /></a>
+<p>Прва три реда заузимају пуну ширину стране, испод њих је ред са две колоне једнаких ширина, испод кога се налази ред у коме је лева колона два пута шира од десне. <em>Twitter Bootstrap</em> распоред који одговара овој страни је:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-6&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-6&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-4&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Прва три реда имају само по један <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> у реду, како би ти унутрашњи блокови заузели пуну ширину. У четвртом реду постоје две једнако широке колоне (класа <code class="docutils literal notranslate"><span class="pre">col-6</span></code>). У петом реду су такође две колоне, али овде је прва колона два пута шира од друге (класе <code class="docutils literal notranslate"><span class="pre">col-8</span></code> и <code class="docutils literal notranslate"><span class="pre">col-4</span></code>).</p>
+</div>
+<div class="section" id="id3">
+<h2>Распоред – Пример 2<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Потребно је направити <em>Twitter Bootstrap</em> распоред за следећи дизајн (без убацивања елемената у <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> блокове):</p>
+<a class="reference internal image-reference" href="../_images/raspored2.png"><img alt="../_images/raspored2.png" class="align-center" src="../_images/raspored2.png" style="width: 500px;" /></a>
+<p>Први и други ред заузимају пуну ширину, док су у трећем реду на крајевима празне колоне које заузимају <span class="math notranslate nohighlight">\(1 \over 12\)</span> ширине стране, две од три колоне у средини заузимају по <span class="math notranslate nohighlight">\({1 \over 4} = {3 \over 12}\)</span> ширине стране, а централна колона заузима <span class="math notranslate nohighlight">\({1 \over 3} = {4 \over 12}\)</span> стране. Испод ове три колоне се налази колона која заузима централних <span class="math notranslate nohighlight">\({5 \over 6} = {10 \over 12}\)</span> ширине стране, док на крајеве отпада по <span class="math notranslate nohighlight">\(1 \over 12\)</span> ширине.</p>
+<p>Један од начина да се имплементира овакав распоред је приказан у следећем листингу:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Navbar…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Hello World…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-3&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-4&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-3&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-10&quot;</span><span class="p">&gt;</span>@Company 2017<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Блокови <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> са класама <code class="docutils literal notranslate"><span class="pre">col-1</span></code>, <code class="docutils literal notranslate"><span class="pre">col-3</span></code>, <code class="docutils literal notranslate"><span class="pre">col-4</span></code>, и <code class="docutils literal notranslate"><span class="pre">col-10</span></code> су коришћени где год је потребно да ширина блока буде <span class="math notranslate nohighlight">\(1 \over 12\)</span>, <span class="math notranslate nohighlight">\(3 \over 12\)</span>, <span class="math notranslate nohighlight">\(4 \over 12\)</span> i <span class="math notranslate nohighlight">\(10 \over 12\)</span> расположиве ширине редом. У последња два реда су  елементи распоређени тако да је у сваком реду збир ширина 12, тј. 1+3+4+3+1 у првом и 1+10+1 у другом реду.</p>
+<p>Да је захтев био мало другачији и да централни „Heading…” блок (<code class="docutils literal notranslate"><span class="pre">col-4</span></code>) није мало шири од осталих „Heading…” блокова (<code class="docutils literal notranslate"><span class="pre">col-3</span></code>), овакав дизајн не би могао да се примени зато што 1+3+3+3+1 није 12. У том случају би могао да се направи распоред у коме се за тај део стране најпре направи један ред са три колоне, при чему су бочне колоне ширине по <span class="math notranslate nohighlight">\(1 \over 12\)</span> празне, а централна колона <span class="math notranslate nohighlight">\(10 \over 12\)</span> се даље дели на три под-колоне међусобно једнаке ширине. Садржај (<code class="docutils literal notranslate"><span class="pre">Heading</span></code> и <code class="docutils literal notranslate"><span class="pre">&#64;Company</span></code> елементи) се распоређује у ове три колоне настале у другом нивоу поделе.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Navbar…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>Hello World…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-10&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-4&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-4&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-4&quot;</span><span class="p">&gt;</span>Heading…<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>@Company 2017<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Трећи ред садржи три колоне, од којих су прва и трећа колона празан простор. У централном <code class="docutils literal notranslate"><span class="pre">col-10</span></code> блоку се налазе два угњеждена реда која представљају два реда из претходног примера. У првом реду који је унутар <code class="docutils literal notranslate"><span class="pre">col-10</span></code> блока се налазе три равномерно распоређена <code class="docutils literal notranslate"><span class="pre">col-4</span></code> блока која заузимају ширину од 4+4+4 дванаестине реда у коме се налазе, тако да је и овај дизајн коректан.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+    <li id="relations-prev" title='Previous chapter - B-4 Bootstrap и распоређивање елемената' data-toggle="tooltip"><a href="index.html"><i class="fas fa-arrow-left"></i></a></li>
+    
+        <li id="relations-next" title='Next chapter - <em>Bootstrap</em> и распоређивање елемената - питања' data-toggle="tooltip"><a href="04b_bootstrap_raspored_pitanja.html"><i class="fas fa-arrow-right"></i></a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - B-4 Bootstrap и распоређивање елемената' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - <em>Bootstrap</em> и распоређивање елемената - питања' data-toggle="tooltip"><a href="04b_bootstrap_raspored_pitanja.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

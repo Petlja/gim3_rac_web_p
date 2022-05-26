@@ -1,0 +1,12 @@
+==================
+JS_5 Веб интерфејс
+==================
+
+.. toctree:: 
+    :maxdepth: 1
+
+    05a_js_dugmad_citanje.rst
+    05b_js_polja_za_unos_citanje.rst
+    05c_js_liste_za_odabir_citanje.rst
+    05e_js_veb_interfejs_pitanja.rst
+    05f_js_veb_interfejs_zadaci.rst

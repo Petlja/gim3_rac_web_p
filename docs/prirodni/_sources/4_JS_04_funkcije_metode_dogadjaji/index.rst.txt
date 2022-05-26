@@ -1,0 +1,12 @@
+===============================
+JS_4 Функције, методе, догађаји
+===============================
+
+.. toctree:: 
+    :maxdepth: 1
+
+    04a_js_funkcije_citanje.rst
+    04b_js_metodi_citanje.rst
+    04c_js_dogadjaji_citanje.rst
+    04d_js_fmd_pitanja.rst
+    04e_js_fmd_zadaci.rst

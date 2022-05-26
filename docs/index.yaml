@@ -1,0 +1,500 @@
+courseId: kurs-treci-gim-prirodni
+description:
+  externalLinks: []
+  longDescription: '<div class="document">
+
+    <p>Овај курс је намењен ученицима 3. разреда гимназије природно математичког смера
+    за предмет Рачунарство и информатика.
+
+    У оквиру овог курса детаљно је  обрађене наставне теме Веб дизајн и Клијентско
+    веб програмирање.
+
+    Курс у потпуности прати план наставе и учења за овај предмет. Курс је организован
+    по часовима.
+
+    Током курса детаљно се изучава HTML, CSS, JavaScript. Материјал намењен за један
+    час се састоји од лекције,
+
+    дела са питалицама, којима се ученицима скреће пажња на најбитније делове из садржаја
+    лекције и  квизова,
+
+    који имају за циљ проверу усвојеног градива.</p>
+
+    <p>Поред рада у школи, курс се може пролазити и самостално.</p>
+
+    <p>&lt;p&gt;
+
+    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
+
+    &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
+    src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+
+    &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
+    href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
+
+    &lt;/p&gt;</p>
+
+    </div>
+
+    '
+  requirements:
+  - Рачунар са савременим прегледачем (браузером)
+  shortDescription: Веб дизајн и клијентско веб програмирање за природни смер
+  toc:
+  - HTML
+  - CSS
+  - JavaScript
+  willLearn:
+  - Основе језика HTML, CSS, и JavaScript
+lang: sr-Cyrl
+lessons:
+- activities:
+  - description: ''
+    file: 01a_prikazivanje_html_citanje.html
+    guid: 6ae342c1-8b4c-4ae6-ab81-70a98da37257
+    src: 01a_prikazivanje_html_citanje.rst
+    title: Приказивање HTML документа
+    type: reading
+  - description: ''
+    file: 01b_elementi_html_citanje.html
+    guid: ad89acb6-6d75-4872-bfad-c8d1be2a30c8
+    src: 01b_elementi_html_citanje.rst
+    title: Елементи HTML документа
+    type: reading
+  - description: ''
+    file: 01c_elementi_html_zadaci.html
+    guid: f592e6bf-c76b-410d-9255-1105df719530
+    src: 01c_elementi_html_zadaci.rst
+    title: Елементи HTML документа - задаци
+    type: reading
+  archived-activities: []
+  description: HTML документи
+  folder: 1_HTML_01_HTML_dokumenti
+  guid: bf449b62-1d2e-4d6e-b8e0-2be6854d962c
+  normalized_title: HTML-1 HTML документи
+  title: HTML-1 HTML документи
+- activities:
+  - description: ''
+    file: 02a_formatiranje_teksta_citanje.html
+    guid: e8e26581-5538-4b78-8a84-0a276ef8a067
+    src: 02a_formatiranje_teksta_citanje.rst
+    title: Форматирање текста
+    type: reading
+  - description: ''
+    file: 02b_formatiranje_teksta_pitanja.html
+    guid: 88d5223e-ab8d-49c3-a637-b0020112a359
+    src: 02b_formatiranje_teksta_pitanja.rst
+    title: Форматирање текста - питања
+    type: quiz
+  - description: ''
+    file: 02c_formatiranje_teksta_zadaci.html
+    guid: 1e189697-a803-4fd8-b9ec-3c76e22e1bf7
+    src: 02c_formatiranje_teksta_zadaci.rst
+    title: Форматирање текста - задаци
+    type: reading
+  archived-activities: []
+  description: Форматирање текста
+  folder: 1_HTML_02_formatiranje_teksta
+  guid: 4a7a9e09-fd2d-4d83-9a45-34f70e3c3225
+  normalized_title: HTML-2 Форматирање текста
+  title: HTML-2 Форматирање текста
+- activities:
+  - description: ''
+    file: 03a_liste_citanje.html
+    guid: 0c8b0b72-b340-4732-b115-e66dd4522990
+    src: 03a_liste_citanje.rst
+    title: Листе
+    type: reading
+  - description: ''
+    file: 03b_liste_pitanja.html
+    guid: 4f3c27f4-7a6e-4b04-b652-0e6e0edefa41
+    src: 03b_liste_pitanja.rst
+    title: Листе - питања
+    type: quiz
+  - description: ''
+    file: 03c_liste_zadaci.html
+    guid: 7363ad2b-bd9d-4a52-9f10-b2bb82699c1b
+    src: 03c_liste_zadaci.rst
+    title: Листе - задаци
+    type: reading
+  - description: ''
+    file: 03d_tabele_citanje.html
+    guid: 843f3739-6d1e-495a-8683-5d4fe4198344
+    src: 03d_tabele_citanje.rst
+    title: Табеле
+    type: reading
+  - description: ''
+    file: 03e_tabele_pitanja.html
+    guid: 966e677a-c460-4b76-91f6-dcf6f3e38dfd
+    src: 03e_tabele_pitanja.rst
+    title: Табеле - питања
+    type: quiz
+  - description: ''
+    file: 03f_tabele_zadaci.html
+    guid: 5097f6b8-7e7c-42b1-a8b1-e7605e2bb46a
+    src: 03f_tabele_zadaci.rst
+    title: Табеле - задаци
+    type: reading
+  archived-activities: []
+  description: Листе и табеле
+  folder: 1_HTML_03_liste_i_tabele
+  guid: 9cd8a3a8-b9c6-4f37-a38a-34282d2c09b4
+  normalized_title: HTML-3 Листе и табеле
+  title: HTML-3 Листе и табеле
+- activities:
+  - description: ''
+    file: 04a_povezivanje_dokumenata_citanje.html
+    guid: 7778650d-29dd-4d75-a4fd-1e7844a262a6
+    src: 04a_povezivanje_dokumenata_citanje.rst
+    title: Повезивање докумената
+    type: reading
+  - description: ''
+    file: 04b_povezivanje_dokumenata_pitanja.html
+    guid: d3901066-6854-46c1-ace0-e16fa5539e4e
+    src: 04b_povezivanje_dokumenata_pitanja.rst
+    title: Повезивање докумената - питања
+    type: quiz
+  - description: ''
+    file: 04c_povezivanje_dokumenata_zadaci.html
+    guid: 2527d450-422a-4537-8c75-e8b5a15f44ca
+    src: 04c_povezivanje_dokumenata_zadaci.rst
+    title: Повезивање докумената - задаци
+    type: reading
+  archived-activities: []
+  description: Повезивање докумената
+  folder: 1_HTML_04_povezivanje_dokumenata
+  guid: e7e928c8-fd6f-4baa-8710-3306ddbef95e
+  normalized_title: HTML-4 Повезивање докумената
+  title: HTML-4 Повезивање докумената
+- activities:
+  - description: ''
+    file: 05a_multimedija_citanje.html
+    guid: a85e5cea-2de0-4ff5-8ebe-0917fabace4e
+    src: 05a_multimedija_citanje.rst
+    title: Мултимедијални садржаји
+    type: reading
+  - description: ''
+    file: 05b_multimedija_pitanja.html
+    guid: 6114b0e9-a572-4c39-8234-58a3a905a62c
+    src: 05b_multimedija_pitanja.rst
+    title: Мултимедијални садржаји - питања
+    type: quiz
+  - description: ''
+    file: 05c_multimedija_zadaci.html
+    guid: 9748c7c6-03c6-4918-9ded-e10d51c494f0
+    src: 05c_multimedija_zadaci.rst
+    title: Мултимедијални садржаји - задаци
+    type: reading
+  archived-activities: []
+  description: Мултимедијални садржаји
+  folder: 1_HTML_05_multimedijalni_sadrzaji
+  guid: a7dba7da-f4f5-49fb-b31f-59fc57959307
+  normalized_title: HTML-5 Мултимедијални садржаји
+  title: HTML-5 Мултимедијални садржаји
+- activities:
+  - description: ''
+    file: 01a_css_stilovi_citanje.html
+    guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f75
+    src: 01a_css_stilovi_citanje.rst
+    title: CSS стилови
+    type: reading
+  - description: ''
+    file: 01c_css_stilovi_vezbe.html
+    guid: 9493a4e0-0154-4c00-a46b-e8e439852552
+    src: 01c_css_stilovi_vezbe.rst
+    title: CSS стилови - вежбе
+    type: reading
+  archived-activities: []
+  description: CSS стилови
+  folder: 2_CSS_01_CSS_stilovi
+  guid: c1a4f7ae-8edb-4914-9e7e-63ce2159471c
+  normalized_title: CSS-1 CSS стилови
+  title: CSS-1 CSS стилови
+- activities:
+  - description: ''
+    file: 02a_css_svojstva_citanje.html
+    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc43
+    src: 02a_css_svojstva_citanje.rst
+    title: CSS својства
+    type: reading
+  - description: ''
+    file: 02b_css_svojstva_pitanja.html
+    guid: 9c838d88-5572-4bb6-9233-71a7d811871c
+    src: 02b_css_svojstva_pitanja.rst
+    title: CSS својства - питања
+    type: quiz
+  - description: ''
+    file: 02c_css_svojstva_zadaci.html
+    guid: 02f77f91-4eeb-4ab8-bda0-2c4574abcb77
+    src: 02c_css_svojstva_zadaci.rst
+    title: CSS својства - задаци
+    type: reading
+  archived-activities: []
+  description: CSS својства
+  folder: 2_CSS_02_CSS_svojstva
+  guid: bd513286-0234-4641-90ea-c723ed5dd111
+  normalized_title: CSS-2 CSS својства
+  title: CSS-2 CSS својства
+- activities:
+  - description: ''
+    file: 03a_css_selektori_citanje.html
+    guid: 5a22069a-7205-471f-b438-cf46910c0da4
+    src: 03a_css_selektori_citanje.rst
+    title: CSS селектори
+    type: reading
+  - description: ''
+    file: 03b_css_selektori_pitanja.html
+    guid: 8f6017b8-d952-4b54-b267-ac898124867a
+    src: 03b_css_selektori_pitanja.rst
+    title: CSS селектори - питања
+    type: quiz
+  - description: ''
+    file: 03c_css_selektori_zadaci.html
+    guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
+    src: 03c_css_selektori_zadaci.rst
+    title: CSS селектори - задаци
+    type: reading
+  archived-activities: []
+  description: CSS селектори
+  folder: 2_CSS_03_CSS_selektori
+  guid: f7472e25-2f78-4960-b8d7-9882a26ecacd
+  normalized_title: CSS-3 CSS селектори
+  title: CSS-3 CSS селектори
+- activities:
+  - description: ''
+    file: 04a_raspored_elemenata_citanje.html
+    guid: 24396313-c689-4095-bd3b-d04ee23a850a
+    src: 04a_raspored_elemenata_citanje.rst
+    title: Распоред елемената
+    type: reading
+  - description: ''
+    file: 04b_raspored_elemenata_pitanja.html
+    guid: 2a4df725-d5c1-4e17-a451-9ce23c9bf426
+    src: 04b_raspored_elemenata_pitanja.rst
+    title: Распоред елемената - питања
+    type: quiz
+  - description: ''
+    file: 04c_raspored_elemenata_zadaci.html
+    guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
+    src: 04c_raspored_elemenata_zadaci.rst
+    title: Распоред елемената - задаци
+    type: reading
+  archived-activities: []
+  description: Распоред елемената
+  folder: 2_CSS_04_raspored_elemenata
+  guid: fe6e37f4-a9ad-473d-859e-ed469a992547
+  normalized_title: CSS-4 Распоред елемената
+  title: CSS-4 Распоред елемената
+- activities:
+  - description: ''
+    file: 01a_js_uvod_citanje.html
+    guid: 93edde33-d98f-4b03-bbaa-0b234ce1b1e9
+    src: 01a_js_uvod_citanje.rst
+    title: Увод у јава скрипт
+    type: reading
+  - description: ''
+    file: 01b_js_izvrsavanje_citanje.html
+    guid: 9581803d-c298-491a-b781-040c8addebc9
+    src: 01b_js_izvrsavanje_citanje.rst
+    title: Извршавање јава скриптова
+    type: reading
+  - description: ''
+    file: 01c_js_izvrsavanje_pitanja.html
+    guid: e625a46c-cd55-49ac-bdc8-0b71d304513c
+    src: 01c_js_izvrsavanje_pitanja.rst
+    title: Извршавање јава скриптова - питања
+    type: quiz
+  archived-activities: []
+  description: Јава скрипт
+  folder: 4_JS_01_izvrsavanje
+  guid: c7ff09ff-6638-4a03-907a-adde7c81da7b
+  normalized_title: JS_1 Јава скрипт
+  title: JS_1 Јава скрипт
+- activities:
+  - description: ''
+    file: 02a_js_promenljive_citanje.html
+    guid: a8228c63-a0a9-4cd3-bb83-0e41fc21af8d
+    src: 02a_js_promenljive_citanje.rst
+    title: Променљиве
+    type: reading
+  - description: ''
+    file: 02b_js_brojevi_citanje.html
+    guid: 924f5a44-6638-40f2-8260-c761067297e9
+    src: 02b_js_brojevi_citanje.rst
+    title: Нумеричке вредности и изрази
+    type: reading
+  - description: ''
+    file: 02c_js_tekstualne_vrednosti_citanje.html
+    guid: e4409df0-f107-49f9-90fe-d5e5ca19915c
+    src: 02c_js_tekstualne_vrednosti_citanje.rst
+    title: Текстуалне вредности и изрази
+    type: reading
+  - description: ''
+    file: 02d_js_logicke_vrednosti_citanje.html
+    guid: 31e6b8c6-6450-4df8-89b7-6a790d5e38a5
+    src: 02d_js_logicke_vrednosti_citanje.rst
+    title: Логичке вредности и изрази
+    type: reading
+  - description: ''
+    file: 02e_js_osnovni_tipovi_pitanja.html
+    guid: f507142a-c10f-41ee-b7bf-dc5c3633db26
+    src: 02e_js_osnovni_tipovi_pitanja.rst
+    title: Основни типови - питања
+    type: quiz
+  - description: ''
+    file: 02f_js_osnovni_tipovi_zadaci.html
+    guid: d5e0f87a-f942-44f0-af83-54b9a34237bf
+    src: 02f_js_osnovni_tipovi_zadaci.rst
+    title: Основни типови - задаци
+    type: reading
+  archived-activities: []
+  description: Променљиве и изрази
+  folder: 4_JS_02_promenljive_i_izrazi
+  guid: 7bdd4b79-2836-4163-abbb-3ffe80c0de5e
+  normalized_title: JS_2 Променљиве и изрази
+  title: JS_2 Променљиве и изрази
+- activities:
+  - description: ''
+    file: 03a_js_objekti_citanje.html
+    guid: de033902-d47a-4133-a57e-5801b169dde8
+    src: 03a_js_objekti_citanje.rst
+    title: Објекти
+    type: reading
+  - description: ''
+    file: 03b_js_nizovi_citanje.html
+    guid: 8cd4e1dc-43a6-4720-b4d9-d3b1043c45f6
+    src: 03b_js_nizovi_citanje.rst
+    title: Низови
+    type: reading
+  - description: ''
+    file: 03c_js_objekti_i_nizovi_pitanja.html
+    guid: 611fef04-da2f-449e-a4ef-e7c7244fec81
+    src: 03c_js_objekti_i_nizovi_pitanja.rst
+    title: Сложени типови података - питања
+    type: quiz
+  - description: ''
+    file: 03d_js_objekti_i_nizovi_zadaci.html
+    guid: 2d95fc6f-9767-455a-ba43-0adfbc2b59b5
+    src: 03d_js_objekti_i_nizovi_zadaci.rst
+    title: Сложени типови података - задаци
+    type: reading
+  archived-activities: []
+  description: Сложени типови података
+  folder: 4_JS_03_slozeni_tipovi_podataka
+  guid: 948f7f69-4786-4cda-8b6a-5581f29ce1a1
+  normalized_title: JS_3 Сложени типови података
+  title: JS_3 Сложени типови података
+- activities:
+  - description: ''
+    file: 04a_js_funkcije_citanje.html
+    guid: 0e3021db-e958-4e7d-97dc-40a31143ebdd
+    src: 04a_js_funkcije_citanje.rst
+    title: Функције у Јава-скрипту
+    type: reading
+  - description: ''
+    file: 04b_js_metodi_citanje.html
+    guid: a3429b59-52a5-4c82-a8ec-0840cbfbe14a
+    src: 04b_js_metodi_citanje.rst
+    title: Методи - функције у објектима
+    type: reading
+  - description: ''
+    file: 04c_js_dogadjaji_citanje.html
+    guid: 705a3317-ab00-49bd-95c7-d6b5a9766021
+    src: 04c_js_dogadjaji_citanje.rst
+    title: Догађаји
+    type: reading
+  - description: ''
+    file: 04d_js_fmd_pitanja.html
+    guid: ac060663-a768-41e1-b85a-e47bc45ccc36
+    src: 04d_js_fmd_pitanja.rst
+    title: Функције, методе, догађаји -  питања
+    type: quiz
+  - description: ''
+    file: 04e_js_fmd_zadaci.html
+    guid: 0193180b-89a4-4f89-82e4-17f8c155cc2e
+    src: 04e_js_fmd_zadaci.rst
+    title: Функције, методе, догађаји -  задаци
+    type: reading
+  archived-activities: []
+  description: Функције, методе, догађаји
+  folder: 4_JS_04_funkcije_metode_dogadjaji
+  guid: 7f56f5bd-5a8d-4eb1-9905-e8cc5ccccbea
+  normalized_title: JS_4 Функције, методе, догађаји
+  title: JS_4 Функције, методе, догађаји
+- activities:
+  - description: ''
+    file: 05a_js_dugmad_citanje.html
+    guid: d5909e75-f0f7-4c64-86a5-70fbb6b40639
+    src: 05a_js_dugmad_citanje.rst
+    title: Дугмад
+    type: reading
+  - description: ''
+    file: 05b_js_polja_za_unos_citanje.html
+    guid: 6a90eb2e-8cbe-4c3b-9fbf-029217058686
+    src: 05b_js_polja_za_unos_citanje.rst
+    title: Поља за унос података
+    type: reading
+  - description: ''
+    file: 05c_js_liste_za_odabir_citanje.html
+    guid: 1898d1d5-5a04-49b7-83d2-f7d17b7db697
+    src: 05c_js_liste_za_odabir_citanje.rst
+    title: Листе за одабир вредности
+    type: reading
+  - description: ''
+    file: 05e_js_veb_interfejs_pitanja.html
+    guid: 40dd298e-1962-4595-85c2-10de9552842d
+    src: 05e_js_veb_interfejs_pitanja.rst
+    title: Веб интерфејс - питања
+    type: quiz
+  - description: ''
+    file: 05f_js_veb_interfejs_zadaci.html
+    guid: 2e2f64a1-d7d8-47c8-b7d2-c148d3458224
+    src: 05f_js_veb_interfejs_zadaci.rst
+    title: Веб интерфејс - задаци
+    type: reading
+  archived-activities: []
+  description: Веб интерфејс
+  folder: 4_JS_05_veb_interfejs
+  guid: f348bf0f-15fb-4e34-b128-8d5e4d5a9498
+  normalized_title: JS_5 Веб интерфејс
+  title: JS_5 Веб интерфејс
+- activities:
+  - description: ''
+    file: 06a_js_grananja_citanje.html
+    guid: c8dd6a99-7328-469b-8778-a5e24a10facf
+    src: 06a_js_grananja_citanje.rst
+    title: Гранања у Јава-скрипту
+    type: reading
+  - description: ''
+    file: 06b_js_grananja_veb_citanje.html
+    guid: 1bb96271-cd3e-42b2-97f0-72dd2f4b7899
+    src: 06b_js_grananja_veb_citanje.rst
+    title: Употреба гранања у веб странама
+    type: reading
+  - description: ''
+    file: 06c_js_petlje_citanje.html
+    guid: 6f329c1a-3492-4ba5-8480-9ea6155f7caa
+    src: 06c_js_petlje_citanje.rst
+    title: Петље у Јава-скрипту
+    type: reading
+  - description: ''
+    file: 06d_js_petlje_veb_citanje.html
+    guid: 77dbb64a-73ed-46cf-a893-e760ab977e93
+    src: 06d_js_petlje_veb_citanje.rst
+    title: Употреба петљи у веб странама
+    type: reading
+  - description: ''
+    file: 06f_js_grananja_i_petlje_zadaci.html
+    guid: ecc57697-17d9-4d5c-9c79-fc00962dd5b2
+    src: 06f_js_grananja_i_petlje_zadaci.rst
+    title: Гранања и петље - задаци
+    type: reading
+  archived-activities: []
+  description: Контрола тока програма
+  folder: 4_JS_06_kontrola_toka
+  guid: 141140d9-00b6-4ca1-8726-237dcdc49531
+  normalized_title: JS_6 Контрола тока програма
+  title: JS_6 Контрола тока програма
+title: Веб дизајн и клијентско веб програмирање за трећи разред гимназије природни
+  смер

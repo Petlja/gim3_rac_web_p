@@ -1,0 +1,24 @@
+    <!DOCTYPE html>
+    <html lang="sr">
+        <head>
+            <title>Слике</title>
+            <script>
+
+                // funkcija menja velicinu slike
+                function vel(slika, faktor) {
+                    slika.style.width = `${slika.naturalWidth * faktor}px`;
+                    slika.style.height = `${slika.naturalHeight * faktor}px`;
+                }
+
+            </script>
+        </head>
+        <body>
+            <h2>Повећававање и смањивање слика</h2>
+           
+            <img onmouseover="vel(this, 2)" onmouseout="vel(this, 1)" src="../_images/emo1.png">
+            <img onmouseover="vel(this, 2)" onmouseout="vel(this, 1)" src="../_images/emo2.png">
+            <img onmouseover="vel(this, 2)" onmouseout="vel(this, 1)" src="../_images/emo3.png">
+
+            <p> Позиционирањем миша на слику, она се увећава. </p>
+         </body>
+    </html>

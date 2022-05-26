@@ -1,0 +1,10 @@
+==========================================
+WP-2 Креирање садржаја у систему WordPress
+==========================================
+
+.. toctree:: 
+    :maxdepth: 1
+
+    02a_wp_kreiranje_sadrzaja_citanje.rst
+    02b_wp_kreiranje_sadrzaja_pitanja.rst
+    02c_wp_kreiranje_sadrzaja_zadaci.rst

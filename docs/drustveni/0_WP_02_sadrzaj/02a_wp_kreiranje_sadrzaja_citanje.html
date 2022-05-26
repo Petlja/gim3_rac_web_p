@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Креирање садржаја &#8212; Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Креирање садржаја - питања" href="02b_wp_kreiranje_sadrzaja_pitanja.html" />
+    <link rel="prev" title="WP-2 Креирање садржаја у систему WordPress" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="margin-left: 50%;margin-top: 5%;font-size: 20px;">
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_01_opste/index.html">WP-1 WordPress - основе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01a_cms_citanje.html">Готова решења за веб дизајн</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01b_wp_citanje.html">Основне компоненте система WordPress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01c_cms_wp_pitanja.html">CMS системи и WordPress - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">WP-2 Креирање садржаја у систему WordPress</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Креирање садржаја</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02b_wp_kreiranje_sadrzaja_pitanja.html">Креирање садржаја - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02c_wp_kreiranje_sadrzaja_zadaci.html">Креирање садржаја - задатак</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/index.html">WP-3 Теме и додаци</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03a_teme_i_dodaci_citanje.html">Теме и додаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03b_teme_i_dodaci_pitanja.html">Теме и додаци - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03c_teme_i_dodaci_zadaci.html">Теме и додаци - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/index.html">HTML-1 HTML документи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01a_prikazivanje_html_citanje.html">Приказивање <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01b_elementi_html_citanje.html">Елементи <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01c_elementi_html_zadaci.html">Елементи <em>HTML</em> документа - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/index.html">HTML-2 Форматирање текста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02a_formatiranje_teksta_citanje.html">Форматирање текста</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02b_formatiranje_teksta_pitanja.html">Форматирање текста - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02c_formatiranje_teksta_zadaci.html">Форматирање текста - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/index.html">HTML-3 Листе и табеле</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03a_liste_citanje.html">Листе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03b_liste_pitanja.html">Листе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03c_liste_zadaci.html">Листе - задаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03d_tabele_citanje.html">Табеле</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03e_tabele_pitanja.html">Табеле - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03f_tabele_zadaci.html">Табеле - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/index.html">HTML-4 Повезивање докумената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04a_povezivanje_dokumenata_citanje.html">Повезивање докумената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04b_povezivanje_dokumenata_pitanja.html">Повезивање докумената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04c_povezivanje_dokumenata_zadaci.html">Повезивање докумената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/index.html">HTML-5 Мултимедијални садржаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05a_multimedija_citanje.html">Мултимедијални садржаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05b_multimedija_pitanja.html">Мултимедијални садржаји - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05c_multimedija_zadaci.html">Мултимедијални садржаји - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/index.html">CSS-1 CSS стилови</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html">CSS стилови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html">Стилизовање документа - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/index.html">CSS-2 CSS својства</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html">CSS својства</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html">CSS својства - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html">CSS својства - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_03_CSS_selektori/index.html">CSS-3 CSS селектори</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html">CSS селектори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html">CSS селектори - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html">CSS селектори - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/index.html">CSS-4 Распоред елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html">Распоред елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html">Распоред елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html">Распоред елемената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/index.html">B-1 Bootstrap библиотека</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01a_bootstrap_biblioteka_citanje.html">Bootstrap библиотека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01b_bootstrap_biblioteka_pitanja.html">Bootstrap библиотека - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_02_klase/index.html">B-2 Bootstrap класе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02a_bootstrap_klase_citanje.html">Bootstrap класе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02b_bootstrap_klase_pitanja.html">Bootstrap класе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02c_bootstrap_klase_zadaci.html">Bootstrap класе - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_03_komponente/index.html">B-3 Bootstrap подршка компонентама</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03a_bootstrap_komponente_citanje.html">Bootstrap подршка компонентама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03b_bootstrap_komponente_pitanja.html">Уграђене Bootstrap компоненте - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03c_bootstrap_komponente_zadaci.html">Уграђене Bootstrap компоненте - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_04_raspored/index.html">B-4 Bootstrap и распоређивање елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04a_bootstrap_raspored_citanje.html"><em>Bootstrap</em> и распоређивање елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04b_bootstrap_raspored_pitanja.html"><em>Bootstrap</em> и распоређивање елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04c_bootstrap_raspored_zadaci.html"><em>Bootstrap</em> и распоређивање елемената - задаци</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+  </div>
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-10 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Креирање садржаја<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Креирање сајта подразумева пре свега смишљање његове структуре, а у оквиру тога креирање веб страна од којих се сајт састоји. Број страна не мора да буде велики, често је то свега 3-4 стране. Типично, сајт садржи почетну страницу (<em>home page</em>), на којој се налази наслов сајта, појашњење о намени сајта, везе ка осталим страницама, а могу се наћи и други садржаји. Свака од осталих страна обично садржи везу ка почетној страници (или ка свим осталим странама), као и одређени специфичан садржај. На пример, уобичајена је страница на којој се власник сајта представља (<em>О мени</em> или <em>О нама</em>), једна или више страница са главним садржајем сајта, страница за контактирање власника сајта итд.</p>
+<p>Блог, скраћено од „веб лог”, је веб страница (или група страница) која служи као нека врста јавно доступног журнала (дневника) аутора блога. Блог се састоји од хронолошки сортираних објава тј. постова (енгл. <em>post</em>), обично се ажурира једном у неколико дана (нема чврстог правила) и омогућава аутору да изнесе своја размишљања на одређене теме, реакције на догађаје и слично. На веб-сајтовима направљеним у систему <em>WordPress</em> једна (или више) страна може да буде организована као блог. Када се у систему <em>WordPress</em> креира нови сајт, иницијални изглед сајта садржи блог страницу.</p>
+<div class="section" id="id2">
+<h2>Креирање објава на блогу<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Најједноставнији начин да се направи нова објава на блогу је да се у менију <img alt="btn_my_site" src="../_images/btn_my_site.png" /> изабере опција <em>Site → Post</em> (касније <em>Site → Posts</em>), а затим се кликне на дугме <img alt="add_new_post" src="../_images/add_new_post.png" />. Тиме се прелази у едитор у коме се може унети садржај објаве. Иако једноставан, едитор има могућност основног форматирања текста, тако да се садржај приказује слично као у текст процесорима, то јест онако како ће бити приказан и у оквиру веб стране (визуелно уређивање, или <em>WYSIWYG</em> - <em>What you see is what you get</em>). Алтернативно, кликом на симбол <code class="docutils literal notranslate"><span class="pre">⋮</span></code> може се одабрати и директно уношење <em>HTML</em> кода, који садржи текст заједно са ознакама за форматирање.</p>
+<p>Када довршимо објаву, објављујемо је кликом на дугме <img alt="btn_publish" src="../_images/btn_publish.png" />. У зависности од подешавања опције <em>Always show pre-publish checks</em> („увек преконтролиши пре објављивања” у дну екрана), може бити потребно да се и по други пут кликне на дугме <em>Publish</em>. Ако је опција <em>Always show pre-publish checks</em> укључена, пре другог клика на дугме <em>Publish</em> можемо да подесимо коме ће објава бити видљива, када ће бити објављена (време објављивања може да се одложи) и где желимо да поделимо објаву (налози на друштвеним мрежама који ће пренети вест о објави).</p>
+<p>У случају да објаву изменимо (нпр. неком допуном или исправком), измењену објаву објављујемо кликом на дугме <img alt="btn_update" src="../_images/btn_update.png" />.</p>
+<p>Дугме <img alt="btn_settings" src="../_images/btn_settings.png" /> (<em>settings</em>) нам омогућава да задамо особине објаве у целини или неког њеног блока.</p>
+<a class="reference internal image-reference" href="../_images/settings.png"><img alt="../_images/settings.png" class="align-center" src="../_images/settings.png" style="width: 300px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>На пример, за објаву можемо да променимо видљивост (коме је објава видљива), да је фиксирамо на врху листе наших објава (<em>stick</em> -  прикачи), да је сврстамо у одређене категорије, или да јој доделимо етикете (<em>tags</em>). Категорије су распоређене хијерархијски (свака категорија може да има подкатегорије) и помоћу њих објаве разврставамо у групе и подгрупе. Етикете су у суштини кључне речи спрецифичне за поједине објаве. И категорије и етикете су врло корисне приликом претраге. На пример, ако наш сајт има одговарајући виџит за претрагу (биће објашњено касније), посетиоци сајта уношењем категорије или етикете у поље за претрагу могу лакше да нађу објаву или објаве које их интересују. Чак и када сајт не подржава могућност интерне претраге, корисници могу да искористе категорије и етикете које смо доделили објавама тако што унесу назив категорије или етикете у претраживач опште намене и ограниче претрагу на наш сајт дописивањем <em>site:adresa_sajta</em> у поље за претрагу (наравно, уместо <em>adresa_sajta</em> треба навести праву адресу сајта).</p>
+<p>У секцији <em>Featured Image</em> (истакнута слика) можемо да задамо слику, која ће се појавити заједно са скраћеним приказом (сажетком) објаве у листи објава.</p>
+<p>У секцији <em>Excerpt</em> (извод, сажетак) задајемо текст, који ће се појавити испод наслова објаве у листи објава. Уколико не задамо овај текст, <em>WordPress</em> ће аутоматски направити сажетак, најчешће тако што као сажетак искористи почетак објаве (првих 55 речи).</p>
+<p>У секцији <em>Discussion</em> задајемо да ли дозвољавамо коментаре на нашу објаву (<em>Allow comments</em>), као и да ли желимо да будемо обавештени ако неко референцира на нашу објаву (<em>Allow pingbacks &amp; trackbacks</em>).</p>
+<p>У секцији <em>Post Attibutes</em> задајемо темплејт (изглед) који ће бити употребљен за приказ објаве.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Подешавања на нивоу блока поруке односе се на фонт, величину слова, боје које се користе у том блоку и слично.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>WordPress</em> аутоматски памти све објаве на којима сте радили, па и оне које сте обрисали или нисте довршили. Када прекинете рад на некој објави, не морате да предузимате никакве посебне акције ради чувања објаве у тренутном стању. По повратку у <em>WordPress</em>, кликните на <em>Site → Posts</em> у менију <img alt="btn_my_site" src="../_images/btn_my_site.png" /> да се вратите на ваше објаве. Ако имате више објава, врх стране треба да изгледа слично овоме:</p>
+<a class="reference internal image-reference" href="../_images/posts_by_status.png"><img alt="../_images/posts_by_status.png" class="align-center" src="../_images/posts_by_status.png" style="width: 440px;" /></a>
+<p>Ваше недовршене објаве ћете видети ако кликнете на дугме <em>Drafts</em>, а обрисане ако кликнете на <em>Trashed</em>. На дугме <em>Scheduled</em> добијате објаве чије објављивање је заказано за неко време у будућности. У ситуацији на слици видимо да постоји 5 објављених и једна обрисана објава.</p>
+<div class="section" id="id3">
+<h3>Додавање мултимедијалних садржаја<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Слике, аудио, видео, <em>pdf</em> документи и слични садржаји које желимо да стављамо у наше објаве (и на друге веб-стране) прво треба  унети у медијску библиотеку (<em>Media Library</em>). Сваки од ових мултимедијалних садржаја се налази у неком фајлу. Фајлове додајемо у медијску библиотеку избором опције <em>Site → Media</em> у менију <img alt="btn_my_site" src="../_images/btn_my_site.png" />, а затим кликом на <img alt="add_new_media" src="../_images/add_new_media.png" />. Фајл можемо да додамо са рачунара за којим смо, или са задате локације на интернету.</p>
+<p>Када се вратимо у објаву (опција <em>Site → Post</em>, а затим избор неке од претходних или нове објаве), кликом на плус у сликовном менију можемо да убацимо у објаву садржај који смо раније додали у медијску библиотеку.</p>
+<a class="reference internal image-reference" href="../_images/media_in_post1.png"><img alt="../_images/media_in_post1.png" class="align-center" src="../_images/media_in_post1.png" style="width: 340px;" /></a>
+<p>Након клика на плус, у листи понуђених типова блокова који се могу додати, треба (у гупи <em>MEDIA</em>) пронаћи тип који одговара нашем садржају. На пример, ако хоћемо да додамо слику, изабраћемо тип <em>image</em>. Следећи корак је да у дијалогу попут приказаног на следећој слици изаберемо одакле желимо да поставимо слику. У нашем случају, кликнућемо на <em>Select Image</em>, а затим <em>Media Library</em>, након чега изаберемо слику из медијске библиотеке.</p>
+<a class="reference internal image-reference" href="../_images/media_in_post2.png"><img alt="../_images/media_in_post2.png" class="align-center" src="../_images/media_in_post2.png" style="width: 600px;" /></a>
+<p>Место и начин приказивања слике можемо да подешавамо помоћу оваквог сликовног менија:</p>
+<a class="reference internal image-reference" href="../_images/media_in_post3.png"><img alt="../_images/media_in_post3.png" class="align-center" src="../_images/media_in_post3.png" style="width: 360px;" /></a>
+<p>На пример, првим дугметом можемо да подесимо да се слика приказује у оквиру галерије, или као слајд-шоу и слично, другим дугметом (то су у ствари два мања дугмета) померамо слику у објави навише или наниже, треће служи да се зада поравнање у односу на леву и десну маргину, четврто нам омогућава да задамо понашање када се кликне на слику (нпр. да се слика отвори у новом табу прегледача), а пето да изабрану слику заменимо неком другом. Међу додатним опцијама (симбол <code class="docutils literal notranslate"><span class="pre">⋮</span></code>) је и уклањање целог блока са сликом.</p>
+<p>Мултимедијални садржај се неће појавити у сажетку објаве у листи објава, него тек када отворимо објаву и погледамо њен комплетан садржај. Слика се може појавити у сажетку само ако је задата у подешавањима као истакнута слика (<em>Settings → Featured Image</em>) као што је раније објашњено.</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>додавање и брисање веб страна<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Када почнемо да правимо Сајт у систему <em>WordPress</em>, као иницијално стање добијамо неке стране већ направљене (на пример, почетна страна, блог, стана о нама и страна за контакт). Уколико нам овај избор страна не одговара, можемо да обришемо неке од затечених страна, или да додамо нове. Такве промене радимо у секцији <em>Site → Pages</em> у менију <img alt="btn_my_site" src="../_images/btn_my_site.png" />.</p>
+<p>Постојећу страницу можемо да обришемо кликом на њу, а затим кликом на дугме <img alt="btn_settings" src="../_images/btn_settings.png" /> (<em>settings</em>) и на дугме <img alt="btn_move_to_trash" src="../_images/btn_move_to_trash.png" />.</p>
+<p>Нову страницу додајемо кликом на дугме <img alt="btn_add_new_page" src="../_images/btn_add_new_page.png" />. Први корак приликом прављења нове стране је дефинисање распореда њених елемената (<em>layout</em>). <em>WordPress</em> ће нам понудити неке готове распореде од којих можемо да изаберемо један по жељи, а можемо и да почнемо од празног распореда и да га сами дефинишемо елемент по елемент. Овај корак не можемо да обавимо касније, јер садржај стране зависи од распореда елемената. Уколико накнадно покушамо да изменимо распоред, то би уништило садржај који је у међувремену унет.</p>
+<p>Даље попуњавање странице текстом, сликама и другим садржајем је веома слично креирању објава. Користимо исти едитор са могућностима визуелног приказа основног форматирања или уношења <em>HTML</em> кода.</p>
+<a class="reference internal image-reference" href="../_images/page_settings.png"><img alt="../_images/page_settings.png" class="align-right" src="../_images/page_settings.png" style="width: 300px;" /></a>
+<p>Кликом на дугме <img alt="btn_settings" src="../_images/btn_settings.png" /> приступамо подешавањима. Међу подешавањима стране постоје следеће опције:</p>
+<ul class="simple">
+<li><p><em>Status &amp; visibility</em>. Овде можемо да подесимо коме ће страна да буде видљива (свима, свима са лозинком, или само администраторима и уредницима сајта) и када треба да буде објављена.</p></li>
+<li><p><em>Page layout</em>. Овде можемо да променимо изглед, односно распоред елемената на страни (<em>layout</em>) што је, као што смо рекли, најбоље урадити на почетку уређивања стране.</p></li>
+<li><p><em>Permalink</em> је опција која служи да задамо фиксну адресу наше стране. Адреса стране увек има облик <em>адреса_сајта/наставак</em>, тј. добија се када на адресу сајта допишемо косу црту и наставак (<em>slug</em>). Подразумевани наставак је наслов стране. На пример, ако је <em>URL</em> адреса нашег сајта (на <em>WordPress</em> серверу) <em>https://adresa_sajta.wordpress.com</em> а назив странице је <em>about</em>, онда је подразумевана адреса странице <em>https://adresa_sajta.wordpress.com/about</em>.  У опцији <em>Permalink</em> за дату страницу можемо да променимо наставак који се пише иза косе црте.  За страницу означену као почетну (<em>homepage</em>) није могуће задати наставак (њена адреса је управо адреса сајта).</p></li>
+<li><p><em>Featured image</em>. Ова опција је иста као код објава и омогућава да у листи страна (ако постоји негде на сајту) ову страну представимо и сликом.</p></li>
+<li><p><em>Excerpt</em>. Ово је место на коме задајемо сажетак, тј. кратак текстуапни приказ (најаву) који ће се појавити у евентуалној листи страна.</p></li>
+<li><p><em>Discussion</em>. Место на коме дозвољавамо или забрањујемо коментаре за текућу страну.</p></li>
+<li><p><em>Page attributes</em>. Овде за текућу страну можемо да задамо која јој је родитељска страна. Попуњавањем овог поља за све стране се формира хијерархија страна, која може да нам помогне да боље организујемо сајт. Наравно, једна страна може истовремено да буде родитељ неке групе страна и дете неке стране вишег нивоа у хијерархији.</p></li>
+</ul>
+<p>Хијерархија страна се директно одражава на адресе тих страна, тако што се адреса стране у ствари добија дописивањем наставка те стране на адресу родитељске стране. На пример, ако за страницу <em>Биографија</em> чији је наставак за адресирање <em>bio</em> задамо да јој је родитељска страна <em>О нама</em>, чија је адреса <em>https://adresa_sajta.wordpress.com/about</em>, онда је адреса стране са биографијом <em>https://adresa_sajta.wordpress.com/about/bio</em>. Стране којима са зада да немају родитељску страну (што је подразумевана поставка) су стране највишег нивоа и њихова адреса се и даље добија дописивањем наставка директно на адресу сајта.</p>
+<div class="section" id="id5">
+<h3>Менији<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Свака објављена страница сајта је увек доступна преко своје <em>URL</em> адресе. Међутим, посетиоци сајта обично не знају адресе појединачних страница, а (чак и када знају) директно уношење адресе сваке странице у прегледач није нарочито удобан начин да се страница посети. Да би структура сајта била јаснија посетиоцима, а сам сајт лакши за прегледање, користе се менији. Мени омогућава да се са једне странице пређе на другу једноставним кликом. Свака тема садржи један или више менија, који могу да буду приказани на различите начине и на различитим местима на страни. Уобичајено је да постоји један главни мени, који се приказује у заглављу сваке стране, и преко којег се може посетити свака страна сајта. Главни мени се може поставити и у бочну, или навигациону траку, мада је то ређи случај. Поред главног менија, сајту могу да се додају разни споредни менији, који могу а не морају да се појављују на свакој страници сајта.</p>
+<p>До секције за управљање менијима нашег сајта долазимо избором <em>Design → Customize → Menus</em> у менију <img alt="btn_my_site" src="../_images/btn_my_site.png" />. Овде можемо да додајемо меније и да преименујемо или обришемо постојеће. Када изаберемо мени који желимо да уређујемо, појављују се његове ставке (ако их има).</p>
+<p>Кликом на ставку можемо да је преименујемо или обришемо. Редослед ставки се може променити превлачењем постојећих ставки горе или доле. Осим тога, ставке менија могу да буду организоване и у више нивоа, то јест да формирају хијерархију. Хијерархија ставки у менију се уређује назависно од хијерархије родитељских страна.  Ставке у менију се и хијерархијски могу једноставно уређивати мишем, тако што ставку повучемо лево или десно, чиме јој мењамо ниво у хијерархији. Кликом на опцију <em>Reorder</em>, на ставкама добијамо и дугмад (стрелице) за померање тих ставки.</p>
+<a class="reference internal image-reference" href="../_images/menu_reorder.png"><img alt="../_images/menu_reorder.png" class="align-center" src="../_images/menu_reorder.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ставке менија се додају кликом на дугме <em>Add Items</em>. Нова ставка најчешће води ка некој од страница сајта, али то није једина могућност (зато се хијерархије менија и страна и уређују независно). Ставке менија могу, на пример, да воде ка појединим објавама, ка листи објава из одређене категорије, или ка странама других сајтова (између осталог, могуће је направити и ставке које не воде никуда него само садрже друге ставке нижег хијерархијског нивоа). Због тога се после клика на дугме <em>Add Items</em> појављује подмени у коме прво треба изабрати каква ставка се додаје менију (за везе ка страницама нашег сајта треба изабрати <em>pages</em> итд.).</p>
+<p>На крају, испод приказа ставки постоје још нека подешавања за изабрани мени. Као прво, можемо да задамо у којој области (или областима) странице сајта ће се мени приказивати, а као друго - можемо да подесимо да се свака будућа страна која нема родитељску страну аутоматски дода на крај овог менија. Препорука је да се ова опција ипак не укључује, јер се при мање спретној употреби у менију могу појавити странице које нисмо намеравали да додамо.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+    <li id="relations-prev" title='Previous chapter - WP-2 Креирање садржаја у систему WordPress' data-toggle="tooltip"><a href="index.html"><i class="fas fa-arrow-left"></i></a></li>
+    
+        <li id="relations-next" title='Next chapter - Креирање садржаја - питања' data-toggle="tooltip"><a href="02b_wp_kreiranje_sadrzaja_pitanja.html"><i class="fas fa-arrow-right"></i></a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - WP-2 Креирање садржаја у систему WordPress' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Креирање садржаја - питања' data-toggle="tooltip"><a href="02b_wp_kreiranje_sadrzaja_pitanja.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

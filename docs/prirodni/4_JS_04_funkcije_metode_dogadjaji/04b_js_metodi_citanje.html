@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Методи - функције у објектима &#8212; Петља - Рачунарство и информатика за трећи разред гимназије - природно-математички смер</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/flatly.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/petlja.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Догађаји" href="04c_js_dogadjaji_citanje.html" />
+    <link rel="prev" title="Функције" href="04a_js_funkcije_citanje.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'gim3_web_prirodni';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'gim3_web_prirodni';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Петља - Рачунарство и информатика за трећи разред гимназије - природно-математички смер</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="margin-left: 50%;margin-top: 5%;font-size: 20px;">
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/index.html">HTML-1 HTML документи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01a_prikazivanje_html_citanje.html">Приказивање <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01b_elementi_html_citanje.html">Елементи <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01c_elementi_html_zadaci.html">Елементи <em>HTML</em> документа - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/index.html">HTML-2 Форматирање текста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02a_formatiranje_teksta_citanje.html">Форматирање текста</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02b_formatiranje_teksta_pitanja.html">Форматирање текста - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02c_formatiranje_teksta_zadaci.html">Форматирање текста - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/index.html">HTML-3 Листе и табеле</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03a_liste_citanje.html">Листе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03b_liste_pitanja.html">Листе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03c_liste_zadaci.html">Листе - задаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03d_tabele_citanje.html">Табеле</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03e_tabele_pitanja.html">Табеле - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03f_tabele_zadaci.html">Табеле - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/index.html">HTML-4 Повезивање докумената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04a_povezivanje_dokumenata_citanje.html">Повезивање докумената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04b_povezivanje_dokumenata_pitanja.html">Повезивање докумената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04c_povezivanje_dokumenata_zadaci.html">Повезивање докумената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/index.html">HTML-5 Мултимедијални садржаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05a_multimedija_citanje.html">Мултимедијални садржаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05b_multimedija_pitanja.html">Мултимедијални садржаји - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05c_multimedija_zadaci.html">Мултимедијални садржаји - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/index.html">CSS-1 CSS стилови</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html">CSS стилови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html">Стилизовање документа - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/index.html">CSS-2 CSS својства</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html">CSS својства</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html">CSS својства - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html">CSS својства - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_03_CSS_selektori/index.html">CSS-3 CSS селектори</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html">CSS селектори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html">CSS селектори - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html">CSS селектори - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/index.html">CSS-4 Распоред елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html">Распоред елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html">Распоред елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html">Распоред елемената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_01_izvrsavanje/index.html">JS_1 Јава скрипт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01a_js_uvod_citanje.html">Увод у <em>JavaScript</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01b_js_izvrsavanje_citanje.html">Извршавање <em>JavaScript</em> кода</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01c_js_izvrsavanje_pitanja.html">Извршавање <em>JavaScript</em> кода - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/index.html">JS_2 Променљиве и изрази</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02a_js_promenljive_citanje.html">Променљиве</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02b_js_brojevi_citanje.html">Нумеричке вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02c_js_tekstualne_vrednosti_citanje.html">Текстуалне вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02d_js_logicke_vrednosti_citanje.html">Логичке вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02e_js_osnovni_tipovi_pitanja.html">Основни типови - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02f_js_osnovni_tipovi_zadaci.html">Основни типови - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/index.html">JS_3 Сложени типови података</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html">Објекти</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html">Низови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html">Сложени типови података - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html">Сложени типови података - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">JS_4 Функције, методе, догађаји</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="04a_js_funkcije_citanje.html">Функције</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Методи - функције у објектима</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c_js_dogadjaji_citanje.html">Догађаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04d_js_fmd_pitanja.html">Функције, методе, догађаји -  питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04e_js_fmd_zadaci.html">Функције, методе, догађаји -  задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_05_veb_interfejs/index.html">JS_5 Веб интерфејс</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05a_js_dugmad_citanje.html">Дугмад</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05b_js_polja_za_unos_citanje.html">Поља за унос података</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05c_js_liste_za_odabir_citanje.html">Листе за одабир вредности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05e_js_veb_interfejs_pitanja.html">Веб интерфејс - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05f_js_veb_interfejs_zadaci.html">Веб интерфејс - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_06_kontrola_toka/index.html">JS_6 Контрола тока програма</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06a_js_grananja_citanje.html">Гранања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06b_js_grananja_veb_citanje.html">Употреба гранања у веб странама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06c_js_petlje_citanje.html">Петље у Јава-скрипту</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06d_js_petlje_veb_citanje.html">Употреба петљи у веб странама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06f_js_grananja_i_petlje_zadaci.html">Гранања и петље - задаци</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+  </div>
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-10 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Методи - функције у објектима<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У претходним лекцијама смо се упознали са објектима, који представљају групе повезаних података. Објекти поред података могу да садрже и локалне функције, које се називају методе. Методе су веома сличне обичним функцијама: свака има своје име, могу да добијају параметре и враћају резултат. Разлика је у томе што су методе тесно везане за објекат и служе да приликом позива промене објекат коме припадају или да израчунају неке вредности на основу поља објекта.</p>
+<p>Ако објекат има методе, оне се користе слично пољима објеката. Као што се неком пољу приступа тако што се иза имена објекта стави тачка а онда име поља, тако се и функције објекта (методе) позивају тако што се иза имена објекта коме припадају стави тачка и име функције са заградама, између којих се могу навести параметри:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">imeObjekta</span><span class="p">.</span><span class="nx">imeMetode</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">parametri</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Употребу једне методе смо већ видели у примеру функције <code class="docutils literal notranslate"><span class="pre">prikaziTacnoVreme</span></code>. Објекти који садрже неки временски тренутак имају (поред осталих) методу <code class="docutils literal notranslate"><span class="pre">toLocaleTimeString()</span></code>, која враћа стринг са временом тог тренутка, без датума.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">prikaziTacnoVreme</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">sada</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="sb">`Страница је отворена у </span><span class="si">${</span><span class="nx">sada</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()</span><span class="si">}</span><span class="sb"> сати.`</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>У језику <em>JavaScript</em> постоји велики број оваквих уграђених објеката, који имају разне готове методе које можемо да користимо.</p>
+<div class="section" id="id2">
+<h2>Методе низова<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Низови у језику <em>JavaScript</em> су флексибилне структуре, у које лако можемо да додајемо нове елементе или да из њих избацујемо неке елементе. Ако променљива <code class="docutils literal notranslate"><span class="pre">ocene</span></code> садржи низ неких вредности, можемо да користимо следеће функције:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">toString()</span></code> ова метода ће вратити стринг који садржи све елементе низа са запетама (зарезима) између елемената.</li>
+<li><code class="docutils literal notranslate"><span class="pre">push(vrednost)</span></code> када се ова метода примени над низом, она ће додати <code class="docutils literal notranslate"><span class="pre">vrednost</span></code> на крај низа као нови последњи елемент.</li>
+<li><code class="docutils literal notranslate"><span class="pre">pop()</span></code> када се ова метода примени над низом, она ће уклонити последњи елемент из низа.</li>
+<li><code class="docutils literal notranslate"><span class="pre">join(separator)</span></code> метода веома слична методи <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, враћа стринг који представља садржај низа. Једина разлика је то што ће уместо запете користити вредност параметра <code class="docutils literal notranslate"><span class="pre">separator</span></code>, која је прослеђена као параметар.</li>
+<li><code class="docutils literal notranslate"><span class="pre">slice(pocetak,</span> <span class="pre">kraj)</span></code> ова метода враћа нови низ, који представља део низа над којим је примењена. Нови низ ће садржати све елементе почевши од елемента на позицији <code class="docutils literal notranslate"><span class="pre">pocetak</span></code> до елемента испред позиције <code class="docutils literal notranslate"><span class="pre">kraj</span></code>.</li>
+</ul>
+<p>У следећем примеру можете видети како се користе ове методе над објектом који представља низ оцена:</p>
+
+<div data-childcomponent="metode_niza_js" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=metode_niza_js data-lang="javascript" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+let ocene = [5,5,4,5]
+ocene.pop();        // ocene = [5,5,4]
+ocene.push(4);      // ocene = [5,5,4,4]
+ocene.push(5);      // ocene = [5,5,4,4,5]
+
+alert( ocene.toString() );  // приказаће се 5,5,4,4,5
+ocene = ocene.slice(1,4);   // ocene = [5,4,4]
+alert( ocene.join( ` : ` ) ); // приказаће се 5 : 4 : 4
+</textarea>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Методе документа стране<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Већ смо се упознали са објектом <code class="docutils literal notranslate"><span class="pre">document</span></code>, преко којег можемо да приступимо <em>HTML</em> елементима у страни помоћу неких поља тог објекта. Поред поља са вредностима, овај објекат има и разне методе. Једна од његових метода је и <code class="docutils literal notranslate"><span class="pre">document.write</span></code>, која може да послужи за додавање садржаја веб страни. У следећем примеру употребљена је ова метода да дода један параграф.</p>
+
+<div data-childcomponent="novi_tekst_html_js" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=novi_tekst_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Обичан &lt;i&gt;HTML&lt;/i&gt; параграф.&lt;/p&gt;
+    &lt;script&gt;
+      document.write(&#x27;&lt;p&gt;Параграф дописан &lt;i&gt;JavaScript&lt;/i&gt; наредбом.&lt;/p&gt;&#x27;);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>На овај начин можемо да додајемо и сложеније структуре веб страни:</p>
+
+<div data-childcomponent="nova_lista_html_js" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nova_lista_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Обичан &lt;i&gt;HTML&lt;/i&gt; параграф.&lt;/p&gt;
+    &lt;script&gt;
+      document.write(&#x27;&lt;ul&gt;&#x27;);
+      document.write(&#x27;    &lt;li&gt;Палеозоик&#x27;);
+      document.write(&#x27;        &lt;ul&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Камбријум&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Ордовицијум&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Силур&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Девон&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Карбонифер&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Пермијум&lt;/li&gt;&#x27;);
+      document.write(&#x27;        &lt;/ul&gt;&#x27;);
+      document.write(&#x27;    &lt;/li&gt;&#x27;);
+      document.write(&#x27;    &lt;li&gt;Мезозоик&#x27;);
+      document.write(&#x27;        &lt;ul&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Тријас&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Јура&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Креда&lt;/li&gt;&#x27;);
+      document.write(&#x27;        &lt;/ul&gt;&#x27;);
+      document.write(&#x27;    &lt;/li&gt;&#x27;);
+      document.write(&#x27;    &lt;li&gt;Кенозоик&#x27;);
+      document.write(&#x27;        &lt;ul&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Терцијар&lt;/li&gt;&#x27;);
+      document.write(&#x27;            &lt;li&gt;Квартар&lt;/li&gt;&#x27;);
+      document.write(&#x27;        &lt;/ul&gt;&#x27;);
+      document.write(&#x27;    &lt;/li&gt;&#x27;);
+      document.write(&#x27;&lt;/ul&gt;&#x27;);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>Објекат <code class="docutils literal notranslate"><span class="pre">document</span></code> има и неколико метода које нам омогућавају да пронађемо елементе на страни по идентификатору (атрибуту <code class="docutils literal notranslate"><span class="pre">id</span></code>), типу елемента, или некој од класа. Најбитније методе објекта <code class="docutils literal notranslate"><span class="pre">document</span></code> за приступање <em>HTML</em> елементима су:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">document.querySelector(cssSelektor)</span></code> проналази први <em>HTML</em> елемент у документу који одговара задатом <em>CSS</em> селектору.</li>
+<li><code class="docutils literal notranslate"><span class="pre">document.querySelectorAll(cssSelektor)</span></code> проналази све <em>HTML</em> елементе у документу који одговарају задатом <em>CSS</em> селектору.</li>
+</ul>
+<p>Помоћу ових метода проналажење елемената је једноставније од начина кје смо до сада користили. Било који елемент који се може описати (и стилизовати) неким <em>CSS</em> селектором, може се и пронаћи помоћу ових метода тако што се тај исти селектор проследи као параметар.</p>
+<p>Поред ових метода можемо користити још три метода ради проналажења објеката по идентификатору, имену елемента, или класи:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">document.getElementById(id)</span></code> проналази један <em>HTML</em> елемент у документу који има вредност идентификатора, која је прослеђена методи као параметар. Позив <code class="docutils literal notranslate"><span class="pre">getElementById('naslov')</span></code> је еквивалентан позиву методе <code class="docutils literal notranslate"><span class="pre">querySelector('#naslov')</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">document.getElementsByTagName(name)</span></code> проналази низ <em>HTML</em> елемента задатог типа у документу. Позив <code class="docutils literal notranslate"><span class="pre">getElementsByTagName('div')</span></code> је еквивалентан позиву методе <code class="docutils literal notranslate"><span class="pre">querySelectorАll('div')</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">document.getElementsByClassName(name)</span></code>     проналази низ <em>HTML</em> елемента у документу, који имају задату класу. Позив <code class="docutils literal notranslate"><span class="pre">getElementsByClassName('levo')</span></code> је еквивалентан позиву методе <code class="docutils literal notranslate"><span class="pre">querySelectorAll('.levo')</span></code>.</li>
+</ul>
+<p>Ове методе објекта <code class="docutils literal notranslate"><span class="pre">document</span></code> нам омогућавају да претражимо <em>HTML</em> документ по различитим критеријумима, нађемо елементе који одговарају неком критеријуму и променимо им нека својства, изглед или чак и садржај. У следећем примеру ћемо <em>JavaScript</em> програмом лоцирати одељак <em>вести</em> помоћу методе <code class="docutils literal notranslate"><span class="pre">getElementById</span></code>, а затим ћемо том одељку променити боју позадине.</p>
+
+<div data-childcomponent="lociranje_elementa_html_js" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lociranje_elementa_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;sr&quot;&gt;
+    &lt;head&gt;
+      &lt;title&gt;Вест&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h2&gt;Убацивање текста&lt;/h2&gt;
+
+      &lt;div id=&#x27;aktivnosti&#x27;&gt;
+        &lt;h4&gt;Наше активности&lt;/h4&gt;
+        &lt;p&gt; Активност број 1&lt;/p&gt;
+        &lt;p&gt; Активност број 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&#x27;vesti&#x27;&gt;
+        &lt;h4&gt;Вести&lt;/h4&gt;
+        &lt;p&gt; Вест број 1&lt;/p&gt;
+        &lt;p&gt; Вест број 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+        let odeljakVesti = document.getElementById(&quot;vesti&quot;);
+        odeljakVesti.style.backgroundColor = &#x27;#C0FFFF&#x27;;
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>Замените у претходном коду наредбе</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">odeljakVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;vesti&quot;</span><span class="p">);</span>
+<span class="nx">odeljakVesti</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;#C0FFFF&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>наредбама</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">pojedinacneVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;#vesti p&#39;</span><span class="p">);</span>
+<span class="nx">pojedinacneVesti</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>и покушајте да објасните пре покретања примера шта ће бити ефекат ових наредби. Покрените пример и проверите своју претпоставку.</p>
+<hr class="docutils" />
+<p>Уместо постављања боје, могли смо на пример да убацимо параграф <em>Најновија вест</em> у одељак са вестима. Ради тога смо употребили и методе <code class="docutils literal notranslate"><span class="pre">document.createElement()</span></code>, <code class="docutils literal notranslate"><span class="pre">document.createTextNode()</span></code>, <code class="docutils literal notranslate"><span class="pre">element.appendChild(cvor_dete)</span></code> и <code class="docutils literal notranslate"><span class="pre">element_roditelj.insertBefore(novi_element,</span> <span class="pre">element_dete)</span></code>, за које се не очекује да их у оквиру овог курса запамтите и детаљно познајете. У овом примеру, поменуте методе су употребљене само као илустрација и наговештај могућности употребе <em>JavaScript</em> програма у <em>HTML</em> странама. По потреби се увек можете вратити на овај пример, или сами пронаћи на интернету сличан пример и детаљнија објашњења.</p>
+
+<div data-childcomponent="nova_vest_html_js" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nova_vest_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;sr&quot;&gt;
+    &lt;head&gt;
+      &lt;title&gt;Вест&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h2&gt;Убацивање текста&lt;/h2&gt;
+
+      &lt;div id=&#x27;aktivnosti&#x27;&gt;
+        &lt;h4&gt;Наше активности&lt;/h4&gt;
+        &lt;p&gt; Активност број 1&lt;/p&gt;
+        &lt;p&gt; Активност број 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&#x27;vesti&#x27;&gt;
+        &lt;h4&gt;Вести&lt;/h4&gt;
+        &lt;p&gt; Вест број 1&lt;/p&gt;
+        &lt;p&gt; Вест број 2&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+         // HTML параграф као објекат у DOM  моделу
+         // садржи чвор са текстом као своје поље
+        let novaVest = document.createElement(&quot;P&quot;);
+        let cvor = document.createTextNode(&quot;Најновија вест&quot;);
+        novaVest.appendChild(cvor);
+
+        // Убацујемо параграф &#x27;novaVest&#x27; у одговарајући одељак
+        let odeljakVesti = document.getElementById(&quot;vesti&quot;);
+        odeljakVesti.insertBefore(novaVest, odeljakVesti.children[1]);
+      &lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+    <li id="relations-prev" title='Previous chapter - Функције' data-toggle="tooltip"><a href="04a_js_funkcije_citanje.html"><i class="fas fa-arrow-left"></i></a></li>
+    
+        <li id="relations-next" title='Next chapter - Догађаји' data-toggle="tooltip"><a href="04c_js_dogadjaji_citanje.html"><i class="fas fa-arrow-right"></i></a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Функције' data-toggle="tooltip"><a href="04a_js_funkcije_citanje.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Догађаји' data-toggle="tooltip"><a href="04c_js_dogadjaji_citanje.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

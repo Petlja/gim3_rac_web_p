@@ -1,0 +1,314 @@
+courseId: kurs-treci-gim-drustveni
+lang: sr-Cyrl
+title: Веб дизајн и готова веб дизајн решења за трећи разред гимназије друштвени и општи смер
+description: 
+  longDescription: |
+    Овај курс је намењен ученицима 3. разреда гимназије друштвено - језичког и општег смера за предмет Рачунарство и информатика. 
+    У оквиру овог курса детаљно је  обрађене наставне теме Веб дизајн и Клијентско веб програмирање.  
+    Курс у потпуности прати план наставе и учења за овај предмет. Курс је организован по часовима. 
+    Током курса детаљно се изучава Wordpress, HTML, CSS. Материјал намењен за један час се састоји од лекције, дела са питалицама, 
+    којима се ученицима скреће пажња на најбитније делове из садржаја лекције и  квизова, који имају за циљ проверу усвојеног градива.
+    
+    Поред рада у школи, курс се може пролазити и самостално.
+
+    <p>
+    <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
+    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+    <br />Овај курс Фондација Петља објавила je под лиценцом <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)</a>.
+    </p> 
+
+  shortDescription: Веб дизајн и готова веб дизајн решења за друштвени и општи смер
+  willLearn: # list
+    - Креирање веб страна помоћу готових веб решења, тј. система за управљање садржајем
+    - Основе језика HTML и CSS
+  requirements:
+    - Рачунар са савременим прегледачем (браузером)
+  toc:
+    - WordPress
+    - HTML
+    - CSS
+lessons:
+
+## WordPress
+  - title: WP-1 WordPress - основе
+    folder: 0_WP_01_opste
+    guid: 1b3b994c-d484-46cc-b256-f3f9908591a2
+    description: WordPress - основе
+    activities:
+      - type: reading
+        title: Готова решења за веб дизајн
+        file: 01a_cms_citanje.rst
+        guid: aa570850-8084-4856-8d2e-af90c052b3cb
+      - type: reading
+        title: Основне компоненте система WordPress
+        file: 01b_wp_citanje.rst
+        guid: 56987b1e-58ec-4c73-8d35-cb2bf2453240
+      - type: quiz
+        title: CMS системи и WordPress - питања
+        file: 01c_cms_wp_pitanja.rst
+        guid: 554c56c0-03f4-476b-bd70-bf58cb490bc1
+  - title: WP-2 Креирање садржаја у систему WordPress
+    folder: 0_WP_02_sadrzaj
+    guid: 5b71c2c1-9529-4133-8211-20032bf3cfe9
+    description: Креирање садржаја у систему WordPress
+    activities:
+      - type: reading
+        title: Креирање садржаја
+        file: 02a_wp_kreiranje_sadrzaja_citanje.rst
+        guid: e1debbc1-a0b0-470c-8d3e-19c35fb06fa0
+      - type: quiz
+        title: Креирање садржаја - питања
+        file: 02b_wp_kreiranje_sadrzaja_pitanja.rst
+        guid: f57924de-ec58-4fa1-b285-545b878127c2
+      - type: reading ### tasks?
+        title: Креирање садржаја - задаци
+        file: 02c_wp_kreiranje_sadrzaja_zadaci.rst
+        guid: a8a26d0a-3dab-4e4a-a8b4-1f55cf639d3b
+  - title: WP-3 Теме и додаци
+    folder: 0_WP_03_teme_i_dodaci
+    guid: 0090242e-fb66-4286-9305-52dea82bafe0
+    description: Теме и додаци
+    activities:
+      - type: reading
+        title: Теме и додаци
+        file: 03a_teme_i_dodaci_citanje.rst
+        guid: d79f3878-412c-446e-9011-6c5ecae55405
+      - type: quiz
+        title: Теме и додаци - питања
+        file: 03b_teme_i_dodaci_pitanja.rst
+        guid: c08c0e60-cb71-4125-9467-f3670a362027
+      - type: reading ### tasks?
+        title: Теме и додаци - задаци
+        file: 03c_teme_i_dodaci_zadaci.rst
+        guid: 02035d8e-6004-4b86-8cba-c386d8b2199c
+
+### HTML
+  - title: HTML-1 HTML документи
+    folder: 1_HTML_01_HTML_dokumenti
+    guid: bf449b62-1d2e-4d6e-b8e0-2be6854d962c
+    description: HTML документи
+    activities:
+      - type: reading
+        title: Приказивање HTML документа
+        file: 01a_prikazivanje_html_citanje.rst
+        guid: 6ae342c1-8b4c-4ae6-ab81-70a98da37257
+      - type: reading
+        title: Елементи HTML документа
+        file: 01b_elementi_html_citanje.rst
+        guid: ad89acb6-6d75-4872-bfad-c8d1be2a30c8
+      - type: reading ### tasks?
+        title: Елементи HTML документа - задаци
+        file: 01c_elementi_html_zadaci.rst
+        guid: f592e6bf-c76b-410d-9255-1105df719530
+  - title: HTML-2 Форматирање текста
+    folder: 1_HTML_02_formatiranje_teksta
+    guid: 4a7a9e09-fd2d-4d83-9a45-34f70e3c3225
+    description: Форматирање текста
+    activities:
+      - type: reading
+        title: Форматирање текста
+        file: 02a_formatiranje_teksta_citanje.rst
+        guid: e8e26581-5538-4b78-8a84-0a276ef8a067
+      - type: quiz
+        title: Форматирање текста - питања
+        file: 02b_formatiranje_teksta_pitanja.rst
+        guid: 88d5223e-ab8d-49c3-a637-b0020112a359
+      - type: reading ### tasks?
+        title: Форматирање текста - задаци
+        file: 02c_formatiranje_teksta_zadaci.rst
+        guid: 1e189697-a803-4fd8-b9ec-3c76e22e1bf7
+  - title: HTML-3 Листе и табеле
+    folder: 1_HTML_03_liste_i_tabele
+    guid: 9cd8a3a8-b9c6-4f37-a38a-34282d2c09b4
+    description: Листе и табеле
+    activities:
+      - type: reading
+        title: Листе
+        file: 03a_liste_citanje.rst
+        guid: 0c8b0b72-b340-4732-b115-e66dd4522990
+      - type: quiz
+        title: Листе - питања
+        file: 03b_liste_pitanja.rst
+        guid: 4f3c27f4-7a6e-4b04-b652-0e6e0edefa41
+      - type: reading ### tasks?
+        title: Листе - задаци
+        file: 03c_liste_zadaci.rst
+        guid: 7363ad2b-bd9d-4a52-9f10-b2bb82699c1b
+      - type: reading
+        title: Табеле
+        file: 03d_tabele_citanje.rst
+        guid: 843f3739-6d1e-495a-8683-5d4fe4198344
+      - type: quiz
+        title: Табеле - питања
+        file: 03e_tabele_pitanja.rst
+        guid: 966e677a-c460-4b76-91f6-dcf6f3e38dfd
+      - type: reading ### tasks?
+        title: Табеле - задаци
+        file: 03f_tabele_zadaci.rst
+        guid: 5097f6b8-7e7c-42b1-a8b1-e7605e2bb46a
+  - title: HTML-4 Повезивање докумената
+    folder: 1_HTML_04_povezivanje_dokumenata
+    guid: e7e928c8-fd6f-4baa-8710-3306ddbef95e
+    description: Повезивање докумената
+    activities:
+      - type: reading
+        title: Повезивање докумената
+        file: 04a_povezivanje_dokumenata_citanje.rst
+        guid: 7778650d-29dd-4d75-a4fd-1e7844a262a6
+      - type: quiz
+        title: Повезивање докумената - питања
+        file: 04b_povezivanje_dokumenata_pitanja.rst
+        guid: d3901066-6854-46c1-ace0-e16fa5539e4e
+      - type: reading ### tasks?
+        title: Повезивање докумената - задаци
+        file: 04c_povezivanje_dokumenata_zadaci.rst
+        guid: 2527d450-422a-4537-8c75-e8b5a15f44ca
+  - title: HTML-5 Мултимедијални садржаји
+    folder: 1_HTML_05_multimedijalni_sadrzaji
+    guid: a7dba7da-f4f5-49fb-b31f-59fc57959307
+    description: Мултимедијални садржаји
+    activities:
+      - type: reading
+        title: Мултимедијални садржаји
+        file: 05a_multimedija_citanje.rst
+        guid: a85e5cea-2de0-4ff5-8ebe-0917fabace4e
+      - type: quiz
+        title: Мултимедијални садржаји - питања
+        file: 05b_multimedija_pitanja.rst
+        guid: 6114b0e9-a572-4c39-8234-58a3a905a62c
+      - type: reading ### tasks?
+        title: Мултимедијални садржаји - задаци
+        file: 05c_multimedija_zadaci.rst
+        guid: 9748c7c6-03c6-4918-9ded-e10d51c494f0
+
+### CSS
+  - title: CSS-1 CSS стилови
+    folder: 2_CSS_01_CSS_stilovi
+    guid: c1a4f7ae-8edb-4914-9e7e-63ce2159471c
+    description: CSS стилови
+    activities:
+      - type: reading
+        title: CSS стилови
+        file: 01a_css_stilovi_citanje.rst
+        guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f75
+      - type: reading
+        title: CSS стилови - вежбе
+        file: 01c_css_stilovi_vezbe.rst
+        guid: 9493a4e0-0154-4c00-a46b-e8e439852552
+  - title: CSS-2 CSS својства
+    folder: 2_CSS_02_CSS_svojstva
+    guid: bd513286-0234-4641-90ea-c723ed5dd111
+    description: CSS својства
+    activities:
+      - type: reading
+        title: CSS својства
+        file: 02a_css_svojstva_citanje.rst
+        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc43
+      - type: quiz
+        title: CSS својства - питања
+        file: 02b_css_svojstva_pitanja.rst
+        guid: 9c838d88-5572-4bb6-9233-71a7d811871c
+      - type: reading ### tasks?
+        title: CSS својства - задаци
+        file: 02c_css_svojstva_zadaci.rst
+        guid: 02f77f91-4eeb-4ab8-bda0-2c4574abcb77
+  - title: CSS-3 CSS селектори
+    folder: 2_CSS_03_CSS_selektori
+    guid: f7472e25-2f78-4960-b8d7-9882a26ecacd
+    description: CSS селектори
+    activities:
+      - type: reading
+        title: CSS селектори
+        file: 03a_css_selektori_citanje.rst
+        guid: 5a22069a-7205-471f-b438-cf46910c0da4
+      - type: quiz
+        title: CSS селектори - питања
+        file: 03b_css_selektori_pitanja.rst
+        guid: 8f6017b8-d952-4b54-b267-ac898124867a
+      - type: reading ### tasks?
+        title: CSS селектори - задаци
+        file: 03c_css_selektori_zadaci.rst
+        guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
+  - title: CSS-4 Распоред елемената
+    folder: 2_CSS_04_raspored_elemenata
+    guid: fe6e37f4-a9ad-473d-859e-ed469a992547
+    description: Распоред елемената
+    activities:
+      - type: reading
+        title: Распоред елемената
+        file: 04a_raspored_elemenata_citanje.rst
+        guid: 24396313-c689-4095-bd3b-d04ee23a850a
+      - type: quiz
+        title: Распоред елемената - питања
+        file: 04b_raspored_elemenata_pitanja.rst
+        guid: 2a4df725-d5c1-4e17-a451-9ce23c9bf426
+      - type: reading ### tasks?
+        title: Распоред елемената - задаци
+        file: 04c_raspored_elemenata_zadaci.rst
+        guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
+
+### Bootstrap
+  - title: B-1 Bootstrap библиотека
+    folder: 3_Bootstrap_01_biblioteka
+    guid: 9a460451-b2fb-4d94-af3d-fd3605716a1a
+    description: Bootstrap библиотека
+    activities:
+      - type: reading
+        title: Bootstrap библиотека
+        file: 01a_bootstrap_biblioteka_citanje.rst
+        guid: aeb77edc-4597-42c0-87d5-40bca03194ae
+      - type: quiz
+        title: Bootstrap библиотека - питања
+        file: 01b_bootstrap_biblioteka_pitanja.rst
+        guid: 47040b4a-683e-4c3c-8b9b-6fdde40e24b7
+  - title: B-2 Bootstrap класе
+    folder: 3_Bootstrap_02_klase
+    guid: 796051c5-3193-42f7-8505-3052b6c622a7
+    description: Bootstrap класе
+    activities:
+      - type: reading
+        title: Bootstrap класе
+        file: 02a_bootstrap_klase_citanje.rst
+        guid: da466efb-0036-41cb-9717-e3f1b105e0db
+      - type: quiz
+        title: Bootstrap класе - питања
+        file: 02b_bootstrap_klase_pitanja.rst
+        guid: b14d7ad4-81f1-45b5-873b-34b66aed6446
+      - type: reading ### zadaci
+        title: Bootstrap класе - задаци
+        file: 02c_bootstrap_klase_zadaci.rst
+        guid: efcea516-370b-422e-a342-93942bd64719
+  - title: B-3 Bootstrap подршка компонентама
+    folder: 3_Bootstrap_03_komponente
+    guid: 0089c13a-bd03-474d-9dfe-4ae8cbf48f8b
+    description: Bootstrap компоненте
+    activities:
+      - type: reading
+        title: Bootstrap подршка компонентама
+        file: 03a_bootstrap_komponente_citanje.rst
+        guid: e74d98c2-1bd9-4260-8d62-143bd9ab8aa2
+      - type: quiz
+        title: Bootstrap компоненте - питања
+        file: 03b_bootstrap_komponente_pitanja.rst
+        guid: 45e9e3d8-37fb-4f3b-8926-5e0972422dbd
+      - type: reading ### zadaci
+        title: Bootstrap компоненте - задаци
+        file: 03c_bootstrap_komponente_zadaci.rst
+        guid: 381b9c53-4816-42ec-9023-b61701b8cd66
+  - title: B-4 Bootstrap и распоређивање елемената
+    folder: 3_Bootstrap_04_raspored
+    guid: 64d45690-da38-4c43-9e3c-cdab999ec721
+    description: Распоред елемената помоћу *Twitter Bootstrap* библиотеке
+    activities:
+      - type: reading
+        title: Bootstrap и распоређивање елемената
+        file: 04a_bootstrap_raspored_citanje.rst
+        guid: 70238755-9f7f-4ea4-a55e-cad8a4b2e116
+      - type: quiz
+        title: Bootstrap и распоређивање елемената - питања
+        file: 04b_bootstrap_raspored_pitanja.rst
+        guid: aa115c67-261b-4a4a-a30e-bab25124ad66
+      - type: reading ### zadaci
+        title: Bootstrap и распоређивање елемената - задаци
+        file: 04c_bootstrap_raspored_zadaci.rst
+        guid: dbec1597-0a5a-4ecf-9ab9-b4f6f083ab86

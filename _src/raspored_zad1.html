@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        *{
+          box-sizing:border-box; 
+          font-size:1em; 
+          border-width: 0.1em;
+          padding: 2px;
+          margin-bottom: 2px;
+        }
+/*
+        div {border:solid black;}
+        nav {border:solid green;}
+        .left article {border:solid lightblue;}
+        .middle article {border:solid orange;}
+        .right article {border:solid pink;}
+        .content div.left { border:solid blue; }
+        .content div.right { border:solid red; }
+*/
+
+        .inline { float:left;}
+        .left {  width: 20%;  }
+        .content {  width: 80%;  }
+
+        .content div.left { width: 50%; }
+        .content div.right { width: 50%; }
+        
+        body { margin: auto; width: 500px; }
+    </style>
+    <title>Veb</title>
+  </head>
+  <body>
+        <!-- <div> Насловна трака </div> -->
+        <div class="left inline">
+            <heading>ЛОГО</heading>
+          <nav>
+            <p>Линк 1</p>
+            <p>Линк 2</p>
+            <p>Линк 3</p>
+            <p>Линк 4</p>
+          </nav>
+        </div>
+        <div class="content inline">
+            <nav>
+              <a>Мени 1</a>
+              <a>Мени 2</a>
+              <a>Мени 3</a>
+              <a>Мени 4</a>
+            </nav>
+            <div class="full">ГЛАВНИ НАСЛОВ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ</div>
+            <div class="left inline">
+                <article>Леви чланак 1 текст текст текст текст текст текст </article>
+                <article>Леви чланак 2 текст текст текст текст текст текст </article>
+                <article>Леви чланак 3 текст текст текст текст текст текст </article>
+            </div>
+            <div class="right inline">
+                <article>Десни чланак 1 текст текст текст </article>
+                <article>Десни чланак 2 текст текст текст </article>
+                <article>Десни чланак 3 текст текст текст </article>
+                <article>Десни чланак 4 текст текст текст </article>
+                <article>Десни чланак 5 текст текст текст </article>
+            </div>
+        </div>
+  </body>
+</html>

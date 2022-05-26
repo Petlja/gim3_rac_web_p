@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Повезивање докумената &#8212; Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Повезивање докумената - питања" href="04b_povezivanje_dokumenata_pitanja.html" />
+    <link rel="prev" title="HTML-4 Повезивање докумената" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'gim3_web_drustveni_i_opsti';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Петља - Рачунарство и информатика за трећи разред гимназије - друштвено-језички и општи смер</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="margin-left: 50%;margin-top: 5%;font-size: 20px;">
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_01_opste/index.html">WP-1 WordPress - основе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01a_cms_citanje.html">Готова решења за веб дизајн</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01b_wp_citanje.html">Основне компоненте система WordPress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_01_opste/01c_cms_wp_pitanja.html">CMS системи и WordPress - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_02_sadrzaj/index.html">WP-2 Креирање садржаја у систему WordPress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02a_wp_kreiranje_sadrzaja_citanje.html">Креирање садржаја</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02b_wp_kreiranje_sadrzaja_pitanja.html">Креирање садржаја - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_02_sadrzaj/02c_wp_kreiranje_sadrzaja_zadaci.html">Креирање садржаја - задатак</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/index.html">WP-3 Теме и додаци</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03a_teme_i_dodaci_citanje.html">Теме и додаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03b_teme_i_dodaci_pitanja.html">Теме и додаци - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_WP_03_teme_i_dodaci/03c_teme_i_dodaci_zadaci.html">Теме и додаци - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/index.html">HTML-1 HTML документи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01a_prikazivanje_html_citanje.html">Приказивање <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01b_elementi_html_citanje.html">Елементи <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01c_elementi_html_zadaci.html">Елементи <em>HTML</em> документа - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/index.html">HTML-2 Форматирање текста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02a_formatiranje_teksta_citanje.html">Форматирање текста</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02b_formatiranje_teksta_pitanja.html">Форматирање текста - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02c_formatiranje_teksta_zadaci.html">Форматирање текста - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/index.html">HTML-3 Листе и табеле</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03a_liste_citanje.html">Листе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03b_liste_pitanja.html">Листе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03c_liste_zadaci.html">Листе - задаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03d_tabele_citanje.html">Табеле</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03e_tabele_pitanja.html">Табеле - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03f_tabele_zadaci.html">Табеле - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">HTML-4 Повезивање докумената</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Повезивање докумената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04b_povezivanje_dokumenata_pitanja.html">Повезивање докумената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c_povezivanje_dokumenata_zadaci.html">Повезивање докумената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/index.html">HTML-5 Мултимедијални садржаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05a_multimedija_citanje.html">Мултимедијални садржаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05b_multimedija_pitanja.html">Мултимедијални садржаји - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05c_multimedija_zadaci.html">Мултимедијални садржаји - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/index.html">CSS-1 CSS стилови</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html">CSS стилови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html">Стилизовање документа - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/index.html">CSS-2 CSS својства</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html">CSS својства</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html">CSS својства - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html">CSS својства - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_03_CSS_selektori/index.html">CSS-3 CSS селектори</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html">CSS селектори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html">CSS селектори - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html">CSS селектори - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/index.html">CSS-4 Распоред елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html">Распоред елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html">Распоред елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html">Распоред елемената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/index.html">B-1 Bootstrap библиотека</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01a_bootstrap_biblioteka_citanje.html">Bootstrap библиотека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_01_biblioteka/01b_bootstrap_biblioteka_pitanja.html">Bootstrap библиотека - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_02_klase/index.html">B-2 Bootstrap класе</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02a_bootstrap_klase_citanje.html">Bootstrap класе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02b_bootstrap_klase_pitanja.html">Bootstrap класе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_02_klase/02c_bootstrap_klase_zadaci.html">Bootstrap класе - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_03_komponente/index.html">B-3 Bootstrap подршка компонентама</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03a_bootstrap_komponente_citanje.html">Bootstrap подршка компонентама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03b_bootstrap_komponente_pitanja.html">Уграђене Bootstrap компоненте - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_03_komponente/03c_bootstrap_komponente_zadaci.html">Уграђене Bootstrap компоненте - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Bootstrap_04_raspored/index.html">B-4 Bootstrap и распоређивање елемената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04a_bootstrap_raspored_citanje.html"><em>Bootstrap</em> и распоређивање елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04b_bootstrap_raspored_pitanja.html"><em>Bootstrap</em> и распоређивање елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_Bootstrap_04_raspored/04c_bootstrap_raspored_zadaci.html"><em>Bootstrap</em> и распоређивање елемената - задаци</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+  </div>
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-10 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Повезивање докумената<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У обичном тексту у књигама и <em>Word</em> документима прелазите са стране на страну и читате га редом (секвенцијално). На веб странама имате могућност да током читања лако прелазите на друге делове текста у зависности од интереса, вратите се назад и наставите током који вас највише занима.</p>
+<p>Једна од најбитнијих идеја језика <em>HTML</em> је да омогући тзв. <strong>хипер-текст</strong> – текст који може да се чита различитим редом, зависно од интересовања читаоца.</p>
+<p>Хипер-текст је толико битан елемент језика <em>HTML</em>, да је постао и део самог назива језика - “Hyper-Text Markup Language”. <em>HTML</em> документи вам омогућавају да поделите садржај на више фајлова, како би читалац могао да пролази кроз садржаје који га интересују на начин који му одговара. На овај начин, <em>HTML</em> документи постају много више од обичних страна које можете наћи у књигама. Као пример, погледајмо како Google приказује резултате претраге када се траже информације о српским научницима.</p>
+<a class="reference internal image-reference" href="../_images/srpski_naucnici.png"><img alt="../_images/srpski_naucnici.png" class="align-center" src="../_images/srpski_naucnici.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Након што пронађе податке о неким српским научницима, <em>Google</em> неће приказати страну на којој детаљно описује све те научнике, него само имена и слике научника које је пронашао. Поред тога, <em>Google</em> ће вам омогућити да одаберете име научника о коме желите да сазнате више, а по вашем избору ће се приказати нова страна са информацијама о научнику којег сте одабрали.</p>
+<p>Конкретније, <em>Google</em> приказује <em>HTML</em> документ који садржи везе (линкове) ка странама на којима можете да прочитате више информација о научнику за кога сте заинтересовани.</p>
+<p>Као што <em>Google</em> може да постави овакве везе када прикаже резултате претраге, и ви можете да урадите исто у својим странама. Замислимо да смо поред стране о <em>Николи Тесли</em> (NikolaTesla.html) направили и стране о <em>Михајлу Пупину</em> (MihajloPupin.html) и <em>Милутину Миланковићу</em> (MilutinMilankovic.html) и да желимо да направимо страну на којој ће читалац моћи да одабере који од ових докумената жели да прочита. Потребно је да текст на који ће читалац да кликне окружимо <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елементом. Унутар почетне ознаке елемента <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> пишемо и атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code>, чија вредност је име <em>HTML</em> документа којег треба приказати када читалац кликне на текст унутар елемента:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> омогућава читаоцу да одабере (кликне, тапне) на текст унутар <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елемента и том акцијом пређе на <em>HTML</em> документ који је наведен као вредност <code class="docutils literal notranslate"><span class="pre">href</span></code> атрибута. На овај начин можемо да направимо везе од једног <em>HTML</em> документа ка осталима.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Атрибути</strong></p>
+<p>Подсетимо се, када смо говорили о струткури <em>HTML</em> документа, поменули смо атрибут <code class="docutils literal notranslate"><span class="pre">lang</span></code> елемента <code class="docutils literal notranslate"><span class="pre">html</span></code>.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    ...
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Сада смо наишли на други пример употребе атрибута, а то је атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;NikolaTesla.html&quot;</span><span class="p">&gt;</span>
+    Никола Тесла
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>У претходним примерима, отварајући тагови који означавају почетак елемента били су најчешће између ознака <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> и садржавали су само име елемента. Као што видимо, језик <em>HTML</em> нам омогућава да сваки елемент додатно опишемо атрибутима, који се пишу у отварајућем тагу, у облику <code class="docutils literal notranslate"><span class="pre">атрибут1=&quot;вредност1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">атрибут2=&quot;вредност2&quot;</span></code> итд, или у неким случајевима само <code class="docutils literal notranslate"><span class="pre">атрибут1</span></code>, <code class="docutils literal notranslate"><span class="pre">атрибут2</span></code>, без вредности (што зависи од конкретног атрибута, а такве примере ћемо видети ускоро). У овом примеру, атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code> описује на коју <em>HTML</em> страну треба прећи када се кликне на текст.</p>
+
+    </p></div></div>
+<p><em>HTML</em> документи који се користе у претходном примеру се налазе у истом директоријуму као и документ у коме се налазе <em>HTML</em> елементи <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>. Међутим, ништа нас не спречава да фајлове распоредимо по посебним директоријумима и да их повежемо. На пример, претпоставимо да су стране о научницима у поддиректоријуму <em>naucnici</em>, стране о фудбалерима у поддиректоријуму <em>fudbaleri</em>, а стране о кошаркашима у поддиректоријуму <em>kosarkasi</em>. Ако бисмо хтели да повежемо своју страну са њима, могли бисмо да користимо линкове приказане у следећем примеру:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DragoslavSekularac.html&quot;</span><span class="p">&gt;</span>Драгослав Шекуларац<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DejanStankovic.html&quot;</span><span class="p">&gt;</span>Дејан Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DraganMance.html&quot;</span><span class="p">&gt;</span>Драган Манце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/SasaIlic.html&quot;</span><span class="p">&gt;</span>Саша Илић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/BoraStankovic.html&quot;</span><span class="p">&gt;</span>Бора Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ово су такозвани <strong>релативни линкови</strong>, који нам омогућавају да одведемо читаоца од тренутне стране ка другој страни. У претходном примерима се референцирају стране које се налазе у поддиректоријумима, али релативни линкови нам омогућавају и да пређемо у наддиректоријум коришћењем две тачке <code class="docutils literal notranslate"><span class="pre">..</span></code>, које представљају директоријум на вишем нивоу. На пример, замислимо да се читалац налази на страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> и да желимо да га одведемо на страну <code class="docutils literal notranslate"><span class="pre">kosarkasi/SasaDjordjevic.html</span></code> када одабере линк. На страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> бисмо ставили следећи релативни линк:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Поред докумената који се налазе у различитим директоријумима у оквиру тренутног сајта, можемо да направимо везе ка странама које се налазе на потпуно другим веб сајтовима (као што то ради <em>Google</em> у највећем броју случајева). У том случају би требало да ставимо пун <em>URL</em> који наводимо и у прегледачу када желимо да одемо на неку страну. Елемент са везом ка страни <em>Википедије</em> би изгледао овако:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ово су такозвани <strong>апсолутни линкови</strong>, помоћу којих се задаје пуна <em>URL</em> адреса до жељене стране. Једна од најчешћих грешака које се праве је изостављање <code class="docutils literal notranslate"><span class="pre">http://</span></code>, односно <code class="docutils literal notranslate"><span class="pre">https://</span></code> префикса у апсолутном линку, као што је приказано у следећем примеру:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Могуће је да сте навикли да пишете <em>URL</em> адресе без <code class="docutils literal notranslate"><span class="pre">http://</span></code> или <code class="docutils literal notranslate"><span class="pre">https://</span></code> префикса, пошто ће их прегледачи аутоматски додати. Међутим, то се неће десити у случају <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елемената. Ако ставите вредност <code class="docutils literal notranslate"><span class="pre">href</span></code> атрибута без овог префикса, прегледач ће сматрати да желите да отворите локални фајл <em>Борислав_Станковић</em>, који се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">sr.wikipedia.org/sr-ec</span></code>. Префикс <code class="docutils literal notranslate"><span class="pre">http://</span></code> (или <code class="docutils literal notranslate"><span class="pre">https://</span></code>) у вашој <em>HTML</em> референци говори прегледачу да треба да потражи референцирани документ на другом веб сајту, а не локално. Зато ћете у већини случајева добити грешку ако изоставите овај префикс.</p>
+<div class="section" id="id2">
+<h2>Интерни линкови<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У неким случајевима ће вам бити потребно да направите везе које не воде ка другим странама, него ка секцијама унутар исте стране. Најчешћи пример у коме би вам ово било потребно је прављење садржаја на почетку стране. На следећој слици је приказан садржај стране о Бориславу Станковићу са линковима ка различитим секцијама (<em>Биографија</em>, <em>Остало</em>, <em>Референце</em>, <em>Литература</em>, <em>Спољашње везе</em>) на истој веб страни о овом славном кошаркашу, тренеру и кошаркашком функционеру:</p>
+<a class="reference internal image-reference" href="../_images/wiki_borislav_stankovic.png"><img alt="../_images/wiki_borislav_stankovic.png" class="align-center" src="../_images/wiki_borislav_stankovic.png" style="width: 600px;" /></a>
+<p>Ако одаберете било који од ових линкова, нећете прећи на нову страну на којој можете наћи више информација. Уместо тога, прегледач ће вас само позиционирати на део тренутне стране где се налазе информације које желите да прочитате. Да бисте могли да користите интерне линкове, потребно је да урадите следеће:</p>
+<ul class="simple">
+<li><p>Уведите идентификаторе <em>HTML</em> елемената на које омогућавате прелазак (нпр. <em>биографија</em>, <em>референце</em> итд. у претходној слици) и обележите елементе тим идентификаторима.</p></li>
+<li><p>Направите линкове који референцирају те обележене елементе и од њих формирајте садржај.</p></li>
+</ul>
+<p>Елементи се могу јединствено идентификовати помоћу тзв. идентификатора, који су задати као вредности у <em>id</em> атрибуту <em>HTML</em> елемента. На пример, ако имамо више наслова у документу, сваком од њих можемо да доделимо идентификатор тако што ставимо неку вредност у атрибут <code class="docutils literal notranslate"><span class="pre">id</span></code> сваког наслова:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Идентификатори треба да буду јединствени у страни, тако да прегледач може да идентификује тачно један елемент на који треба прећи по захтеву читаоца. Када дефинишемо идентификаторе, потребно је да направимо <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елементе који упућују читаоца на њих. Ово постижемо тако што као вредност атрибута <code class="docutils literal notranslate"><span class="pre">href</span></code> ставимо <strong>идентификатор секције</strong> на коју треба прећи, са знаком # на почетку:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ако се одабере линк о биографији, прећи ће се на елемент са идентификатором <em>biografija</em>.</p>
+<p>У претходном примеру су коришћене интерне везе ка секцијама у тренутној страни. У случају да нам је потребно да усмеримо читаоца на одређену секцију у оквиру неке друге стране, можемо да комбинујемо линкове ка другим странама и идентификаторе, како бисмо водили читаоца на тачно одређену позицију у документу, уместо да га увек поставимо на почетак документа.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ако читалац одабере први линк, прегледач ће га одвести на Википедија страну o Бори Станковићу, али уместо да прикаже почетак стране - <a class="reference external" href="https://sr.wikipedia.org/sr-ec/Борислав_Станковић">https://sr.wikipedia.org/sr-ec/Борислав_Станковић</a>, позиционираће се на секцију о биографији Боре Станковића - <a class="reference external" href="https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija">https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija</a>.</p>
+<hr class="docutils" />
+<p>Када задржите показивач миша на неком линку, ваш веб прегледач ће вероватно у доњем левом углу да прикаже веб адресу до које тај линк води. На пример, ако позиционирате миша <a class="reference external" href="https://sr.wikipedia.org/sr-ec">овде</a>,  требало би да видите адресу као на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/url_linka.png"><img alt="../_images/url_linka.png" class="align-center" src="../_images/url_linka.png" style="width: 600px;" /></a>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+    <li id="relations-prev" title='Previous chapter - HTML-4 Повезивање докумената' data-toggle="tooltip"><a href="index.html"><i class="fas fa-arrow-left"></i></a></li>
+    
+        <li id="relations-next" title='Next chapter - Повезивање докумената - питања' data-toggle="tooltip"><a href="04b_povezivanje_dokumenata_pitanja.html"><i class="fas fa-arrow-right"></i></a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - HTML-4 Повезивање докумената' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Повезивање докумената - питања' data-toggle="tooltip"><a href="04b_povezivanje_dokumenata_pitanja.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

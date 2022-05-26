@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Распоред елемената &#8212; Петља - Рачунарство и информатика за трећи разред гимназије - природно-математички смер</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/flatly.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/petlja.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Распоред елемената - питања" href="04b_raspored_elemenata_pitanja.html" />
+    <link rel="prev" title="CSS-4 Распоред елемената" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'gim3_web_prirodni';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'gim3_web_prirodni';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Петља - Рачунарство и информатика за трећи разред гимназије - природно-математички смер</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="margin-left: 50%;margin-top: 5%;font-size: 20px;">
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/index.html">HTML-1 HTML документи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01a_prikazivanje_html_citanje.html">Приказивање <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01b_elementi_html_citanje.html">Елементи <em>HTML</em> документа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_01_HTML_dokumenti/01c_elementi_html_zadaci.html">Елементи <em>HTML</em> документа - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/index.html">HTML-2 Форматирање текста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02a_formatiranje_teksta_citanje.html">Форматирање текста</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02b_formatiranje_teksta_pitanja.html">Форматирање текста - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_02_formatiranje_teksta/02c_formatiranje_teksta_zadaci.html">Форматирање текста - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/index.html">HTML-3 Листе и табеле</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03a_liste_citanje.html">Листе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03b_liste_pitanja.html">Листе - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03c_liste_zadaci.html">Листе - задаци</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03d_tabele_citanje.html">Табеле</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03e_tabele_pitanja.html">Табеле - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_03_liste_i_tabele/03f_tabele_zadaci.html">Табеле - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/index.html">HTML-4 Повезивање докумената</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04a_povezivanje_dokumenata_citanje.html">Повезивање докумената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04b_povezivanje_dokumenata_pitanja.html">Повезивање докумената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_04_povezivanje_dokumenata/04c_povezivanje_dokumenata_zadaci.html">Повезивање докумената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/index.html">HTML-5 Мултимедијални садржаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05a_multimedija_citanje.html">Мултимедијални садржаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05b_multimedija_pitanja.html">Мултимедијални садржаји - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_HTML_05_multimedijalni_sadrzaji/05c_multimedija_zadaci.html">Мултимедијални садржаји - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/index.html">CSS-1 CSS стилови</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html">CSS стилови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html">Стилизовање документа - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/index.html">CSS-2 CSS својства</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html">CSS својства</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html">CSS својства - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html">CSS својства - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2_CSS_03_CSS_selektori/index.html">CSS-3 CSS селектори</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html">CSS селектори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html">CSS селектори - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html">CSS селектори - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CSS-4 Распоред елемената</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Распоред елемената</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04b_raspored_elemenata_pitanja.html">Распоред елемената - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c_raspored_elemenata_zadaci.html">Распоред елемената - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_01_izvrsavanje/index.html">JS_1 Јава скрипт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01a_js_uvod_citanje.html">Увод у <em>JavaScript</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01b_js_izvrsavanje_citanje.html">Извршавање <em>JavaScript</em> кода</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_01_izvrsavanje/01c_js_izvrsavanje_pitanja.html">Извршавање <em>JavaScript</em> кода - питања</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/index.html">JS_2 Променљиве и изрази</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02a_js_promenljive_citanje.html">Променљиве</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02b_js_brojevi_citanje.html">Нумеричке вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02c_js_tekstualne_vrednosti_citanje.html">Текстуалне вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02d_js_logicke_vrednosti_citanje.html">Логичке вредности и изрази</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02e_js_osnovni_tipovi_pitanja.html">Основни типови - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_02_promenljive_i_izrazi/02f_js_osnovni_tipovi_zadaci.html">Основни типови - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/index.html">JS_3 Сложени типови података</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html">Објекти</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html">Низови</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html">Сложени типови података - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html">Сложени типови података - вежбе</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/index.html">JS_4 Функције, методе, догађаји</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/04a_js_funkcije_citanje.html">Функције</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/04b_js_metodi_citanje.html">Методи - функције у објектима</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/04c_js_dogadjaji_citanje.html">Догађаји</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/04d_js_fmd_pitanja.html">Функције, методе, догађаји -  питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_04_funkcije_metode_dogadjaji/04e_js_fmd_zadaci.html">Функције, методе, догађаји -  задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_05_veb_interfejs/index.html">JS_5 Веб интерфејс</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05a_js_dugmad_citanje.html">Дугмад</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05b_js_polja_za_unos_citanje.html">Поља за унос података</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05c_js_liste_za_odabir_citanje.html">Листе за одабир вредности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05e_js_veb_interfejs_pitanja.html">Веб интерфејс - питања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_05_veb_interfejs/05f_js_veb_interfejs_zadaci.html">Веб интерфејс - задаци</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../4_JS_06_kontrola_toka/index.html">JS_6 Контрола тока програма</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06a_js_grananja_citanje.html">Гранања</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06b_js_grananja_veb_citanje.html">Употреба гранања у веб странама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06c_js_petlje_citanje.html">Петље у Јава-скрипту</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06d_js_petlje_veb_citanje.html">Употреба петљи у веб странама</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_JS_06_kontrola_toka/06f_js_grananja_i_petlje_zadaci.html">Гранања и петље - задаци</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+  </div>
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-10 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Распоред елемената<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Стилизовање елемената стране и дефинисање њиховог изгледа је само један део веб дизајна. Други битан задатак је распоређивање елемената на страни.</p>
+<p>На следећој слици је пример једне стране Википедије, која је подељена на области у које се постављају елементи.</p>
+<a class="reference internal image-reference" href="../_images/wiki_elementi.png"><img alt="../_images/wiki_elementi.png" class="align-center" src="../_images/wiki_elementi.png" style="width: 624px;" /></a>
+<p>Са леве стране у врху се налази заглавље (енгл. <em>header</em>), у коме се налази лого и наслов сајта, испод кога се налази навигација са најбитнијим линковима.</p>
+<p>Са десне стране се на врху налази трака са линковима који ће се приказивати на свим странама, испод која се налази блок елемената са табовима и текстом за претрагу сајта.</p>
+<p>У садржају стране се налази блок са кратким описом сајта, испод кога се налазе два блока са препорученим чланцима и недавним догађајима.</p>
+<p>За овакву поделу стране на делове се користи посебан <em>HTML</em> елемент који се назива <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент (скраћено од енгл. <em>division</em>, што значи подела или одељак). Свака област је представљена једним <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елементом, који уобичајено садржи неку класу која дефинише како га треба приказати. Постоје и специјални елементи који су веома слични елементу <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>, а служе да означе да је то област у којој се налазе наслов сајта (елемент <code class="docutils literal notranslate"><span class="pre">&lt;header&gt;</span></code>), подножје сајта (елемент <code class="docutils literal notranslate"><span class="pre">&lt;footer&gt;</span></code>), област навигације (елемент <code class="docutils literal notranslate"><span class="pre">&lt;nav&gt;</span></code>).</p>
+<p>У следећем примеру је приказана веома упрошћена структура <em>HTML</em> документа који је подељен на секције приказане на претходној слици:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left inline&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">heading</span><span class="p">&gt;</span>Википедија – слободна енциклопедија<span class="p">&lt;/</span><span class="nt">heading</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>Линкови за навигацију<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content inline&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>Линкови за навигацију на врху<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>Картице и претрага сајта<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;full&quot;</span><span class="p">&gt;</span>Добродошли<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left inline&quot;</span><span class="p">&gt;</span>Случајни чланци<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;right inline&quot;</span><span class="p">&gt;</span>Недавни догађаји<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Сада је потребно дефинисати позиције и ширине елемената помоћу класа које су им додељене. Један упрошћени пример CSS стилова који се могу применити на оваквом HTML документу је приказан у следећем листингу:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">inline</span> <span class="p">{</span> <span class="k">float</span><span class="p">:</span><span class="kc">left</span><span class="p">;}</span>
+<span class="p">.</span><span class="nc">left</span> <span class="p">{</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>  <span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span> <span class="p">{</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">75</span><span class="kt">%</span><span class="p">;</span>  <span class="p">}</span>
+
+<span class="p">.</span><span class="nc">content</span> <span class="nt">div</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>  <span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span> <span class="nt">div</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>  <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Када на сајту <a class="reference external" href="https://jsbin.com?html,css,output">https://jsbin.com?html,css,output</a> унесемо овај <em>HTML</em> и <em>CSS</em> садржај, добиjaмо следећи резултат:</p>
+<a class="reference internal image-reference" href="../_images/jsbin_wikistrana_struktura.png"><img alt="../_images/jsbin_wikistrana_struktura.png" class="align-center" src="../_images/jsbin_wikistrana_struktura.png" style="width: 750px;" /></a>
+<p>Помоћу својстава <code class="docutils literal notranslate"><span class="pre">float:left</span></code> и <code class="docutils literal notranslate"><span class="pre">width</span></code> смо распоредили <em>HTML</em> елементе као што би било очекивано на основу примера сајта <em>Википедија</em> и тиме смо добили изглед са слике. Сада је потребно само да применимо претходна знања и попунимо садржај елемената, како бисмо добили праву веб страну.</p>
+<p>У наредним секцијама ћемо научити више о својствима <code class="docutils literal notranslate"><span class="pre">float:left</span></code> и <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+<div class="section" id="id2">
+<h2>Леви ток<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У једној од претходних лекција о димензијама елемената смо се упознали са <em>block</em> и <em>inline</em> елементима. Подразумевано понашање <em>block</em> елемената као што је и елемент <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> је да заузме пуну ширину која му је на располагању, тако да остали елементи не могу да се нађу у истој линији (на истој висини у надређеном елементу). Овакво подразумевано понашање је карактеристика блок елемената као што су <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code> или <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>.</p>
+<p>У неким случајевима (као што је приказано у претходном примеру) желимо да се блокови не поставе у нову линију него да се први постави уз крајњу леву ивицу, следећи уз њега својом левом ивицом и тако даље док год има места у тренутној линији.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;kolona&quot;</span><span class="p">&gt;</span>
+    Први блок који ће се поставити на крајњој левој ивици.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;kolona&quot;</span><span class="p">&gt;</span>
+    Други блок који ће поставити своју леву ивицу на претходни блок.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;kolona&quot;</span><span class="p">&gt;</span>
+    Трећи блок који ће поставити своју леву ивицу на претходни блок.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;kolona&quot;</span><span class="p">&gt;</span>
+    Четврти блок који би требало да постави своју леву ивицу на претходни блок.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;kolona&quot;</span><span class="p">&gt;</span>
+    Пети блок који ће поставити своју леву ивицу на претходни блок.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ми можемо да променимо понашање елемената &lt;div&gt; и дамо им инструкције да се „залепе” уз неки елемент на левој страни ако има места. То се ради помоћу својства <code class="docutils literal notranslate"><span class="pre">float:left</span></code>. Блок за који је дефинисано ово својство и који има неку ограничену ширину, поставиће се уз десну ивицу претходног елемента ако има довољно места у надређеном елементу - блоку.</p>
+<p>Дефинишимо својства <code class="docutils literal notranslate"><span class="pre">float:left</span></code> и ширину блоковима из претходног примера:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">kolona</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ширину ових елемената је потребно експлицитно дефинисати да бисмо их спречили да заузму сав могући простор у линији. У противном својство <code class="docutils literal notranslate"><span class="pre">float:left</span></code> нема ефекта, пошто наредни елемент нема места да се постави уз претходни. Као резултат ових стилова добијамо распоред који је приказан на десној страни слике:</p>
+<a class="reference internal image-reference" href="../_images/jsbin_primer_raspored.png"><img alt="../_images/jsbin_primer_raspored.png" class="align-center" src="../_images/jsbin_primer_raspored.png" style="width: 700px;" /></a>
+<p>У горњем примеру, први блок (<code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент) ће се „залепити” на леву ивицу и заузеће 30% ширине, други <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент ће своју леву ивицу залепити за њега пошто може да заузме 30% ширине у истом реду, а и трећи <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент ће залепити своју леву ивицу на други <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент пошто и он може да стане у преосталих 40% ширине. Четврти елемент <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> покушава да се залепи уз претходни елемент, али пошто нема довољно простора, мора да пређе у следећи ред. Пети блок може да се залепи уз четврти и има довољно ширине тако да ће се наћи поред четвртог.</p>
+<p>Битна ствар коју треба приметити је да некад збир ширина није 100%. Ако се сетите оквира елемената, постоји неколико својстава као што су <code class="docutils literal notranslate"><span class="pre">margin</span></code>, <code class="docutils literal notranslate"><span class="pre">border</span></code> и <code class="docutils literal notranslate"><span class="pre">padding</span></code>, која доприносе димензијама објекта.</p>
+<p>Други чест пример коришћења својства <code class="docutils literal notranslate"><span class="pre">float:left</span></code> су елементи хоризонталног менија, као што је мени приказан на слици:</p>
+<a class="reference internal image-reference" href="../_images/h_meni.png"><img alt="../_images/h_meni.png" class="align-center" src="../_images/h_meni.png" style="width: 624px;" /></a>
+<p>Овакви елементи са хоризонталним менијем се често представљају структуром у облику листе елемената, као што је приказано у следећем примеру:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#home&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#news&quot;</span><span class="p">&gt;</span>News<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#contact&quot;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#about&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Подразумевани начин приказивања овакве листе у прегледачима је постављање ставки листе (елемената <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>) једне испод друге. У случају да желимо да направимо хоризонтални мени, овакав начин приказивања нам не одговара, па треба да спречимо <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code> блок елемент да заузме пуну ширину која му је на располагању и тиме „истера” следећи блок у нову линију. <em>CSS</em> стилови који омогућавају да се оваква структура прикаже као хоризонтални мени су приказани у следећем примеру:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span> <span class="p">{</span>
+  <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="k">padding-right</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Прво је потребно поставити стил <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code> листе тако да се не приказују никакве ознаке (нпр. тачке или цртице) испред ставки листе. Својство <code class="docutils literal notranslate"><span class="pre">float:left</span></code> дефинише да ће се сваки елемент <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code> „лепити” за претходни својом левом ивицом, чиме се добија хоризонтални мени. Коначно, <code class="docutils literal notranslate"><span class="pre">padding-right:</span> <span class="pre">10px;</span></code> ће мало раздвојити <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code> елементе, како би постојао неки размак са десне стране сваког елемента.</p>
+</div>
+<div class="section" id="id3">
+<h2>Десни ток<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Поред левог тока постоји и десни, који говори прегледачу да треба да постави елемент на крајњу десну страну ако је то могуће и залепи његову десну ивицу за претходни елемент.</p>
+<p>Десни ток се користи када је потребно поставити неки елемент (на пример слику) уз десну ивицу, тако да остатак текста заузме простор од почетка до тог елемента и настави да се шири испод елемента.</p>
+<a class="reference internal image-reference" href="../_images/primer_desnog_toka.png"><img alt="../_images/primer_desnog_toka.png" class="align-center" src="../_images/primer_desnog_toka.png" style="width: 624px;" /></a>
+<p>Ево и <em>HTML</em> кôда којим се може дефинисати оваква структура:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;Nikola_Tesla_c1898.jpg &quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Никола Тесла&quot;</span><span class="p">&gt;</span>
+
+    Никола Тесла (Смиљан, 10. јул 1856 — Њујорк, 7. јануар 1943)
+    био је српски и амерички проналазач, инжењер електротехнике
+    и машинства и футуриста, најпознатији по свом доприносу у
+    пројектовању модерног система напајања наизменичном струјом.
+
+    Најзначајнији Теслини проналасци су полифазни систем, обртно
+    магнетско поље, асинхрони мотор, синхрони мотор и Теслин
+    трансформатор. Такође, открио је један од начина за генерисање
+    високофреквентне струје, дао је значајан допринос у преносу и
+    модулацији радио-сигнала, а остали су запажени и његови радови
+    у области рендгенских зрака.
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Под претпоставком да је за слике постављен стил <code class="docutils literal notranslate"><span class="pre">img</span> <span class="pre">{</span>&#160; <span class="pre">float:</span> <span class="pre">right;</span> <span class="pre">}</span></code>, слика ће бити постављена уз десну ивицу <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемента у коме се налази. Потом ће текст о Николи Тесли бити постављен у <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент, почевши од почетка (горње леве ивице) па до ивице коју је заузела слика. Ако је тексту за приказивање потребна висина већа од висине слике, након достизања висине слике текст ће простирати и испод слике.</p>
+</div>
+<div class="section" id="id4">
+<h2>Аутоматске маргине<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>У претходним примерима смо користили распореде који заузимају пуну ширину и распоређују <em>HTML</em> елементе унутар пуне ширине прозора прегледача. Такав распоред је флексибилан и он се користи на многим веб сајтовима, али мана му је то што распоред може да се поремети при промени ширине прозора. Некада се могу добити неочекивани распореди елемената у случају да се смањи ширина прозора прегледача, на пример променом оријентације екрана (или повлачењем ивица прозора прегледача).</p>
+<p>Један начин да се ово избегне је да се дизајн стране организује тако да сав садржај стане у блок фиксне ширине. У том случају, ако је ширина блока мања од ширине прозора прегледача, ивице блока се равномерно одмакну од ивица прозора прегледача, као што је приказано на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/automatske_margine.png"><img alt="../_images/automatske_margine.png" class="align-center" src="../_images/automatske_margine.png" style="width: 624px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ово је мало промењен садржај стране Википедије о Николи Тесли, који је постављен у блок ширине 800px. Блок ће се позиционирати тако да је једнако одмакнут од ивица прозора прегледача ако је ширина прозора већа од 800px, док ће се у случају да је ширина прозора мања од 800px појавиће се хоризонтални клизач (хоризонтална скрол трака).</p>
+<p>Овакав изглед постижемо тако што комплетну структуру ставимо у посебан <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елемент, који ће окружити све елементе и који ће целу групу одмакнути од спољних ивица стране постављањем својства <code class="docutils literal notranslate"><span class="pre">margin:auto</span></code> и постављањем жељене ширине елемента који окружује сав садржај. Као алтернатива, уместо елемента који окружује садржај се користи елемент <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, који ионако мора да окружи садржај стране. CSS стилови који омогућавају овакав распоред су приказани у следећем примеру:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>body {
+    margin: auto;
+    width: 800px;
+}
+</pre></div>
+</div>
+<p>Претпоставимо да смо овакво својство додали у примеру у коме смо демонстрирали како <code class="docutils literal notranslate"><span class="pre">float:left</span></code> својство утиче на распоред елемената. Ако поставимо аутоматске маргине и неку погодну ширину за елемент <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, добиће се распоред као на следећој слици:</p>
+<a class="reference internal image-reference" href="../_images/jsbin_automatske_margine.png"><img alt="../_images/jsbin_automatske_margine.png" class="align-center" src="../_images/jsbin_automatske_margine.png" style="width: 600px;" /></a>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> смо означиили испрекиданом линијом да бисмо истакли да је распоређен у простор фиксне ширине и одмакнут од спољних ивица прозора. Остали блокови (<code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> елементи) имају дефинисане ширине и заузеће задати простор у оквиру омотача, као што је објашњено у секцији о левом току.</p>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+    <li id="relations-prev" title='Previous chapter - CSS-4 Распоред елемената' data-toggle="tooltip"><a href="index.html"><i class="fas fa-arrow-left"></i></a></li>
+    
+        <li id="relations-next" title='Next chapter - Распоред елемената - питања' data-toggle="tooltip"><a href="04b_raspored_elemenata_pitanja.html"><i class="fas fa-arrow-right"></i></a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - CSS-4 Распоред елемената' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Распоред елемената - питања' data-toggle="tooltip"><a href="04b_raspored_elemenata_pitanja.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

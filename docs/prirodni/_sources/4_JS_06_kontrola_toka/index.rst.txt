@@ -1,0 +1,12 @@
+===========================
+JS_6 Контрола тока програма
+===========================
+
+.. toctree:: 
+    :maxdepth: 1
+
+    06a_js_grananja_citanje.rst
+    06b_js_grananja_veb_citanje.rst
+    06c_js_petlje_citanje.rst
+    06d_js_petlje_veb_citanje.rst
+    06f_js_grananja_i_petlje_zadaci.rst

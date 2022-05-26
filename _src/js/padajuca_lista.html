@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Избор из листе</title>
+        <script>
+
+            function izabranOkvir() {
+                let vrstaOkvira = document.querySelector(`#оквир`).value;
+                let omot = document.querySelector(`#омот`);
+                omot.style.border = vrstaOkvira;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h2>Пример употребе елемента &lt;select&gt;</h2>
+       
+        <div id="омот">
+          <p>
+            Избором елемента из листе покреће се функција izabranOkvir(),
+            која подешава тип оквира око текста испод налсова.
+          </p>
+          <label for="оквир">Одаберите тип оквира:</label>
+          <select id="оквир" name="border" onchange="izabranOkvir()">
+              <option value="none">Без оквира</option>
+              <option value="solid">Пун оквир</option>
+              <option value="dashed">Оквир са цртицама</option>
+              <option value="dotted">Тачкаст оквир</option>
+              <option value="double">Двоструки оквир</option>
+          </select>
+        </div>
+     </body>
+</html>

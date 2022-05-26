@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap modal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function zatvori() {
+            alert("Pozvana funkcija zatvori");
+            $('#MojModalniDijalog').modal('hide')
+        }
+    </script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <h2>Пример Bootstrap модалног дијалога</h2>
+
+    <!-- дугме за покретање модалног дијалога -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ПримерМодалногДијалога">
+      Покрени модални дијалог
+    </button>
+
+    <!-- модални дијалог -->
+    <div class="modal fade" id="ПримерМодалногДијалога" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Наслов модалног дијалога</h5>
+            <!-- Dugme "X" u gornjem desnom uglu dijaloga -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Тело модалног дијалога (овде се стављају елементи за унос података).</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Затвори</button>
+            <button type="button" class="btn btn-primary">Сачувај промене</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</body>
+</html>

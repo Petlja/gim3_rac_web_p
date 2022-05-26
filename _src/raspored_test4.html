@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        *{
+          box-sizing:border-box; 
+          padding: 2px;
+          margin-bottom: 2px;
+          overflow:auto;
+        }
+        div {border:solid black 3px; }
+        
+        /* tacan odgovor */
+        
+        .w60 {  width: 60%;  }
+        .w50 {  width: 50%;  }
+        .w40 {  width: 40%;  }
+        .w30 {  width: 30%;  }
+        .w20 {  width: 20%;  }
+        .nevidljiv  { border:solid white 3px; }
+        .zelen      { border:solid green 3px; }
+        .plav      { border:solid blue 3px; }
+        .narandzast { border:solid orange 3px; }
+        .inline { float:left;}
+        /*.cistac { clear:boath; border:solid white 3px;}*/
+        body { margin: 0px auto; width: 380px; }
+    </style>
+
+    <title>Veb</title>
+  </head>
+  <body>
+        <div>
+          <div class="w40 inline narandzast">
+            ЛОГО - наслов
+          </div>
+          <nav class="w60 inline zelen">
+            <a>Мени 1</a>
+            <a>Мени 2</a>
+            <a>Мени 3</a>
+          </nav>
+          <!-- <div class="cistac"></div> -->
+        </div>
+        <div>
+          скрол трака скрол трака скрол трака скрол трака
+        </div>
+        
+        <div class="inline"> 
+          <nav class="w20 inline zelen">
+            <div class="nevidljiv">Линк 1</div>
+            <div class="nevidljiv">Линк 2</div>
+            <div class="nevidljiv">Линк 3</div>
+            <div class="nevidljiv">Линк 4</div>
+          </nav>
+          <div class="w60 inline plav">
+            <div class="narandzast">Слоган - слоган!</div>
+            <div class="w50 inline">
+              <article>Леви чланак 1 текст текст текст текст текст текст текст текст </article>
+              <article>Леви чланак 2 текст текст текст текст текст текст текст текст </article>
+            </div>
+            <div class="w50 inline">
+              <article>Десни чланак 1 текст текст текст </article>
+              <article>Десни чланак 2 текст текст текст </article>
+              <article>Десни чланак 3 текст текст текст </article>
+            </div>
+          </div>
+          <div class="w20 inline">
+                <article>Вест 1 текст текст текст </article>
+                <article>Вест 2 текст текст текст </article>
+          </div>
+        </div>
+  </body>
+</html>
