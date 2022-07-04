@@ -192,6 +192,10 @@ lessons:
         file: 01a_css_stilovi_citanje.rst
         guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f75
       - type: reading
+        title: Дефинисање CSS стилова
+        file: 01b_css_stilovi_definisanje.rst
+        guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f76 # TODO: guid
+      - type: reading
         title: CSS стилови - вежбе
         file: 01c_css_stilovi_vezbe.rst
         guid: 9493a4e0-0154-4c00-a46b-e8e439852552
@@ -204,13 +208,25 @@ lessons:
         title: CSS својства
         file: 02a_css_svojstva_citanje.rst
         guid: d85c82d0-b4a0-41af-94a4-218ef71dfc43
+      - type: reading
+        title: CSS својства текста
+        file: 02b_css_svojstva_teksta_citanje.rst
+        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc44 # TODO: guid
+      - type: reading
+        title: CSS својства која дефинишу границе елемента
+        file: 02c_css_svojstva_granice_elementa_citanje.rst
+        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc45 # TODO: guid
+      - type: reading
+        title: CSS димензије елемената
+        file: 02d_css_svojstva_dimenzije_elementa_citanje.rst
+        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc46 # TODO: guid
       - type: quiz
         title: CSS својства - питања
-        file: 02b_css_svojstva_pitanja.rst
+        file: 02e_css_svojstva_pitanja.rst
         guid: 9c838d88-5572-4bb6-9233-71a7d811871c
       - type: reading ### tasks?
         title: CSS својства - задаци
-        file: 02c_css_svojstva_zadaci.rst
+        file: 02f_css_svojstva_zadaci.rst
         guid: 02f77f91-4eeb-4ab8-bda0-2c4574abcb77
   - title: CSS-3 CSS селектори
     folder: 2_CSS_03_CSS_selektori
@@ -221,13 +237,25 @@ lessons:
         title: CSS селектори
         file: 03a_css_selektori_citanje.rst
         guid: 5a22069a-7205-471f-b438-cf46910c0da4
+      - type: reading
+        title: Стилизовање идентификатора
+        file: 03b_css_selektori_identifikator_citanje.rst
+        guid: 5a22069a-7205-471f-b438-cf46910c0da5 # TODO: guid
+      - type: reading
+        title: Стилизовање класа елемената
+        file: 03c_css_selektori_klase_citanje.rst
+        guid: 5a22069a-7205-471f-b438-cf46910c0da6 # TODO: guid
+      - type: reading
+        title: Сложени CSS селектори
+        file: 03d_css_selektori_slozeni_citanje.rst
+        guid: 5a22069a-7205-471f-b438-cf46910c0da7 # TODO: guid
       - type: quiz
         title: CSS селектори - питања
-        file: 03b_css_selektori_pitanja.rst
+        file: 03e_css_selektori_pitanja.rst
         guid: 8f6017b8-d952-4b54-b267-ac898124867a
       - type: reading ### tasks?
         title: CSS селектори - задаци
-        file: 03c_css_selektori_zadaci.rst
+        file: 03f_css_selektori_zadaci.rst
         guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
   - title: CSS-4 Распоред елемената
     folder: 2_CSS_04_raspored_elemenata
