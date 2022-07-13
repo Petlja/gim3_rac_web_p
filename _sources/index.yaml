@@ -221,7 +221,10 @@ lessons:
         title: Распоред елемената - задаци
         file: 04c_raspored_elemenata_zadaci.rst
         guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
-
+      - type: reading
+        title: Flexbox
+        file: 04d_raspored_elemenata_flexbox_citanje.rst
+        guid: 723b6866-6ec7-4c37-b937-0ef184d8dcf2
 ### JavaScript
   - title: JS_1 Јава скрипт
     folder: 4_JS_01_izvrsavanje

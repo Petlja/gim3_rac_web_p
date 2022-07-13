@@ -19,29 +19,28 @@
 
 У следећем примеру је приказана веома упрошћена структура *HTML* документа који је подељен на секције приказане на претходној слици:
 
-.. activecode:: css_wiki_float
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_wiki_float
 
-    <style>
-        .inline {
-            float:left;
-        }
-        .left {
-            width: 30%;
-        }
-        .content {
-            width: 70%;
-        }
+    style.css
+    .inline {
+        float:left;
+    }
+    .left {
+        width: 30%;
+    }
+    .content {
+        width: 70%;
+    }
 
-        .content div.left {
-            width: 50%;
-        }
-        .content div.right {
-            width: 50%;
-        }
-    </style>
-
+    .content div.left {
+        width: 50%;
+    }
+    .content div.right {
+        width: 50%;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div class="left inline">
         <header>Википедија – слободна енциклопедија</heading>
         <nav>Линкови за навигацију</nav>
@@ -65,18 +64,17 @@
 
 У неким случајевима желимо да се блокови не поставе у нову линију него да се први постави уз крајњу леву ивицу, следећи уз њега својом левом ивицом и тако даље док год има места у тренутној линији. То се ради помоћу својства ``float:left``.
 
-.. activecode:: css_float_left_1
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_float_left_1
 
-    <style>
-        .kolona {
-            float: left;
-            width: 30%;
-            border: 1px solid black;
-        }
-    </style>
-
+    style.css
+    .kolona {
+        float: left;
+        width: 30%;
+        border: 1px solid black;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div class="kolona">
         Први блок који ће се поставити на крајњој левој ивици.
     </div>
@@ -148,19 +146,18 @@
 
 Десни ток се користи када је потребно поставити неки елемент (на пример слику) уз десну ивицу, тако да остатак текста заузме простор од почетка до тог елемента и настави да се шири испод елемента.
 
-.. activecode:: css_float_right
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_float_right
 
-    <style>
-        slika {
-            float: right;
-            background-color: skyblue;
-            width: 100px;
-            height: 150px;
-        }
-    </style>
-
+    style.css
+    .slika {
+        float: right;
+        background-color: skyblue;
+        width: 100px;
+        height: 150px;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div>
         <div class="slika"></div>
 
@@ -196,25 +193,24 @@
 Овакав изглед постижемо тако што комплетну структуру ставимо у посебан ``<div>`` елемент, који ће окружити све елементе и који ће целу групу одмакнути од спољних ивица стране постављањем својства ``margin:auto`` и постављањем жељене ширине елемента који окружује сав садржај. CSS стилови који омогућавају овакав распоред су приказани у следећем примеру:
 
 
-.. activecode:: css_margin_auto
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_margin_auto
 
-    <style>
-        .kolona {
-            float: left;
-            width: 30%;
-            border: 1px solid black;
-        }
+    style.css
+    .kolona {
+        float: left;
+        width: 30%;
+        border: 1px solid black;
+    }
 
-        .centriran {
-            margin: auto;
-            width: 250px;
-            border: 2px dashed skyblue;
-            overflow: hidden;
-        }
-    </style>
-
+    .centriran {
+        margin: auto;
+        width: 250px;
+        border: 2px dashed skyblue;
+        overflow: hidden;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div class="centriran">
         <div class="kolona">
             Први блок који ће се поставити на крајњој левој ивици.

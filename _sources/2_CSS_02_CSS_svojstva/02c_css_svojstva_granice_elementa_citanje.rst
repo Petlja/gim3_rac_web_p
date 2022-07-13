@@ -18,59 +18,59 @@
 
 У следећем примеру је приказано као се подешава оквир око елемента:
 
-.. activecode:: css_borders_1
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_borders_1
 
-    <style>
-        p {
-            border-size: 5px;
-            border-style: solid;
-            border-color: green;
+    style.css
+    p {
+        border-size: 5px;
+        border-style: solid;
+        border-color: green;
 
-            padding: 50px;
-            margin: 20px;
-        }
-    </style>
+        padding: 50px;
+        margin: 20px;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>Параграф текста</p>
 
 У овом примеру су дефинисане величина и боја ивице елемената помоћу *CSS* својстава ``border-size``, ``border-color``.  Својство ``border-style`` је слично стиловима линија на које сте наилазили у процесорима текста и описује да ли ивицу треба исцртати као пуну (``solid``), испрекидану (``dashed``), тачкасту (``dotted``) и слично. Пронађите остале врсте линија и испробајте их на *W3CSchools* сајту.
 
 У неким случајевима ћете наићи на компактнији облик дефиниције *CSS* стила, у коме се својству ``border`` додељују све вредности:
 
-.. activecode:: css_borders_2
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_borders_2
 
-    <style>
-        p {
-            border: 5px solid green;
-        }
-    </style>
+    style.css
+    p {
+        border: 5px solid green;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>Параграф текста</p>
 
 *CSS* стил из претходног примера се примењује на све ивице оквира (горњу, доњу и бочне). Међутим, *CSS* језик дозвољава и финију контролу и омогућава да поставимо посебне вредности за сваку ивицу оквира:
 
-.. activecode:: css_borders_3
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_borders_3
 
-    <style>
-        p {
-            margin-top: 100px;
-            margin-bottom: 100px;
-            margin-right: 150px;
-            margin-left: 80px;
+    style.css
+    p {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 50px;
+        margin-left: 80px;
 
-            border-top-style: dotted;
-            border-right-style: solid;
-            border-bottom-style: dotted;
-            border-left-style: solid;
+        border-top-style: dotted;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
 
-            padding-top: 50px;
-            padding-right: 30px;
-            padding-bottom: 50px;
-            padding-left: 80px;
-        }
-    </style>
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>Пaраграф текста</p>
