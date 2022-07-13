@@ -20,18 +20,18 @@
 
 Дефиниција изгледа слова која ће се применити на сваки параграф веб стране може се написати овако:
 
-.. activecode:: css_text
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_text
 
-    <style>
+    style.css
     p {
       font-size: 12px;
       background-color: yellow;
       color: red;
       font-family: "Times New Roman";
     }
-    </style>
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>Први параграф</p>
     <p>Други параграф</p>
 
@@ -48,24 +48,24 @@
 
 *Генеричко име фамилије* описује опште карактеристике слова као што су писана слова (``Cursive``), слова са украсима-стопицама на ивицама (``Serif``), без украса (``Sans-Serif``), слова исте ширине (``Monospaced``), и слично.
 
-.. activecode:: css_font_family_generic
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_font_family_generic
 
-    <style>
-        p.cursive {
-            font-family: cursive;
-        }
-        p.serif {
-            font-family: serif;
-        }
-        p.sans-serif {
-            font-family: sans-serif;
-        }
-        p.monospaced {
-            font-family: monospaced;
-        }
-    </style>
+    style.css
+    p.cursive {
+        font-family: cursive;
+    }
+    p.serif {
+        font-family: serif;
+    }
+    p.sans-serif {
+        font-family: sans-serif;
+    }
+    p.monospaced {
+        font-family: monospaced;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p class="cursive">Familija cursive.</p>
     <p class="serif">Фамилија serif.</p>
     <p class="sans-serif">Фамилија sans-serif.</p>
@@ -75,21 +75,22 @@
 
 Као вредност *CSS* атрибута ``font-family`` се у пракси наводи листа више фонтова или њихових фамилија, а биће примењена прва препозната фамилија у редоследу навођења. Нека је на пример, наведено:
 
-.. activecode:: css_font_family
-    :language: html
-    :nocodelens:
 
-    <style>
-        p.prvi {
-            font-family: "Times New Roman", Times, serif;
-        }
-        p.drugi {
-            font-family: "Arial", "Times New Roman", Times, serif;
-        }
-        p.treci {
-            font-family: "Lato", "monospaced";
-        }
-    </style>
+.. petlja-editor:: css_font_family
+
+    style.css
+    p.prvi {
+        font-family: "Times New Roman", Times, serif;
+    }
+    p.drugi {
+        font-family: "Arial", "Times New Roman", Times, serif;
+    }
+    p.treci {
+        font-family: "Lato", "monospaced";
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p class="prvi">Овај текст је Times New Roman.</p>
     <p class="drugi">Овај текст је Arial.</p>
     <p class="treci">Овај текст је Lato, уколико је инсталиран на вашем систему. У супротном је Monospaced.</p>

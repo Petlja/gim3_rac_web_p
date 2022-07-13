@@ -7,24 +7,23 @@
 #. спојени селектор ``p.pozadina`` ће доделити плаву позадинску боју параграфу који садржи класу ``pozadina``,
 #. селектор раздвојен размаком ``p .pozadina`` ће доделити зелену позадинску боју било ком елементу који садржи класу ``pozadina`` унутар параграфа (на произвољној дубини).
 
-.. activecode:: css_mixed_selectors
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_mixed_selectors
 
-    <style>
-        .pozadina {
-            background-color: beige;
-        }
+    style.css
+    .pozadina {
+        background-color: beige;
+    }
 
-        p.pozadina {
-            background-color: skyblue;
-        }
+    p.pozadina {
+        background-color: skyblue;
+    }
 
-        p .pozadina {
-            background-color: lime;
-        }
-    </style>
-
+    p .pozadina {
+        background-color: lime;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div class="pozadina">
         Беж позадина јер није параграф.
     </div>

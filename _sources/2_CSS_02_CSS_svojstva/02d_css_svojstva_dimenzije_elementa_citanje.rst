@@ -18,25 +18,24 @@
 - ``block`` елементе као што су ``<p>``, ``<table>``, ``<ul>``, ``<ol>``, или ``<div>``, који заузимају сву ширину која им је на располагању. Подразумевано понашање ових елемената је да се увек позиционирају у новом реду, ширина им је највећа могућа у надређеном елементу, а висина им зависи од количине садржаја.
 - ``inline`` елементе који заузимају најмању могућу ширину која им је потребна. Подразумевано понашање им је да се поставе у исти ред као и остали ``inline`` елементи, а ширина им зависи од садржаја. Примери оваквих елемената су ``<a>``, ``<img>`` и ``<span>``.
 
-.. activecode:: css_dimensions_1
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_dimensions_1
 
-    <style>
-        div {
-            background-color: grey;
-        }
+    style.css
+    div {
+        background-color: grey;
+    }
 
-        p {
-            background-color: green;
-        }
+    p {
+        background-color: green;
+    }
 
-        a {
-            background-color: black;
-            color: white;
-        }
-    </style>
-
+    a {
+        background-color: black;
+        color: white;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <div>
         <p>Параграф је <code>block</code> елемент који заузима целу ширину садржаја. Може садржати <code>inline</code> елементе као што је <a href="https://google.com" target="_blank">линк 1</a>.</p>
 
@@ -61,19 +60,18 @@
 Својство ``overflow`` дефинише шта треба урадити у случају да садржај елемента не може да се смести у задате димензије. Подразумевано понашање је да се ипак прикаже садржај, али ван елемента. Као алтернатива, вишак садржаја се може сакрити ако се ово својство постави на вредност ``hidden``, а уз то се постављањем вредности на ``scroll`` омогућава читаоцу да скрол траком бира видљиви део текста.
 
 
-.. activecode:: css_element_sizing
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_element_sizing
 
-    <style>
-        p {
-            width: 250px;
-            height: 50px;
-            background-color: skyblue;
-            overflow-y: auto;
-        }
-    </style>
-
+    style.css
+    p {
+        width: 250px;
+        height: 50px;
+        background-color: skyblue;
+        overflow-y: auto;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>
         Овај параграф ће заузимати 200x50 пиксела.
         Садржај који не стане у један раде аутоматски иде у нов ред.
@@ -90,19 +88,18 @@
 
 Посматрајмо следећи пример са два параграфа идентичног садржаја где смо другом параграфу смо доделили ``box-sizing: border-box``.
 
-.. activecode:: css_box_sizing
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_box_sizing
 
-    <style>
-        p {
-            width: 250px;
-            padding: 10px;
-            background-color: lime;
-            border: 1px solid green;
-        }
-    </style>
-
+    style.css
+    p {
+        width: 250px;
+        padding: 10px;
+        background-color: lime;
+        border: 1px solid green;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p>
         Никола Тесла (Смиљан, 10. јул 1856 — Њујорк, 7. јануар 1943)
         био је српски и амерички проналазач, инжењер електротехнике

@@ -11,24 +11,23 @@
 
 *HTML* елементи на левој и десној страни су истог типа, тако да је потребно некако означити да елементи из леве групе треба да буду приказани другачије од елемената у десној групи. У овом случају је потребно да одаберемо неко име за сваку групу елемената и да у селектор ставимо име те групе са тачком испред имена.
 
-.. activecode:: css_selector_class
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_selector_class
 
-    <style>
-        .levi {
-            display: inline-block;
-            width: 100px;
-            background-color: lime;
-        }
+    style.css
+    .levi {
+        display: inline-block;
+        width: 100px;
+        background-color: lime;
+    }
 
-        .desni {
-            display: inline-block;
-            width: 100px;
-            background-color: skyblue;
-        }
-    </style>
-
+    .desni {
+        display: inline-block;
+        width: 100px;
+        background-color: skyblue;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p class="levi">
         Параграф са зеленом позадином
     </p>
@@ -38,25 +37,24 @@
 
 Пошто се имена група постављају у оквиру атрибута ``class``, овакве групе елемената називамо **класе** и кажемо да елемент има одређену класу, да припада класи, или да је те класе. Атрибут ``class`` може да садржи једно или више имена класа, на основу којих ће његовом елементу бити постављена својства.
 
-.. activecode:: css_selector_multiple_classes
-    :language: html
-    :nocodelens:
+.. petlja-editor:: css_selector_multiple_classes
 
-    <style>
-        .blok {
-            display: inline-block;
-            width: 100px;
-        }
+    style.css
+    .blok {
+        display: inline-block;
+        width: 100px;
+    }
 
-        .levi {
-            background-color: lime;
-        }
+    .levi {
+        background-color: lime;
+    }
 
-        .desni {
-            background-color: skyblue;
-        }
-    </style>
-
+    .desni {
+        background-color: skyblue;
+    }
+    ~~~
+    test.html
+    <link rel="stylesheet" href="style.css"/>
     <p class="levi blok">
         Параграф са зеленом позадином
     </p>
