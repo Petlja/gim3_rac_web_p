@@ -8,27 +8,27 @@ Flexbox
 .. petlja-editor:: css_flex_columns
 
     style.css
-    .container {
+    .flex {
         display: flex;
         border: 1px solid red;
     }
-    .column {
+    .kolona {
         border: 1px solid grey;
     }
     ~~~
     test.html
     <link rel="stylesheet" href="style.css"/>
-    <div class="container">
-        <div class="column">
+    <div class="flex">
+        <div class="kolona">
             Kolona 1
         </div>
-        <div class="column">
+        <div class="kolona">
             Kolona 2
         </div>
-        <div class="column">
+        <div class="kolona">
             Kolona 3
         </div>
-        <div class="column">
+        <div class="kolona">
             Kolona 4
         </div>
     </div>
@@ -40,7 +40,7 @@ Flexbox
 Својства елемената унутар *flexbox*-а
 -------------------------------------
 
-Елементи који су директно унутар се понашају као колоне, али то је тек почетак *flexbox*-а.
+Елементи који су директно унутар се понашају као колоне. Најчешће коришћена својства *flexbox*-a нам омогућују да контролишемо величину елемената:
 
 .. table:: Најчешће коришћена својства *flexbox*-а
 
@@ -54,47 +54,67 @@ Flexbox
 
 .. infonote::
 
-    Својство ``flex`` је скраћеница којом се могу задати сва 3 својства у формату ``flex: <flex-grow> <flex-shrink> <flex-basis>;``.
+    Својство ``flex`` је скраћеница којом се могу задати сва 3 својства у формату ``flex: <flex-grow> <flex-shrink> <flex-basis>;`` нпр. ``flex: 1 1 auto``.
 
-Погледајмо пример распореда главне странице Википедије из претходне лекције:
+Вратите се на претходни пример и пробајте неке од следећих вежби:
+
+#. Додајте ``flex: 1 1 auto`` свим колонама. Који је резултат?
+#. У *HTML*-у додајте првој колони ``style="flex-grow: 2"``. Који је резултат?
+#. У *HTML*-у додајте последњој колони ``style="flex-basis: 300px``. Који је резултат?
+
+Угњеждавање *flex*-а
+--------------------
+
+Елементи унутар *flex*-а такође могу да садрже елементе који користе *flex*.
+
+У претходној лекцији смо показали пример како постићи распоред елемената главне стране Википедије користећи леви ток.
+
+Плавом бојом су обележени главни елементи који су подељени на леву колону са навигацијом и десну са садржајем.
+
+Црвеном бојом је обележен садржај који се такође дели у две колоне.
 
 .. petlja-editor:: css_wiki_flex
 
     style.css
-    .container {
+    .flex {
         display: flex;
         gap: 10px;
     }
-    .column {
+    .kolona {
         flex: 1 1 auto;
-        border: 1px solid grey;
     }
-    .flex-30 {
-        flex-basis: 30%;
+    .leva-kolona {
+        flex: 0 0 200px;
+    }
+    .plavi {
+        border: 1px solid blue;
+    }
+    .crveni {
+        border: 1px solid red;
     }
     ~~~
     test.html
     <link rel="stylesheet" href="style.css"/>
-    <div class="container">
-        <div class="column flex-30">
+    <div class="flex plavi">
+        <div class="leva-kolona plavi">
             <header>Википедија – слободна енциклопедија</heading>
             <nav>Линкови за навигацију</nav>
         </div>
-        <div class="column">
+        <div class="kolona plavi">
             <nav>Линкови за навигацију на врху</nav>
             <div>Картице и претрага сајта</div>
             <div>Добродошли</div>
-            <div class="container">
-                <div class="column">Случајни чланци</div>
-                <div class="column">Недавни догађаји</div>
+            <div class="flex crveni">
+                <div class="kolona crveni">Случајни чланци</div>
+                <div class="kolona crveni">Недавни догађаји</div>
             </div>
         </div>
     </div>
 
-За више примера погледајте добар ресурс је `MDN Веб документација  <https://developer.mozilla.org/en-US/docs/Web/CSS/flex>`_.
-
 Својства родитељског елемента
 -----------------------------
+
+Родитељски елемент који садржи својство ``display: flex`` може да има додатна својства која утичу на ток елемената.
 
 .. table:: Најчешће коришћена својства *flexbox*-а
 
@@ -106,69 +126,35 @@ Flexbox
     ``align-items``     распоред елемената попреко смера ``flex-direction``
     =================== ====================
 
-.. image:: ../../_images/css/primer_youtube.png
-    :width: 624px
-    :align: center
-
-.. petlja-editor:: css_youtube_flex
+.. petlja-editor:: css_flex_parent
 
     style.css
-    .donja-traka {
+    .flex {
         display: flex;
-        gap: 10px;
-        justify-content: space-between;
-        align-items: center;
     }
-    .akcije {
-        display: flex;
-        gap: 5px;
+    .leva {
+        border: 1px solid red;
+        width: 100px;
     }
-    .akcija {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 16px;
-        text-transform: uppercase;
-    }
-    .ikona {
-        width: 32px;
-        height: 32px;
-        border-radius: 3px;
-        background-color: grey;
+    .desna {
+        border: 1px solid blue;
+        width: 100px;
     }
     ~~~
     test.html
     <link rel="stylesheet" href="style.css"/>
-    <div>
-        <h2>Веома дугачак назив видео материјала</h2>
-        <div class="donja-traka">
-            <div class="pregledi">
-                206,831 views * Jul 11, 2022
-            </div>
-            <div class="akcije">
-                <div class="akcija">
-                    <div class="ikona"></div>
-                    15K
-                </div>
-                <div class="akcija">
-                    <div class="ikona"></div>
-                    Dislike
-                </div>
-                <div class="akcija">
-                    <div class="ikona"></div>
-                    Share
-                </div>
-                <div class="akcija">
-                    <div class="ikona"></div>
-                    Clip
-                </div>
-                <div class="akcija">
-                    <div class="ikona"></div>
-                    Save
-                </div>
-                <div class="akcija">
-                    <div class="ikona"></div>
-                </div>
-            </div>
+    <div class="flex">
+        <div class="leva">
+            Лева колона у два реда.
+        </div>
+        <div class="desna">
+            Десна колона
         </div>
     </div>
+
+Пробајте следеће вежбе да откријете понашање атрибута:
+
+#. Испробајте својство ``justify-content`` на елементу ``.flex`` са вредностима: ``space-between``, ``space-around``, ``flex-end``. Који су резултати?
+#. Испробајте својство ``align-items`` на елементу ``.flex`` са вредностима: ``center``, ``flex-start``, ``flex-end``. Који су резултати?
+
+За више примера погледајте добар ресурс је `MDN Веб документација  <https://developer.mozilla.org/en-US/docs/Web/CSS/flex>`_.
