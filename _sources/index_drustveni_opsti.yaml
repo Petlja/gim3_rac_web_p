@@ -194,7 +194,7 @@ lessons:
       - type: reading
         title: Дефинисање CSS стилова
         file: 01b_css_stilovi_definisanje.rst
-        guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f76 # TODO: guid
+        guid: a20fe5e1-26e4-4723-9791-504572f8674d
       - type: reading
         title: CSS стилови - вежбе
         file: 01c_css_stilovi_vezbe.rst
@@ -211,15 +211,15 @@ lessons:
       - type: reading
         title: CSS својства текста
         file: 02b_css_svojstva_teksta_citanje.rst
-        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc44 # TODO: guid
+        guid: 707c17a1-2074-4217-b736-67719ea2b9b4
       - type: reading
         title: CSS својства која дефинишу границе елемента
         file: 02c_css_svojstva_granice_elementa_citanje.rst
-        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc45 # TODO: guid
+        guid: 93c6ad0b-74d2-4b3b-9830-f129acd71330
       - type: reading
         title: CSS димензије елемената
         file: 02d_css_svojstva_dimenzije_elementa_citanje.rst
-        guid: d85c82d0-b4a0-41af-94a4-218ef71dfc46 # TODO: guid
+        guid: bc8460f8-ea41-4d72-b79f-49fe39de421f
       - type: quiz
         title: CSS својства - питања
         file: 02e_css_svojstva_pitanja.rst
@@ -240,15 +240,15 @@ lessons:
       - type: reading
         title: Стилизовање идентификатора
         file: 03b_css_selektori_identifikator_citanje.rst
-        guid: 5a22069a-7205-471f-b438-cf46910c0da5 # TODO: guid
+        guid: 6e3b1ceb-98c7-478c-9c77-a21d49a89adc
       - type: reading
         title: Стилизовање класа елемената
         file: 03c_css_selektori_klase_citanje.rst
-        guid: 5a22069a-7205-471f-b438-cf46910c0da6 # TODO: guid
+        guid: f1dbf2cb-66cd-490e-beaf-e4d910d10f87
       - type: reading
         title: Сложени CSS селектори
         file: 03d_css_selektori_slozeni_citanje.rst
-        guid: 5a22069a-7205-471f-b438-cf46910c0da7 # TODO: guid
+        guid: 03885150-dcf2-4884-9322-a61e0a242aa7
       - type: quiz
         title: CSS селектори - питања
         file: 03e_css_selektori_pitanja.rst
