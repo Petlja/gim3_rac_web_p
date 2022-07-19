@@ -24,13 +24,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -119,46 +115,14 @@
     <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="../_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="../_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/p5js.js"></script>
     <script type="text/javascript" src="../_static/gallery.js"></script>
-    <script type="text/javascript" src="../_static/dbDirective.js"></script>
-    <script type="text/javascript" src="../_static/sql.js"></script>
     <script type="text/javascript" src="../_static/associations.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
-    <script type="text/javascript" src="../_static/regex-check.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -312,6 +276,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html><div class="studioLecture" id=activity-01a_css_stilovi_citanje><i class="fas fa-file-alt activity-icon"></i>CSS стилови</div></a>
+                <a href=../2_CSS_01_CSS_stilovi/01b_css_stilovi_definisanje.html><div class="studioLecture" id=activity-01b_css_stilovi_definisanje><i class="fas fa-file-alt activity-icon"></i>Дефинисање CSS стилова</div></a>
                 <a href=../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html><div class="studioLecture" id=activity-01c_css_stilovi_vezbe><i class="fas fa-file-alt activity-icon"></i>CSS стилови - вежбе</div></a>
                 </div>
             </div>
@@ -323,8 +288,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html><div class="studioLecture" id=activity-02a_css_svojstva_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02b_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02c_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_teksta_citanje.html><div class="studioLecture" id=activity-02b_css_svojstva_teksta_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства текста</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_granice_elementa_citanje.html><div class="studioLecture" id=activity-02c_css_svojstva_granice_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства која дефинишу границе елемента</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02d_css_svojstva_dimenzije_elementa_citanje.html><div class="studioLecture" id=activity-02d_css_svojstva_dimenzije_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS димензије елемената</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02e_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02e_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02f_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02f_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
                 </div>
             </div>
                 
@@ -335,8 +303,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html><div class="studioLecture" id=activity-03b_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html><div class="studioLecture" id=activity-03c_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03f_css_selektori_zadaci.html><div class="studioLecture" id=activity-03f_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
                 </div>
             </div>
                 
@@ -349,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html><div class="studioLecture" id=activity-04a_raspored_elemenata_citanje><i class="fas fa-file-alt activity-icon"></i>Распоред елемената</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html><div class="studioLecture" id=activity-04b_raspored_elemenata_pitanja><i class="far fa-question-circle activity-icon"></i>Распоред елемената - питања</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html><div class="studioLecture" id=activity-04c_raspored_elemenata_zadaci><i class="fas fa-file-alt activity-icon"></i>Распоред елемената - задаци</div></a>
+                <a href=../2_CSS_04_raspored_elemenata/04d_raspored_elemenata_flexbox_citanje.html><div class="studioLecture" id=activity-04d_raspored_elemenata_flexbox_citanje><i class="fas fa-file-alt activity-icon"></i>Flexbox</div></a>
                 </div>
             </div>
                 
@@ -450,126 +422,34 @@
   <div class="section" id="css">
 <h1>CSS својства<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h1>
 <p><em>CSS</em> својства описују како је потребно приказати елементе у <em>HTML</em> документима. Својства елемената могу бити величина или боја фонтова, димензије (висина и ширина) и слично. Својства се дефинишу тако што се наведе назив својства, затим знак <code class="docutils literal notranslate"><span class="pre">:</span></code>, а онда иза њега вредност коју треба да има то својство елемента.</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">својство</span><span class="o">:</span><span class="w"> </span><span class="nt">вредност</span><span class="w"></span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">својство</span><span class="o">:</span> <span class="nt">вредност</span>
 </pre></div>
 </div>
 <p>Овако, на пример, изгледа <em>CSS</em> дефиниција којом се задаје величина слова од 12 пиксела:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">12px</span><span class="w"></span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span> <span class="nt">12px</span>
 </pre></div>
 </div>
 <p>Постоји велики број својстава које можете поставити, а у овој лекцији ће бити објашњена нека најбитнија својства.</p>
 <div class="section" id="e-css">
 <h2>Често коришћенe вредности <em>CSS</em> својстава<a class="headerlink" href="#e-css" title="Permalink to this headline">¶</a></h2>
 <p>Вредности које се додељују својствима су најчешће неке специјалне речи. Скуп речи које се могу доделити својству као вредност зависи од самог својства, али неке вредности, као што су димензије и боје се често на исти начин дефинишу и додељују различитим својствима и зато ће овде бити укратко објашњене.</p>
-<p><strong>Вредности димензија</strong> су нумеричке вредности које се изражавају у пикселима (нпр. <code class="docutils literal notranslate"><span class="pre">12px</span></code>), типографским тачкама (нпр. <code class="docutils literal notranslate"><span class="pre">10pt</span></code>), центиметрима (нпр. <code class="docutils literal notranslate"><span class="pre">20cm</span></code>) и слично (више информација се може наћи на
-<a class="reference external" href="https://www.w3schools.com/cssref/css_units.asp">страници о јединицама мере</a> сајта <em>W3CSchools</em>). Некада се користи јединица <code class="docutils literal notranslate"><span class="pre">em</span></code> за релативну величину слова и која зависи од подразумеване величине слова. Нпр. <code class="docutils literal notranslate"><span class="pre">1.2em</span></code> значи да ће величина бити увећана за 20% (или 1.2 пута, што је исто) у односу на вредност која би била употребљена без навођења ове величине. На пример, ако је реч о фонту, <code class="docutils literal notranslate"><span class="pre">1.2em</span></code> значи фонт за 20% већи од тренутног фонта.</p>
-<p><strong>Вредности боја</strong> се могу дефинисати на више начина (више информација се може наћи на <a class="reference external" href="https://www.rapidtables.com/web/css/css-color.html">страници о бојама</a> сајта <em>W3CSchools</em>):</p>
+<p><strong>Вредности димензија</strong> су нумеричке вредности које се могу изразити као:</p>
+<ul class="simple">
+<li><p>пикселима (нпр. <code class="docutils literal notranslate"><span class="pre">12px</span></code>),</p></li>
+<li><p>типографским тачкама (нпр. <code class="docutils literal notranslate"><span class="pre">10pt</span></code>),</p></li>
+<li><p>центиметрима (нпр. <code class="docutils literal notranslate"><span class="pre">20cm</span></code>).</p></li>
+</ul>
+<p>Некада се користи јединица <code class="docutils literal notranslate"><span class="pre">em</span></code> за релативну величину слова и која зависи од подразумеване величине слова. Нпр. <code class="docutils literal notranslate"><span class="pre">1.2em</span></code> значи да ће величина бити увећана за 20% (или 1.2 пута, што је исто) у односу на вредност која би била употребљена без навођења ове величине. На пример, ако је реч о фонту, <code class="docutils literal notranslate"><span class="pre">1.2em</span></code> значи фонт за 20% већи од тренутног фонта.</p>
+<p>Више информација се може наћи на
+<a class="reference external" href="https://www.w3schools.com/cssref/css_units.asp">страници о јединицама мере</a> сајта <em>W3CSchools</em>.</p>
+<p><strong>Вредности боја</strong> се могу дефинисати на више начина:</p>
 <ul class="simple">
 <li><p>Помоћу имена боја (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>)</p></li>
 <li><p>Помоћу хексадецималних вредности боја, као на пример <code class="docutils literal notranslate"><span class="pre">#ff6347</span></code>. Прве две хексадецималне цифре означавају количину црвене, друге две количину зелене, а треће две количину плаве. Тако на пример, <code class="docutils literal notranslate"><span class="pre">#ff0000</span></code> означава црвену, а <code class="docutils literal notranslate"><span class="pre">#ffffff</span></code> белу боју.</p></li>
 <li><p>Помоћу вредности црвене, зелене и плаве нијансе без дефинисаног фактора непрозирности у облику <code class="docutils literal notranslate"><span class="pre">rgb(201,</span> <span class="pre">76,</span> <span class="pre">72)</span></code> (црвена: 201, зелена: 76, плава: 72) или са фактором непрозирности <code class="docutils literal notranslate"><span class="pre">rgba(201,</span> <span class="pre">76,</span> <span class="pre">72,</span> <span class="pre">0.3)</span></code> (0 за потптуно прозирну, тј. транспарентну боју, 1 за потпуно непрозирну).</p></li>
 <li><p>Помоћу <em>hsl</em> или <em>hsla</em> вредности. Прва три броја задају нијансу боје, засићеност и осветљеност, а четврти (код формата <em>hsla</em>) непрозирност, као код <em>rgba</em> формата.</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>Својства текста<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p><em>CSS</em> правила нам омогућавају да опишемо изглед текста у <em>HTML</em> елементима. Нека од најчешће коришћених својстава текста су:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">font-size</span></code> – које дефинише величину фонтова (најчешће у пикселима).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color</span></code> – које дефинише боју фонтова (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">font-family</span></code> – која дефинише тзв. фамилију фонтова која представља стил којим ће бити приказан текст.</p></li>
-</ul>
-<p>Напомена: за елементе који садрже текст могу се подесити и друга својства, као што је <code class="docutils literal notranslate"><span class="pre">background-color</span></code> – које дефинише која ће бити боја позадине елемента у коме се налази текст (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>).</p>
-<p>Дефиниција изгледа слова која ће се применити на сваки параграф веб стране може се написати овако:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Кад год претраживач наиђе на параграф текста који је представљен елементом <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> у <em>HTML</em> документу, текст тог параграфа ће приказати на жутој позадини црвеним словима величине 12 пиксела из фамилије <code class="docutils literal notranslate"><span class="pre">Times</span> <span class="pre">New</span> <span class="pre">Roman</span></code>.</p>
-<p>У многим напредним програмима за процесирање текста као што је <em>Microsoft Word</em> сте вероватно видели да постоје такозване <strong>фамилије фонтова</strong>, којима се дефинише на који начин треба приказати слова. Пример фамилије фонтова је „Times New Roman”, који је коришћен у Британским новинама „The Times”. У случају да желите да текст на вашој веб страни изгледа као текст у овим новинама, онда би требало да одговарајућим <em>HTML</em> елементима доделите ову фамилију користећи <em>CSS</em> атрибут <code class="docutils literal notranslate"><span class="pre">font-family</span></code>. Може се задати опште (генеричко) име фамилије или тачно (специфично) име фамилије.</p>
-<ul class="simple">
-<li><p>Генеричко име фамилије описује опште карактеристике слова као што су писана слова (<code class="docutils literal notranslate"><span class="pre">Cursive</span></code>), слова са украсима-стопицама на ивицама (<code class="docutils literal notranslate"><span class="pre">Serif</span></code>), без украса (<code class="docutils literal notranslate"><span class="pre">Sans-Serif</span></code>), слова исте ширине (<code class="docutils literal notranslate"><span class="pre">Monospaced</span></code>), и слично.</p></li>
-<li><p>Тачно име фамилије прецизно означава како треба приказати слова. Примери могу да буду <code class="docutils literal notranslate"><span class="pre">Times</span> <span class="pre">New</span> <span class="pre">Roman</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Serif</span></code> фамилије, <code class="docutils literal notranslate"><span class="pre">Arial</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Sans-Serif</span></code> фамилије, <code class="docutils literal notranslate"><span class="pre">Courier</span> <span class="pre">New</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Monospace</span></code> фамилије.</p></li>
-</ul>
-<p>Као вредност <em>CSS</em> атрибута <code class="docutils literal notranslate"><span class="pre">font-family</span></code> се наводи листа више фонтова или њихових фамилија, а биће примењена прва препозната фамилија у редоследу навођења. Нека је на пример, наведено:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Times</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Ако прегледач подржава и има дефиниције изгледа фамилије фонтова <code class="docutils literal notranslate"><span class="pre">Times</span> <span class="pre">New</span> <span class="pre">Roman</span></code>, ова фамилија ће бити коришћена да се прикажу слова у пасусу. Ако прегледач не препознаје ову фамилију, покушаће да примени <code class="docutils literal notranslate"><span class="pre">Times</span></code> фамилију. Ако ни ово не успе, онда ће приказати слова неким подразумеваним типом из генеричке <code class="docutils literal notranslate"><span class="pre">Serif</span></code> фамилије.</p>
-</div>
-<div class="section" id="id4">
-<h2>Својства која дефинишу границе елемента<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p><em>CSS</em> стилови нам омогућавају да за сваки <em>HTML</em> елемент дефинишемо његове димензије, растојање које треба направити између садржаја тог елемента и околних елемената и слично. <em>HTML</em> елементи имају у себи садржај (илустрације ради, претпоставимо да је садржај обичан текст) око кога се налази невидљиви оквир, који представља границу тог елемента. <em>CSS</em> стилови нам омогућавају да помоћу следећих својстава дефинишемо положај границе елемента у односу на садржај унутар елемента и у односу на околне елементе:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">padding</span></code> - величина подручја унутар елемента, у коме садржај елемента не може да се појави. Ово својство ће одгурнути садржај елемента од ивице ка унутрашњости.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">border</span></code> - ивица елемента. Овим својством можете да контролишете стил, ширину и боју ивице.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code> – величина подручја ван елемента, у коме не могу да се појаве други елементи и њихови делови.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">background</span></code> – дефинише како ће изгледати позадина садржаја елемента. У оквиру овог својства се може дефинисати боја позадине, прозирност (транспарентност), слика која ће се поставити у позадини и слично. Ово се постиже помоћу <em>CSS</em> својстава као што су <code class="docutils literal notranslate"><span class="pre">background-color</span></code>, <code class="docutils literal notranslate"><span class="pre">background-image</span></code> итд. Више информација о подешавању позадина елемената можете пронаћи на <em>W3CSchools</em> сајту.</p></li>
-</ul>
-<p>На следећој слици је приказано шта би елемент који има подешена својства урадио са својим садржајем и неким околним елементима:</p>
-<a class="reference internal image-reference" href="../_images/margin-padding.png"><img alt="../_images/margin-padding.png" class="align-center" src="../_images/margin-padding.png" style="width: 600px;" /></a>
-<p>Својство <code class="docutils literal notranslate"><span class="pre">border</span></code> може, на пример, да дефинише да је оквир елемента зелене боје и дебљине 5 пиксела. Садржај елемента неће моћи да се постави од ивице до ивице, него ће бити одмакнут од ивица за вредност која је постављена у својству <code class="docutils literal notranslate"><span class="pre">padding</span></code>. Елементи који се налазе око овог елемента неће моћи да се поставе уз ивицу него ће бити одмакнути за вредност која је постављена у својству <code class="docutils literal notranslate"><span class="pre">margin</span></code>.</p>
-<p>У следећем примеру је приказано као се подешава оквир око елемента:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">border-size</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-style</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>У овом примеру су дефинисане величина и боја ивице елемената помоћу <em>CSS</em> својстава <code class="docutils literal notranslate"><span class="pre">border-size</span></code>, <code class="docutils literal notranslate"><span class="pre">border-color</span></code>.  Својство <code class="docutils literal notranslate"><span class="pre">border-style</span></code> је слично стиловима линија на које сте наилазили у процесорима текста и описује да ли ивицу треба исцртати као пуну (<code class="docutils literal notranslate"><span class="pre">solid</span></code>), испрекидану (<code class="docutils literal notranslate"><span class="pre">dashed</span></code>), тачкасту (<code class="docutils literal notranslate"><span class="pre">dotted</span></code>) и слично. Пронађите остале врсте линија и испробајте их на <em>W3CSchools</em> сајту.</p>
-<p>У неким случајевима ћете наићи на компактнији облик дефиниције <em>CSS</em> стила, у коме се својству <code class="docutils literal notranslate"><span class="pre">border</span></code> додељују све вредности:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p><em>CSS</em> стил из претходног примера се примењује на све ивице оквира (горњу, доњу и бочне). Међутим, <em>CSS</em> језик дозвољава и финију контролу и омогућава да поставимо посебне вредности за сваку ивицу оквира:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">border-top-style</span><span class="p">:</span><span class="w"> </span><span class="kc">dotted</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-right-style</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-bottom-style</span><span class="p">:</span><span class="w"> </span><span class="kc">dotted</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-left-style</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>Димензије елемената<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>Један од изазова у дизајнирању веб страна је да се постигне да иста страна добро изгледа на екранима различитих величина (од паметних телефона до монитора високе резолуције). Помоћу <em>CSS</em> стилова можемо да постигнемо значајну флексибилност у изгледу стране, тако што подесимо својства описана у наставку, која се односе на димензије елемената. При употреби ових својстава је важно је да се проверава како веб страна изгледа у прозорима различите величине. Брз и једеноставан начин да симулирамо гледање стране на уређајима са различитом резолуцијом је <strong>да мењамо величину прозора прегледача</strong>. Кликом на икону са два екрана у прозору са алатима за развој приказану на слици испод, добијамо  прецизну контролу величине екрана симулираног циљног уређаја.</p>
-<a class="reference internal image-reference" href="../_images/test_responsive.png"><img alt="../_images/test_responsive.png" class="align-center" src="../_images/test_responsive.png" style="width: 320px;" /></a>
-<p>Да бисмо разумели како <em>CSS</em> стилови омогућавају да се дефинишу димензије <em>HTML</em> елемената, треба прво знати да <em>HTML</em> елементи могу грубо да се поделе на:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">block</span></code> елементе као што су <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code>, или <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>, који заузимају сву ширину која им је на располагању. Подразумевано понашање ових елемената је да се увек позиционирају у новом реду, ширина им је највећа могућа у надређеном елементу, а висина им зависи од количине садржаја.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inline</span></code> елементе који заузимају најмању могућу ширину која им је потребна. Подразумевано понашање им је да се поставе у исти ред као и остали <code class="docutils literal notranslate"><span class="pre">inline</span></code> елементи, а ширина им зависи од садржаја. Примери оваквих елемената су <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>.</p></li>
-</ul>
-<p>Прегледач ће, у зависности од типа елемента, сам одлучити да ли ће за његов приказ користити најмању довољну ширину или ће користити пуну ширину од једне до друге ивице надређеног елемента. <em>HTML</em> елементима се може експлицитно дефинисати ширина помоћу <em>CSS</em> својстава. Најбитнија <em>CSS</em> својства која се могу искористити су:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">min-width</span></code>, <code class="docutils literal notranslate"><span class="pre">max-width</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code> која дефинишу минималну, максималну и експлицитно задату ширину елемента. Елементу ће бити промењена висина како би се садржај уклопио у задату ширину. У случају да ширина није задата, а природна ширина елемента није мања од минимума нити већа од максимума, ова својства немају никаквог ефекта.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min-height</span></code>, <code class="docutils literal notranslate"><span class="pre">max-height</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code> која дефинишу минималну, максималну и експлицитно задату висину елемента. Ако садржај елемента не може да се прикаже у елементу, он ће ипак бити приказан, али ван елемента (висина елемента се неће приказати). Ово је подразумевано понашање које се може променити коришћењем својства <code class="docutils literal notranslate"><span class="pre">overflow</span></code>. У случају да висина није задата, а природна висина елемента није мања од минимума нити већа од максимума, ова својства немају никаквог ефекта.</p></li>
-</ul>
-<p>Висина и ширина се односе на садржај унутар елемената не рачунајући дебљину ивице (<code class="docutils literal notranslate"><span class="pre">border-size</span></code>) и подручје <code class="docutils literal notranslate"><span class="pre">padding</span></code>. Ако желимо да се висина и ширина односе и на ова подручја, потребно је додати дефиницију <code class="docutils literal notranslate"><span class="pre">box-sizing:</span> <span class="pre">border-box</span></code>.</p>
-<p>Својство <code class="docutils literal notranslate"><span class="pre">overflow</span></code> дефинише шта треба урадити у случају да садржај елемента не може да се смести у задате димензије. Подразумевано понашање је да се ипак прикаже садржај, али ван елемента. Као алтернатива, вишак садржаја се може сакрити ако се ово својство постави на вредност <code class="docutils literal notranslate"><span class="pre">hidden</span></code>, а уз то се постављањем вредности на <code class="docutils literal notranslate"><span class="pre">scroll</span></code> омогућава читаоцу да скрол траком бира видљиви део текста.</p>
-<p>На <em>W3CSchools</em> сајту пронађите више информација о <a class="reference external" href="https://www.w3schools.com/css/css_boxmodel.asp">моделу оквира</a> и о <a class="reference external" href="https://www.w3schools.com/css/css_dimension.asp">димензијама</a>.</p>
+<p>Више информација се може наћи на <a class="reference external" href="https://www.rapidtables.com/web/css/css-color.html">страници о бојама</a> сајта <em>W3CSchools</em>.</p>
 </div>
 </div>
 
