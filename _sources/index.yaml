@@ -282,16 +282,20 @@ lessons:
         file: 03a_js_objekti_citanje.rst
         guid: de033902-d47a-4133-a57e-5801b169dde8
       - type: reading
+        title: Објектни модел документа стране
+        file: 03b_js_objektni_model_citanje.rst
+        guid: f46ad512-1868-4331-abf6-cc160ed2b20c
+      - type: reading
         title: Низови
-        file: 03b_js_nizovi_citanje.rst
+        file: 03c_js_nizovi_citanje.rst
         guid: 8cd4e1dc-43a6-4720-b4d9-d3b1043c45f6
       - type: quiz
         title: Сложени типови података - питања
-        file: 03c_js_objekti_i_nizovi_pitanja.rst
+        file: 03d_js_objekti_i_nizovi_pitanja.rst
         guid: 611fef04-da2f-449e-a4ef-e7c7244fec81
       - type: reading ### tasks?
         title: Сложени типови података - задаци
-        file: 03d_js_objekti_i_nizovi_zadaci.rst
+        file: 03e_js_objekti_i_nizovi_zadaci.rst
         guid: 2d95fc6f-9767-455a-ba43-0adfbc2b59b5
 
   - title: JS_4 Функције, методе, догађаји
