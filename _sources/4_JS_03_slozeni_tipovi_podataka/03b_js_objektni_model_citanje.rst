@@ -9,27 +9,23 @@
 
 У *JavaScript* коду који се извршава у веб странама се може користити један специјалан објекат који се зове *document*. Овај објекат нам омогућава да приступимо *HTML* елементима који се налазе у веб страни и да их читамо и мењамо. Када лоцирамо неки објекат, који представља неки *HTML* елемент у страни, можемо да га променимо тако што му на пример променимо *CSS* стил.
 
-.. activecode:: boja_teksta_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: boja_teksta_html_js
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-      </head>
-      <body>
+    script.js
+    document.title = 'Ово је наслов стране';
+    let body = document.body;
+    body.style.backgroundColor = 'black';
+    body.style.color = 'lightgreen';
+
+    let boja = document.body.style.color;
+    document.write(`Bоја текста у страни је "${boja}".`);
+    ~~~
+    test.html
+    <body>
         <p>Боја слова и позадине овог текста је постављена JavaScript наредбом.</p>
-        <script>
-          document.title = 'Ово је наслов стране';
-          let body = document.body;
-          body.style.backgroundColor = 'black';
-          body.style.color = 'lightgreen';
+    </body>
+    <script src="script.js"/>
 
-          let boja = document.body.style.color;
-          document.write(`Bоја текста у страни је "${boja}".`);
-        </script>
-      </body>
-    </html>
 
 Хијерархија објеката која почиње од документа стране назива се **објектни модел документа** (енгл. *document object model*, скраћено *DOM*). Из *JavaScript* програма можемо да дохватимо сваки елемент стране, да убацујемо и избацујемо елементе, да их допуњујемо и мењамо на различите начине. Следећи пример показује један начин како можемо да дохватимо поједине елементе у хијерархији документа и да тим елементима задамо нови стил.
 
