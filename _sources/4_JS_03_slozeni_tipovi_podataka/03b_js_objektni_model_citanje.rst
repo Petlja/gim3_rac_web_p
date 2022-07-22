@@ -12,10 +12,10 @@
 .. petlja-editor:: boja_teksta_html_js
 
     script.js
-    document.title = 'Ово је наслов стране';
+    document.title = "Ово је наслов стране";
     let body = document.body;
-    body.style.backgroundColor = 'black';
-    body.style.color = 'lightgreen';
+    body.style.backgroundColor = "black";
+    body.style.color = "lightgreen";
 
     let boja = document.body.style.color;
     document.write(`Bоја текста у страни је "${boja}".`);
@@ -24,7 +24,7 @@
     <body>
         <p>Боја слова и позадине овог текста је постављена JavaScript наредбом.</p>
     </body>
-    <script src="script.js"/>
+    <script src="script.js"></script>
 
 
 Хијерархија објеката која почиње од документа стране назива се **објектни модел документа** (енгл. *document object model*, скраћено *DOM*). Из *JavaScript* програма можемо да дохватимо сваки елемент стране, да убацујемо и избацујемо елементе, да их допуњујемо и мењамо на различите начине. Следећи пример показује један начин како можемо да дохватимо поједине елементе у хијерархији документа и да тим елементима задамо нови стил.
