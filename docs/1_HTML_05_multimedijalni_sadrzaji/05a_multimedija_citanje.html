@@ -24,13 +24,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -119,46 +115,14 @@
     <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="../_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="../_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/p5js.js"></script>
     <script type="text/javascript" src="../_static/gallery.js"></script>
-    <script type="text/javascript" src="../_static/dbDirective.js"></script>
-    <script type="text/javascript" src="../_static/sql.js"></script>
     <script type="text/javascript" src="../_static/associations.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
-    <script type="text/javascript" src="../_static/regex-check.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -312,6 +276,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html><div class="studioLecture" id=activity-01a_css_stilovi_citanje><i class="fas fa-file-alt activity-icon"></i>CSS стилови</div></a>
+                <a href=../2_CSS_01_CSS_stilovi/01b_css_stilovi_definisanje.html><div class="studioLecture" id=activity-01b_css_stilovi_definisanje><i class="fas fa-file-alt activity-icon"></i>Дефинисање CSS стилова</div></a>
                 <a href=../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html><div class="studioLecture" id=activity-01c_css_stilovi_vezbe><i class="fas fa-file-alt activity-icon"></i>CSS стилови - вежбе</div></a>
                 </div>
             </div>
@@ -323,8 +288,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html><div class="studioLecture" id=activity-02a_css_svojstva_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02b_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02c_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_teksta_citanje.html><div class="studioLecture" id=activity-02b_css_svojstva_teksta_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства текста</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_granice_elementa_citanje.html><div class="studioLecture" id=activity-02c_css_svojstva_granice_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства која дефинишу границе елемента</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02d_css_svojstva_dimenzije_elementa_citanje.html><div class="studioLecture" id=activity-02d_css_svojstva_dimenzije_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS димензије елемената</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02e_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02e_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02f_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02f_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
                 </div>
             </div>
                 
@@ -335,8 +303,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html><div class="studioLecture" id=activity-03b_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html><div class="studioLecture" id=activity-03c_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03f_css_selektori_zadaci.html><div class="studioLecture" id=activity-03f_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
                 </div>
             </div>
                 
@@ -349,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html><div class="studioLecture" id=activity-04a_raspored_elemenata_citanje><i class="fas fa-file-alt activity-icon"></i>Распоред елемената</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html><div class="studioLecture" id=activity-04b_raspored_elemenata_pitanja><i class="far fa-question-circle activity-icon"></i>Распоред елемената - питања</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html><div class="studioLecture" id=activity-04c_raspored_elemenata_zadaci><i class="fas fa-file-alt activity-icon"></i>Распоред елемената - задаци</div></a>
+                <a href=../2_CSS_04_raspored_elemenata/04d_raspored_elemenata_flexbox_citanje.html><div class="studioLecture" id=activity-04d_raspored_elemenata_flexbox_citanje><i class="fas fa-file-alt activity-icon"></i>Flexbox</div></a>
                 </div>
             </div>
                 
@@ -453,49 +425,93 @@
 <div class="section" id="id2">
 <h2>Слике<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Слике су, у највећем броју случајева, фајлови који се чувају одвојено од <em>HTML</em> докумената (најћешће у неком поддиректоријуму). Слике се постављају у документ на сличан начин као и линкови – помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>, који у свом атрибуту <code class="docutils literal notranslate"><span class="pre">src</span></code> садржи име слике коју треба приказати:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;NikolaTesla.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Nikola Tesla&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Слика Николе Тесле</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;NikolaTesla.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Nikola Tesla&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+</div>
 <p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> нема садржај, тј. ништа не наводимо између отварајућег и затварајућег тага. Зато се овај елемент може написати и као самозатварајући таг, овако:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;NikolaTesla.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Nikola Tesla&quot;</span><span class="p">/&gt;</span>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Слика Николе Тесле - самозатварајући таг</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;NikolaTesla.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Nikola Tesla&quot;</span><span class="p">/&gt;</span>
 </pre></div>
+</div>
 </div>
 
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
 <p>Подсетимо се, самозатварајући таг је целина за себе и нема пратећег парњака, јер не ограничава део текста који припада његовом елементу. Раније смо помињали <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code> (прелазак у нови ред), који се такође представља самозатварајућим тагом.</p>
-<p>Елемент <code class="docutils literal notranslate"><span class="pre">img</span></code> је још један елемент који може да буде цео садржан у једном самозатварајућем тагу.</p>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> је још један елемент који може да буде цео садржан у једном самозатварајућем тагу.</p>
 
     </p></div></div>
 <p>Поред <code class="docutils literal notranslate"><span class="pre">src</span></code> атрибута, свака слика треба да има текст који ће се приказати уместо ње у случају да се слика не може учитати или приказати у прегледачу. Овај текст се ставља у оквиру <code class="docutils literal notranslate"><span class="pre">alt</span></code> атрибута.</p>
 <p><em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> веома личи на елементе везе објашњене у претходној лекцији, уз једну разлику. Слика која се референцира се директно убацује и приказује на месту овог елемента.</p>
-<p>Помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> прегледач може да прикаже слике у различитим форматима, као што су <em>JPG/JPEG</em>, <em>PNG</em>, <em>WEBP</em>, <em>SVG</em>. На веб странама се најчешће користе <em>JPEG</em> формати, зато што дају најбољи однос квалитета и величине слике. <em>PNG</em> формат се може користити како би се приказале квалитетније слике, али често је цена спорије учитавање стране. Због брзине учитавања посебно треба избегавати формате намењене пре свега за квалитетно штампање, као што је <em>TIF</em>, јер су фајлови у том формату често велики. Пожељно је користити прогресивни формат слика (нпр. прогресивни <em>JPEG</em>) у случају да су слике веће и спорије се учитавају. Класични формати исцртавају део по део слике (у хоризонталним тракама), док прогресивни исцртају одмах целу слику, али лошијег квалитета (замућено). Потом се, како се учитава додатни садржај слике, квалитет приказа поправља и слика се изоштрава. У случају да се величина слике мења, пожељно је користити скалабилне (векторске) формате као што је <em>SVG</em>. <em>GIF</em> слика се често користи када је потребно направити неку анимирану илустрацију, која је довољно једноставна и не захтева пратећи аудио или контроле (пауза, заустављање, позиционирање на неки тренутак).</p>
-<p>Избор формата, величине, компресије и резолуције слике је компромис између брзине учитавања и квалитета и намене слике.
-Поред <code class="docutils literal notranslate"><span class="pre">src</span></code> и <code class="docutils literal notranslate"><span class="pre">alt</span></code> атрибута, слика треба да има и <code class="docutils literal notranslate"><span class="pre">title</span></code> атрибут, који описује слику и приказује се када неко пређе мишем преко ње. Друга, можда и важнија намена атрибута <code class="docutils literal notranslate"><span class="pre">title</span></code> је да претраживачи као што су <em>Google</em> или <em>Bing</em> имају на располагању описе слика, што им омогућава квалитетније рангирање резултата претраге.</p>
-</div>
+<p>Поред <code class="docutils literal notranslate"><span class="pre">src</span></code> и <code class="docutils literal notranslate"><span class="pre">alt</span></code> атрибута, слика треба да има и <code class="docutils literal notranslate"><span class="pre">title</span></code> атрибут, који описује слику и приказује се када неко пређе мишем преко ње. Друга, можда и важнија намена атрибута <code class="docutils literal notranslate"><span class="pre">title</span></code> је да претраживачи као што су <em>Google</em> или <em>Bing</em> имају на располагању описе слика, што им омогућава квалитетније рангирање резултата претраге.</p>
 <div class="section" id="id3">
-<h2>Видео материјали<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p><em>HTML</em> језик нам омогућава да у веб страну поставимо видео материјале који се могу приказати у тој страни. Као и слике, видео фајлови се снимају одвојено од <em>HTML</em> докумената (нпр. видео може да буде снимљен као посебан фајл <code class="docutils literal notranslate"><span class="pre">movie.mp4</span></code>). У том случају је потребно у <em>HTML</em> документ ставити <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code>, који ће у себи имати везу ка видео фајлу.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;film.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span> <span class="p">/&gt;</span>
-    Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
-<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-</pre></div>
+<h3>Формати слика<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> прегледач може да прикаже слике у различитим форматима, као што су <em>JPG/JPEG</em>, <em>PNG</em>, <em>WEBP</em>, <em>SVG</em>. Избор формата, величине, компресије и резолуције слике је компромис између брзине учитавања и квалитета и намене слике.</p>
+<p>На веб странама се најчешће користе <em>JPEG</em> формати, зато што дају најбољи однос квалитета и величине слике.</p>
+<p><em>PNG</em> формат се може користити како би се приказале квалитетније слике, али често је цена спорије учитавање стране. Због брзине учитавања посебно треба избегавати формате намењене пре свега за квалитетно штампање, као што је <em>TIF</em>, јер су фајлови у том формату често велики.</p>
+<p><em>GIF</em> слика се често користи када је потребно направити неку анимирану илустрацију, која је довољно једноставна и не захтева пратећи аудио или контроле (пауза, заустављање, позиционирање на неки тренутак).</p>
+<p>Пожељно је користити прогресивни формат слика (нпр. прогресивни <em>JPEG</em>) у случају да су слике веће и спорије се учитавају. Класични формати исцртавају део по део слике (у хоризонталним тракама), док прогресивни исцртају одмах целу слику, али лошијег квалитета (замућено). Потом се, како се учитава додатни садржај слике, квалитет приказа поправља и слика се изоштрава.</p>
+<p>Постоје и векторски формати као што је <em>SVG</em> (енгл. <em>Scalable Vector Graphics</em>). Предност векторских формата је могућност увеличања слике без губитка квалитета јер се њихов опис своди на дефинисање линија, облика фигура и боја.</p>
 </div>
-<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> у себи садржи <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;source&gt;</span></code> (представља се самозатварајућим тагом), који представља линк на видео фајл који треба приказати. У случају да постоји више елемената <code class="docutils literal notranslate"><span class="pre">&lt;source&gt;</span></code> у оквиру истог <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> елемента, прегледач ће покушати да прикаже први, а ако не може да га прикаже, онда ће прећи на следећи. Унутар елемента <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> се може наћи и текст који ће бити приказан у случају да прегледач не може да покрене видео (нпр. ако фајл није на задатој локацији, ако је оштећен, или ако прегледач не може да покрене такав тип видеа). Уз видео се могу ставити и преводи помоћу <code class="docutils literal notranslate"><span class="pre">&lt;track&gt;</span></code> елемента.</p>
-<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> има још неколико корисних својстава којима се може дефинисати понашање ове контроле, као на пример:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">autoplay</span> <span class="na">poster</span><span class="o">=</span><span class="s">&quot;/images/naslov.jpg&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;film.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span> <span class="p">/&gt;</span>
-    Ако видите овај текст, онда видео не може да се прикаже.
-<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Атрибутом <code class="docutils literal notranslate"><span class="pre">controls</span></code> се дефинише да је потребно приказати алатку са контролама за покретање и заустављање видеа, атрибут <code class="docutils literal notranslate"><span class="pre">autoplay</span></code> дефинише да је потребно покренути видео чим се учита, док атрибут <code class="docutils literal notranslate"><span class="pre">poster</span></code> представља слику која ће бити приказана пре него што се видео покрене. Више информација о елементу <code class="docutils literal notranslate"><span class="pre">video</span></code> можете наћи на
-<a class="reference external" href="https://www.w3schools.com/tags/tag_video.asp">страни о елементу video</a> sajta <em>W3 schools</em>.</p>
 </div>
 <div class="section" id="id4">
-<h2>Оквири<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>Видео материјали<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><em>HTML</em> језик нам омогућава да у веб страну поставимо видео материјале који се могу приказати у тој страни. Као и слике, видео фајлови се снимају одвојено од <em>HTML</em> докумената (нпр. видео може да буде снимљен као посебан фајл <code class="docutils literal notranslate"><span class="pre">movie.mp4</span></code>). У том случају је потребно у <em>HTML</em> документ ставити <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code>, који ће у себи имати везу ка видео фајлу.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">video</span></code> елемент који показује <code class="docutils literal notranslate"><span class="pre">mp4</span></code> формат релативне путање <code class="docutils literal notranslate"><span class="pre">film.mp4</span></code></span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;film.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span> <span class="p">/&gt;</span>
+     Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
+ <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> у себи садржи <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;source&gt;</span></code> (представља се самозатварајућим тагом), који представља линк на видео фајл који треба приказати.</p>
+<p>У случају да постоји више елемената <code class="docutils literal notranslate"><span class="pre">&lt;source&gt;</span></code> у оквиру истог <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> елемента, прегледач ће покушати да прикаже први, а ако не може да га прикаже, онда ће прећи на следећи.</p>
+<p>Унутар елемента <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> се може наћи и текст који ће бити приказан у случају да прегледач не може да покрене видео. Пример: ако фајл није на задатој локацији, ако је оштећен, или ако прегледач не може да покрене такав тип видеа.</p>
+<p>Уз видео се могу ставити и преводи помоћу <code class="docutils literal notranslate"><span class="pre">&lt;track&gt;</span></code> елемента.</p>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> има још неколико корисних својстава којима се може дефинисати понашање ове контроле.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Атрибут</p></th>
+<th class="head"><p>Опис</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">controls</span></code></p></td>
+<td><p>Приказује алатку са контролама за покретанје и заустављање видеа</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">autoplay</span></code></p></td>
+<td><p>Дефинише да је потребно покренути видео чим се учита</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">poster</span></code></p></td>
+<td><p>Представља слику која ће бити приказана пре него што се видео покрене</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Пример <code class="docutils literal notranslate"><span class="pre">video</span></code> елемента са додатним својствима</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">autoplay</span> <span class="na">poster</span><span class="o">=</span><span class="s">&quot;/images/naslov.jpg&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;film.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span> <span class="p">/&gt;</span>
+     Ако видите овај текст, онда видео не може да се прикаже.
+ <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Више информација о елементу <code class="docutils literal notranslate"><span class="pre">video</span></code> можете наћи на
+<a class="reference external" href="https://www.w3schools.com/tags/tag_video.asp">страни о елементу video</a> sajta <em>W3 schools</em>.</p>
+</div>
+<div class="section" id="id5">
+<h2>Оквири<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Постоји још један начин да се прикажу видео фајлови - елемент <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> је <em>HTML</em> елемент којим можете да укључите садржај друге <em>HTML</em> стране или документа у тренутну страну. На пример, у случају да желимо да у <em>HTML</em> документу прикажемо неки <em>YouTube</em> видео, можемо у нашу страну да поставимо <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> <em>HTML</em> елемент, коме је у <code class="docutils literal notranslate"><span class="pre">src</span></code> атрибуту уписано одакле треба да прочита видео:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/s9KCMku_StY?list=PLWXhVV6d5_uXFh9vOfagoU4FzJJlV3oWz&quot;</span><span class="p">&gt;</span>
@@ -506,8 +522,8 @@
 <a class="reference internal image-reference" href="../_images/chrome_share_embed_video.png"><img alt="../_images/chrome_share_embed_video.png" class="align-center" src="../_images/chrome_share_embed_video.png" style="width: 600px;" /></a>
 <p>Све што је потребно да урадите је да овај <em>HTML</em> код убаците у вашу страну и <em>YouTube</em> видео ће бити пуштен.</p>
 </div>
-<div class="section" id="id5">
-<h2>Аудио материјали<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>Аудио материјали<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p><em>HTML</em> нам омогућава да поставимо аудио материјале унутар веб стране помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code>, као што је приказано у следећем примеру:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;himna.ogg&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/ogg&quot;</span> <span class="p">/&gt;</span>
@@ -518,7 +534,8 @@
 </div>
 <p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code> омогућава да пустите („одсвирате”) аудио материјале у <em>MP3</em>, <em>WAV</em> и <em>OGG</em> формату, мада различити прегледачи могу да имају подршку за само неке од ових формата. Због тога се у оквиру елемента <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code> обично наводи неколико аудио фајлова, како би прегледач могао да употреби фајл чији формат подржава. У случају да прегледач подржава елемент <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code>, видећете нешто попут приказа на следећој слици:</p>
 <a class="reference internal image-reference" href="../_images/audio.png"><img alt="../_images/audio.png" class="align-center" src="../_images/audio.png" style="width: 600px;" /></a>
-<p>Као и у случају елемента <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code>, постоји неколико својстава помоћу којих можемо да задамо прегледачу како да прикаже контролу и пусти аудио запис. На пример, <code class="docutils literal notranslate"><span class="pre">controls</span></code> дефинише да је потребно приказати контроле за покретање и заустављање аудио материјала, <code class="docutils literal notranslate"><span class="pre">loop</span></code> да је потребно стално понављати аудио материјал, док <code class="docutils literal notranslate"><span class="pre">autoplay</span></code> задаје да аудио запис треба одмах покренути чим се садржај учита. Више информација о елементу <code class="docutils literal notranslate"><span class="pre">audio</span></code> можете наћи на <a class="reference external" href="https://www.w3schools.com/tags/tag_audio.asp">страни о аудио елементу</a> сајта <em>W3 schools</em>.</p>
+<p>Као и у случају елемента <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code>, постоји неколико својстава помоћу којих можемо да задамо прегледачу како да прикаже контролу и пусти аудио запис. На пример, <code class="docutils literal notranslate"><span class="pre">controls</span></code> дефинише да је потребно приказати контроле за покретање и заустављање аудио материјала, <code class="docutils literal notranslate"><span class="pre">loop</span></code> да је потребно стално понављати аудио материјал, док <code class="docutils literal notranslate"><span class="pre">autoplay</span></code> задаје да аудио запис треба одмах покренути чим се садржај учита.</p>
+<p>Више информација о елементу <code class="docutils literal notranslate"><span class="pre">audio</span></code> можете наћи на <a class="reference external" href="https://www.w3schools.com/tags/tag_audio.asp">страни о аудио елементу</a> сајта <em>W3 schools</em>.</p>
 </div>
 </div>
 

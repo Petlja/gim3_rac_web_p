@@ -24,13 +24,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -119,46 +115,14 @@
     <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="../_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="../_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/p5js.js"></script>
     <script type="text/javascript" src="../_static/gallery.js"></script>
-    <script type="text/javascript" src="../_static/dbDirective.js"></script>
-    <script type="text/javascript" src="../_static/sql.js"></script>
     <script type="text/javascript" src="../_static/associations.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
-    <script type="text/javascript" src="../_static/regex-check.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -312,6 +276,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html><div class="studioLecture" id=activity-01a_css_stilovi_citanje><i class="fas fa-file-alt activity-icon"></i>CSS стилови</div></a>
+                <a href=../2_CSS_01_CSS_stilovi/01b_css_stilovi_definisanje.html><div class="studioLecture" id=activity-01b_css_stilovi_definisanje><i class="fas fa-file-alt activity-icon"></i>Дефинисање CSS стилова</div></a>
                 <a href=../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html><div class="studioLecture" id=activity-01c_css_stilovi_vezbe><i class="fas fa-file-alt activity-icon"></i>CSS стилови - вежбе</div></a>
                 </div>
             </div>
@@ -323,8 +288,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html><div class="studioLecture" id=activity-02a_css_svojstva_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02b_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02c_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_teksta_citanje.html><div class="studioLecture" id=activity-02b_css_svojstva_teksta_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства текста</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_granice_elementa_citanje.html><div class="studioLecture" id=activity-02c_css_svojstva_granice_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства која дефинишу границе елемента</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02d_css_svojstva_dimenzije_elementa_citanje.html><div class="studioLecture" id=activity-02d_css_svojstva_dimenzije_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS димензије елемената</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02e_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02e_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02f_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02f_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
                 </div>
             </div>
                 
@@ -335,8 +303,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html><div class="studioLecture" id=activity-03b_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html><div class="studioLecture" id=activity-03c_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03f_css_selektori_zadaci.html><div class="studioLecture" id=activity-03f_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
                 </div>
             </div>
                 
@@ -349,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html><div class="studioLecture" id=activity-04a_raspored_elemenata_citanje><i class="fas fa-file-alt activity-icon"></i>Распоред елемената</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html><div class="studioLecture" id=activity-04b_raspored_elemenata_pitanja><i class="far fa-question-circle activity-icon"></i>Распоред елемената - питања</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html><div class="studioLecture" id=activity-04c_raspored_elemenata_zadaci><i class="fas fa-file-alt activity-icon"></i>Распоред елемената - задаци</div></a>
+                <a href=../2_CSS_04_raspored_elemenata/04d_raspored_elemenata_flexbox_citanje.html><div class="studioLecture" id=activity-04d_raspored_elemenata_flexbox_citanje><i class="fas fa-file-alt activity-icon"></i>Flexbox</div></a>
                 </div>
             </div>
                 
@@ -453,73 +425,106 @@
 <p><strong>Табеле</strong> представљају податке организоване у облику редова и колона.</p>
 <a class="reference internal image-reference" href="../_images/tabela.png"><img alt="../_images/tabela.png" class="align-center" src="../_images/tabela.png" style="width: 600px;" /></a>
 <p>Први ред у табели садржи називе колона и назива се <strong>заглавље</strong> (енгл. <em>heading</em>) табеле. Испод овог реда се налазе редови који садрже податке у својим <strong>ћелијама</strong> (енгл. <em>cells</em>).</p>
-<p>Табела је сложени <em>HTML</em> елемент, који садржи више других елемената различитих врста. <em>HTML</em> елементи садржани у табели представљају различите делове табеле (заглавље, остали редови, ћелије):</p>
-<ul class="simple">
-<li><p>Цела табела је окружена ознакама <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/table&gt;</span></code>. Унутар сваке табеле се налазе заглавље (између ознака <code class="docutils literal notranslate"><span class="pre">&lt;thead&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/thead&gt;</span></code>) и <strong>тело</strong> (између ознака тагова <code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/tbody&gt;</span></code>). Унутар заглавља и тела се налазе <strong>редови</strong>.</p></li>
-</ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-        ...
-    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-        ...
-    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<p>Табела је сложени <em>HTML</em> елемент, који садржи више других елемената различитих врста. <em>HTML</em> елементи садржани у табели представљају различите делове табеле (заглавље, остали редови, ћелије).</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Елементи табела</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 46%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Елемент</p></th>
+<th class="head"><p>Опис</p></th>
+<th class="head"><p>Енглески назив</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code></p></td>
+<td><p>Табела</p></td>
+<td><p>Table</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;thead&gt;</span></code></p></td>
+<td><p>Заглавље табеле</p></td>
+<td><p>Table header</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code></p></td>
+<td><p>Тело табеле</p></td>
+<td><p>Table body</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code></p></td>
+<td><p>Ред табеле</p></td>
+<td><p>Table row</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code></p></td>
+<td><p>Ћелија заглавља табеле</p></td>
+<td><p>Table heading</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code></p></td>
+<td><p>Ћелија тела табеле</p></td>
+<td><p>Table data</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;tfoot&gt;</span></code></p></td>
+<td><p>Подножје табеле</p></td>
+<td><p>Table footer</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;caption&gt;</span></code></p></td>
+<td><p>Поднаслов</p></td>
+<td><p>Caption</p></td>
+</tr>
+</tbody>
+</table>
+<p>Цела табела је окружена тагом <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>. Унутар сваке табеле се налази заглавље (елемент <code class="docutils literal notranslate"><span class="pre">&lt;thead&gt;</span></code>) и <strong>тело</strong> (елемент <code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code>). Унутар заглавља и тела се налазе <strong>редови</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Табела са заглављем и телом</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+         ...
+     <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+         ...
+     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Сваки ред је окружен таговима <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/tr&gt;</span></code> (енгл. <em>table row</em>) и у њему се налазе ћелије колона табеле.</p></li>
-<li><p>Први ред садржи ћелије заглавља табеле (енгл. <em>table heading</em>), где се текст налази између ознака <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/th&gt;</span></code> (енгл. <em>table heading</em>) и мало je подебљан у односу на текст у осталим ћелијама.</p></li>
-</ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Назив<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Земља<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Година<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+</div>
+<p>Ред се описује елементом <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code> и у њему се налазе ћелије колона табеле.</p>
+<p>Унутар заглавља табеле, ћелије табеле су окружене елементом <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code> и биће приказане подебљаним текстом.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Заглавље табеле са једним редом и 3 колоне</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Назив<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Земља<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Година<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Унутар тела табеле (&lt;tbody&gt;), редови имају ћелије табеле окружене ознакама &lt;td&gt; и &lt;/td&gt; (енгл. <em>table data</em>).</p></li>
-</ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-    …
-    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Орден Светог Саве<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Србија<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1892<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-    …
-<span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+</div>
+<p>Унутар тела табеле (<code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code>), ћелије табеле су окружене елементом <code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Тело табеле са редом и 3 колоне</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+     …
+     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Орден Светог Саве<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Србија<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1892<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+     …
+ <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Опционо се може додати и <strong>подножје</strong> (енгл. <em>footer</em>) између тагова <code class="docutils literal notranslate"><span class="pre">&lt;tfoot&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/tfoot&gt;</span></code> и <strong>поднаслов</strong> табеле (енгл. <em>caption</em>), између ознака <code class="docutils literal notranslate"><span class="pre">&lt;caption&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/caption&gt;</span></code>.</p></li>
-</ul>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Опционо се може додати и <strong>подножје</strong> користећи елемент <code class="docutils literal notranslate"><span class="pre">&lt;tfoot&gt;</span></code> и <strong>поднаслов</strong> табеле (енгл. <em>caption</em>), користећи елемент <code class="docutils literal notranslate"><span class="pre">&lt;caption&gt;</span></code>.</p>
+
+    </p></div></div>
 <p>Табела која приказује ордење које је добио Никола Тесла и која има три колоне и три реда је приказана у следећем примеру:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Назив<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Земља<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Година<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Орден Светог Саве<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Србија<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1892<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Медаља Универзитета у Паризу<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Француска<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1937<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Орден белог лава<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Чехословачка<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1937<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Ако овај <em>HTML</em> текст копирамо у <a class="reference external" href="https://jsbin.com/?html,output">https://jsbin.com/?html,output</a>, можемо да видимо како ће табела изгледати у прегледачу:</p>
-<a class="reference internal image-reference" href="../_images/web_nikola_tesla_ordenje.png"><img alt="../_images/web_nikola_tesla_ordenje.png" class="align-center" src="../_images/web_nikola_tesla_ordenje.png" style="width: 600px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Кôд целог <em>HTML</em> документа је дат у следећем листингу, који можете да испробате без копирања, у оквиру ове стане.</p>
 
 <div data-childcomponent="tabela_html" class="course-box course-box-problem course-content">
 
@@ -528,76 +533,46 @@
     data-audio=''   
                data-hidehistory=true
        >
- &lt;!DOCTYPE html&gt;
- &lt;html&gt;
- &lt;head&gt;
-   &lt;meta charset=&quot;utf-8&quot;&gt;
-   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
-   &lt;title&gt;JS Bin&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-     &lt;table&gt;
-         &lt;thead&gt;
-             &lt;tr&gt;
-                 &lt;th&gt;Назив&lt;/th&gt;&lt;th&gt;Земља&lt;/th&gt;&lt;th&gt;Година&lt;/th&gt;
-             &lt;tr&gt;
-         &lt;/thead&gt;
-         &lt;tbody&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Орден Светог Саве&lt;/td&gt;&lt;td&gt;Србија&lt;/td&gt;&lt;td&gt;1892&lt;/td&gt;
-             &lt;/tr&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Медаља Универзитета у Паризу&lt;/td&gt;&lt;td&gt;Француска&lt;/td&gt;&lt;td&gt;1937&lt;/td&gt;
-             &lt;/tr&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Орден белог лава&lt;/td&gt;&lt;td&gt;Чехословачка&lt;/td&gt;&lt;td&gt;1937&lt;/td&gt;
-             &lt;/tr&gt;
-         &lt;/tbody&gt;
-     &lt;/table&gt;
- &lt;/body&gt;
- &lt;/html&gt;
+ &lt;table border=&quot;solid 1px&quot;&gt;
+     &lt;thead&gt;
+         &lt;tr&gt;
+             &lt;th&gt;Назив&lt;/th&gt;
+             &lt;th&gt;Земља&lt;/th&gt;
+             &lt;th&gt;Година&lt;/th&gt;
+         &lt;tr&gt;
+     &lt;/thead&gt;
+     &lt;tbody&gt;
+         &lt;tr&gt;
+             &lt;td&gt;Орден Светог Саве&lt;/td&gt;
+             &lt;td&gt;Србија&lt;/td&gt;
+             &lt;td&gt;1892&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+             &lt;td&gt;Медаља Универзитета у Паризу&lt;/td&gt;
+             &lt;td&gt;Француска&lt;/td&gt;
+             &lt;td&gt;1937&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+             &lt;td&gt;Орден белог лава&lt;/td&gt;
+             &lt;td&gt;Чехословачка&lt;/td&gt;
+             &lt;td&gt;1937&lt;/td&gt;
+         &lt;/tr&gt;
+     &lt;/tbody&gt;
+ &lt;/table&gt;
+ &lt;caption&gt;Ордени и медаље додељени Николи Тесли&lt;/caption&gt;
 </textarea>
 </div>
-<p>Са стилизовањем табела (и других елемената) ћемо се упознати ускоро. У међувремену, поменимо само да се писањем, на пример, <code class="docutils literal notranslate"><span class="pre">&lt;table</span> <span class="pre">border=&quot;solid</span> <span class="pre">1px&quot;&gt;</span></code> уместо само <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code> добија табела у којој су појединачна поља уоквирена, што је чини знатно прегледнијом:</p>
 
-<div data-childcomponent="tabela_okvir_html" class="course-box course-box-problem course-content">
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Атрибут <code class="docutils literal notranslate"><span class="pre">border</span></code> са вредношћу <code class="docutils literal notranslate"><span class="pre">solid</span> <span class="pre">1px</span></code> описује да ивице табеле и ћелија треба да буду једнобојне (енгл. <em>solid</em>) величине једног пиксела.</p>
 
-<textarea data-component="activecode" id=tabela_okvir_html data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
- &lt;!DOCTYPE html&gt;
- &lt;html&gt;
- &lt;head&gt;
-   &lt;meta charset=&quot;utf-8&quot;&gt;
-   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
-   &lt;title&gt;JS Bin&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-     &lt;table border=&quot;solid 1px&quot;&gt;
-         &lt;thead&gt;
-             &lt;tr&gt;
-                 &lt;th&gt;Назив&lt;/th&gt;&lt;th&gt;Земља&lt;/th&gt;&lt;th&gt;Година&lt;/th&gt;
-             &lt;tr&gt;
-         &lt;/thead&gt;
-         &lt;tbody&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Орден Светог Саве&lt;/td&gt;&lt;td&gt;Србија&lt;/td&gt;&lt;td&gt;1892&lt;/td&gt;
-             &lt;/tr&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Медаља Универзитета у Паризу&lt;/td&gt;&lt;td&gt;Француска&lt;/td&gt;&lt;td&gt;1937&lt;/td&gt;
-             &lt;/tr&gt;
-             &lt;tr&gt;
-                 &lt;td&gt;Орден белог лава&lt;/td&gt;&lt;td&gt;Чехословачка&lt;/td&gt;&lt;td&gt;1937&lt;/td&gt;
-             &lt;/tr&gt;
-         &lt;/tbody&gt;
-     &lt;/table&gt;
- &lt;/body&gt;
- &lt;/html&gt;
-</textarea>
+    </p></div></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Употреба атрибута <code class="docutils literal notranslate"><span class="pre">border</span></code> није препоручени начин стилизовања табеле и налази се на листи застарелих атрибута. Можете га користити приликом вежбања да би јасније видели табеле.</p>
 </div>
-<p>Употреба атрибута <code class="docutils literal notranslate"><span class="pre">border</span></code> није препоручени начин стилизовања табеле (о чему ће још бити речи), али га можете користити да бисте јасније видели табеле које правите током вежбања.</p>
 </div>
 
 

@@ -200,6 +200,12 @@ lessons:
     title: CSS стилови
     type: reading
   - description: ''
+    file: 01b_css_stilovi_definisanje.html
+    guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f76
+    src: 01b_css_stilovi_definisanje.rst
+    title: Дефинисање CSS стилова
+    type: reading
+  - description: ''
     file: 01c_css_stilovi_vezbe.html
     guid: 9493a4e0-0154-4c00-a46b-e8e439852552
     src: 01c_css_stilovi_vezbe.rst
@@ -219,15 +225,33 @@ lessons:
     title: CSS својства
     type: reading
   - description: ''
-    file: 02b_css_svojstva_pitanja.html
+    file: 02b_css_svojstva_teksta_citanje.html
+    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc44
+    src: 02b_css_svojstva_teksta_citanje.rst
+    title: CSS својства текста
+    type: reading
+  - description: ''
+    file: 02c_css_svojstva_granice_elementa_citanje.html
+    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc45
+    src: 02c_css_svojstva_granice_elementa_citanje.rst
+    title: CSS својства која дефинишу границе елемента
+    type: reading
+  - description: ''
+    file: 02d_css_svojstva_dimenzije_elementa_citanje.html
+    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc46
+    src: 02d_css_svojstva_dimenzije_elementa_citanje.rst
+    title: CSS димензије елемената
+    type: reading
+  - description: ''
+    file: 02e_css_svojstva_pitanja.html
     guid: 9c838d88-5572-4bb6-9233-71a7d811871c
-    src: 02b_css_svojstva_pitanja.rst
+    src: 02e_css_svojstva_pitanja.rst
     title: CSS својства - питања
     type: quiz
   - description: ''
-    file: 02c_css_svojstva_zadaci.html
+    file: 02f_css_svojstva_zadaci.html
     guid: 02f77f91-4eeb-4ab8-bda0-2c4574abcb77
-    src: 02c_css_svojstva_zadaci.rst
+    src: 02f_css_svojstva_zadaci.rst
     title: CSS својства - задаци
     type: reading
   archived-activities: []
@@ -244,15 +268,33 @@ lessons:
     title: CSS селектори
     type: reading
   - description: ''
-    file: 03b_css_selektori_pitanja.html
+    file: 03b_css_selektori_identifikator_citanje.html
+    guid: 5a22069a-7205-471f-b438-cf46910c0da5
+    src: 03b_css_selektori_identifikator_citanje.rst
+    title: Стилизовање идентификатора
+    type: reading
+  - description: ''
+    file: 03c_css_selektori_klase_citanje.html
+    guid: 5a22069a-7205-471f-b438-cf46910c0da6
+    src: 03c_css_selektori_klase_citanje.rst
+    title: Стилизовање класа елемената
+    type: reading
+  - description: ''
+    file: 03d_css_selektori_slozeni_citanje.html
+    guid: 5a22069a-7205-471f-b438-cf46910c0da7
+    src: 03d_css_selektori_slozeni_citanje.rst
+    title: Сложени CSS селектори
+    type: reading
+  - description: ''
+    file: 03e_css_selektori_pitanja.html
     guid: 8f6017b8-d952-4b54-b267-ac898124867a
-    src: 03b_css_selektori_pitanja.rst
+    src: 03e_css_selektori_pitanja.rst
     title: CSS селектори - питања
     type: quiz
   - description: ''
-    file: 03c_css_selektori_zadaci.html
+    file: 03f_css_selektori_zadaci.html
     guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
-    src: 03c_css_selektori_zadaci.rst
+    src: 03f_css_selektori_zadaci.rst
     title: CSS селектори - задаци
     type: reading
   archived-activities: []
@@ -279,6 +321,12 @@ lessons:
     guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
     src: 04c_raspored_elemenata_zadaci.rst
     title: Распоред елемената - задаци
+    type: reading
+  - description: ''
+    file: 04d_raspored_elemenata_flexbox_citanje.html
+    guid: 723b6866-6ec7-4c37-b937-0ef184d8dcf2
+    src: 04d_raspored_elemenata_flexbox_citanje.rst
+    title: Flexbox
     type: reading
   archived-activities: []
   description: Распоред елемената

@@ -24,13 +24,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -119,46 +115,14 @@
     <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="../_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="../_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/p5js.js"></script>
     <script type="text/javascript" src="../_static/gallery.js"></script>
-    <script type="text/javascript" src="../_static/dbDirective.js"></script>
-    <script type="text/javascript" src="../_static/sql.js"></script>
     <script type="text/javascript" src="../_static/associations.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
-    <script type="text/javascript" src="../_static/regex-check.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -312,6 +276,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html><div class="studioLecture" id=activity-01a_css_stilovi_citanje><i class="fas fa-file-alt activity-icon"></i>CSS стилови</div></a>
+                <a href=../2_CSS_01_CSS_stilovi/01b_css_stilovi_definisanje.html><div class="studioLecture" id=activity-01b_css_stilovi_definisanje><i class="fas fa-file-alt activity-icon"></i>Дефинисање CSS стилова</div></a>
                 <a href=../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html><div class="studioLecture" id=activity-01c_css_stilovi_vezbe><i class="fas fa-file-alt activity-icon"></i>CSS стилови - вежбе</div></a>
                 </div>
             </div>
@@ -323,8 +288,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html><div class="studioLecture" id=activity-02a_css_svojstva_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02b_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02c_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_teksta_citanje.html><div class="studioLecture" id=activity-02b_css_svojstva_teksta_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства текста</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_granice_elementa_citanje.html><div class="studioLecture" id=activity-02c_css_svojstva_granice_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства која дефинишу границе елемента</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02d_css_svojstva_dimenzije_elementa_citanje.html><div class="studioLecture" id=activity-02d_css_svojstva_dimenzije_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS димензије елемената</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02e_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02e_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02f_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02f_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
                 </div>
             </div>
                 
@@ -335,8 +303,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html><div class="studioLecture" id=activity-03b_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html><div class="studioLecture" id=activity-03c_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03f_css_selektori_zadaci.html><div class="studioLecture" id=activity-03f_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
                 </div>
             </div>
                 
@@ -349,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html><div class="studioLecture" id=activity-04a_raspored_elemenata_citanje><i class="fas fa-file-alt activity-icon"></i>Распоред елемената</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html><div class="studioLecture" id=activity-04b_raspored_elemenata_pitanja><i class="far fa-question-circle activity-icon"></i>Распоред елемената - питања</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html><div class="studioLecture" id=activity-04c_raspored_elemenata_zadaci><i class="fas fa-file-alt activity-icon"></i>Распоред елемената - задаци</div></a>
+                <a href=../2_CSS_04_raspored_elemenata/04d_raspored_elemenata_flexbox_citanje.html><div class="studioLecture" id=activity-04d_raspored_elemenata_flexbox_citanje><i class="fas fa-file-alt activity-icon"></i>Flexbox</div></a>
                 </div>
             </div>
                 
@@ -449,112 +421,198 @@
     
   <div class="section" id="id1">
 <h1>Повезивање докумената<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>У обичном тексту у књигама и <em>Word</em> документима прелазите са стране на страну и читате га редом (секвенцијално). На веб странама имате могућност да током читања лако прелазите на друге делове текста у зависности од интереса, вратите се назад и наставите током који вас највише занима.</p>
-<p>Једна од најбитнијих идеја језика <em>HTML</em> је да омогући тзв. <strong>хипер-текст</strong> – текст који може да се чита различитим редом, зависно од интересовања читаоца.</p>
-<p>Хипер-текст је толико битан елемент језика <em>HTML</em>, да је постао и део самог назива језика - “Hyper-Text Markup Language”. <em>HTML</em> документи вам омогућавају да поделите садржај на више фајлова, како би читалац могао да пролази кроз садржаје који га интересују на начин који му одговара. На овај начин, <em>HTML</em> документи постају много више од обичних страна које можете наћи у књигама. Као пример, погледајмо како Google приказује резултате претраге када се траже информације о српским научницима.</p>
-<a class="reference internal image-reference" href="../_images/srpski_naucnici.png"><img alt="../_images/srpski_naucnici.png" class="align-center" src="../_images/srpski_naucnici.png" style="width: 600px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Након што пронађе податке о неким српским научницима, <em>Google</em> неће приказати страну на којој детаљно описује све те научнике, него само имена и слике научника које је пронашао. Поред тога, <em>Google</em> ће вам омогућити да одаберете име научника о коме желите да сазнате више, а по вашем избору ће се приказати нова страна са информацијама о научнику којег сте одабрали.</p>
-<p>Конкретније, <em>Google</em> приказује <em>HTML</em> документ који садржи везе (линкове) ка странама на којима можете да прочитате више информација о научнику за кога сте заинтересовани.</p>
-<p>Као што <em>Google</em> може да постави овакве везе када прикаже резултате претраге, и ви можете да урадите исто у својим странама. Замислимо да смо поред стране о <em>Николи Тесли</em> (NikolaTesla.html) направили и стране о <em>Михајлу Пупину</em> (MihajloPupin.html) и <em>Милутину Миланковићу</em> (MilutinMilankovic.html) и да желимо да направимо страну на којој ће читалац моћи да одабере који од ових докумената жели да прочита. Потребно је да текст на који ће читалац да кликне окружимо <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елементом. Унутар почетне ознаке елемента <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> пишемо и атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code>, чија вредност је име <em>HTML</em> документа којег треба приказати када читалац кликне на текст унутар елемента:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<p>Често имамо потребу да одвајамо садржај у посебне документе. Замислимо да имамо 3 различите особе за које смо направили одвојен документ:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Научник</p></th>
+<th class="head"><p>Назив документа</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Никола Тесла</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">NikolaTesla.html</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Михајло Пупин</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MihajloPupin.html</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Милутин Миланковић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MilutinMilankovic.html</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Ако желимо да направимо документ <code class="docutils literal notranslate"><span class="pre">Sadrzaj.html</span></code> који би имао везе (енгл. <em>link</em>) ка овим документима, могли би да искористимо елемент <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> (енгл. <em>anchor</em>).</p>
+<p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> prima atribut <code class="docutils literal notranslate"><span class="pre">href</span></code> коме је могуће проследити име стране са којом желимо да повежемо садржај:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Линкови ка документима</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
+</div>
 </div>
 <p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> омогућава читаоцу да одабере (кликне, тапне) на текст унутар <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елемента и том акцијом пређе на <em>HTML</em> документ који је наведен као вредност <code class="docutils literal notranslate"><span class="pre">href</span></code> атрибута. На овај начин можемо да направимо везе од једног <em>HTML</em> документа ка осталима.</p>
-
-    <div class="course-box course-box-info">
-        <div class="course-content">
-            <p>
-<p><strong>Атрибути</strong></p>
-<p>Подсетимо се, када смо говорили о струткури <em>HTML</em> документа, поменули смо атрибут <code class="docutils literal notranslate"><span class="pre">lang</span></code> елемента <code class="docutils literal notranslate"><span class="pre">html</span></code>.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-    ...
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Сада смо наишли на други пример употребе атрибута, а то је атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code>:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;NikolaTesla.html&quot;</span><span class="p">&gt;</span>
-    Никола Тесла
-<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>У претходним примерима, отварајући тагови који означавају почетак елемента били су најчешће између ознака <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> и садржавали су само име елемента. Као што видимо, језик <em>HTML</em> нам омогућава да сваки елемент додатно опишемо атрибутима, који се пишу у отварајућем тагу, у облику <code class="docutils literal notranslate"><span class="pre">атрибут1=&quot;вредност1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">атрибут2=&quot;вредност2&quot;</span></code> итд, или у неким случајевима само <code class="docutils literal notranslate"><span class="pre">атрибут1</span></code>, <code class="docutils literal notranslate"><span class="pre">атрибут2</span></code>, без вредности (што зависи од конкретног атрибута, а такве примере ћемо видети ускоро). У овом примеру, атрибут <code class="docutils literal notranslate"><span class="pre">href</span></code> описује на коју <em>HTML</em> страну треба прећи када се кликне на текст.</p>
-
-    </p></div></div>
-<p><em>HTML</em> документи који се користе у претходном примеру се налазе у истом директоријуму као и документ у коме се налазе <em>HTML</em> елементи <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>. Међутим, ништа нас не спречава да фајлове распоредимо по посебним директоријумима и да их повежемо. На пример, претпоставимо да су стране о научницима у поддиректоријуму <em>naucnici</em>, стране о фудбалерима у поддиректоријуму <em>fudbaleri</em>, а стране о кошаркашима у поддиректоријуму <em>kosarkasi</em>. Ако бисмо хтели да повежемо своју страну са њима, могли бисмо да користимо линкове приказане у следећем примеру:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DragoslavSekularac.html&quot;</span><span class="p">&gt;</span>Драгослав Шекуларац<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DejanStankovic.html&quot;</span><span class="p">&gt;</span>Дејан Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DraganMance.html&quot;</span><span class="p">&gt;</span>Драган Манце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/SasaIlic.html&quot;</span><span class="p">&gt;</span>Саша Илић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/BoraStankovic.html&quot;</span><span class="p">&gt;</span>Бора Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Ово су такозвани <strong>релативни линкови</strong>, који нам омогућавају да одведемо читаоца од тренутне стране ка другој страни. У претходном примерима се референцирају стране које се налазе у поддиректоријумима, али релативни линкови нам омогућавају и да пређемо у наддиректоријум коришћењем две тачке <code class="docutils literal notranslate"><span class="pre">..</span></code>, које представљају директоријум на вишем нивоу. На пример, замислимо да се читалац налази на страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> и да желимо да га одведемо на страну <code class="docutils literal notranslate"><span class="pre">kosarkasi/SasaDjordjevic.html</span></code> када одабере линк. На страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> бисмо ставили следећи релативни линк:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Поред докумената који се налазе у различитим директоријумима у оквиру тренутног сајта, можемо да направимо везе ка странама које се налазе на потпуно другим веб сајтовима (као што то ради <em>Google</em> у највећем броју случајева). У том случају би требало да ставимо пун <em>URL</em> који наводимо и у прегледачу када желимо да одемо на неку страну. Елемент са везом ка страни <em>Википедије</em> би изгледао овако:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Ово су такозвани <strong>апсолутни линкови</strong>, помоћу којих се задаје пуна <em>URL</em> адреса до жељене стране. Једна од најчешћих грешака које се праве је изостављање <code class="docutils literal notranslate"><span class="pre">http://</span></code>, односно <code class="docutils literal notranslate"><span class="pre">https://</span></code> префикса у апсолутном линку, као што је приказано у следећем примеру:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Могуће је да сте навикли да пишете <em>URL</em> адресе без <code class="docutils literal notranslate"><span class="pre">http://</span></code> или <code class="docutils literal notranslate"><span class="pre">https://</span></code> префикса, пошто ће их прегледачи аутоматски додати. Међутим, то се неће десити у случају <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елемената. Ако ставите вредност <code class="docutils literal notranslate"><span class="pre">href</span></code> атрибута без овог префикса, прегледач ће сматрати да желите да отворите локални фајл <em>Борислав_Станковић</em>, који се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">sr.wikipedia.org/sr-ec</span></code>. Префикс <code class="docutils literal notranslate"><span class="pre">http://</span></code> (или <code class="docutils literal notranslate"><span class="pre">https://</span></code>) у вашој <em>HTML</em> референци говори прегледачу да треба да потражи референцирани документ на другом веб сајту, а не локално. Зато ћете у већини случајева добити грешку ако изоставите овај префикс.</p>
 <div class="section" id="id2">
-<h2>Интерни линкови<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>У неким случајевима ће вам бити потребно да направите везе које не воде ка другим странама, него ка секцијама унутар исте стране. Најчешћи пример у коме би вам ово било потребно је прављење садржаја на почетку стране. На следећој слици је приказан садржај стране о Бориславу Станковићу са линковима ка различитим секцијама (<em>Биографија</em>, <em>Остало</em>, <em>Референце</em>, <em>Литература</em>, <em>Спољашње везе</em>) на истој веб страни о овом славном кошаркашу, тренеру и кошаркашком функционеру:</p>
+<h2>Релативни линкови<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><em>HTML</em> документи који се користе у претходном примеру се налазе у истом директоријуму као и документ у коме се налазе <em>HTML</em> елементи <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>. Међутим, ништа нас не спречава да фајлове распоредимо по посебним директоријумима и да их повежемо. Посматрајмо следећи пример:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Особа</p></th>
+<th class="head"><p>Назив документа</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Никола Тесла</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">naucnici/NikolaTesla.html</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Михајло Пупин</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">naucnici/MihajloPupin.html</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Милутин Миланковић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">naucnici/MilutinMilankovic.html</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Драгослав Шекуларац</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fudbaleri/DragoslavSekularac.html</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Дејан Станковић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fudbaleri/DejanStankovic.html</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Драган Манце</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Саша Илић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fudbaleri/SasaIlic.html</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Бора Станковић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kosarkasi/BoraStankovic.html</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Саша Ђорђевић</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">kosarkasi/SasaDjordjevic.html</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Да би направили линк ка неком документу, потребно је навести путању укључујући директоријум у ком се документ налази:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Релативни линкови</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/NikolaTesla.html&quot;</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MihajloPupin.html&quot;</span><span class="p">&gt;</span>Михајло Пупин<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;naucnici/MilutinMilankovic.html&quot;</span><span class="p">&gt;</span>Милутин Миланковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DragoslavSekularac.html&quot;</span><span class="p">&gt;</span>Драгослав Шекуларац<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DejanStankovic.html&quot;</span><span class="p">&gt;</span>Дејан Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/DraganMance.html&quot;</span><span class="p">&gt;</span>Драган Манце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;fudbaleri/SasaIlic.html&quot;</span><span class="p">&gt;</span>Саша Илић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/BoraStankovic.html&quot;</span><span class="p">&gt;</span>Бора Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Ово су такозвани <strong>релативни линкови</strong>, који нам омогућавају да одведемо читаоца од тренутне стране ка другој страни.</p>
+<p>У претходном примерима се референцирају стране које се налазе у поддиректоријумима, али релативни линкови нам омогућавају и да пређемо у наддиректоријум коришћењем две тачке <code class="docutils literal notranslate"><span class="pre">..</span></code>, које представљају директоријум на вишем нивоу.</p>
+<p>На пример, замислимо да се читалац налази на страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> и да желимо да га одведемо на страну <code class="docutils literal notranslate"><span class="pre">kosarkasi/SasaDjordjevic.html</span></code> када одабере линк. На страни <code class="docutils literal notranslate"><span class="pre">fudbaleri/DraganMance.html</span></code> бисмо ставили следећи релативни линк:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Релативни линк користећи наддиректоријум</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../kosarkasi/SasaDjordjevic.html&quot;</span><span class="p">&gt;</span>Саша Ђорђевић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Апсолутни линкови<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Поред докумената који се налазе у различитим директоријумима у оквиру тренутног сајта, можемо да направимо везе ка странама које се налазе на потпуно другим веб сајтовима. У том случају би требало да ставимо пун <em>URL</em> који наводимо и у прегледачу када желимо да одемо на неку страну. Елемент са везом ка страни <em>Википедије</em> би изгледао овако:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Апсолутни линк</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Ово су такозвани <strong>апсолутни линкови</strong>, помоћу којих се задаје пуна <em>URL</em> адреса до жељене стране.</p>
+<p>Једна од најчешћих грешака које се праве је изостављање <code class="docutils literal notranslate"><span class="pre">http://</span></code>, односно <code class="docutils literal notranslate"><span class="pre">https://</span></code> префикса у апсолутном линку, као што је приказано у следећем примеру:</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Апсолутни линк без префикса</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;sr.wikipedia.org/sr-ec/Борислав_Станковић&quot;</span><span class="p">&gt;</span>Борислав Станковић<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ако ставите вредност <code class="docutils literal notranslate"><span class="pre">href</span></code> атрибута без префикса, прегледач ће сматрати да желите да отворите локални фајл <em>Борислав_Станковић</em>, који се налази унутар фолдера <code class="docutils literal notranslate"><span class="pre">sr.wikipedia.org/sr-ec</span></code>.</p>
+<p>Префикси <code class="docutils literal notranslate"><span class="pre">http://</span></code> (или <code class="docutils literal notranslate"><span class="pre">https://</span></code>) у вашој <em>HTML</em> референци говори прегледачу да треба да потражи референцирани документ на другом веб сајту, а не локално. Зато ћете у већини случајева добити грешку ако га изоставите.</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Интерни линкови<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>У неким случајевима ће вам бити потребно да направите везе које не воде ка другим странама, него ка секцијама унутар исте стране. Најчешћи пример у коме би вам ово било потребно је прављење садржаја на почетку стране.</p>
+<p>На следећој слици је приказан садржај стране о Бориславу Станковићу са линковима ка различитим секцијама (<em>Биографија</em>, <em>Остало</em>, <em>Референце</em>, <em>Литература</em>, <em>Спољашње везе</em>) на истој веб страни о овом славном кошаркашу, тренеру и кошаркашком функционеру:</p>
 <a class="reference internal image-reference" href="../_images/wiki_borislav_stankovic.png"><img alt="../_images/wiki_borislav_stankovic.png" class="align-center" src="../_images/wiki_borislav_stankovic.png" style="width: 600px;" /></a>
 <p>Ако одаберете било који од ових линкова, нећете прећи на нову страну на којој можете наћи више информација. Уместо тога, прегледач ће вас само позиционирати на део тренутне стране где се налазе информације које желите да прочитате. Да бисте могли да користите интерне линкове, потребно је да урадите следеће:</p>
 <ul class="simple">
 <li><p>Уведите идентификаторе <em>HTML</em> елемената на које омогућавате прелазак (нпр. <em>биографија</em>, <em>референце</em> итд. у претходној слици) и обележите елементе тим идентификаторима.</p></li>
 <li><p>Направите линкове који референцирају те обележене елементе и од њих формирајте садржај.</p></li>
 </ul>
-<p>Елементи се могу јединствено идентификовати помоћу тзв. идентификатора, који су задати као вредности у <em>id</em> атрибуту <em>HTML</em> елемента. На пример, ако имамо више наслова у документу, сваком од њих можемо да доделимо идентификатор тако што ставимо неку вредност у атрибут <code class="docutils literal notranslate"><span class="pre">id</span></code> сваког наслова:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<p>Елементи се могу јединствено идентификовати помоћу тзв. идентификатора, који су задати као вредности у <code class="docutils literal notranslate"><span class="pre">id</span></code> атрибуту <em>HTML</em> елемента. На пример, ако имамо више наслова у документу, сваком од њих можемо да доделимо идентификатор тако што ставимо неку вредност у атрибут <code class="docutils literal notranslate"><span class="pre">id</span></code> сваког наслова:</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Идентификатори елемената</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Идентификатори треба да буду јединствени у страни, тако да прегледач може да идентификује тачно један елемент на који треба прећи по захтеву читаоца. Када дефинишемо идентификаторе, потребно је да направимо <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елементе који упућују читаоца на њих. Ово постижемо тако што као вредност атрибута <code class="docutils literal notranslate"><span class="pre">href</span></code> ставимо <strong>идентификатор секције</strong> на коју треба прећи, са знаком # на почетку:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Идентификатори треба да буду јединствени у страни, тако да прегледач може да идентификује тачно један елемент на који треба прећи по захтеву читаоца.</p>
+
+    </p></div></div>
+<p>Када дефинишемо идентификаторе, потребно је да направимо <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> елементе који упућују читаоца на њих. Ово постижемо тако што као вредност атрибута <code class="docutils literal notranslate"><span class="pre">href</span></code> ставимо <strong>идентификатор секције</strong> на коју треба прећи, са знаком # на почетку:</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Интерни линкови</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#literatura&quot;</span><span class="p">&gt;</span>Литература<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#spoljasnje&quot;</span><span class="p">&gt;</span>Спољашње везе<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
+</div>
 </div>
 <p>Ако се одабере линк о биографији, прећи ће се на елемент са идентификатором <em>biografija</em>.</p>
 <p>У претходном примеру су коришћене интерне везе ка секцијама у тренутној страни. У случају да нам је потребно да усмеримо читаоца на одређену секцију у оквиру неке друге стране, можемо да комбинујемо линкове ка другим странама и идентификаторе, како бисмо водили читаоца на тачно одређену позицију у документу, уместо да га увек поставимо на почетак документа.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Апсолутни линкови</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija&quot;</span><span class="p">&gt;</span>Биографија<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#ostalo&quot;</span><span class="p">&gt;</span>Остало<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://sr.wikipedia.org/sr-ec/Борислав_Станковић#reference&quot;</span><span class="p">&gt;</span>Референце<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+</div>
 <p>Ако читалац одабере први линк, прегледач ће га одвести на Википедија страну o Бори Станковићу, али уместо да прикаже почетак стране - <a class="reference external" href="https://sr.wikipedia.org/sr-ec/Борислав_Станковић">https://sr.wikipedia.org/sr-ec/Борислав_Станковић</a>, позиционираће се на секцију о биографији Боре Станковића - <a class="reference external" href="https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija">https://sr.wikipedia.org/sr-ec/Борислав_Станковић#biografija</a>.</p>
-<hr class="docutils" />
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
 <p>Када задржите показивач миша на неком линку, ваш веб прегледач ће вероватно у доњем левом углу да прикаже веб адресу до које тај линк води. На пример, ако позиционирате миша <a class="reference external" href="https://sr.wikipedia.org/sr-ec">овде</a>,  требало би да видите адресу као на следећој слици.</p>
 <a class="reference internal image-reference" href="../_images/url_linka.png"><img alt="../_images/url_linka.png" class="align-center" src="../_images/url_linka.png" style="width: 600px;" /></a>
+
+    </p></div></div>
 </div>
 </div>
 

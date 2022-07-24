@@ -24,13 +24,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pycode.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5js.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/regex-check.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -119,46 +115,14 @@
     <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
-    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
-    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
-    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
-    <script type="text/javascript" src="../_static/simanim.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
-    <script type="text/javascript" src="../_static/pycode.js"></script>
-    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/p5js.js"></script>
     <script type="text/javascript" src="../_static/gallery.js"></script>
-    <script type="text/javascript" src="../_static/dbDirective.js"></script>
-    <script type="text/javascript" src="../_static/sql.js"></script>
     <script type="text/javascript" src="../_static/associations.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
-    <script type="text/javascript" src="../_static/regex-check.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/regex-check-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -312,6 +276,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_01_CSS_stilovi/01a_css_stilovi_citanje.html><div class="studioLecture" id=activity-01a_css_stilovi_citanje><i class="fas fa-file-alt activity-icon"></i>CSS стилови</div></a>
+                <a href=../2_CSS_01_CSS_stilovi/01b_css_stilovi_definisanje.html><div class="studioLecture" id=activity-01b_css_stilovi_definisanje><i class="fas fa-file-alt activity-icon"></i>Дефинисање CSS стилова</div></a>
                 <a href=../2_CSS_01_CSS_stilovi/01c_css_stilovi_vezbe.html><div class="studioLecture" id=activity-01c_css_stilovi_vezbe><i class="fas fa-file-alt activity-icon"></i>CSS стилови - вежбе</div></a>
                 </div>
             </div>
@@ -323,8 +288,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_02_CSS_svojstva/02a_css_svojstva_citanje.html><div class="studioLecture" id=activity-02a_css_svojstva_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02b_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
-                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02c_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02b_css_svojstva_teksta_citanje.html><div class="studioLecture" id=activity-02b_css_svojstva_teksta_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства текста</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02c_css_svojstva_granice_elementa_citanje.html><div class="studioLecture" id=activity-02c_css_svojstva_granice_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS својства која дефинишу границе елемента</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02d_css_svojstva_dimenzije_elementa_citanje.html><div class="studioLecture" id=activity-02d_css_svojstva_dimenzije_elementa_citanje><i class="fas fa-file-alt activity-icon"></i>CSS димензије елемената</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02e_css_svojstva_pitanja.html><div class="studioLecture" id=activity-02e_css_svojstva_pitanja><i class="far fa-question-circle activity-icon"></i>CSS својства - питања</div></a>
+                <a href=../2_CSS_02_CSS_svojstva/02f_css_svojstva_zadaci.html><div class="studioLecture" id=activity-02f_css_svojstva_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS својства - задаци</div></a>
                 </div>
             </div>
                 
@@ -335,8 +303,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_pitanja.html><div class="studioLecture" id=activity-03b_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_zadaci.html><div class="studioLecture" id=activity-03c_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03f_css_selektori_zadaci.html><div class="studioLecture" id=activity-03f_css_selektori_zadaci><i class="fas fa-file-alt activity-icon"></i>CSS селектори - задаци</div></a>
                 </div>
             </div>
                 
@@ -349,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_04_raspored_elemenata/04a_raspored_elemenata_citanje.html><div class="studioLecture" id=activity-04a_raspored_elemenata_citanje><i class="fas fa-file-alt activity-icon"></i>Распоред елемената</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04b_raspored_elemenata_pitanja.html><div class="studioLecture" id=activity-04b_raspored_elemenata_pitanja><i class="far fa-question-circle activity-icon"></i>Распоред елемената - питања</div></a>
                 <a href=../2_CSS_04_raspored_elemenata/04c_raspored_elemenata_zadaci.html><div class="studioLecture" id=activity-04c_raspored_elemenata_zadaci><i class="fas fa-file-alt activity-icon"></i>Распоред елемената - задаци</div></a>
+                <a href=../2_CSS_04_raspored_elemenata/04d_raspored_elemenata_flexbox_citanje.html><div class="studioLecture" id=activity-04d_raspored_elemenata_flexbox_citanje><i class="fas fa-file-alt activity-icon"></i>Flexbox</div></a>
                 </div>
             </div>
                 
@@ -450,44 +422,117 @@
   <div class="section" id="html">
 <h1>Елементи <em>HTML</em> документа<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h1>
 <p>Сваки <em>HTML</em> документ се састоји од <em>HTML</em> <strong>елемената</strong>. <em>HTML</em> елементи су делови веб страна или компоненте које се приказују на веб страни. <em>HTML</em> елементи могу да буду наслов стране који видите у прегледачу, пасус (параграф) текста, табела, или слика која је приказана на страни.</p>
-<p><em>HTML</em> елементи могу да садрже текст или друге елементе, а њихов садржај говори прегледачу шта треба да прикаже. Сваки <em>HTML</em> елемент има своје ознаке за почетак и крај, а између тих ознака се могу наћи текст или други <em>HTML</em> елементи. Ево примера једног једноставног <em>HTML</em> елемента који садржи у себи само текст:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Петља – Веб дизајн<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<p><em>HTML</em> елементи могу да садрже текст или друге елементе, а њихов садржај говори прегледачу шта треба да прикаже.</p>
+
+<div data-childcomponent="paragraf_html" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=paragraf_html data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+         data-caption='Пример само текста и текста у комбинацији са другим HTML елементом.'      data-hidehistory=true
+       >
+&lt;p&gt;Текст који се појављује у веб страни&lt;/p&gt;
+&lt;p&gt;Текст који се прелама.&lt;br/&gt;Овај текст је у новом реду.&lt;/p&gt;
+</textarea>
+</div>
+<p>Прегледач ће прочитати вредност који се налази између ознака <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code> и закључити да текст између њих треба приказати као параграф.</p>
+<p>Већина <em>HTML</em> елемената има ознаку - <strong>таг</strong>. Тагови означавају границе <em>HTML</em> елемента и тиме одређују који текст и који други <em>HTML</em> елементи припадају датом <em>HTML</em> елементу. Ове ознаке су неке унапред дефинисане речи. Почетни (отварајући) и завршни (затварајући) тагови морају да буду упарени, као заграде у математичким изразима. Ако <em>HTML</em> елемент почиње ознаком <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, негде у <em>HTML</em> документу мора да постоји и ознака <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code>, којом се тај елемент завршава.</p>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Елементи са отварајућим и затварајућим таговима</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Елемент</p></th>
+<th class="head"><p>Тагови</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Параграф</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;...&lt;/p&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Веза</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;a&gt;...&lt;/a&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Подебљан текст</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;b&gt;...&lt;/b&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Коментар</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">--&gt;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Неки елементи се цели састоје само од једног тага. За такав таг кажемо да је <strong>самозатварајући</strong>, јер се он не састоји од пара одговарајућих тагова, него представља целину за себе (цео елемент). Самозатварајући таг почиње знаком <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и завршава знаком <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>, на пример <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code>. <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code> (скраћено од енгл. <em>break</em>, прекини) се користи за прекидање исписа у текућем реду и прелазак у нови ред.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Елементи са самозатварајућим таговима</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Елемент</p></th>
+<th class="head"><p>Таг</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Нов ред</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Слика</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;img/&gt;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h1>Угњеждавање елемената<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Пошто <em>HTML</em> елементи могу само да следе један за другим или да садрже један другог, парови одговарајућих тагова не смеју да се опкорачују. Последњи отварајући таг мора пре осталих да буде упарен истоименим затварајућим тагом.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Пример неисправног HTML записа</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Прегледач ће прочитати текст који се налази између ознака <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/title&gt;</span></code> и закључити да текст између њих треба приказати као наслов стране. Већина <em>HTML</em> елемената има ознаку - <strong>таг</strong> на свом почетку и крају. Тагови означавају границе <em>HTML</em> елемента и тиме одређују који текст и који други <em>HTML</em> елементи припадају датом <em>HTML</em> елементу. Ове ознаке су неке унапред дефинисане речи, окружене знацима <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> и налазе се на почетку и крају текста који представља садржај елемента.</p>
-<p>На почетку <em>HTML</em> елемента се налази ознака као на пример <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, или <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> (тзв. <strong>отварајући тагови</strong>), која говори прегледачу да почевши од те ознаке почиње текст који има неко специјално значење (као наслов у претходном примеру). Елемент се завршава истоименом ознаком која је окружена знацима <code class="docutils literal notranslate"><span class="pre">&lt;/</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> као, на пример, <code class="docutils literal notranslate"><span class="pre">&lt;/head&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;/title&gt;</span></code> (<strong>затварајући тагови</strong>).</p>
-<p>Почетни (отварајући) и завршни (затварајући) тагови морају да буду упарени, као заграде у математичким изразима. Ако <em>HTML</em> елемент почиње ознаком <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, негде у <em>HTML</em> документу мора да постоји и ознака <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code>, којом се тај елемент завршава.</p>
-<p>Неки елементи се цели састоје само од једног тага. За такав таг кажемо да је <strong>самозатварајући</strong>, јер се он не састоји од пара одговарајућих тагова, него представља целину за себе (цео елемент). Самозатварајући таг почиње знаком <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и завршава знаком <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>, на пример <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code>. <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code> (скраћено од енгл. <em>break</em>, прекини) се користи за прекидање исписа у текућем реду и прелазак у нови ред.</p>
-<p>Пошто <em>HTML</em> елементи могу само да следе један за другим или да садрже један другог, парови одговарајућих тагова не смеју да се опкорачују. На пример, <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code> није исправан запис, као што ни у математици није исправно писати опкорачене угласте и обле заграде: <span class="math notranslate nohighlight">\([(2+3) \cdot (1+5])^2\)</span>. Последњи отварајући таг мора пре осталих да буде упарен истоименим затварајућим тагом. То значи да је у претходном примеру исправан запис <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code>. Веб прегледачи нису сасвим строги и често умеју да се изборе са ситнијим неправилностима ове врсте, али о редоследу тагова треба водити рачуна и из других разлога (веб прегледачи нису једини програми који читају <em>HTML</em> документе).</p>
-<p><em>HTML</em> елементи дају неки додатни смисао тексту који је у њима, тако да прегледач „зна” како да прикаже тај текст. Осим тога, <em>HTML</em> елементи су важни и за претраживаче (<em>Google</em>, <em>Bing</em>), јер претраживачи на основу припадности текста одређеним <em>HTML</em> елементима одлучују о значају тог текста за нечију претрагу.</p>
-<p>Елементи некада имају и додатне информације у тзв. <strong>атрибутима</strong>. На пример, у <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> елемент можемо да упишемо информацију о језику на коме је написан текст тог документа. То радимо додавањем атрибута <em>lang</em>, као што је приказано у следећем примеру у коме је за дати документ речено да је написан на енглеском језику:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-    ...
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Пример исправног HTML записа</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </pre></div>
+</div>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Ни у математици није исправно писати опкорачене угласте и обле заграде: <span class="math notranslate nohighlight">\([(2+3) \cdot (1+5])^2\)</span>.</p>
+
+    </p></div></div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Веб прегледачи нису сасвим строги и често умеју да се изборе са ситнијим неправилностима ове врсте, али о редоследу тагова треба водити рачуна и из других разлога. Веб прегледачи нису једини програми који читају <em>HTML</em> документе.</p>
+
+    </p></div></div>
+<p><em>HTML</em> елементи дају неки додатни смисао тексту који је у њима, тако да прегледач „зна” како да прикаже тај текст. Осим тога, <em>HTML</em> елементи су важни и за претраживаче (<em>Google</em>, <em>Bing</em>), јер претраживачи на основу припадности текста одређеним <em>HTML</em> елементима одлучују о значају тог текста за нечију претрагу.</p>
+</div>
+<div class="section" id="id2">
+<h1>Атрибути<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Елементи некада имају и додатне информације у тзв. <strong>атрибутима</strong>. На пример, у <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> елемент можемо да упишемо информацију о језику на коме је написан текст тог документа.</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">lang</span></code> атрибут говори да је документ написан на енглеском језику</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+     ...
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
 </div>
 <p>Овај атрибут није неопходан, а помаже претраживачима као што је <em>Google</em> или <em>Bing</em> да схвате на ком језику је написан текст у страни, тако да знају како да га индексирају. У наредним лекцијама ћемо видети неке много битније атрибуте, који су неопходни и не могу се изоставити из елемената.</p>
 <p>Језик <em>HTML</em> није осетљив на то да ли се тагови, атрибути и вредности пишу малим или великим словима (могу да се пишу чак и мешано), али је уобичајено да се све што није сам садржај документа пише малим словима.</p>
-<p>Поред <em>HTML</em> елемената, <em>HTML</em> документ може да садржи и коментаре. Коментар је текст који не утиче на садржај и изглед веб стране, већ само служи да помогне људима који читају <em>HTML</em> кôд да га лакше разумеју. Коментар почиње знаковима <code class="docutils literal notranslate"><span class="pre">&lt;!—</span></code>, а завршава знаковима <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>. На пример:</p>
-
-<div data-childcomponent="komentar_html" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=komentar_html data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
- &lt;html&gt;
-   &lt;head&gt;
-     &lt;title&gt;Наслов&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-     &lt;!— текст који се не појављује у веб страни --&gt;
-     &lt;p&gt;Текст који се појављује у веб страни&lt;/p&gt;
-   &lt;/body&gt;
- &lt;/html&gt;
-</textarea>
-</div>
 </div>
 
 
