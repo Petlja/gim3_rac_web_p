@@ -114,6 +114,14 @@
     alert(`Тест је положило ${brUspesnih} кандидата.`);
 
 .. questionnote::
+
+    **Вежба**
+
+    Измените претходни пример тако да поред броја успешних кандидата, изброји и број кандидата који немају негативне поене (број негативних је нула).
+
+~~~~
+
+.. questionnote::
     
     **Пример - Викенд или радни дан:** 
     
@@ -121,8 +129,8 @@
     
     .. code-block:: javascript
 
-        let sada = new Date();
-        let dan = sada.getDay();
+        const sada = new Date();
+        const dan = sada.getDay();
         
     у променљивој *dan* се налази редни број дана у недељи (0 за недељу, 1 за понедељак, ... и 6 за суботу).
     
@@ -134,13 +142,20 @@
     :language: javascript
     :nocodelens:
 
-    let sada = new Date();
-    let dan = sada.getDay();
+    const sada = new Date();
+    const dan = sada.getDay();
     if (dan == 0 || dan == 6)
         alert("Данас је викенд.");
     else
         alert("Данас је радни дан.");
 
+.. questionnote::
+
+    **Вежба**
+
+    Измените претходни пример тако да само за случај да је тренутни дан среда испише ”Данас је дан за сладолед.”
+
+~~~~
 
 .. questionnote::
     
@@ -167,8 +182,8 @@
     :language: javascript
     :nocodelens:
 
-    let sada = new Date();
-    let sati = sada.getHours();
+    const sada = new Date();
+    const sati = sada.getHours();
     let pozdrav;
     if (sati < 10)
         pozdrav = "Добро јутро!"
@@ -177,6 +192,15 @@
     else
         pozdrav = "Добро вече!"
     alert(pozdrav);
+
+
+.. questionnote::
+
+    **Вежба**
+
+    Измените претходни програм тако да поздрав буде ”Лаку ноћ” у случају да је време између 23h i 05h.
+
+~~~~
 
 .. questionnote::
     
@@ -192,9 +216,9 @@
 
     let biloLepoVreme = false;
 
-    let tempBeograd = parseInt(prompt('Температура у Београду: '));
-    let tempNoviSad = parseInt(prompt('Температура у Новим Саду: '));
-    let tempNis = parseInt(prompt('Температура у Нишу: '));
+    const tempBeograd = parseInt(prompt('Температура у Београду: '));
+    const tempNoviSad = parseInt(prompt('Температура у Новим Саду: '));
+    const tempNis = parseInt(prompt('Температура у Нишу: '));
     let odgovor = '';
 
     if (tempBeograd >= 20 && tempBeograd <= 27)
@@ -218,7 +242,13 @@
         
     alert(odgovor);
 
-|
+.. questionnote::
+
+    **Вежба**
+
+    Изменити претходни програм да пронађе најнижу температуру и испише температуру и име града. Уколико два града имају исту температуру, није битно који ће бити исписан.
+
+~~~~
 
 .. questionnote::
     
@@ -253,7 +283,15 @@
     
 Испробајте решење за разне вредности разреда ученика у прва два реда програма.
 
-|
+.. questionnote::
+
+    Измените претходни пример тако да имамо трећег ученика:
+
+    .. code-block:: javascript
+
+        let ucenik3 = { ime: "Сима Симоновић", tel: "054 321 987", razr: 7 };
+
+~~~~
 
 .. questionnote::
 

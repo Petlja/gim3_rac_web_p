@@ -57,10 +57,10 @@
                 alert(`Напустили сте мишем параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
             }
 
-            let p1 = document.getElementById('prvi');
+            const p1 = document.getElementById('prvi');
             p1.addEventListener('click', klik);
             
-            let p2 = document.getElementById('drugi');
+            const p2 = document.getElementById('drugi');
             p2.addEventListener('click', klik);
             p2.addEventListener('mouseenter', dolazakMisa);
             p2.addEventListener('mouseout', odlazakMisa);
@@ -117,97 +117,151 @@
 
 *JavaScript* објекти који представљају *HTML* елементе имају поље ``innerHTML``, које представља садржај елемента. Коришћењем овог поља, функција може не само да чита него и да мења садржај елемента. Испробајте!
 
+.. questionnote::
+
+    **Вежба - промена боје текста**
+
+    Користећи ``dogadjaj.currentTarget``, промените боју текста елемента преко ког се прелази мишем, и вратите је на првобитну када миш напусти елемент.
 
 Остали догађаји
 ---------------
 
-Неки догађаји нису везани за одређени *HTML* елемент. У том случају можемо да користимо методу ``document.addEventListener`` да бисмо повезали дати догађај са *JavaScript* кодом који се на тај догађај извршава. И у овом случају ћемо методи ``addEventListener`` прослеђивати два аргумента: назив догађаја и назив функције коју на тај догађај желимо да извршимо.
+Постоје догађаји који су везани за сам документ, па би за њих користили  методу ``document.addEventListener``. И у овом случају ћемо методи ``addEventListener`` прослеђивати два аргумента: назив догађаја и назив функције коју на тај догађај желимо да извршимо.
 
 .. comment
 
     ``onload`` дешава се када се учита страна.
 
-На пример, догађај ``DOMContentLoaded`` наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију ``postavi`` на следећи начин:
+На пример, догађај ``DOMContentLoaded`` наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију ``ucitan`` на следећи начин:
 
-.. code-block:: javascript
-
-    document.addEventListener('DOMContentLoaded', postavi);
-
-Овим постижемо да се функција ``postavi`` изврши након учитавања стране у објектни модел. На овај начин можемо да извршавамо и разна почетна подешавања изгледа и садржаја веб стране из *JavaScript* кода убрзо по отварању те стране.
-
-Веб страна се учитава и интерпретира редом како је написана. Ако *JavaScript* кôд пишемо у заглављу документа, покушај да приступимо *HTML* елементима из кода који се одмах извршава (на пример, написан је ван функција) доводи до грешке, јер страна још није у потпуности учитана. Један од начина да овај проблем превазиђемо је употреба метода ``document.addEventListener`` са параметром ``DOMContentLoaded``.
-
-Осим методе ``document.addEventListener`` можемо да користимо и методу ``setInterval``. Ова метода се користи када неку *JavaScript* функцију желимо да извршавамо периодично, на сваких *n* милисекунди. Први аргумент методе ``setInterval`` је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе ``setInterval`` постижемо да се догађај часовника који је повезан са наведеном *JavaScript* функцијом генерише у задатим интервалима. На пример, позивом
-
-.. code-block:: javascript
-
-    setInterval(tik, 1000);
-
-постижемо да се догађај који покреће функцију ``tik`` генерише на сваких 1000 милисекунди, тј. једном у секунди. Свако генерисање овог догађаја покреће функцију ``tik``.
-
-Ако постоји потреба да се касније престане са генерисањем овог догађаја, запамтићемо вредност коју враћа метода ``setInterval``:
-
-.. code-block:: javascript
-
-    tiktanje = setInterval(tik, 1000);
-
-а на другом месту у коду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију ``tik``:
-
-.. code-block:: javascript
-
-    clearInterval(tiktanje);
-
-Следи комплетан пример који илуструје употребу метода ``document.addEventListener`` и ``clearInterval``. Испробајте га!
-
-.. activecode:: casovnik_html
+.. activecode:: dogadjaji_domcontentloaded
     :language: html
     :nocodelens:
 
     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Часовник</title>
-            <script>
+      <head>
+        <title>Догађаји</title>
+        <script>
 
-                function tik() {
-                    document.querySelector('h1').innerHTML = `${new Date().toLocaleTimeString()}`;
-                }
-                
-                function postavi() {
-                    setInterval(tik, 1000);
-                }
+          function ucitan() {
+            const paragraf = document.querySelector('p');
+            paragraf.style.color = 'red';
+          }
 
-                document.addEventListener('DOMContentLoaded', postavi);
+          document.addEventListener('DOMContentLoaded', ucitan);
 
-            </script>
-        </head>
-        <body>
-            <h1></h1>
-        </body>
+        </script>
+      </head>
+      <body>
+        <p>Садржај стране</p>
+      </body>
     </html>
 
-.. comment
+Овим постижемо да се функција ``ucitan`` изврши након учитавања стране у објектни модел. На овај начин можемо да извршавамо и разна почетна подешавања изгледа и садржаја веб стране из *JavaScript* кода убрзо по отварању те стране.
 
-    Пример – Тренутно време
-    -----------------------
+.. infonote::
 
-    Потребно је направити веб страну у којој ће се налазити једно заглавље (нпр. елемент <h1>). Када корисник пређе мишем преко тог заглавља потребно је приказати тренутно време у њему.
+    Веб страна се учитава и интерпретира редом како је написана. Ако *JavaScript* кôд пишемо у заглављу документа, покушај да приступимо *HTML* елементима из кода који се одмах извршава (на пример, написан је ван функција) доводи до грешке, јер страна још није у потпуности учитана.
 
-    .. code-block:: html
+    Један од начина да овај проблем превазиђемо је употреба метода ``document.addEventListener`` са параметром ``DOMContentLoaded``.
 
-        <!DOCTYPE html>
-        <html>
-        <body>
+Периодично извршавање
+---------------------
 
-        <h1 onmouseover="prikaziVreme(this)">Пређи мишем да видиш колико је сати!</h1>
+Осим методе ``document.addEventListener`` можемо да користимо и методу ``setInterval``. Ова метода се користи када неку *JavaScript* функцију желимо да извршавамо периодично, на сваких *n* милисекунди. Први аргумент методе ``setInterval`` је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе ``setInterval`` постижемо да се догађај часовника који је повезан са наведеном *JavaScript* функцијом генерише у задатим интервалима.
 
+.. activecode:: dogadjaji_set_interval
+    :language: html
+    :nocodelens:
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Догађаји</title>
         <script>
-        function prikaziVreme(zaglavlje) {
-          zaglavlje.innerHTML = `${new Date().toLocaleString()}. Пређи мишем опет!`;
-        }
+
+          const boje = ['red', 'green', 'blue'];
+          let trenutna = 0;
+
+          function promeniBoju() {
+            const paragraf = document.querySelector('p');
+            paragraf.style.color = boje[trenutna];
+            trenutna = (trenutna + 1) % boje.length;
+          }
+
+          function ucitaj() {
+            setInterval(promeniBoju, 1000);
+          }
+
+          document.addEventListener('DOMContentLoaded', ucitaj);
+
         </script>
-        </body>
-        </html>
+      </head>
+      <body>
+        <p>Садржај стране</p>
+      </body>
+    </html>
+
+У овом примеру постижемо да се догађај који покреће функцију ``promeniBoju`` генерише на сваких 1000 милисекунди, тј. једном у секунди. Свако генерисање овог догађаја покреће функцију ``promeniBoju``.
+
+Ако постоји потреба да се касније престане са генерисањем овог догађаја, запамтићемо вредност коју враћа метода ``setInterval``:
+
+.. code-block:: javascript
+
+    tiktanje = setInterval(promeniBoju, 1000);
+
+а на другом месту у коду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију ``promeniBoju``:
+
+.. activecode:: dogadjaji_clear_interval
+    :language: html
+    :nocodelens:
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Догађаји</title>
+        <script>
+
+          const boje = ['red', 'green', 'blue'];
+          let trenutna = 0;
+          let intervalId = 0;
+
+          function promeniBoju() {
+            const paragraf = document.querySelector('p');
+            paragraf.style.color = boje[trenutna];
+            trenutna = (trenutna + 1) % boje.length;
+          }
+
+          function zaustavi() {
+            clearInterval(intervalId);
+          }
+
+          function ucitaj() {
+            intervalId = setInterval(promeniBoju, 1000);
+
+            const dugme = document.querySelector('button');
+            dugme.addEventListener('click', zaustavi);
+          }
+
+          document.addEventListener('DOMContentLoaded', ucitaj);
+
+        </script>
+      </head>
+      <body>
+        <p>Садржај стране</p>
+        <button>Стани</button>
+      </body>
+    </html>
+
+.. questionnote::
+
+    **Вежба - интервали**
+
+    Измените претходни пример тако да стоје два дугмета:
+
+    * Покрени - кликом на дугме се покреће догађај који мења боју сваке секунде.
+    * Стани - кликом на дугме се зауставља догађај и боја се више не мења.
 
 Пример - Повећавање слике
 '''''''''''''''''''''''''

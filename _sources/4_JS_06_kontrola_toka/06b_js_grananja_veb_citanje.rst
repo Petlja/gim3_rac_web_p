@@ -13,8 +13,10 @@
 За решавање овог задатка је потребно ван *HTML* стране некако запамтити претходни број посета. У ту сврху можемо да употребимо објекат
 ``localStorage`` (локално складиште). Помоћу овог објекта можемо да сачувамо разне вредности на нашем рачунару, тако да су нам на располагању када отворимо било коју веб страну са *JavaScript* програмом који приступа објекту ``localStorage``.
 
-За читање вредности из локалног складишта користи се мотода ``localStorage.getItem``, а за уписивање вредности  метода ``localStorage.setItem``. За сваку вредност при читању и упису користимо посебан кључ типа стринг, који одговара тој вредности.
-Када читамо вредност која није претходно уписана, добијамо вредност ``null``, која је слична вредности ``undefined``. Обе ове вредности се могу користити као логички изрази, где се аутоматски конвертују у ``false``.
+Објекат ``localStorage`` има методе:
+
+* ``setItem(kljuc, vrednost)`` - Уписује вредност под именом првог аргумента ”кључ”.
+* ``getItem(kljuc)`` - Чита вредност кључа. Уколико вредност није уписана, враћа ``null``.
 
 У следећем решењу најпре проверавамо да ли је нека вредност већ уписана. Ако нема уписане вредности, уписујемо 0 као почетну вредност. Након тога поново читамо вредност (сада знамо да вредност постоји и да је то број), повећавамо је, приказујемо у веб страни и памтимо увећану вредност у локалном складишту.
 
@@ -24,24 +26,36 @@
 
     <!DOCTYPE html>
     <html lang="sr">
-        <head>
-            <title>Бројач</title>
-        </head>
-        <body>
-            <h1>Број учитавања ове стране: <span id="brp">0</span></h1>
-            <script>
-              if (!localStorage.getItem('counter')) {
-                  localStorage.setItem('counter', 0);
-              }
-                            
-              let counter = localStorage.getItem('counter');
-              counter++;
-              document.querySelector('#brp').innerHTML = counter;
-              localStorage.setItem('counter', counter);
-            </script>
-        </body>
+      <head>
+        <title>Бројач</title>
+      </head>
+      <body>
+        <h1>Број учитавања ове стране: <span id="brp">0</span></h1>
+        <script>
+          if (!localStorage.getItem('counter')) {
+              localStorage.setItem('counter', 0);
+          }
+
+          let counter = parseInt(localStorage.getItem('counter'));
+          counter++;
+          document.querySelector('#brp').innerHTML = counter;
+          localStorage.setItem('counter', counter);
+        </script>
+      </body>
     </html>
 
+.. infonote::
+
+    Уколико вредност постоји, ``localStorage.getItem`` враћа тип ``string``!
+
+    Испробајте следећи код у конзоли:
+
+    .. code-block:: javascript
+
+        localStorage.setItem('broj', 1);
+        let vrednost = localStorage.getItem('broj');
+        console.log(`Прочитана вредност: ${vrednost}`);
+        console.log(`Тип: ${typeof vrednost}`);
 
 Пример - Листа послова са валидацијом података
 ----------------------------------------------
