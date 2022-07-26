@@ -165,6 +165,14 @@
       </script>
     </html>
 
+.. questionnote::
+
+    **Вежба**
+
+    Измените пример тако да дугме ”Унеси” буде онемогућено док је форма неисправна.
+
+    *Савет:* атрибут ``disabled`` (`HTML button disabled attribute <https://www.w3schools.com/tags/att_button_disabled.asp>`_) се може користити да се дугме онемогући. Догађај ``change`` (`onchange Event <https://www.w3schools.com/jsref/event_onchange.asp>`_) може да послужи за проверу исправности форме приликом промене вредности.
+
 
 Пример - Штоперица
 ------------------
@@ -172,9 +180,6 @@
 .. questionnote::
     
     Направити веб страну која приказује функционалну штоперицу са два дугмета. Кликом на једно дугме се штоперица покреће и зауставља, а на друго се ресетује (враћа на 0).
-
-
-
 
 .. activecode:: stoperica_html_js
     :language: html
@@ -192,6 +197,7 @@
         </body>
             <script>
 
+                let running = false;
                 let counter = 0;
                 let delta = 0;
                             
@@ -206,19 +212,21 @@
                 });
 
                 document.getElementById('start_stop').addEventListener('click', function(dogadjaj) {
-                    if (this.innerHTML == "Старт") {
-                        delta = 0.01;
-                        this.innerHTML = "Стоп";
-                        this.style.backgroundColor = "red";
-                        this.style.color = "black";
-                        document.querySelector('#reset').disabled = true;
-                    }
-                    else if (this.innerHTML == "Стоп") {
+                    if (running) {
+                        running = false;
                         delta = 0;
                         this.innerHTML = "Старт";
                         this.style.backgroundColor = "green";
                         this.style.color = "white";
                         document.querySelector('#reset').disabled = false;
+                    }
+                    else {
+                        running = true;
+                        delta = 0.01;
+                        this.innerHTML = "Стоп";
+                        this.style.backgroundColor = "red";
+                        this.style.color = "black";
+                        document.querySelector('#reset').disabled = true;
                     }
                 });
 
@@ -228,6 +236,12 @@
 
             </script>
     </html>
+
+.. questionnote::
+
+    **Вежба**
+
+    Штоперицу желе да користе тркачи да измере време сваког круга атлетске стазе. Изменити претходни пример да се дода додатно дугме ”Круг”. Притиском на дугме ”Круг”, време штоперице у тренутку се исписује у листи са редним бројем круга.
 
 Пример - Тајмер
 ---------------

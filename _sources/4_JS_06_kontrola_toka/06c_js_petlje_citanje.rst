@@ -104,30 +104,30 @@ For петља
     :language: javascript
     :nocodelens:
 
-        let brojevi = [2, 5, 3];
-        let zbir = 0;
-        for (let broj of brojevi) {
-            zbir += broj;
-        }
-        alert(`Збир је ${zbir}.`)
+    let brojevi = [2, 5, 3];
+    let zbir = 0;
+    for (let broj of brojevi) {
+        zbir += broj;
+    }
+    alert(`Збир је ${zbir}.`)
         
 .. activecode:: for_of_niz_imena_js
     :language: javascript
     :nocodelens:
 
-        let imena = ['Јован', 'Марко', 'Лука'];
-        for (let ime of imena) {
-            alert(ime);
-        }
+    let imena = ['Јован', 'Марко', 'Лука'];
+    for (let ime of imena) {
+        alert(ime);
+    }
         
 .. activecode:: for_of_string_js
     :language: javascript
     :nocodelens:
 
-        let tekst = 'JavaScript';
-        for (let slovo of tekst) {
-            alert(slovo);
-        }
+    let tekst = 'JavaScript';
+    for (let slovo of tekst) {
+        alert(slovo);
+    }
 
 За итерирање кроз поља објекта користи се петља ``for-in``, која има овај облик:
 

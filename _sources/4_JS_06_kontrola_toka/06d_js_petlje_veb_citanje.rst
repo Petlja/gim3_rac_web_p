@@ -131,6 +131,23 @@
       </body>
     </html> 
 
+.. questionnote::
+
+    **Вежба**
+
+    Користећи петље, упростити следећи део кода:
+
+    .. code-block:: javascript
+
+        document.getElementById('t0').addEventListener('click', function(dogadjaj) {
+            prikaziSlajd(0, true);
+        });
+        document.getElementById('t1').addEventListener('click', function(dogadjaj) {
+            prikaziSlajd(1, true);
+        });
+        document.getElementById('t2').addEventListener('click', function(dogadjaj) {
+            prikaziSlajd(2, true);
+        });
 
 Пример - Календар
 -----------------
@@ -249,7 +266,16 @@
             </table>
             </body>
     </html>
-    
+
+.. questionnote::
+
+    **Вежба**
+
+    Календар у примеру увек приказује тренутни месец. Изменити претходни пример тако да постоје дугмад ”Претходни” и ”Следећи”.
+
+    Дугме ”Претходни” приказује календар за претходни месец.
+
+    Дугме ”Следећи” приказује календар за следећи месец.
     
 Пример - Листа послова са валидацијом и памћењем података
 ---------------------------------------------------------
@@ -273,6 +299,7 @@
 .. activecode:: todo_validation_and_storage_html_js
     :language: html
     :nocodelens:
+
 
     <!DOCTYPE html>
     <html>
@@ -307,7 +334,6 @@
         </table>
         <script>
             let stavke = [];
-            let rokovi = [];
             
             function posalji() {
                 let stavka = document.querySelector(`#stavka`);
@@ -335,23 +361,21 @@
             }
 
             function zapamti(stavka, datum) {
-                stavke.push(stavka);
-                rokovi.push(datum);
+                stavke.push({
+                    stavka,
+                    datum
+                });
                 localStorage.setItem("stavke", JSON.stringify(stavke));
-                localStorage.setItem("rokovi", JSON.stringify(rokovi));
             }
 
             function popuni() {
-                stavke = JSON.parse(localStorage.getItem("stavke"));
-                rokovi = JSON.parse(localStorage.getItem("rokovi"));
+                const sacuvaneStavke = JSON.parse(localStorage.getItem("stavke"));
                 console.log(stavke);
-                if (stavke) {
+                if (sacuvaneStavke) {
+                    stavke = sacuvaneStavke;
                     for (let i = 0; i < stavke.length; i++) {
-                        unesi(stavke[i], rokovi[i]);
+                        unesi(stavke[i].stavka, stavke[i].datum);
                     }
-                } else {
-                    stavke = [];
-                    rokovi = [];
                 }
             }
             
@@ -362,10 +386,14 @@
       </body>
     </html>
 
-Пошто ова верзија памти све ставке које су икад унете, можда ћете желети да у неком тренутку поништите претходни унос. За поништавање целокупног претходног уноса можете да  додате ову наредбу у скрипт, на пример пре позива функције ``popuni``:
+.. questionnote::
 
-.. code-block:: javascript
+    **Вежба - брисање ставки**
 
-    localStorage.clear();
+    Претходни пример памти све ставке које су икад унете. Додати дугме ”Очисти” које брише све ставке са стране и из ``localStorage``.
 
-Лепши начин би био да се у веб страни уз сваку ставку налази по једно дугме за поништавање, тј. избацивање из листе. Ако вам је интерсантно, покушајте да то реазлизујете, на пример додавањем још једне колоне у табелу.
+.. questionnote::
+
+    **Вежба - брисање појединачне ставке**
+
+    За сваку ставку додати дугме ”Обриши” које брише само ту ставку из листе и ``localStorage``.
