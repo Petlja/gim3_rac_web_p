@@ -185,7 +185,7 @@ lessons:
         file: 03a_css_selektori_citanje.rst
         guid: 5a22069a-7205-471f-b438-cf46910c0da4
       - type: reading
-        title: Стилизовање идентификатора
+        title: Стилизовање елемената по идентификатору
         file: 03b_css_selektori_identifikator_citanje.rst
         guid: 6e3b1ceb-98c7-478c-9c77-a21d49a89adc
       - type: reading

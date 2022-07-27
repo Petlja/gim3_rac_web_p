@@ -161,4 +161,4 @@ Flexbox
     #. Испробајте својство ``justify-content`` на елементу ``.flex`` са вредностима: ``space-between``, ``space-around``, ``flex-end``. Који су резултати?
     #. Испробајте својство ``align-items`` на елементу ``.flex`` са вредностима: ``center``, ``flex-start``, ``flex-end``. Који су резултати?`
 
-За више примера погледајте добар ресурс је `MDN Веб документација  <https://developer.mozilla.org/en-US/docs/Web/CSS/flex>`_.
+За више примера добар ресурс је `MDN Веб документација  <https://developer.mozilla.org/en-US/docs/Web/CSS/flex>`_, па погледајте.
