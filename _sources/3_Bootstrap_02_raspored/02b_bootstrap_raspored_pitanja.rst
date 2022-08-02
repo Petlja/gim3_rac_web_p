@@ -130,7 +130,7 @@
           <div class="col-1">...</div>
           <div class="col-10">
             <div class="row">
-              <div class="col"><p>...</p>
+              <div class="col">...</div>
               <div class="col">...</div>
               <div class="col">...</div>
             </div>
