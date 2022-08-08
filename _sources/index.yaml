@@ -143,6 +143,10 @@ lessons:
         file: 01b_css_stilovi_definisanje.rst
         guid: a20fe5e1-26e4-4723-9791-504572f8674d
       - type: reading
+        title: Дефинисање CSS стилова
+        file: 01b_css_stilovi_definisanje.rst
+        guid: a20fe5e1-26e4-4723-9791-504572f8674d
+      - type: reading
         title: CSS стилови - вежбе
         file: 01c_css_stilovi_vezbe.rst
         guid: 9493a4e0-0154-4c00-a46b-e8e439852552
@@ -155,6 +159,18 @@ lessons:
         title: CSS својства
         file: 02a_css_svojstva_citanje.rst
         guid: d85c82d0-b4a0-41af-94a4-218ef71dfc43
+      - type: reading
+        title: CSS својства текста
+        file: 02b_css_svojstva_teksta_citanje.rst
+        guid: 707c17a1-2074-4217-b736-67719ea2b9b4
+      - type: reading
+        title: CSS својства која дефинишу границе елемента
+        file: 02c_css_svojstva_granice_elementa_citanje.rst
+        guid: 93c6ad0b-74d2-4b3b-9830-f129acd71330
+      - type: reading
+        title: CSS димензије елемената
+        file: 02d_css_svojstva_dimenzije_elementa_citanje.rst
+        guid: bc8460f8-ea41-4d72-b79f-49fe39de421f
       - type: reading
         title: CSS својства текста
         file: 02b_css_svojstva_teksta_citanje.rst
@@ -185,7 +201,7 @@ lessons:
         file: 03a_css_selektori_citanje.rst
         guid: 5a22069a-7205-471f-b438-cf46910c0da4
       - type: reading
-        title: Стилизовање идентификатора
+        title: Стилизовање елемената по идентификатору
         file: 03b_css_selektori_identifikator_citanje.rst
         guid: 6e3b1ceb-98c7-478c-9c77-a21d49a89adc
       - type: reading

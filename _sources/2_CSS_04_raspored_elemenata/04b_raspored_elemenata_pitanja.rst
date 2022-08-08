@@ -1,11 +1,11 @@
-Распоред елемената - питања
+Распоред елемената – питања
 ===========================
 
 .. mchoice:: css_raspored_q1
     :answer_a: box-sizing: border-box;
     :answer_b: float: left;
     :answer_c: overflow: auto;
-    :answer_d: margin: auto;
+    :answer_d: margin: auto;.
     :correct: b
     :feedback_a: Не.
     :feedback_b: Тачно!
@@ -42,7 +42,7 @@
     :answer_a: За та два дугмета је постављено својство float: right; а за остала четири својство float: left;
     :answer_b: Довољно је за остала четири дугмета поставити својство float: left;
     :answer_c: Елементи се не могу овако позиционирати у истом блоку.
-    :answer_d: Начин постоји, али није наведен међу понуђеним одгворима.
+    :answer_d: Начин постоји, али није наведен међу понуђеним одговорима.
     :correct: a
     :feedback_a: Тачно!
     :feedback_b: Не.
@@ -66,7 +66,7 @@
     :feedback_b: Тачно!
     :feedback_c: Не.
 
-    Ово је део *HTML* кôда једне веб стране.
+    Ово је део *HTML* кôда једне веб-стране.
 
     .. code-block:: html
 
@@ -95,7 +95,7 @@
     :feedback_c: Не.
     :feedback_d: Не.
 
-    За веб страну која изгледа овако
+    За веб-страну која изгледа овако
 
     .. image:: ../../_images/css/raspored_test4_pitanje.png
         :width: 288px
@@ -125,13 +125,13 @@
     :feedback_c: Не.
     :feedback_d: Тачно!
 
-    На основу изгледа ове веб стране
+    На основу изгледа ове веб-стране...
 
     .. image:: ../../_images/css/raspored_test5_pitanje.png
         :width: 360px
         :align: center
 
-    одредите који од понуђених распореда блокова јој одговара:
+    ...одредите који од понуђених распореда блокова јој одговара:
 
     .. image:: ../../_images/css/raspored_test5_odg1.png
         :width: 300px
