@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -433,18 +434,18 @@
 <p>Својство <code class="docutils literal notranslate"><span class="pre">border</span></code> може, на пример, да дефинише да је оквир елемента зелене боје и дебљине 5 пиксела. Садржај елемента неће моћи да се постави од ивице до ивице, него ће бити одмакнут од ивица за вредност која је постављена у својству <code class="docutils literal notranslate"><span class="pre">padding</span></code>. Елементи који се налазе око овог елемента неће моћи да се поставе уз ивицу него ће бити одмакнути за вредност која је постављена у својству <code class="docutils literal notranslate"><span class="pre">margin</span></code>.</p>
 <p>У следећем примеру је приказано као се подешава оквир око елемента:</p>
 
-    <div id="css_borders_1" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p>\u041f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p {\n    border-size: 5px;\n    border-style: solid;\n    border-color: green;\n\n    padding: 50px;\n    margin: 20px;\n}"}}'>
+    <div id="css_borders_1" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p {\n    border-size: 5px;\n    border-style: solid;\n    border-color: green;\n\n    padding: 50px;\n    margin: 20px;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p&gt;\u041f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430&lt;/p&gt;"}}'>
 
     </div>
 <p>У овом примеру су дефинисане величина и боја ивице елемената помоћу <em>CSS</em> својстава <code class="docutils literal notranslate"><span class="pre">border-size</span></code>, <code class="docutils literal notranslate"><span class="pre">border-color</span></code>.  Својство <code class="docutils literal notranslate"><span class="pre">border-style</span></code> је слично стиловима линија на које сте наилазили у процесорима текста и описује да ли ивицу треба исцртати као пуну (<code class="docutils literal notranslate"><span class="pre">solid</span></code>), испрекидану (<code class="docutils literal notranslate"><span class="pre">dashed</span></code>), тачкасту (<code class="docutils literal notranslate"><span class="pre">dotted</span></code>) и слично. Пронађите остале врсте линија и испробајте их на <em>W3CSchools</em> сајту.</p>
 <p>У неким случајевима ћете наићи на компактнији облик дефиниције <em>CSS</em> стила, у коме се својству <code class="docutils literal notranslate"><span class="pre">border</span></code> додељују све вредности:</p>
 
-    <div id="css_borders_2" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p>\u041f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p {\n    border: 5px solid green;\n}"}}'>
+    <div id="css_borders_2" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p {\n    border: 5px solid green;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p&gt;\u041f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430&lt;/p&gt;"}}'>
 
     </div>
 <p><em>CSS</em> стил из претходног примера се примењује на све ивице оквира (горњу, доњу и бочне). Међутим, <em>CSS</em> језик дозвољава и финију контролу и омогућава да поставимо посебне вредности за сваку ивицу оквира:</p>
 
-    <div id="css_borders_3" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p>\u041fa\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p {\n    margin-top: 100px;\n    margin-bottom: 100px;\n    margin-right: 50px;\n    margin-left: 80px;\n\n    border-top-style: dotted;\n    border-right-style: solid;\n    border-bottom-style: dotted;\n    border-left-style: solid;\n\n    padding-top: 50px;\n    padding-right: 30px;\n    padding-bottom: 50px;\n    padding-left: 80px;\n}"}}'>
+    <div id="css_borders_3" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p {\n    margin-top: 100px;\n    margin-bottom: 100px;\n    margin-right: 50px;\n    margin-left: 80px;\n\n    border-top-style: dotted;\n    border-right-style: solid;\n    border-bottom-style: dotted;\n    border-left-style: solid;\n\n    padding-top: 50px;\n    padding-right: 30px;\n    padding-bottom: 50px;\n    padding-left: 80px;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p&gt;\u041fa\u0440\u0430\u0433\u0440\u0430\u0444 \u0442\u0435\u043a\u0441\u0442\u0430&lt;/p&gt;"}}'>
 
     </div>
 </div>

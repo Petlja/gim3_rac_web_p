@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -449,7 +450,9 @@
 </tbody>
 </table>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
 <p>За елементе који садрже текст могу се подесити и друга својства, као што је <code class="docutils literal notranslate"><span class="pre">background-color</span></code> – које дефинише која ће бити боја позадине елемента у коме се налази текст (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>).</p>
@@ -457,7 +460,7 @@
     </p></div></div>
 <p>Дефиниција изгледа слова која ће се применити на сваки параграф веб стране може се написати овако:</p>
 
-    <div id="css_text" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p>\u041f\u0440\u0432\u0438 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444</p>\n<p>\u0414\u0440\u0443\u0433\u0438 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p {\n  font-size: 12px;\n  background-color: yellow;\n  color: red;\n  font-family: \"Times New Roman\";\n}"}}'>
+    <div id="css_text" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p {\n  font-size: 12px;\n  background-color: yellow;\n  color: red;\n  font-family: \"Times New Roman\";\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p&gt;\u041f\u0440\u0432\u0438 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444&lt;/p&gt;\n&lt;p&gt;\u0414\u0440\u0443\u0433\u0438 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444&lt;/p&gt;"}}'>
 
     </div>
 <p>Кад год претраживач наиђе на параграф текста који је представљен елементом <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> у <em>HTML</em> документу, текст тог параграфа ће приказати на жутој позадини црвеним словима величине 12 пиксела из фамилије <code class="docutils literal notranslate"><span class="pre">Times</span> <span class="pre">New</span> <span class="pre">Roman</span></code>.</p>
@@ -468,13 +471,13 @@
 <p>Може се задати опште (генеричко) име фамилије или тачно (специфично) име фамилије.</p>
 <p><em>Генеричко име фамилије</em> описује опште карактеристике слова као што су писана слова (<code class="docutils literal notranslate"><span class="pre">Cursive</span></code>), слова са украсима-стопицама на ивицама (<code class="docutils literal notranslate"><span class="pre">Serif</span></code>), без украса (<code class="docutils literal notranslate"><span class="pre">Sans-Serif</span></code>), слова исте ширине (<code class="docutils literal notranslate"><span class="pre">Monospaced</span></code>), и слично.</p>
 
-    <div id="css_font_family_generic" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p class=\"cursive\">Familija cursive.</p>\n<p class=\"serif\">\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 serif.</p>\n<p class=\"sans-serif\">\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 sans-serif.</p>\n<p class=\"monospaced\">\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 Monospaced.</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p.cursive {\n    font-family: cursive;\n}\np.serif {\n    font-family: serif;\n}\np.sans-serif {\n    font-family: sans-serif;\n}\np.monospaced {\n    font-family: monospaced;\n}"}}'>
+    <div id="css_font_family_generic" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p.cursive {\n    font-family: cursive;\n}\np.serif {\n    font-family: serif;\n}\np.sans-serif {\n    font-family: sans-serif;\n}\np.monospaced {\n    font-family: monospaced;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p class=\"cursive\"&gt;Familija cursive.&lt;/p&gt;\n&lt;p class=\"serif\"&gt;\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 serif.&lt;/p&gt;\n&lt;p class=\"sans-serif\"&gt;\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 sans-serif.&lt;/p&gt;\n&lt;p class=\"monospaced\"&gt;\u0424\u0430\u043c\u0438\u043b\u0438\u0458\u0430 Monospaced.&lt;/p&gt;"}}'>
 
     </div>
 <p><em>Тачно име фамилије</em> прецизно означава како треба приказати слова. Примери могу да буду <code class="docutils literal notranslate"><span class="pre">Times</span> <span class="pre">New</span> <span class="pre">Roman</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Serif</span></code> фамилије, <code class="docutils literal notranslate"><span class="pre">Arial</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Sans-Serif</span></code> фамилије, <code class="docutils literal notranslate"><span class="pre">Courier</span> <span class="pre">New</span></code> који је специјална врста <code class="docutils literal notranslate"><span class="pre">Monospace</span></code> фамилије.</p>
 <p>Као вредност <em>CSS</em> атрибута <code class="docutils literal notranslate"><span class="pre">font-family</span></code> се у пракси наводи листа више фонтова или њихових фамилија, а биће примењена прва препозната фамилија у редоследу навођења. Нека је на пример, наведено:</p>
 
-    <div id="css_font_family" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<p class=\"prvi\">\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Times New Roman.</p>\n<p class=\"drugi\">\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Arial.</p>\n<p class=\"treci\">\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Lato, \u0443\u043a\u043e\u043b\u0438\u043a\u043e \u0458\u0435 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0441\u0438\u0441\u0442\u0435\u043c\u0443. \u0423 \u0441\u0443\u043f\u0440\u043e\u0442\u043d\u043e\u043c \u0458\u0435 Monospaced.</p>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": "p.prvi {\n    font-family: \"Times New Roman\", Times, serif;\n}\np.drugi {\n    font-family: \"Arial\", \"Times New Roman\", Times, serif;\n}\np.treci {\n    font-family: \"Lato\", \"monospaced\";\n}"}}'>
+    <div id="css_font_family" class="petlja-editor" data='{"css": {"name": "style.css", "source": "p.prvi {\n    font-family: \"Times New Roman\", Times, serif;\n}\np.drugi {\n    font-family: \"Arial\", \"Times New Roman\", Times, serif;\n}\np.treci {\n    font-family: \"Lato\", \"monospaced\";\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;p class=\"prvi\"&gt;\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Times New Roman.&lt;/p&gt;\n&lt;p class=\"drugi\"&gt;\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Arial.&lt;/p&gt;\n&lt;p class=\"treci\"&gt;\u041e\u0432\u0430\u0458 \u0442\u0435\u043a\u0441\u0442 \u0458\u0435 Lato, \u0443\u043a\u043e\u043b\u0438\u043a\u043e \u0458\u0435 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0441\u0438\u0441\u0442\u0435\u043c\u0443. \u0423 \u0441\u0443\u043f\u0440\u043e\u0442\u043d\u043e\u043c \u0458\u0435 Monospaced.&lt;/p&gt;"}}'>
 
     </div>
 <p>Како ће изгледати пример у вашем прегледачу зависи од фамилије фонтова која је подржана.</p>

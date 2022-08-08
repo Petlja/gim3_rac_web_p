@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -422,23 +423,49 @@
   <div class="section" id="id1">
 <h1>Објекти<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>У досадашњим примерима смо се сусретали са променљивама које имају једноставне вредности. Свака променљива има у себи само један податак, који може да буде број, текст, итд. (такозвани основни, или прости типови). Међутим, често je потребно користити сложеније структуре података, које у себи садрже по неколико једноставнијих вредности. На пример, да би се сачувале информације о особи, згодно је податке као што су име, презиме, датум рођења и слично објединити у једну целину. У ту сврху користе се објекти.</p>
-<p>Објекат је вредност сложеног типа, коју можемо замислити као групу именованих вредности. Замислите да у програму желимо да користимо разне податке о неком ученику, као што су његово име, старост, град у коме живи, број телефона, имејл, контакт на некој друштвеној мрежи, школа и разред у који иде. Уместо да употребимо осам засебних променљивих за ове податке, могли бисмо да групишемо ове податке и ставимо их у једну променљиву. Такве променљиве можемо да правимо и за друге ученике:</p>
+<p><strong>Објекат је вредност сложеног типа</strong>, коју можемо замислити као групу именованих вредности. Замислите да у програму желимо да користимо разне податке о неком ученику, као што су његово име, старост, град у коме живи, број телефона, имејл, контакт на некој друштвеној мрежи, школа и разред у који иде. Уместо да употребимо осам засебних променљивих за ове податке, могли бисмо да групишемо ове податке и ставимо их у једну променљиву. Такве променљиве можемо да правимо и за друге ученике.</p>
 <a class="reference internal image-reference" href="../_images/ucenik_kartoteka.png"><img alt="../_images/ucenik_kartoteka.png" class="align-center" src="../_images/ucenik_kartoteka.png" style="width: 600px;" /></a>
 <p>У језику <em>JavaScript</em> се овакви објекти праве тако што се у витичасте заграде ставе имена поља и вредности које ће бити у тим пољима:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">ucenik1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">ime</span><span class="o">:</span> <span class="s2">&quot;Петар Петровић&quot;</span><span class="p">,</span> <span class="nx">godiste</span><span class="o">:</span> <span class="mf">1998</span><span class="p">,</span> <span class="nx">telefon</span><span class="o">:</span> <span class="s2">&quot;012 345 678&quot;</span> <span class="p">}</span>
-<span class="kd">let</span> <span class="nx">ucenik2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">ime</span><span class="o">:</span> <span class="s2">&quot;Марко Марковић&quot;</span><span class="p">,</span> <span class="nx">godiste</span><span class="o">:</span> <span class="mf">1997</span><span class="p">,</span> <span class="nx">telefon</span><span class="o">:</span> <span class="s2">&quot;098 765 432&quot;</span> <span class="p">}</span>
-</pre></div>
+
+<div data-childcomponent="js_objects_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=js_objects_1 data-lang="javascript" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+let ucenik1 = {
+    ime: "Петар Петровић",
+    godiste: 1998,
+    telefon: "012 345 678"
+};
+let ucenik2 = {
+    ime: "Марко Марковић",
+    godiste: 1997,
+    telefon: "098 765 432"
+};
+alert(ucenik1.ime);
+</textarea>
 </div>
 <p>Направили смо две променљиве (<code class="docutils literal notranslate"><span class="pre">ucenik1</span></code> и <code class="docutils literal notranslate"><span class="pre">ucenik2</span></code>) које садрже објекте. Имена поља морају да буду у складу са правилима именовања променљивих у <em>JavaScript</em>-у (тј. почињу словима, доларом или доњом цртом, а после могу да садрже и цифре), а вредности могу да буду бројеви, стрингови или вредности било којег другог типа, укључујући и друге објекте.</p>
-<p>Објекат можемо да направимо и тако што почнемо од потпуно празног објекта</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{};</span>
-</pre></div>
+<p>Објекат можемо да направимо и тако што почнемо од потпуно празног објекта, a касније таквом објекту додајемо поља.</p>
+
+<div data-childcomponent="js_objects_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=js_objects_2 data-lang="javascript" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+let ucenik = {};
+ucenik.ime = "Петар Петровић";
+ucenik.godiste = 1998;
+ucenik.telefon = "012 345 678";
+alert(ucenik.ime);
+</textarea>
 </div>
-<p>a касније таквом објекту додајемо поља.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">x</span><span class="p">.</span><span class="nx">polje</span> <span class="o">=</span> <span class="nx">vrednost</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Пољима у објекту се може приступити по имену коришћењем тачке (нпр. <code class="docutils literal notranslate"><span class="pre">имеОбјекта.имеПоља</span></code>). У следећем примеру можете да видите како се прави објекат, како се чита податак из њега и како се уписује вредност у неко поље објекта.</p>
+<p>Пољима у објекту се може приступити по имену коришћењем тачке (нпр. <code class="docutils literal notranslate"><span class="pre">ucenik.ime</span></code>).</p>
+<p>У следећем примеру можете да видите како се прави објекат, како се чита податак из њега и како се уписује вредност у неко поље објекта.</p>
 
 <div data-childcomponent="azuriranje_objekta_1_js" class="course-box course-box-problem course-content">
 
@@ -447,7 +474,11 @@
     data-audio=''   
                data-hidehistory=true
        >
-let ucenik = { ime: "Петар Петровић", tel: "012 345 678", razred: 6 };
+let ucenik = {
+    ime: "Петар Петровић",
+    tel: "012 345 678",
+    razred: 6
+};
 let razred = ucenik.razred;
 razred = razred + 1;
 ucenik.razred = razred;
@@ -463,12 +494,16 @@ alert(ucenik.razred);
     data-audio=''   
                data-hidehistory=true
        >
-let ucenik = { ime: "Петар Петровић", tel: "012 345 678", razred: 6 };
+let ucenik = {
+    ime: "Петар Петровић",
+    tel: "012 345 678",
+    razred: 6
+};
 ucenik.razred++;
 alert(ucenik.razred);
 </textarea>
 </div>
-<p>Ако покушамо да дохватимо вредност непостојећег поља у објекту, добићемо специјалну вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code>:</p>
+<p>Ако покушамо да дохватимо вредност непостојећег поља у објекту, добићемо специјалну вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code>. Вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code> треба схватити као одсуство вредности.</p>
 
 <div data-childcomponent="nepostojece_polje_objekta_js" class="course-box course-box-problem course-content">
 
@@ -477,16 +512,27 @@ alert(ucenik.razred);
     data-audio=''   
                data-hidehistory=true
        >
-let ucenik = { ime: "Петар Петровић", tel: "012 345 678", razred: 6 };
+let ucenik = {
+    ime: "Петар Петровић",
+    tel: "012 345 678",
+    razred: 6
+};
 alert(ucenik.eposta);
 </textarea>
 </div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            <p>
 <p>Поред неиницијализованих поља објеката, вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code> имају и декларисане променљиве које нису иницијализоване:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">n</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">m</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code> треба схватити као одсуство вредности.</p>
+
+    </p></div></div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -499,7 +545,11 @@ alert(ucenik.eposta);
     data-audio=''   
                data-hidehistory=true
        >
-let ucenik = { ime: "Петар Петровић", tel: "012 345 678", razred: 6 };
+let ucenik = {
+    ime: "Петар Петровић",
+    tel: "012 345 678",
+    razred: 6
+};
 alert(ucenik);
 </textarea>
 </div>
@@ -512,7 +562,11 @@ alert(ucenik);
     data-audio=''   
                data-hidehistory=true
        >
-let ucenik = { ime: "Петар Петровић", tel: "012 345 678", razred: 6 };
+let ucenik = {
+    ime: "Петар Петровић",
+    tel: "012 345 678",
+    razred: 6
+};
 alert(JSON.stringify(ucenik));
 </textarea>
 </div>
@@ -530,7 +584,15 @@ let ucenik = JSON.parse(s);
 alert(ucenik.ime);
 </textarea>
 </div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            <p>
 <p>JSON је постао опште прихваћен као начин записивања сложених вредности, а настао је управо у оквиру језика <em>JavaScript</em> (скраћеница <em>JSON</em> долази од <em>JavaScript Object Notation</em>).</p>
+
+    </p></div></div>
 <div class="section" id="id2">
 <h2>Хијерархија објеката<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Поменули смо да вредности у објекту могу да буду други објекти. На тај начин објекти могу да формирају хијерархијску структуру. Ево како изгледа таква ситуација:</p>
@@ -543,7 +605,10 @@ alert(ucenik.ime);
                data-hidehistory=true
        >
 let ucenik = {
-    licniPodaci: { ime: "Петар Петровић", tel: "012 345 678" },
+    licniPodaci: {
+        ime: "Петар Петровић",
+        tel: "012 345 678"
+    },
     skola: {
         razred: 6,
         ocene: { srpski: 5, fizika: 4 },
@@ -556,91 +621,6 @@ ucenik.skola.izostanci.neopravdani++;
 
 alert(`Ученик ${ucenik.licniPodaci.ime} има` +
     ` ${ucenik.skola.izostanci.neopravdani} неоправданих изостанака.`);
-</textarea>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>Објектни модел документа стране<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>У лекцијама о језику <em>HTML</em> смо видели да <em>HTML</em> кôд дефинише структуру стране у којој се налази заглавље са насловима и тело са различитим <em>HTML</em> елементима.</p>
-<a class="reference internal image-reference" href="../_images/DOM.png"><img alt="../_images/DOM.png" class="align-center" src="../_images/DOM.png" style="width: 600px;" /></a>
-<p>У <em>JavaScript</em> коду који се извршава у веб странама се може користити један специјалан објекат који се зове <em>document</em>. Овај објекат нам омогућава да приступимо <em>HTML</em> елементима који се налазе у веб страни и да их читамо и мењамо. Када лоцирамо неки објекат, који представља неки <em>HTML</em> елемент у страни, можемо да га променимо тако што му на пример променимо <em>CSS</em> стил.</p>
-
-<div data-childcomponent="boja_teksta_html_js" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=boja_teksta_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Боја слова и позадине овог текста је постављена JavaScript наредбом.&lt;/p&gt;
-    &lt;script&gt;
-      document.title = &#x27;Ово је наслов стране&#x27;;
-      let body = document.body;
-      body.style.backgroundColor = &#x27;black&#x27;;
-      body.style.color = &#x27;lightgreen&#x27;;
-
-      let boja = document.body.style.color;
-      alert(`Bоја текста у страни је &quot;${boja}&quot;`);
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
-<p>Хијерархија објеката која почиње од документа стране назива се <strong>објектни модел документа</strong> (енгл. <em>document object model</em>, скраћено <em>DOM</em>). Из <em>JavaScript</em> програма можемо да дохватимо сваки елемент стране, да убацујемо и избацујемо елементе, да их допуњујемо и мењамо на различите начине. Следећи пример показује један начин како можемо да дохватимо поједине елементе у хијерархији документа и да тим елементима задамо нови стил.</p>
-<p>За сада ћемо употребити својства <code class="docutils literal notranslate"><span class="pre">firstElementChild</span></code> за дохватање првог детета и <code class="docutils literal notranslate"><span class="pre">nextElementSibling</span></code> за дохватање следећег елемента у истом нивоу хијерархије (следећи брат или сестра). Ова два својства <em>DOM</em> објеката су довољна за дохватање било ког елемента, а ускоро ћемо упознати и удобније начине за манипулисање <em>DOM</em> објектима.</p>
-<p><strong>Пример - дохватање елемената кроз DOM</strong></p>
-
-<div data-childcomponent="DOM_hijerarhija_html_js" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=DOM_hijerarhija_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div&gt;
-      &lt;p&gt;Овај документ има четири одељка.&lt;/p&gt;
-      &lt;p&gt;Ово је други параграф првог одељка.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;p&gt;Ово је други одељак.&lt;/p&gt;
-      &lt;p&gt;Стил другог и трећег одељка је подешен програмски.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;p&gt;Ово је трећи одељак.&lt;/p&gt;
-      &lt;p&gt;У трећем одељку други параграф је посебно стилизован.&lt;/p&gt;
-      &lt;p&gt;У осталим деловима трећег одељка примењује се стил одељка.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;p&gt;Четврти одељак изгледа као и први.&lt;/p&gt;
-      &lt;p&gt;Њихов стил није програмски мењан.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
-      let prviOdeljak = document.body.firstElementChild;
-      let drugiOdeljak = prviOdeljak.nextElementSibling;
-      let treciOdeljak = drugiOdeljak.nextElementSibling;
-      let p31 = treciOdeljak.firstElementChild;
-      let p32 = p31.nextElementSibling;
-      drugiOdeljak.style.backgroundColor = &#x27;#C0FFFF&#x27;;
-      drugiOdeljak.style.color = &#x27;blue&#x27;;
-      drugiOdeljak.style.fontSize = &quot;16pt&quot;;
-
-      treciOdeljak.style.backgroundColor = &#x27;#FFFFC0&#x27;;
-      treciOdeljak.style.color = &#x27;brown&#x27;;
-      p32.style.color = &#x27;red&#x27;;
-      p32.style.border = &quot;1px solid red&quot;;
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
 </textarea>
 </div>
 </div>

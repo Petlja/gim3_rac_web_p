@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -428,7 +429,7 @@
 </div>
 <p>Употребу једне методе смо већ видели у примеру функције <code class="docutils literal notranslate"><span class="pre">prikaziTacnoVreme</span></code>. Објекти који садрже неки временски тренутак имају (поред осталих) методу <code class="docutils literal notranslate"><span class="pre">toLocaleTimeString()</span></code>, која враћа стринг са временом тог тренутка, без датума.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">prikaziTacnoVreme</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">sada</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">sada</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
   <span class="nx">alert</span><span class="p">(</span><span class="sb">`Страница је отворена у </span><span class="si">${</span><span class="nx">sada</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">()</span><span class="si">}</span><span class="sb"> сати.`</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -453,14 +454,14 @@
     data-audio=''   
                data-hidehistory=true
        >
-let ocene = [5,5,4,5]
+let ocene = [5, 5, 4, 5];
 ocene.pop();        // ocene = [5,5,4]
 ocene.push(4);      // ocene = [5,5,4,4]
 ocene.push(5);      // ocene = [5,5,4,4,5]
 
 alert( ocene.toString() );  // приказаће се 5,5,4,4,5
 ocene = ocene.slice(1,4);   // ocene = [5,4,4]
-alert( ocene.join( ` : ` ) ); // приказаће се 5 : 4 : 4
+alert( ocene.join( " : " ) ); // приказаће се 5 : 4 : 4
 </textarea>
 </div>
 </div>
@@ -534,6 +535,9 @@ alert( ocene.join( ` : ` ) ); // приказаће се 5 : 4 : 4
 &lt;/html&gt;
 </textarea>
 </div>
+</div>
+<div class="section" id="id4">
+<h2>Методе документа стране - селектовање елемената<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Објекат <code class="docutils literal notranslate"><span class="pre">document</span></code> има и неколико метода које нам омогућавају да пронађемо елементе на страни по идентификатору (атрибуту <code class="docutils literal notranslate"><span class="pre">id</span></code>), типу елемента, или некој од класа. Најбитније методе објекта <code class="docutils literal notranslate"><span class="pre">document</span></code> за приступање <em>HTML</em> елементима су:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">document.querySelector(cssSelektor)</span></code> проналази први <em>HTML</em> елемент у документу који одговара задатом <em>CSS</em> селектору.</p></li>
@@ -565,33 +569,73 @@ alert( ocene.join( ` : ` ) ); // приказаће се 5 : 4 : 4
 
       &lt;div id=&#x27;aktivnosti&#x27;&gt;
         &lt;h4&gt;Наше активности&lt;/h4&gt;
-        &lt;p&gt; Активност број 1&lt;/p&gt;
-        &lt;p&gt; Активност број 2&lt;/p&gt;
+        &lt;p&gt;Активност број 1&lt;/p&gt;
+        &lt;p&gt;Активност број 2&lt;/p&gt;
       &lt;/div&gt;
       &lt;div id=&#x27;vesti&#x27;&gt;
         &lt;h4&gt;Вести&lt;/h4&gt;
-        &lt;p&gt; Вест број 1&lt;/p&gt;
-        &lt;p&gt; Вест број 2&lt;/p&gt;
+        &lt;p&gt;Вест број 1&lt;/p&gt;
+        &lt;p&gt;Вест број 2&lt;/p&gt;
       &lt;/div&gt;
       &lt;script&gt;
-        let odeljakVesti = document.getElementById(&quot;vesti&quot;);
+        const odeljakVesti = document.getElementById(&quot;vesti&quot;);
         odeljakVesti.style.backgroundColor = &#x27;#C0FFFF&#x27;;
       &lt;/script&gt;
    &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба 1</strong></p>
 <p>Замените у претходном коду наредбе</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">odeljakVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;vesti&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">odeljakVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;vesti&quot;</span><span class="p">);</span>
 <span class="nx">odeljakVesti</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;#C0FFFF&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>наредбама</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">pojedinacneVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;#vesti p&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">pojedinacneVesti</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;#vesti p&#39;</span><span class="p">);</span>
 <span class="nx">pojedinacneVesti</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>и покушајте да објасните, пре покретања примера, шта ће бити ефекат ових наредби. Покрените пример и проверите своју претпоставку.</p>
+
+    </p></div></div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба 2</strong></p>
+<p>У претходном примеру додајте следећи код:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">naslovi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;#aktivnosti, #vesti&#39;</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">naslovi</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">naslov</span> <span class="o">=</span> <span class="nx">naslovi</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="nx">naslov</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Који је очекиван резултат? Покрените пример и проверите своју претпоставку.</p>
+
+    </p></div></div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба 3</strong></p>
+<p>Користећи <code class="docutils literal notranslate"><span class="pre">querySelectorAll</span></code> пронађите све наслове (”Убацивање текста”, ”Наше активности” и ”Вести”) и обојите им позадину у плаво, без додавања класе или идентификатора наслову ”Убацивање текста”.</p>
+
+    </p></div></div>
 <hr class="docutils" />
 <p>Уместо постављања боје, могли смо, на пример, да убацимо параграф <em>Најновија вест</em> у одељак са вестима. Ради тога смо употребили и методе <code class="docutils literal notranslate"><span class="pre">document.createElement()</span></code>, <code class="docutils literal notranslate"><span class="pre">document.createTextNode()</span></code>, <code class="docutils literal notranslate"><span class="pre">element.appendChild(cvor_dete)</span></code> и <code class="docutils literal notranslate"><span class="pre">element_roditelj.insertBefore(novi_element,</span> <span class="pre">element_dete)</span></code>, за које се не очекује да их у оквиру овог курса запамтите и детаљно познајете. У овом примеру, поменуте методе су употребљене само као илустрација и наговештај могућности употребе <em>JavaScript</em> програма у <em>HTML</em> странама. По потреби се увек можете вратити на овај пример, или сами пронаћи на интернету сличан пример и детаљнија објашњења.</p>
 
@@ -612,29 +656,40 @@ alert( ocene.join( ` : ` ) ); // приказаће се 5 : 4 : 4
 
       &lt;div id=&#x27;aktivnosti&#x27;&gt;
         &lt;h4&gt;Наше активности&lt;/h4&gt;
-        &lt;p&gt; Активност број 1&lt;/p&gt;
-        &lt;p&gt; Активност број 2&lt;/p&gt;
+        &lt;p&gt;Активност број 1&lt;/p&gt;
+        &lt;p&gt;Активност број 2&lt;/p&gt;
       &lt;/div&gt;
       &lt;div id=&#x27;vesti&#x27;&gt;
         &lt;h4&gt;Вести&lt;/h4&gt;
-        &lt;p&gt; Вест број 1&lt;/p&gt;
-        &lt;p&gt; Вест број 2&lt;/p&gt;
+        &lt;p&gt;Вест број 1&lt;/p&gt;
+        &lt;p&gt;Вест број 2&lt;/p&gt;
       &lt;/div&gt;
       &lt;script&gt;
-         // HTML параграф као објекат у DOM  моделу
-         // садржи чвор са текстом као своје поље
-        let novaVest = document.createElement(&quot;P&quot;);
-        let cvor = document.createTextNode(&quot;Најновија вест&quot;);
+        // HTML параграф као објекат у DOM  моделу
+        // садржи чвор са текстом као своје поље
+        const novaVest = document.createElement(&quot;P&quot;);
+        const cvor = document.createTextNode(&quot;Најновија вест&quot;);
         novaVest.appendChild(cvor);
 
         // Убацујемо параграф &#x27;novaVest&#x27; у одговарајући одељак
-        let odeljakVesti = document.getElementById(&quot;vesti&quot;);
+        const odeljakVesti = document.getElementById(&quot;vesti&quot;);
         odeljakVesti.insertBefore(novaVest, odeljakVesti.children[1]);
       &lt;/script&gt;
    &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба - нов одељак</strong></p>
+<p>У претходном примеру користећи <code class="docutils literal notranslate"><span class="pre">document.createElement</span></code> i <code class="docutils literal notranslate"><span class="pre">document.createTextNode</span></code> додајте нов одељак ”Чланови” са листом неколико имена.</p>
+
+    </p></div></div>
 </div>
 </div>
 
