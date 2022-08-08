@@ -1,4 +1,4 @@
-CSS својства - питања
+CSS својства – питања
 =====================
 
 .. mchoice:: css_svojstva_q1
@@ -18,10 +18,10 @@ CSS својства - питања
 
 .. mchoice:: css_svojstva_q2
     :multiple_answers:
-    :answer_a: rgb(201, 76, 76)
+    :answer_a: rgb(201, 76, 76);
     :answer_b: color: rgb(#ff, 0, 0);
     :answer_c: color: "255, 0, 0";
-    :answer_d: color: #ff0000;
+    :answer_d: color: #ff0000;.
     :correct: a, d
 
     Који начини задавања боје су исправни у језику *CSS* (означите све тачне одговоре)?
@@ -29,10 +29,10 @@ CSS својства - питања
 
 
 .. mchoice:: css_svojstva_q3
-    :answer_a: margin > padding
-    :answer_b: margin < padding
-    :answer_c: margin = padding
-    :answer_d: не може се одредити са слике
+    :answer_a: margin > padding,
+    :answer_b: margin < padding,
+    :answer_c: margin = padding,
+    :answer_d: не може се одредити са слике.
     :correct: b
     :feedback_a: Не.
     :feedback_b: Тачно!
