@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -521,12 +522,12 @@ alert (`Збир двоцифрених непарних бројева до ${g
     data-audio=''   
                data-hidehistory=true
        >
-    let brojevi = [2, 5, 3];
-    let zbir = 0;
-    for (let broj of brojevi) {
-        zbir += broj;
-    }
-    alert(`Збир је ${zbir}.`)
+let brojevi = [2, 5, 3];
+let zbir = 0;
+for (let broj of brojevi) {
+    zbir += broj;
+}
+alert(`Збир је ${zbir}.`)
 </textarea>
 </div>
 
@@ -537,10 +538,10 @@ alert (`Збир двоцифрених непарних бројева до ${g
     data-audio=''   
                data-hidehistory=true
        >
-    let imena = ['Јован', 'Марко', 'Лука'];
-    for (let ime of imena) {
-        alert(ime);
-    }
+let imena = ['Јован', 'Марко', 'Лука'];
+for (let ime of imena) {
+    alert(ime);
+}
 </textarea>
 </div>
 
@@ -551,10 +552,10 @@ alert (`Збир двоцифрених непарних бројева до ${g
     data-audio=''   
                data-hidehistory=true
        >
-    let tekst = 'JavaScript';
-    for (let slovo of tekst) {
-        alert(slovo);
-    }
+let tekst = 'JavaScript';
+for (let slovo of tekst) {
+    alert(slovo);
+}
 </textarea>
 </div>
 <p>За итерирање кроз поља објекта користи се петља <code class="docutils literal notranslate"><span class="pre">for-in</span></code>, која има овај облик:</p>

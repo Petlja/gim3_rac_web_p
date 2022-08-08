@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -430,7 +431,9 @@
 <h2>Декларација<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Декларацијом променљиве се најављује њена употреба у наставку програма и одређује се у ком делу програма се та променљива може користити.</p>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
 <p>У језику <em>JavaScript</em> декларацију променљивих <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code> треба писати овако:</p>
@@ -477,6 +480,9 @@ alert(z);
 </textarea>
 </div>
 <p>Додељивање почетне вредности променљивој назива се <strong>иницијализација</strong>. Препоручује се да променљиве иницијализујемо одмах при декларацији кад год то логика програма допушта.</p>
+</div>
+<div class="section" id="id4">
+<h2>Константе<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Понекад је у програмима иницијализација променљиве једино додељивање вредности тој променљивој. Када не намеравамо да мењамо вредност променљиве у наставку програма, добро је у декларацији уместо речи <code class="docutils literal notranslate"><span class="pre">let</span></code> писати реч <code class="docutils literal notranslate"><span class="pre">const</span></code>.</p>
 
 <div data-childcomponent="let_i_poc_vrednost3_js" class="course-box course-box-problem course-content">
@@ -493,9 +499,9 @@ alert(z);
 </textarea>
 </div>
 <p>Тиме програм додатно постаје јаснији за читање, а неки теже ухватљиви багови се могу претворити у грешке у току извршавања (енгл. <em>runtime errors</em>, пуцање програма). Као што је раније речено, ако већ имамо грешке у програму, онда је боље да су то грешке о којима добијамо поруку (као што су синтаксне грешке и пуцање програма), јер ћемо уз помоћ тих порука грешке лакше исправити.</p>
-<div class="line-block">
-<div class="line"><br /></div>
 </div>
+<div class="section" id="id5">
+<h2>Типови<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Вредности које додељујемо променљивама у програмима су подаци који се уносе у програм, чувају у фајловима, комбинују приликом рачунања израза и на крају на неки начин приказују. Те вредности могу бити разних врста, тј. могу припадати различитим типовима. Типови вредности који се најчешће користе су <em>number</em>, <em>boolean</em> и <em>string</em> и о њима ће бити речи у наставку.</p>
 </div>
 </div>

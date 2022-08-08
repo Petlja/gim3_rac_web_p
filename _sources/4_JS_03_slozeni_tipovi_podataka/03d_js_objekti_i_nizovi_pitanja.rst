@@ -1,4 +1,4 @@
-Сложени типови података - питања
+Сложени типови података – питања
 ================================
 
 .. mchoice:: slozeni_tipovi_q1
@@ -21,10 +21,10 @@
 
 
 .. mchoice:: slozeni_tipovi_q2
-    :answer_a: Програм пукне
+    :answer_a: Програм пукне.
     :answer_b: Програм је синтаксно неисправан и не може да се покрене.
-    :answer_c: Програм испише "0".
-    :answer_d: Програм испише "undefined".
+    :answer_c: Програм испише „0“.
+    :answer_d: Програм испише „undefined“.
     :correct: d
     :feedback_a: Не.
     :feedback_b: Не.

@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -427,8 +428,8 @@
 <h2>Догађаји на елементима стране<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Да бисмо омогућили реаговање на догађаје, потребно је да некако повежемо изабрани догађај са <em>JavaScript</em> функцијом која ће се извршити при настанку тог догађаја.</p>
 <p>Када се ради о догађајима који се дешавају на одређеном <em>HTML</em> елементу, један начин да повежемо догађаје са <em>JavaScript</em> функцијама је да у <em>JavaScript</em> коду дохватимо тај <em>HTML</em> елемент и позовемо његов методу <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code>. Ова метода може да буде позвана са различитим листама параметара. Најједноставнији начин позивања је са само два параметра: стринг који представља назив догађаја и име функције која се извршава на тај догађај. Примери назива неких догађаја су:</p>
-<table class="colwidths-given docutils align-left" id="id6">
-<caption><span class="caption-text">Неки често коришћени догађаји</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<table class="colwidths-given docutils align-left" id="id7">
+<caption><span class="caption-text">Неки често коришћени догађаји</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 80%" />
@@ -494,10 +495,10 @@
             alert(`Напустили сте мишем параграф у коме пише &quot;${dogadjaj.currentTarget.innerText}&quot;`);
         }
 
-        let p1 = document.getElementById(&#x27;prvi&#x27;);
+        const p1 = document.getElementById(&#x27;prvi&#x27;);
         p1.addEventListener(&#x27;click&#x27;, klik);
 
-        let p2 = document.getElementById(&#x27;drugi&#x27;);
+        const p2 = document.getElementById(&#x27;drugi&#x27;);
         p2.addEventListener(&#x27;click&#x27;, klik);
         p2.addEventListener(&#x27;mouseenter&#x27;, dolazakMisa);
         p2.addEventListener(&#x27;mouseout&#x27;, odlazakMisa);
@@ -508,64 +509,172 @@
 </div>
 <p>У овом примеру функције <code class="docutils literal notranslate"><span class="pre">klik</span></code>, <code class="docutils literal notranslate"><span class="pre">dolazakMisa</span></code> и <code class="docutils literal notranslate"><span class="pre">odlazakMisa</span></code> се позивају када наступи одговарајући догађај. Ове функције као параметар добијају објекат који садржи информације о догађају. Између осталог, поље <code class="docutils literal notranslate"><span class="pre">currentTarget</span></code> овог објекта представља <em>HTML</em> елемент на коме се десио догађај. На тај начин функција „зна” одакле је позвана и може да прочита вредности атрибута или текстуални садржај прослеђеног елемента.</p>
 <p><em>JavaScript</em> објекти који представљају <em>HTML</em> елементе имају поље <code class="docutils literal notranslate"><span class="pre">innerHTML</span></code>, које представља садржај елемента. Коришћењем овог поља, функција може не само да чита него и да мења садржај елемента. Испробајте!</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба - промена боје текста</strong></p>
+<p>Користећи <code class="docutils literal notranslate"><span class="pre">dogadjaj.currentTarget</span></code>, промените боју текста елемента преко ког се прелази мишем, и вратите је на првобитну када миш напусти елемент.</p>
+
+    </p></div></div>
 </div>
 <div class="section" id="id3">
 <h2>Остали догађаји<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Неки догађаји нису везани за одређени <em>HTML</em> елемент. У том случају можемо да користимо методу <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> да бисмо повезали дати догађај са <em>JavaScript</em> кодом који се на тај догађај извршава. И у овом случају ћемо методи <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code> прослеђивати два аргумента: назив догађаја и назив функције коју на тај догађај желимо да извршимо.</p>
-<p>На пример, догађај <code class="docutils literal notranslate"><span class="pre">DOMContentLoaded</span></code> наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију <code class="docutils literal notranslate"><span class="pre">postavi</span></code> на следећи начин:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="nx">postavi</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Овим постижемо да се функција <code class="docutils literal notranslate"><span class="pre">postavi</span></code> изврши након учитавања стране у објектни модел. На овај начин можемо да извршавамо и разна почетна подешавања изгледа и садржаја веб стране из <em>JavaScript</em> кода убрзо по отварању те стране.</p>
-<p>Веб страна се учитава и интерпретира редом како је написана. Ако <em>JavaScript</em> кôд пишемо у заглављу документа, покушај да приступимо <em>HTML</em> елементима из кода који се одмах извршава (на пример, написан је ван функција) доводи до грешке, јер страна још није у потпуности учитана. Један од начина да овај проблем превазиђемо је употреба метода <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> са параметром <code class="docutils literal notranslate"><span class="pre">DOMContentLoaded</span></code>.</p>
-<p>Осим методе <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> можемо да користимо и методу <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>. Ова метода се користи када неку <em>JavaScript</em> функцију желимо да извршавамо периодично, на сваких <em>n</em> милисекунди. Први аргумент методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> постижемо да се догађај часовника који је повезан са наведеном <em>JavaScript</em> функцијом генерише у задатим интервалима. На пример, позивом</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">tik</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>постижемо да се догађај који покреће функцију <code class="docutils literal notranslate"><span class="pre">tik</span></code> генерише на сваких 1000 милисекунди, тј. једном у секунди. Свако генерисање овог догађаја покреће функцију <code class="docutils literal notranslate"><span class="pre">tik</span></code>.</p>
-<p>Ако постоји потреба да се касније престане са генерисањем овог догађаја, запамтићемо вредност коју враћа метода <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">tiktanje</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">tik</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>а на другом месту у коду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију <code class="docutils literal notranslate"><span class="pre">tik</span></code>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">tiktanje</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Следи комплетан пример који илуструје употребу метода <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> и <code class="docutils literal notranslate"><span class="pre">clearInterval</span></code>. Испробајте га!</p>
+<p>Постоје догађаји који су везани за сам документ, па би за њих користили  методу <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code>. И у овом случају ћемо методи <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code> прослеђивати два аргумента: назив догађаја и назив функције коју на тај догађај желимо да извршимо.</p>
+<p>На пример, догађај <code class="docutils literal notranslate"><span class="pre">DOMContentLoaded</span></code> наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију <code class="docutils literal notranslate"><span class="pre">ucitan</span></code> на следећи начин:</p>
 
-<div data-childcomponent="casovnik_html" class="course-box course-box-problem course-content">
+<div data-childcomponent="dogadjaji_domcontentloaded" class="course-box course-box-problem course-content">
 
-<textarea data-component="activecode" id=casovnik_html data-lang="htmlmixed" 
+<textarea data-component="activecode" id=dogadjaji_domcontentloaded data-lang="htmlmixed" 
       data-timelimit=25000    
     data-audio=''   
                data-hidehistory=true
        >
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Часовник&lt;/title&gt;
-        &lt;script&gt;
+  &lt;head&gt;
+    &lt;title&gt;Догађаји&lt;/title&gt;
+    &lt;script&gt;
 
-            function tik() {
-                document.querySelector(&#x27;h1&#x27;).innerHTML = `${new Date().toLocaleTimeString()}`;
-            }
+      function ucitan() {
+        const paragraf = document.querySelector(&#x27;p&#x27;);
+        paragraf.style.color = &#x27;red&#x27;;
+      }
 
-            function postavi() {
-                setInterval(tik, 1000);
-            }
+      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitan);
 
-            document.addEventListener(&#x27;DOMContentLoaded&#x27;, postavi);
-
-        &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;&lt;/h1&gt;
-    &lt;/body&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Садржај стране&lt;/p&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
+<p>Овим постижемо да се функција <code class="docutils literal notranslate"><span class="pre">ucitan</span></code> изврши након учитавања стране у објектни модел. На овај начин можемо да извршавамо и разна почетна подешавања изгледа и садржаја веб стране из <em>JavaScript</em> кода убрзо по отварању те стране.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            <p>
+<p>Веб страна се учитава и интерпретира редом како је написана. Ако <em>JavaScript</em> кôд пишемо у заглављу документа, покушај да приступимо <em>HTML</em> елементима из кода који се одмах извршава (на пример, написан је ван функција) доводи до грешке, јер страна још није у потпуности учитана.</p>
+<p>Један од начина да овај проблем превазиђемо је употреба метода <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> са параметром <code class="docutils literal notranslate"><span class="pre">DOMContentLoaded</span></code>.</p>
+
+    </p></div></div>
+</div>
 <div class="section" id="id4">
-<h3>Пример - Повећавање слике<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h2>Периодично извршавање<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Осим методе <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> можемо да користимо и методу <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>. Ова метода се користи када неку <em>JavaScript</em> функцију желимо да извршавамо периодично, на сваких <em>n</em> милисекунди. Први аргумент методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> постижемо да се догађај часовника који је повезан са наведеном <em>JavaScript</em> функцијом генерише у задатим интервалима.</p>
+
+<div data-childcomponent="dogadjaji_set_interval" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dogadjaji_set_interval data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Догађаји&lt;/title&gt;
+    &lt;script&gt;
+
+      const boje = [&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;];
+      let trenutna = 0;
+
+      function promeniBoju() {
+        const paragraf = document.querySelector(&#x27;p&#x27;);
+        paragraf.style.color = boje[trenutna];
+        trenutna = (trenutna + 1) % boje.length;
+      }
+
+      function ucitaj() {
+        setInterval(promeniBoju, 1000);
+      }
+
+      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitaj);
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Садржај стране&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>У овом примеру постижемо да се догађај који покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code> генерише на сваких 1000 милисекунди, тј. једном у секунди. Свако генерисање овог догађаја покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code>.</p>
+<p>Ако постоји потреба да се касније престане са генерисањем овог догађаја, запамтићемо вредност коју враћа метода <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">tiktanje</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">promeniBoju</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>а на другом месту у коду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code>:</p>
+
+<div data-childcomponent="dogadjaji_clear_interval" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dogadjaji_clear_interval data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Догађаји&lt;/title&gt;
+    &lt;script&gt;
+
+      const boje = [&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;];
+      let trenutna = 0;
+      let intervalId = 0;
+
+      function promeniBoju() {
+        const paragraf = document.querySelector(&#x27;p&#x27;);
+        paragraf.style.color = boje[trenutna];
+        trenutna = (trenutna + 1) % boje.length;
+      }
+
+      function zaustavi() {
+        clearInterval(intervalId);
+      }
+
+      function ucitaj() {
+        intervalId = setInterval(promeniBoju, 1000);
+
+        const dugme = document.querySelector(&#x27;button&#x27;);
+        dugme.addEventListener(&#x27;click&#x27;, zaustavi);
+      }
+
+      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitaj);
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Садржај стране&lt;/p&gt;
+    &lt;button&gt;Стани&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба - интервали</strong></p>
+<p>Измените претходни пример тако да стоје два дугмета:</p>
+<ul class="simple">
+<li><p>Покрени - кликом на дугме се покреће догађај који мења боју сваке секунде.</p></li>
+<li><p>Стани - кликом на дугме се зауставља догађај и боја се више не мења.</p></li>
+</ul>
+
+    </p></div></div>
+<div class="section" id="id5">
+<h3>Пример - Повећавање слике<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>У следећем примеру дата је веб страна са ове 3 слике:</p>
 <a class="reference internal image-reference" href="../_images/emo11.png"><img alt="../_images/emo11.png" src="../_images/emo11.png" style="width: 100px;" /></a>
 <a class="reference internal image-reference" href="../_images/emo21.png"><img alt="../_images/emo21.png" src="../_images/emo21.png" style="width: 100px;" /></a>
@@ -621,8 +730,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>Догађаји и анонимне функције<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>Догађаји и анонимне функције<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>Исти ефекат привременог повећавања слике при преласку мишем преко ње може да се постигне и мало другачијим кодом. Као други параметар методе <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code> уместо назива функције можемо да наведемо комплетну дефиницију функције. Приметимо да тако уметнуте функције нигде нису именоване, па су због тога познате као анонимне функције (а понекад их називамо и ламбда-функције). Пошто немају име, анонимне функције се могу користити само на једном месту у коду и само у једну сврху (за употребу функције на другим местима у коду потребно је да функција има име).</p>
 <p>Употреба анонимних функција (навођење целе функције тамо где се очекује њено име) је честа у језику <em>JavaScript</em>, а следећи пример показује како та употреба изгледа.</p>
 

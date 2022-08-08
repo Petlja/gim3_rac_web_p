@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -424,7 +425,7 @@
 <p>Често је потребно направити много комплексније распореде елемената које је веома тешко постићи уз леви и десни ток.</p>
 <p><em>CSS flexbox</em> (скраћено енг. <em>flexible box layout module</em>) подржава низ напредних контрола тока. Да би користили <em>flexbox</em> потребно је на неки родитељски елемент поставити <code class="docutils literal notranslate"><span class="pre">display:</span> <span class="pre">flex;</span></code>.</p>
 
-    <div id="css_flex_columns" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<div class=\"container\">\n    <div class=\"column\">\n        Kolona 1\n    </div>\n    <div class=\"column\">\n        Kolona 2\n    </div>\n    <div class=\"column\">\n        Kolona 3\n    </div>\n    <div class=\"column\">\n        Kolona 4\n    </div>\n</div>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": ".container {\n    display: flex;\n    border: 1px solid red;\n}\n.column {\n    border: 1px solid grey;\n}"}}'>
+    <div id="css_flex_columns" class="petlja-editor" data='{"css": {"name": "style.css", "source": ".flex {\n    display: flex;\n    border: 1px solid red;\n}\n.kolona {\n    border: 1px solid grey;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;div class=\"flex\"&gt;\n    &lt;div class=\"kolona\"&gt;\n        Kolona 1\n    &lt;/div&gt;\n    &lt;div class=\"kolona\"&gt;\n        Kolona 2\n    &lt;/div&gt;\n    &lt;div class=\"kolona\"&gt;\n        Kolona 3\n    &lt;/div&gt;\n    &lt;div class=\"kolona\"&gt;\n        Kolona 4\n    &lt;/div&gt;\n&lt;/div&gt;"}}'>
 
     </div>
 
@@ -439,7 +440,7 @@
     </p></div></div>
 <div class="section" id="id1">
 <h2>Својства елемената унутар <em>flexbox</em>-а<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Елементи који су директно унутар се понашају као колоне, али то је тек почетак <em>flexbox</em>-а.</p>
+<p>Елементи који су директно унутар се понашају као колоне. Најчешће коришћена својства <em>flexbox</em>-a нам омогућују да контролишемо величину елемената:</p>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Најчешће коришћена својства <em>flexbox</em>-а</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -464,21 +465,44 @@
 </tbody>
 </table>
 
-    <div class="course-box course-box-info">
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
-<p>Својство <code class="docutils literal notranslate"><span class="pre">flex</span></code> је скраћеница којом се могу задати сва 3 својства у формату <code class="docutils literal notranslate"><span class="pre">flex:</span> <span class="pre">&lt;flex-grow&gt;</span> <span class="pre">&lt;flex-shrink&gt;</span> <span class="pre">&lt;flex-basis&gt;;</span></code>.</p>
+<p>Својство <code class="docutils literal notranslate"><span class="pre">flex</span></code> је скраћеница којом се могу задати сва 3 својства у формату <code class="docutils literal notranslate"><span class="pre">flex:</span> <span class="pre">&lt;flex-grow&gt;</span> <span class="pre">&lt;flex-shrink&gt;</span> <span class="pre">&lt;flex-basis&gt;;</span></code> нпр. <code class="docutils literal notranslate"><span class="pre">flex:</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">auto</span></code>.</p>
 
     </p></div></div>
-<p>Погледајмо пример распореда главне странице Википедије из претходне лекције:</p>
 
-    <div id="css_wiki_flex" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<div class=\"container\">\n    <div class=\"column flex-30\">\n        <header>\u0412\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430 \u2013 \u0441\u043b\u043e\u0431\u043e\u0434\u043d\u0430 \u0435\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u0458\u0430</heading>\n        <nav>\u041b\u0438\u043d\u043a\u043e\u0432\u0438 \u0437\u0430 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u0458\u0443</nav>\n    </div>\n    <div class=\"column\">\n        <nav>\u041b\u0438\u043d\u043a\u043e\u0432\u0438 \u0437\u0430 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u0458\u0443 \u043d\u0430 \u0432\u0440\u0445\u0443</nav>\n        <div>\u041a\u0430\u0440\u0442\u0438\u0446\u0435 \u0438 \u043f\u0440\u0435\u0442\u0440\u0430\u0433\u0430 \u0441\u0430\u0458\u0442\u0430</div>\n        <div>\u0414\u043e\u0431\u0440\u043e\u0434\u043e\u0448\u043b\u0438</div>\n        <div class=\"container\">\n            <div class=\"column\">\u0421\u043b\u0443\u0447\u0430\u0458\u043d\u0438 \u0447\u043b\u0430\u043d\u0446\u0438</div>\n            <div class=\"column\">\u041d\u0435\u0434\u0430\u0432\u043d\u0438 \u0434\u043e\u0433\u0430\u0452\u0430\u0458\u0438</div>\n        </div>\n    </div>\n</div>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": ".container {\n    display: flex;\n    gap: 10px;\n}\n.column {\n    flex: 1 1 auto;\n    border: 1px solid grey;\n}\n.flex-30 {\n    flex-basis: 30%;\n}"}}'>
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Вратите се на претходни пример и пробајте неке од следећих вежби:</p>
+<ol class="arabic simple">
+<li><p>Додајте <code class="docutils literal notranslate"><span class="pre">flex:</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">auto</span></code> свим колонама. Који је резултат?</p></li>
+<li><p>У <em>HTML</em>-у додајте првој колони <code class="docutils literal notranslate"><span class="pre">style=&quot;flex-grow:</span> <span class="pre">2&quot;</span></code>. Који је резултат?</p></li>
+<li><p>У <em>HTML</em>-у додајте последњој колони <code class="docutils literal notranslate"><span class="pre">style=&quot;flex-basis:</span> <span class="pre">300px</span></code>. Који је резултат?</p></li>
+</ol>
+
+    </p></div></div>
+</div>
+<div class="section" id="flex">
+<h2>Угњеждавање <em>flex</em>-а<a class="headerlink" href="#flex" title="Permalink to this headline">¶</a></h2>
+<p>Елементи унутар <em>flex</em>-а такође могу да садрже елементе који користе <em>flex</em>.</p>
+<p>У претходној лекцији смо показали пример како постићи распоред елемената главне стране Википедије користећи леви ток.</p>
+<p>Плавом бојом су обележени главни елементи који су подељени на леву колону са навигацијом и десну са садржајем.</p>
+<p>Црвеном бојом је обележен садржај који се такође дели у две колоне.</p>
+
+    <div id="css_wiki_flex" class="petlja-editor" data='{"css": {"name": "style.css", "source": ".flex {\n    display: flex;\n    gap: 10px;\n}\n.kolona {\n    flex: 1 1 auto;\n}\n.leva-kolona {\n    flex: 0 0 200px;\n}\n.plavi {\n    border: 1px solid blue;\n}\n.crveni {\n    border: 1px solid red;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;div class=\"flex plavi\"&gt;\n    &lt;div class=\"leva-kolona plavi\"&gt;\n        &lt;header&gt;\u0412\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430 \u2013 \u0441\u043b\u043e\u0431\u043e\u0434\u043d\u0430 \u0435\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u0458\u0430&lt;/heading&gt;\n        &lt;nav&gt;\u041b\u0438\u043d\u043a\u043e\u0432\u0438 \u0437\u0430 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u0458\u0443&lt;/nav&gt;\n    &lt;/div&gt;\n    &lt;div class=\"kolona plavi\"&gt;\n        &lt;nav&gt;\u041b\u0438\u043d\u043a\u043e\u0432\u0438 \u0437\u0430 \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u0458\u0443 \u043d\u0430 \u0432\u0440\u0445\u0443&lt;/nav&gt;\n        &lt;div&gt;\u041a\u0430\u0440\u0442\u0438\u0446\u0435 \u0438 \u043f\u0440\u0435\u0442\u0440\u0430\u0433\u0430 \u0441\u0430\u0458\u0442\u0430&lt;/div&gt;\n        &lt;div&gt;\u0414\u043e\u0431\u0440\u043e\u0434\u043e\u0448\u043b\u0438&lt;/div&gt;\n        &lt;div class=\"flex crveni\"&gt;\n            &lt;div class=\"kolona crveni\"&gt;\u0421\u043b\u0443\u0447\u0430\u0458\u043d\u0438 \u0447\u043b\u0430\u043d\u0446\u0438&lt;/div&gt;\n            &lt;div class=\"kolona crveni\"&gt;\u041d\u0435\u0434\u0430\u0432\u043d\u0438 \u0434\u043e\u0433\u0430\u0452\u0430\u0458\u0438&lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"}}'>
 
     </div>
-<p>За више примера погледајте добар ресурс је <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">MDN Веб документација</a>.</p>
 </div>
 <div class="section" id="id2">
 <h2>Својства родитељског елемента<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Родитељски елемент који садржи својство <code class="docutils literal notranslate"><span class="pre">display:</span> <span class="pre">flex</span></code> може да има додатна својства која утичу на ток елемената.</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Најчешће коришћена својства <em>flexbox</em>-а</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -502,11 +526,25 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="2_CSS_04_raspored_elemenata\../../_images/css/primer_youtube.png"><img alt="2_CSS_04_raspored_elemenata\../../_images/css/primer_youtube.png" class="align-center" src="2_CSS_04_raspored_elemenata\../../_images/css/primer_youtube.png" style="width: 624px;" /></a>
 
-    <div id="css_youtube_flex" class="petlja-editor" data='{"html": {"name": "test.html", "source": "<link rel=\"stylesheet\" href=\"style.css\"/>\n<div>\n    <h2>\u0412\u0435\u043e\u043c\u0430 \u0434\u0443\u0433\u0430\u0447\u0430\u043a \u043d\u0430\u0437\u0438\u0432 \u0432\u0438\u0434\u0435\u043e \u043c\u0430\u0442\u0435\u0440\u0438\u0458\u0430\u043b\u0430</h2>\n    <div class=\"donja-traka\">\n        <div class=\"pregledi\">\n            206,831 views * Jul 11, 2022\n        </div>\n        <div class=\"akcije\">\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n                15K\n            </div>\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n                Dislike\n            </div>\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n                Share\n            </div>\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n                Clip\n            </div>\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n                Save\n            </div>\n            <div class=\"akcija\">\n                <div class=\"ikona\"></div>\n            </div>\n        </div>\n    </div>\n</div>"}, "js": {"name": "main.js", "source": ""}, "css": {"name": "style.css", "source": ".donja-traka {\n    display: flex;\n    gap: 10px;\n    justify-content: space-between;\n    align-items: center;\n}\n.akcije {\n    display: flex;\n    gap: 5px;\n}\n.akcija {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n    font-size: 16px;\n    text-transform: uppercase;\n}\n.ikona {\n    width: 32px;\n    height: 32px;\n    border-radius: 3px;\n    background-color: grey;\n}"}}'>
+    <div id="css_flex_parent" class="petlja-editor" data='{"css": {"name": "style.css", "source": ".flex {\n    display: flex;\n}\n.leva {\n    border: 1px solid red;\n    width: 100px;\n}\n.desna {\n    border: 1px solid blue;\n    width: 100px;\n}"}, "html": {"name": "test.html", "source": "&lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n&lt;div class=\"flex\"&gt;\n    &lt;div class=\"leva\"&gt;\n        \u041b\u0435\u0432\u0430 \u043a\u043e\u043b\u043e\u043d\u0430 \u0443 \u0434\u0432\u0430 \u0440\u0435\u0434\u0430.\n    &lt;/div&gt;\n    &lt;div class=\"desna\"&gt;\n        \u0414\u0435\u0441\u043d\u0430 \u043a\u043e\u043b\u043e\u043d\u0430\n    &lt;/div&gt;\n&lt;/div&gt;"}}'>
 
     </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Пробајте следеће вежбе да откријете понашање атрибута:</p>
+<ol class="arabic simple">
+<li><p>Испробајте својство <code class="docutils literal notranslate"><span class="pre">justify-content</span></code> на елементу <code class="docutils literal notranslate"><span class="pre">.flex</span></code> са вредностима: <code class="docutils literal notranslate"><span class="pre">space-between</span></code>, <code class="docutils literal notranslate"><span class="pre">space-around</span></code>, <code class="docutils literal notranslate"><span class="pre">flex-end</span></code>. Који су резултати?</p></li>
+<li><p>Испробајте својство <code class="docutils literal notranslate"><span class="pre">align-items</span></code> на елементу <code class="docutils literal notranslate"><span class="pre">.flex</span></code> са вредностима: <code class="docutils literal notranslate"><span class="pre">center</span></code>, <code class="docutils literal notranslate"><span class="pre">flex-start</span></code>, <code class="docutils literal notranslate"><span class="pre">flex-end</span></code>. Који су резултати?`</p></li>
+</ol>
+
+    </p></div></div>
+<p>За више примера погледајте добар ресурс је <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">MDN Веб документација</a>.</p>
 </div>
 </div>
 

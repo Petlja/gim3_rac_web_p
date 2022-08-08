@@ -1,4 +1,4 @@
-Извршавање *JavaScript* кода - питања
+Извршавање *JavaScript* кôда - питања
 =====================================
 
 .. mchoice:: js_izvrsavanje_q1
@@ -30,10 +30,10 @@
     
 
 .. mchoice:: js_izvrsavanje_q3
-    :answer_a: У табу са натписом Elements
-    :answer_b: У табу са натписом Console
-    :answer_c: У табу са натписом Application
-    :answer_d: У табу са натписом Performance
+    :answer_a: У табу са натписом Elements.
+    :answer_b: У табу са натписом Console.
+    :answer_c: У табу са натписом Application.
+    :answer_d: У табу са натписом Performance.
     :correct: b
     :feedback_a: Не.
     :feedback_b: Тачно!

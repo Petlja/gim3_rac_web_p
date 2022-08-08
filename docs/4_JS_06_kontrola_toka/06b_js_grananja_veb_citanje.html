@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -436,8 +437,11 @@
     </p></div></div>
 <p>За решавање овог задатка је потребно ван <em>HTML</em> стране некако запамтити претходни број посета. У ту сврху можемо да употребимо објекат
 <code class="docutils literal notranslate"><span class="pre">localStorage</span></code> (локално складиште). Помоћу овог објекта можемо да сачувамо разне вредности на нашем рачунару, тако да су нам на располагању када отворимо било коју веб страну са <em>JavaScript</em> програмом који приступа објекту <code class="docutils literal notranslate"><span class="pre">localStorage</span></code>.</p>
-<p>За читање вредности из локалног складишта користи се мотода <code class="docutils literal notranslate"><span class="pre">localStorage.getItem</span></code>, а за уписивање вредности  метода <code class="docutils literal notranslate"><span class="pre">localStorage.setItem</span></code>. За сваку вредност при читању и упису користимо посебан кључ типа стринг, који одговара тој вредности.
-Када читамо вредност која није претходно уписана, добијамо вредност <code class="docutils literal notranslate"><span class="pre">null</span></code>, која је слична вредности <code class="docutils literal notranslate"><span class="pre">undefined</span></code>. Обе ове вредности се могу користити као логички изрази, где се аутоматски конвертују у <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>Објекат <code class="docutils literal notranslate"><span class="pre">localStorage</span></code> има методе:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">setItem(kljuc,</span> <span class="pre">vrednost)</span></code> - Уписује вредност под именом првог аргумента ”кључ”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getItem(kljuc)</span></code> - Чита вредност кључа. Уколико вредност није уписана, враћа <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+</ul>
 <p>У следећем решењу најпре проверавамо да ли је нека вредност већ уписана. Ако нема уписане вредности, уписујемо 0 као почетну вредност. Након тога поново читамо вредност (сада знамо да вредност постоји и да је то број), повећавамо је, приказујемо у веб страни и памтимо увећану вредност у локалном складишту.</p>
 
 <div data-childcomponent="broj_otvaranja_strane_html_js" class="course-box course-box-problem course-content">
@@ -449,25 +453,41 @@
        >
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;sr&quot;&gt;
-    &lt;head&gt;
-        &lt;title&gt;Бројач&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Број учитавања ове стране: &lt;span id=&quot;brp&quot;&gt;0&lt;/span&gt;&lt;/h1&gt;
-        &lt;script&gt;
-          if (!localStorage.getItem(&#x27;counter&#x27;)) {
-              localStorage.setItem(&#x27;counter&#x27;, 0);
-          }
+  &lt;head&gt;
+    &lt;title&gt;Бројач&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Број учитавања ове стране: &lt;span id=&quot;brp&quot;&gt;0&lt;/span&gt;&lt;/h1&gt;
+    &lt;script&gt;
+      if (!localStorage.getItem(&#x27;counter&#x27;)) {
+          localStorage.setItem(&#x27;counter&#x27;, 0);
+      }
 
-          let counter = localStorage.getItem(&#x27;counter&#x27;);
-          counter++;
-          document.querySelector(&#x27;#brp&#x27;).innerHTML = counter;
-          localStorage.setItem(&#x27;counter&#x27;, counter);
-        &lt;/script&gt;
-    &lt;/body&gt;
+      let counter = parseInt(localStorage.getItem(&#x27;counter&#x27;));
+      counter++;
+      document.querySelector(&#x27;#brp&#x27;).innerHTML = counter;
+      localStorage.setItem(&#x27;counter&#x27;, counter);
+    &lt;/script&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            <p>
+<p>Уколико вредност постоји, <code class="docutils literal notranslate"><span class="pre">localStorage.getItem</span></code> враћа тип <code class="docutils literal notranslate"><span class="pre">string</span></code>!</p>
+<p>Испробајте следећи код у конзоли:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;broj&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">vrednost</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;broj&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Прочитана вредност: </span><span class="si">${</span><span class="nx">vrednost</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Тип: </span><span class="si">${</span><span class="k">typeof</span> <span class="nx">vrednost</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</pre></div>
+</div>
+
+    </p></div></div>
 </div>
 <div class="section" id="id3">
 <h2>Пример - Листа послова са валидацијом података<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -576,6 +596,18 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба</strong></p>
+<p>Измените пример тако да дугме ”Унеси” буде онемогућено док је форма неисправна.</p>
+<p><em>Савет:</em> атрибут <code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<a class="reference external" href="https://www.w3schools.com/tags/att_button_disabled.asp">HTML button disabled attribute</a>) се може користити да се дугме онемогући. Догађај <code class="docutils literal notranslate"><span class="pre">change</span></code> (<a class="reference external" href="https://www.w3schools.com/jsref/event_onchange.asp">onchange Event</a>) може да послужи за проверу исправности форме приликом промене вредности.</p>
+
+    </p></div></div>
 </div>
 <div class="section" id="id4">
 <h2>Пример - Штоперица<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
@@ -609,6 +641,7 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
     &lt;/body&gt;
         &lt;script&gt;
 
+            let running = false;
             let counter = 0;
             let delta = 0;
 
@@ -623,19 +656,21 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
             });
 
             document.getElementById(&#x27;start_stop&#x27;).addEventListener(&#x27;click&#x27;, function(dogadjaj) {
-                if (this.innerHTML == &quot;Старт&quot;) {
-                    delta = 0.01;
-                    this.innerHTML = &quot;Стоп&quot;;
-                    this.style.backgroundColor = &quot;red&quot;;
-                    this.style.color = &quot;black&quot;;
-                    document.querySelector(&#x27;#reset&#x27;).disabled = true;
-                }
-                else if (this.innerHTML == &quot;Стоп&quot;) {
+                if (running) {
+                    running = false;
                     delta = 0;
                     this.innerHTML = &quot;Старт&quot;;
                     this.style.backgroundColor = &quot;green&quot;;
                     this.style.color = &quot;white&quot;;
                     document.querySelector(&#x27;#reset&#x27;).disabled = false;
+                }
+                else {
+                    running = true;
+                    delta = 0.01;
+                    this.innerHTML = &quot;Стоп&quot;;
+                    this.style.backgroundColor = &quot;red&quot;;
+                    this.style.color = &quot;black&quot;;
+                    document.querySelector(&#x27;#reset&#x27;).disabled = true;
                 }
             });
 
@@ -647,6 +682,17 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба</strong></p>
+<p>Штоперицу желе да користе тркачи да измере време сваког круга атлетске стазе. Изменити претходни пример да се дода додатно дугме ”Круг”. Притиском на дугме ”Круг”, време штоперице у тренутку се исписује у листи са редним бројем круга.</p>
+
+    </p></div></div>
 </div>
 <div class="section" id="id5">
 <h2>Пример - Тајмер<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
