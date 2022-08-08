@@ -339,7 +339,7 @@ lessons:
     file: 01a_js_uvod_citanje.html
     guid: 93edde33-d98f-4b03-bbaa-0b234ce1b1e9
     src: 01a_js_uvod_citanje.rst
-    title: Увод у јава скрипт
+    title: Увод у Јаваскрипт (Javascript)
     type: reading
   - description: ''
     file: 01b_js_izvrsavanje_citanje.html
@@ -351,7 +351,7 @@ lessons:
     file: 01c_js_izvrsavanje_pitanja.html
     guid: e625a46c-cd55-49ac-bdc8-0b71d304513c
     src: 01c_js_izvrsavanje_pitanja.rst
-    title: Извршавање јава скриптова - питања
+    title: Извршавање јава скриптова – питања
     type: quiz
   archived-activities: []
   description: Јава скрипт
@@ -394,7 +394,7 @@ lessons:
     file: 02f_js_osnovni_tipovi_zadaci.html
     guid: d5e0f87a-f942-44f0-af83-54b9a34237bf
     src: 02f_js_osnovni_tipovi_zadaci.rst
-    title: Основни типови - задаци
+    title: Основни типови – задаци
     type: reading
   archived-activities: []
   description: Променљиве и изрази
@@ -425,13 +425,13 @@ lessons:
     file: 03d_js_objekti_i_nizovi_pitanja.html
     guid: 611fef04-da2f-449e-a4ef-e7c7244fec81
     src: 03d_js_objekti_i_nizovi_pitanja.rst
-    title: Сложени типови података - питања
+    title: Сложени типови података – питања
     type: quiz
   - description: ''
     file: 03e_js_objekti_i_nizovi_zadaci.html
     guid: 2d95fc6f-9767-455a-ba43-0adfbc2b59b5
     src: 03e_js_objekti_i_nizovi_zadaci.rst
-    title: Сложени типови података - задаци
+    title: Сложени типови података – задаци
     type: reading
   archived-activities: []
   description: Сложени типови података
@@ -462,13 +462,13 @@ lessons:
     file: 04d_js_fmd_pitanja.html
     guid: ac060663-a768-41e1-b85a-e47bc45ccc36
     src: 04d_js_fmd_pitanja.rst
-    title: Функције, методе, догађаји -  питања
+    title: Функције, методе, догађаји – питања
     type: quiz
   - description: ''
     file: 04e_js_fmd_zadaci.html
     guid: 0193180b-89a4-4f89-82e4-17f8c155cc2e
     src: 04e_js_fmd_zadaci.rst
-    title: Функције, методе, догађаји -  задаци
+    title: Функције, методе, догађаји – задаци
     type: reading
   archived-activities: []
   description: Функције, методе, догађаји
@@ -499,13 +499,13 @@ lessons:
     file: 05e_js_veb_interfejs_pitanja.html
     guid: 40dd298e-1962-4595-85c2-10de9552842d
     src: 05e_js_veb_interfejs_pitanja.rst
-    title: Веб интерфејс - питања
+    title: Веб интерфејс – питања
     type: quiz
   - description: ''
     file: 05f_js_veb_interfejs_zadaci.html
     guid: 2e2f64a1-d7d8-47c8-b7d2-c148d3458224
     src: 05f_js_veb_interfejs_zadaci.rst
-    title: Веб интерфејс - задаци
+    title: Веб-интерфејс – задаци
     type: reading
   archived-activities: []
   description: Веб интерфејс
@@ -524,25 +524,25 @@ lessons:
     file: 06b_js_grananja_veb_citanje.html
     guid: 1bb96271-cd3e-42b2-97f0-72dd2f4b7899
     src: 06b_js_grananja_veb_citanje.rst
-    title: Употреба гранања у веб странама
+    title: Употреба гранања у веб-странама
     type: reading
   - description: ''
     file: 06c_js_petlje_citanje.html
     guid: 6f329c1a-3492-4ba5-8480-9ea6155f7caa
     src: 06c_js_petlje_citanje.rst
-    title: Петље у Јава-скрипту
+    title: Петље у Јаваскрипту
     type: reading
   - description: ''
     file: 06d_js_petlje_veb_citanje.html
     guid: 77dbb64a-73ed-46cf-a893-e760ab977e93
     src: 06d_js_petlje_veb_citanje.rst
-    title: Употреба петљи у веб странама
+    title: Употреба петљи у веб-странама
     type: reading
   - description: ''
     file: 06f_js_grananja_i_petlje_zadaci.html
     guid: ecc57697-17d9-4d5c-9c79-fc00962dd5b2
     src: 06f_js_grananja_i_petlje_zadaci.rst
-    title: Гранања и петље - задаци
+    title: Гранања и петље – задаци
     type: reading
   archived-activities: []
   description: Контрола тока програма
