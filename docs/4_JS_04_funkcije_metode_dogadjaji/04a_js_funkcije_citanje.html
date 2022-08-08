@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -424,7 +425,7 @@
 <p>У програмима који решавају сложеније проблеме, групу наредби које решавају неки подзадатак можемо да издвојимо у целину која се зове функција. Функција има своје име и позивом функције по имену се извршавају наредбе у тој функцији.</p>
 <p>У језику <em>JavaScript</em> се функције креирају тако што се иза имена функције у облим задградама наведе листа параметара, а затим у витичастим заградама скуп наредби које треба извршити када се та функција позове.</p>
 <a class="reference internal image-reference" href="../_images/funkcija_sintaksa.png"><img alt="../_images/funkcija_sintaksa.png" class="align-center" src="../_images/funkcija_sintaksa.png" style="width: 500px;" /></a>
-<p>Параметри су вредности које можемо да пошаљемо функцији када је позовемо. Функција на основу параметара може (а не мора) да врати неки резултат помоћу наредбе <em>return</em>. У следећих пар примера ћемо видети како се пишу и позивају функције које враћају резултат:</p>
+<p>Параметри су вредности које можемо да пошаљемо функцији када је позовемо. Функција на основу параметара може (а не мора) да врати неки резултат помоћу наредбе <code class="docutils literal notranslate"><span class="pre">return</span></code>. У следећих пар примера ћемо видети како се пишу и позивају функције које враћају резултат:</p>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -543,24 +544,32 @@ alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script&gt;
-
-  function prikaziTacnoVreme() {
-    let sada = new Date();
-    alert(`Страница је отворена у ${sada.toLocaleTimeString()} сати.`);
-  }
-
-  prikaziTacnoVreme();
-
-  &lt;/script&gt;
   &lt;title&gt;Време&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;p&gt;Садржај стране.&lt;/p&gt;
+  &lt;script&gt;
+    function prikaziTacnoVreme() {
+      const sada = new Date();
+      alert(`Страница је отворена у ${sada.toLocaleTimeString()} сати.`);
+    }
+
+    prikaziTacnoVreme();
+  &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба - приказивање датума</strong></p>
+<p>Изменити претходни пример да се поред времена испише и датум отварања странице.</p>
+
+    </p></div></div>
 <p>У случају да функција нема у себи наредбу <code class="docutils literal notranslate"><span class="pre">return</span></code>, или ако би у њој писало само <code class="docutils literal notranslate"><span class="pre">return;</span></code> без вредности која се враћа, позив функције пишемо као наредбу</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">prikaziTacnoVreme</span><span class="p">();</span>
 </pre></div>

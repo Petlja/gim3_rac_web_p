@@ -358,9 +358,10 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_JS_03_slozeni_tipovi_podataka/03a_js_objekti_citanje.html><div class="studioLecture" id=activity-03a_js_objekti_citanje><i class="fas fa-file-alt activity-icon"></i>Објекти</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_nizovi_citanje.html><div class="studioLecture" id=activity-03b_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03c_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
-                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03b_js_objektni_model_citanje.html><div class="studioLecture" id=activity-03b_js_objektni_model_citanje><i class="fas fa-file-alt activity-icon"></i>Објектни модел документа стране</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03c_js_nizovi_citanje.html><div class="studioLecture" id=activity-03c_js_nizovi_citanje><i class="fas fa-file-alt activity-icon"></i>Низови</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03d_js_objekti_i_nizovi_pitanja.html><div class="studioLecture" id=activity-03d_js_objekti_i_nizovi_pitanja><i class="far fa-question-circle activity-icon"></i>Сложени типови података - питања</div></a>
+                <a href=../4_JS_03_slozeni_tipovi_podataka/03e_js_objekti_i_nizovi_zadaci.html><div class="studioLecture" id=activity-03e_js_objekti_i_nizovi_zadaci><i class="fas fa-file-alt activity-icon"></i>Сложени типови података - задаци</div></a>
                 </div>
             </div>
                 
@@ -528,10 +529,22 @@ alert(`Тест је положило ${brUspesnih} кандидата.`);
                 <img class="corner-image float-right" src="../_static/img/question-mark.png" />
             </h4>
             <p>
+<p><strong>Вежба</strong></p>
+<p>Измените претходни пример тако да поред броја успешних кандидата, изброји и број кандидата који немају негативне поене (број негативних је нула).</p>
+
+    </p></div></div>
+<hr class="docutils" />
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
 <p><strong>Пример - Викенд или радни дан:</strong></p>
 <p>После извршавања наредби</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">sada</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-<span class="kd">let</span> <span class="nx">dan</span> <span class="o">=</span> <span class="nx">sada</span><span class="p">.</span><span class="nx">getDay</span><span class="p">();</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">sada</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">dan</span> <span class="o">=</span> <span class="nx">sada</span><span class="p">.</span><span class="nx">getDay</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>у променљивој <em>dan</em> се налази редни број дана у недељи (0 за недељу, 1 за понедељак, … и 6 за суботу).</p>
@@ -547,14 +560,26 @@ alert(`Тест је положило ${brUspesnih} кандидата.`);
     data-audio=''   
                data-hidehistory=true
        >
-let sada = new Date();
-let dan = sada.getDay();
+const sada = new Date();
+const dan = sada.getDay();
 if (dan == 0 || dan == 6)
     alert("Данас је викенд.");
 else
     alert("Данас је радни дан.");
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба</strong></p>
+<p>Измените претходни пример тако да само за случај да је тренутни дан среда испише ”Данас је дан за сладолед.”</p>
+
+    </p></div></div>
+<hr class="docutils" />
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -586,8 +611,8 @@ else
     data-audio=''   
                data-hidehistory=true
        >
-let sada = new Date();
-let sati = sada.getHours();
+const sada = new Date();
+const sati = sada.getHours();
 let pozdrav;
 if (sati < 10)
     pozdrav = "Добро јутро!"
@@ -598,6 +623,18 @@ else
 alert(pozdrav);
 </textarea>
 </div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба</strong></p>
+<p>Измените претходни програм тако да поздрав буде ”Лаку ноћ” у случају да је време између 23h i 05h.</p>
+
+    </p></div></div>
+<hr class="docutils" />
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -620,9 +657,9 @@ alert(pozdrav);
        >
 let biloLepoVreme = false;
 
-let tempBeograd = parseInt(prompt('Температура у Београду: '));
-let tempNoviSad = parseInt(prompt('Температура у Новим Саду: '));
-let tempNis = parseInt(prompt('Температура у Нишу: '));
+const tempBeograd = parseInt(prompt('Температура у Београду: '));
+const tempNoviSad = parseInt(prompt('Температура у Новим Саду: '));
+const tempNis = parseInt(prompt('Температура у Нишу: '));
 let odgovor = '';
 
 if (tempBeograd >= 20 && tempBeograd <= 27)
@@ -647,9 +684,18 @@ if (!biloLepoVreme)
 alert(odgovor);
 </textarea>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Вежба</strong></p>
+<p>Изменити претходни програм да пронађе најнижу температуру и испише температуру и име града. Уколико два града имају исту температуру, није битно који ће бити исписан.</p>
+
+    </p></div></div>
+<hr class="docutils" />
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -688,9 +734,20 @@ if (ucenik1.razr > ucenik2.razr) {
 </textarea>
 </div>
 <p>Испробајте решење за разне вредности разреда ученика у прва два реда програма.</p>
-<div class="line-block">
-<div class="line"><br /></div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Измените претходни пример тако да имамо трећег ученика:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">ucenik3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">ime</span><span class="o">:</span> <span class="s2">&quot;Сима Симоновић&quot;</span><span class="p">,</span> <span class="nx">tel</span><span class="o">:</span> <span class="s2">&quot;054 321 987&quot;</span><span class="p">,</span> <span class="nx">razr</span><span class="o">:</span> <span class="mf">7</span> <span class="p">};</span>
+</pre></div>
 </div>
+
+    </p></div></div>
+<hr class="docutils" />
 
     <div class="course-box course-box-special">
         <div class="course-content">

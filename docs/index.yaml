@@ -201,7 +201,7 @@ lessons:
     type: reading
   - description: ''
     file: 01b_css_stilovi_definisanje.html
-    guid: 2e8b66a5-d2d3-4937-ba1c-90b18e5c8f76
+    guid: a20fe5e1-26e4-4723-9791-504572f8674d
     src: 01b_css_stilovi_definisanje.rst
     title: Дефинисање CSS стилова
     type: reading
@@ -226,19 +226,19 @@ lessons:
     type: reading
   - description: ''
     file: 02b_css_svojstva_teksta_citanje.html
-    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc44
+    guid: 707c17a1-2074-4217-b736-67719ea2b9b4
     src: 02b_css_svojstva_teksta_citanje.rst
     title: CSS својства текста
     type: reading
   - description: ''
     file: 02c_css_svojstva_granice_elementa_citanje.html
-    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc45
+    guid: 93c6ad0b-74d2-4b3b-9830-f129acd71330
     src: 02c_css_svojstva_granice_elementa_citanje.rst
     title: CSS својства која дефинишу границе елемента
     type: reading
   - description: ''
     file: 02d_css_svojstva_dimenzije_elementa_citanje.html
-    guid: d85c82d0-b4a0-41af-94a4-218ef71dfc46
+    guid: bc8460f8-ea41-4d72-b79f-49fe39de421f
     src: 02d_css_svojstva_dimenzije_elementa_citanje.rst
     title: CSS димензије елемената
     type: reading
@@ -269,19 +269,19 @@ lessons:
     type: reading
   - description: ''
     file: 03b_css_selektori_identifikator_citanje.html
-    guid: 5a22069a-7205-471f-b438-cf46910c0da5
+    guid: 6e3b1ceb-98c7-478c-9c77-a21d49a89adc
     src: 03b_css_selektori_identifikator_citanje.rst
     title: Стилизовање идентификатора
     type: reading
   - description: ''
     file: 03c_css_selektori_klase_citanje.html
-    guid: 5a22069a-7205-471f-b438-cf46910c0da6
+    guid: f1dbf2cb-66cd-490e-beaf-e4d910d10f87
     src: 03c_css_selektori_klase_citanje.rst
     title: Стилизовање класа елемената
     type: reading
   - description: ''
     file: 03d_css_selektori_slozeni_citanje.html
-    guid: 5a22069a-7205-471f-b438-cf46910c0da7
+    guid: 03885150-dcf2-4884-9322-a61e0a242aa7
     src: 03d_css_selektori_slozeni_citanje.rst
     title: Сложени CSS селектори
     type: reading
@@ -410,21 +410,27 @@ lessons:
     title: Објекти
     type: reading
   - description: ''
-    file: 03b_js_nizovi_citanje.html
+    file: 03b_js_objektni_model_citanje.html
+    guid: f46ad512-1868-4331-abf6-cc160ed2b20c
+    src: 03b_js_objektni_model_citanje.rst
+    title: Објектни модел документа стране
+    type: reading
+  - description: ''
+    file: 03c_js_nizovi_citanje.html
     guid: 8cd4e1dc-43a6-4720-b4d9-d3b1043c45f6
-    src: 03b_js_nizovi_citanje.rst
+    src: 03c_js_nizovi_citanje.rst
     title: Низови
     type: reading
   - description: ''
-    file: 03c_js_objekti_i_nizovi_pitanja.html
+    file: 03d_js_objekti_i_nizovi_pitanja.html
     guid: 611fef04-da2f-449e-a4ef-e7c7244fec81
-    src: 03c_js_objekti_i_nizovi_pitanja.rst
+    src: 03d_js_objekti_i_nizovi_pitanja.rst
     title: Сложени типови података - питања
     type: quiz
   - description: ''
-    file: 03d_js_objekti_i_nizovi_zadaci.html
+    file: 03e_js_objekti_i_nizovi_zadaci.html
     guid: 2d95fc6f-9767-455a-ba43-0adfbc2b59b5
-    src: 03d_js_objekti_i_nizovi_zadaci.rst
+    src: 03e_js_objekti_i_nizovi_zadaci.rst
     title: Сложени типови података - задаци
     type: reading
   archived-activities: []

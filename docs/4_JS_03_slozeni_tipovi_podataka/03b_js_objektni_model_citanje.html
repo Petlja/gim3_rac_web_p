@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Гранања и петље - задаци</title>
+    <title>Објектни модел документа стране</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
@@ -421,48 +421,88 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Гранања и петље - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Објектни модел документа стране<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У лекцијама о језику <em>HTML</em> смо видели да <em>HTML</em> кôд дефинише структуру стране у којој се налази заглавље са насловима и тело са различитим <em>HTML</em> елементима.</p>
+<a class="reference internal image-reference" href="../_images/DOM.png"><img alt="../_images/DOM.png" class="align-center" src="../_images/DOM.png" style="width: 600px;" /></a>
+<p>У <em>JavaScript</em> коду који се извршава у веб странама се може користити један специјалан објекат који се зове <em>document</em>. Овај објекат нам омогућава да приступимо <em>HTML</em> елементима који се налазе у веб страни и да их читамо и мењамо. Када лоцирамо неки објекат, који представља неки <em>HTML</em> елемент у страни, можемо да га променимо тако што му на пример променимо <em>CSS</em> стил.</p>
 
-    <div class="course-box course-box-special">
-        <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
-<p><strong>Задатак 4.6.1</strong></p>
-<p>Копирајте на свој рачунар решење примера <a class="reference external" href="06d_js_petlje_veb_citanje.html#id2">Слајд шоу</a> као фајл са екстензијом <em>html</em>.</p>
-<p>Додајте са леве и десне стране по једно дугме за прелазак на претходну, односно следећу слику.</p>
+<div data-childcomponent="boja_teksta_html_js" class="course-box course-box-problem course-content">
 
-    </p></div></div>
+<textarea data-component="activecode" id=boja_teksta_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Боја слова и позадине овог текста је постављена JavaScript наредбом.&lt;/p&gt;
+    &lt;script&gt;
+      document.title = &#x27;Ово је наслов стране&#x27;;
+      let body = document.body;
+      body.style.backgroundColor = &#x27;black&#x27;;
+      body.style.color = &#x27;lightgreen&#x27;;
 
-    <div class="course-box course-box-special">
-        <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
-<p><strong>Задатак 4.6.2</strong></p>
-<p>Копирајте на свој рачунар решење примера <a class="reference external" href="06d_js_petlje_veb_citanje.html#id3">Календар</a> као фајл са екстензијом <em>html</em>.</p>
-<p>Измените програм тако да не приказује само календар за текући месец, него да се може изабрати година и месец за које се приказује календар.</p>
+      let boja = document.body.style.color;
+      alert(`Bоја текста у страни је &quot;${boja}&quot;.`);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>Хијерархија објеката која почиње од документа стране назива се <strong>објектни модел документа</strong> (енгл. <em>document object model</em>, скраћено <em>DOM</em>). Из <em>JavaScript</em> програма можемо да дохватимо сваки елемент стране, да убацујемо и избацујемо елементе, да их допуњујемо и мењамо на различите начине. Следећи пример показује један начин како можемо да дохватимо поједине елементе у хијерархији документа и да тим елементима задамо нови стил.</p>
+<p>За сада ћемо употребити својства <code class="docutils literal notranslate"><span class="pre">firstElementChild</span></code> за дохватање првог детета и <code class="docutils literal notranslate"><span class="pre">nextElementSibling</span></code> за дохватање следећег елемента у истом нивоу хијерархије (следећи брат или сестра). Ова два својства <em>DOM</em> објеката су довољна за дохватање било ког елемента, а ускоро ћемо упознати и удобније начине за манипулисање <em>DOM</em> објектима.</p>
 
-    </p></div></div>
+<div data-childcomponent="DOM_hijerarhija_html_js" class="course-box course-box-problem course-content">
 
-    <div class="course-box course-box-special">
-        <div class="course-content">
-            <h4 class="carbox-title">
-                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
-            </h4>
-            <p>
-<p><strong>Задатак 4.6.3</strong></p>
-<p>Овај задатак није обавезан, већ представља неколико идеја за вежбање, намењених заинтересованим читаоцима. У неким деловима се претпоставља способност за самостално налажење додатних информација (на пример, онлајн).</p>
-<p>Копирајте на свој рачунар решење примера <a class="reference external" href="06d_js_petlje_veb_citanje.html#id4">Листа послова са валидацијом и памћењем података</a> као фајл са екстензијом <em>html</em>.</p>
-<ol class="arabic simple">
-<li><p>Измените програм тако да се свака ставка може уклонити из листе.</p></li>
-<li><p>Измените програм тако да се свака ставка може померити навише или наниже у табели.</p></li>
-<li><p>Додајте дугме помоћу кога се ставке у табели могу сортирати по роковима.</p></li>
-</ol>
+<textarea data-component="activecode" id=DOM_hijerarhija_html_js data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''   
+               data-hidehistory=true
+       >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Овај документ има четири одељка.&lt;/p&gt;
+      &lt;p&gt;Ово је други параграф првог одељка.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Ово је други одељак.&lt;/p&gt;
+      &lt;p&gt;Стил другог и трећег одељка је подешен програмски.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Ово је трећи одељак.&lt;/p&gt;
+      &lt;p&gt;У трећем одељку други параграф је посебно стилизован.&lt;/p&gt;
+      &lt;p&gt;У осталим деловима трећег одељка примењује се стил одељка.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Четврти одељак изгледа као и први.&lt;/p&gt;
+      &lt;p&gt;Њихов стил није програмски мењан.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+      let prviOdeljak = document.body.firstElementChild;
+      let drugiOdeljak = prviOdeljak.nextElementSibling;
+      let treciOdeljak = drugiOdeljak.nextElementSibling;
+      let p31 = treciOdeljak.firstElementChild;
+      let p32 = p31.nextElementSibling;
+      drugiOdeljak.style.backgroundColor = &#x27;#C0FFFF&#x27;;
+      drugiOdeljak.style.color = &#x27;blue&#x27;;
+      drugiOdeljak.style.fontSize = &quot;16pt&quot;;
 
-    </p></div></div>
+      treciOdeljak.style.backgroundColor = &#x27;#FFFFC0&#x27;;
+      treciOdeljak.style.color = &#x27;brown&#x27;;
+      p32.style.color = &#x27;red&#x27;;
+      p32.style.border = &#x27;1px solid red&#x27;;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
 </div>
 
 
@@ -470,8 +510,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="06d_js_petlje_veb_citanje.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="03a_js_objekti_citanje.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
