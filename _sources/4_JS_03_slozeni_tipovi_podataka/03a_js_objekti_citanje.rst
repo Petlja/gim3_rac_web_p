@@ -11,10 +11,9 @@
 
 У језику *JavaScript* се овакви објекти праве тако што се у витичасте заграде ставе имена поља и вредности које ће бити у тим пољима:
 
-.. activecode:: js_objects_1
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: js_objects_1
 
+    main.js
     let ucenik1 = {
         ime: "Петар Петровић",
         godiste: 1998,
@@ -26,29 +25,33 @@
         telefon: "098 765 432"
     };
     alert(ucenik1.ime);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Направили смо две променљиве (``ucenik1`` и ``ucenik2``) које садрже објекте. Имена поља морају да буду у складу са правилима именовања променљивих у Јаваскрипту (тј. да почињу словима, доларом или доњом цртом, а после могу да садрже и цифре), а вредности могу да буду бројеви, стрингови или вредности било којег другог типа, укључујући и друге објекте.
 
 Објекат можемо да направимо и тако што почнемо од потпуно празног објекта, a касније таквом објекту додајемо поља.
 
-.. activecode:: js_objects_2
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: js_objects_2
 
+    main.js
     let ucenik = {};
     ucenik.ime = "Петар Петровић";
     ucenik.godiste = 1998;
     ucenik.telefon = "012 345 678";
     alert(ucenik.ime);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Пољима у објекту се може приступити по имену коришћењем тачке (нпр. ``ucenik.ime``).
 
 У следећем примеру можете да видите како се прави објекат, како се чита податак из њега и како се уписује вредност у неко поље објекта.
 
-.. activecode:: azuriranje_objekta_1_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: azuriranje_objekta_1_js
 
+    main.js
     let ucenik = {
         ime: "Петар Петровић",
         tel: "012 345 678",
@@ -58,13 +61,15 @@
     razred = razred + 1;
     ucenik.razred = razred;
     alert(ucenik.razred);
-    
+    ~~~
+    index.html
+    <script src="main.js"></script>
+
 У овом случају, вредност објекта је могла да буде промењена и једноставније:
 
-.. activecode:: azuriranje_objekta_2_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: azuriranje_objekta_2_js
 
+    main.js
     let ucenik = {
         ime: "Петар Петровић",
         tel: "012 345 678",
@@ -72,19 +77,24 @@
     };
     ucenik.razred++;
     alert(ucenik.razred);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Ако покушамо да дохватимо вредност непостојећег поља у објекту, добићемо специјалну вредност ``undefined``. Вредност ``undefined`` треба схватити као одсуство вредности.
 
-.. activecode:: nepostojece_polje_objekta_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: nepostojece_polje_objekta_js
 
+    main.js
     let ucenik = {
         ime: "Петар Петровић",
         tel: "012 345 678",
         razred: 6
     };
     alert(ucenik.eposta);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 .. infonote::
 
@@ -99,39 +109,45 @@
 
 Приликом приказивања вредности објекта долази до претварања (конверзије) објекта у стринг, али не на нарочито користан начин:
 
-.. activecode:: ispisivanje_objekta_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: ispisivanje_objekta_js
 
+    main.js
     let ucenik = {
         ime: "Петар Петровић",
         tel: "012 345 678",
         razred: 6
     };
     alert(ucenik);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Да бисмо уместо резултата ``[object Object]`` добили смисленији запис објекта, треба писати:
 
-.. activecode:: ispisivanje_objekta_2_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: ispisivanje_objekta_2_js
 
+    main.js
     let ucenik = {
         ime: "Петар Петровић",
         tel: "012 345 678",
         razred: 6
     };
     alert(JSON.stringify(ucenik));
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Обрнуто, ако је ``s`` стринг који садржи запис објекта, овако можемо да формирамо објекат на основу таквог стринга и да користимо поља тог објекта (важно је да су у стрингу називи поља и вредности баш под овим, двоструким наводницима, као у примеру):
 
-.. activecode:: ispisivanje_objekta_3_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: ispisivanje_objekta_3_js
 
+    main.js
     let s = '{ "ime": "Петар Петровић", "tel": "012 345 678", "razred": 6 }';
     let ucenik = JSON.parse(s);
     alert(ucenik.ime);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 .. infonote::
 
@@ -143,10 +159,9 @@
 
 Поменули смо да вредности у објекту могу да буду други објекти. На тај начин објекти могу да формирају хијерархијску структуру. Ево како изгледа таква ситуација:
 
-.. activecode:: hijerarhija_objekta_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: hijerarhija_objekta_js
 
+    main.js
     let ucenik = { 
         licniPodaci: {
             ime: "Петар Петровић",
@@ -164,3 +179,6 @@
 
     alert(`Ученик ${ucenik.licniPodaci.ime} има` + 
         ` ${ucenik.skola.izostanci.neopravdani} неоправданих изостанака.`);
+    ~~~
+    index.html
+    <script src="main.js"></script>

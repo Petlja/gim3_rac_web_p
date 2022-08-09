@@ -37,13 +37,15 @@
 
 На пример, следећи програм исписује вредност 5, јер је :math:`\sqrt{3^2 + 4^2} = 5`.
 
-.. activecode:: koren_primer_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: koren_primer_js
 
+    main.js
     const x = 3;
     const y = 4;
     alert(Math.sqrt(x ** 2 + y ** 2));
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Приоритет операција је у суштини исти као у математици. Ако нисте сигурни у вези са приоритетом, користите заграде (непотребне заграде нису грешка).
 
@@ -51,31 +53,34 @@
 
 Оператор ``%`` представља рачунање остатка при дељењу. На пример, остатак при дељењу 7 са 3 је један, па израз ``7 % 3`` има вредност један. Проверимо:
 
-.. activecode:: ostatak_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: ostatak_js
 
+    main.js
     alert(7 % 3); // 1
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Оператор ``++`` повећава дату вредност за један (ово је унарни оператор, што значи да се примењује на једну нумеричку вредност). Слично томе, оператор ``--`` смањује дату вредност за један. Извршавањем следећег примера потврдите своје разумевање ових оператора.
 
-.. activecode:: plusplus_minusminus_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: plusplus_minusminus_js
 
+    main.js
     let a = 5;
     a++;
     a++;
     alert(a); // 7
     a--;
     alert(a); // 6
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Оператор ``+=`` је бинарни оператор којим се вредност лево од оператора (која мора бити променљива) увећава за вредност десно од оператора. На пример, наредбом ``а+=3;`` се вредност ``a`` увећава за 3. На сличан начин, операторима ``-=``, ``*=`` и ``/=`` се лева вредност умањује, множи или дели десном вредношћу. Проверите ово на следећем примеру:
 
-.. activecode:: plusjednako_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: plusjednako_js
 
+    main.js
     let a = 0;
     a += 3;
     a *= 4;
@@ -83,6 +88,9 @@
     a -= 4;
     a /= 2;
     alert(a); // 4
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 **Специјалне вредности** типа *number*
 
@@ -99,13 +107,15 @@
    
 Ове вредности се могу добити као резултат неких рачунских операција, на пример:
 
-.. activecode:: specijalne_vrednosti_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: specijalne_vrednosti_js
 
+    main.js
     alert(1/0); // плус бесконачно
     alert(-1/0); // минус бесконачно
     alert(Math.sqrt(-1)); // не-број
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 .. comment
 

@@ -9,9 +9,11 @@
     
     На пример, ако су координате редом 2, -3, 10, -9, треба исписати бројеве 10, 28, 48.
 
-    .. activecode:: zadatak_dijagonala_obim_povrsina_js
-        :language: javascript
-        :nocodelens:
+    .. petlja-editor:: zadatak_dijagonala_obim_povrsina_js
 
+        main.js
         let x1 = parseInt(prompt('x1=?'));
         // ...
+        ~~~
+        index.html
+        <script src="main.js"></script>

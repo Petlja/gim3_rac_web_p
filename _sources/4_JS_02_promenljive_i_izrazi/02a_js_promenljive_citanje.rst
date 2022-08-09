@@ -38,26 +38,30 @@
 
 Често се променљивој одмах при декларацији додељује и почетна вредност. На пример, уместо:
 
-.. activecode:: let_i_poc_vrednost1_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: let_i_poc_vrednost1_js
 
+    main.js
     let x, y, z;
     x = parseInt(prompt('x=?'));
     y = parseInt(prompt('y=?'));
     z = x + y;
     alert(z);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 ... можемо да пишемо:
 
-.. activecode:: let_i_poc_vrednost2_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: let_i_poc_vrednost2_js
 
+    main.js
     let x = parseInt(prompt('x=?'));
     let y = parseInt(prompt('y=?'));
     let z = x + y;
     alert(z);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Додељивање почетне вредности променљивој назива се **иницијализација**. Препоручује се да променљиве иницијализујемо одмах при декларацији кад год то логика програма допушта.
 
@@ -66,14 +70,16 @@
 
 Понекад је у програмима иницијализација променљиве једино додељивање вредности тој променљивој. Када не намеравамо да мењамо вредност променљиве у наставку програма, добро је у декларацији уместо речи ``let`` писати реч ``const``.
 
-.. activecode:: let_i_poc_vrednost3_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: let_i_poc_vrednost3_js
 
+    main.js
     const x = parseInt(prompt('x=?'));
     const y = parseInt(prompt('y=?'));
     const z = x + y;
     alert(z);
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 Тиме програм додатно постаје јаснији за читање, а неки теже ухватљиви багови се могу претворити у грешке у току извршавања (енгл. *runtime errors*, пуцање програма). Као што је раније речено, ако већ имамо грешке у програму, онда је боље да су то грешке о којима добијамо поруку (као што су синтаксне грешке и пуцање програма), јер ћемо уз помоћ тих порука грешке лакше исправити.
 
