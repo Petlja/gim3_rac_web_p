@@ -89,10 +89,9 @@
     
 Задатак можемо да решимо увођењем једне бројачке променљиве (то је променљива *brUspesnih*), а помоћу ње ћемо пребројати колико кандидата је положило тест.
 
-.. activecode:: pspTest_skracena_if_naredba_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: pspTest_skracena_if_naredba_js
 
+    main.js
     let poeni = 0, brUspesnih = 0;
 
     poeni = parseInt(prompt('Негативни поени првог кандидата: '));
@@ -112,6 +111,17 @@
         brUspesnih++;
 
     alert(`Тест је положило ${brUspesnih} кандидата.`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. questionnote::
 
@@ -138,16 +148,26 @@
     
 У наставку је дат програм који решава задатак:
     
-.. activecode:: puna_if_naredba_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: puna_if_naredba_js
 
+    main.js
     const sada = new Date();
     const dan = sada.getDay();
     if (dan == 0 || dan == 6)
         alert("Данас је викенд.");
     else
         alert("Данас је радни дан.");
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. questionnote::
 
@@ -178,10 +198,9 @@
 
 Следи програм који решава задатак:
 
-.. activecode:: produzena_if_naredba_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: produzena_if_naredba_js
 
+    main.js
     const sada = new Date();
     const sati = sada.getHours();
     let pozdrav;
@@ -192,7 +211,17 @@
     else
         pozdrav = "Добро вече!"
     alert(pozdrav);
-
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. questionnote::
 
@@ -210,10 +239,9 @@
 
 Један од начина да решимо овај задатак је дат следећим прoграмом:
 
-.. activecode:: skracene_if_naredbe_lepo_vreme_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: skracene_if_naredbe_lepo_vreme_js
 
+    main.js
     let biloLepoVreme = false;
 
     const tempBeograd = parseInt(prompt('Температура у Београду: '));
@@ -241,6 +269,17 @@
         odgovor = "Није било лепо време.";
         
     alert(odgovor);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. questionnote::
 
@@ -266,10 +305,9 @@
 Преписаћемо два дата објекта и упоредићемо поља у којима су уписани разреди. Ако је разред првог ученика већи, он је старији и приказаћемо његово име. У супротном, проверавамо да ли је други ученик старији и ако јесте, приказујемо његово име. Ако ни тај услов није испуњен, исписујемо да су та два ученика вршњаци.
 
 
-.. activecode:: stariji_ucenik_js
-    :language: javascript
-    :nocodelens:
-    
+.. petlja-editor:: stariji_ucenik_js
+
+    main.js
     let ucenik1 = { ime: "Петар Петровић", tel: "012 345 678", razr: 6 };
     let ucenik2 = { ime: "Марко Марковић", tel: "098 765 432", razr: 4 };
     
@@ -280,7 +318,18 @@
     } else {
         alert(`Ученици ${ucenik1.ime} и ${ucenik2.ime} су вршњаци`)
     }
-    
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
+
 Испробајте решење за разне вредности разреда ученика у прва два реда програма.
 
 .. questionnote::
@@ -326,10 +375,9 @@
 
 Функцја *poRedu* прихвата два параметра и враћа их редом по величини (први резултат једнак је мањем од два параметра, а други већем).
 
-.. activecode:: koverta_i_cestitka_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: koverta_i_cestitka_js
 
+    main.js
     function poRedu(a, b) {
         if (a > b) return [b, a];
 
@@ -349,6 +397,17 @@
     } else {
         alert('Честитка не може да стане у коверту');
     }
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. comment
 

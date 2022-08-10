@@ -34,10 +34,9 @@
 
 У следећем примеру можете видети како се користе ове методе над објектом који представља низ оцена:
 
-.. activecode:: metode_niza_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: metode_niza_js
 
+    main.js
     let ocene = [5, 5, 4, 5];
     ocene.pop();	// ocene = [5,5,4]
     ocene.push(4); 	// ocene = [5,5,4,4]
@@ -46,6 +45,17 @@
     alert( ocene.toString() );  // приказаће се 5,5,4,4,5
     ocene = ocene.slice(1,4); 	// ocene = [5,4,4]
     alert( ocene.join( " : " ) ); // приказаће се 5 : 4 : 4
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Методе документа стране
 -----------------------
@@ -58,7 +68,6 @@
     document.write('<p>Параграф дописан <i>JavaScript</i> наредбом.</p>');
     ~~~
     index.html
-
     <!DOCTYPE html>
     <html>
       <head>

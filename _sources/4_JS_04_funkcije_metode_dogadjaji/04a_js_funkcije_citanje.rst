@@ -26,10 +26,9 @@
 
 Уз нешто знања физике не би требало да буде тешко да се разуме дато решење:
 
-.. activecode:: slozeno_kretanje_1_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: slozeno_kretanje_1_js
 
+    main.js
     function put(tPoc, tZav, vPoc, vZav) {
         let t = tZav - tPoc;
         let vsr = (vPoc + vZav) / 2;
@@ -45,6 +44,17 @@
     let s2 = put(t1, t2, v1, v2);
     let s3 = put(t2, t3, v2, v3);
     alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. comment
 
@@ -79,10 +89,9 @@
     
     Написати програм који израчунава дужину пута коју је ово тело прешло.
 
-.. activecode:: slozeno_kretanje_2_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: slozeno_kretanje_2_js
 
+    main.js
     function putIZavrsnaBrzina(t, vpoc, a) {
         let vzav = vpoc + a*t;        // брзина после t секунди (завршна)
         let vsr = (vpoc + vzav) / 2;  // средња брзина
@@ -100,6 +109,17 @@
     let t23 = v2 / Math.abs(a23);
     let [s3, v3] = putIZavrsnaBrzina(t23, v2, a23);
     alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 |
     
@@ -130,7 +150,15 @@
     prikaziTacnoVreme();
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. questionnote::
 

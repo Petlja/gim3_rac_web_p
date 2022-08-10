@@ -32,10 +32,9 @@ While петља
     
 Ево како задатак можемо да решимо уз помоћ петље *while*:
 
-.. activecode:: zbir_dvocifrenih_neparnih_while_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: zbir_dvocifrenih_neparnih_while_js
 
+    main.js
     let broj = 11;
     let zbir = 0;
     let granica = parseInt(prompt(`Унесите границу`));
@@ -45,6 +44,17 @@ While петља
         broj += 2;
     }
     alert (`Збир двоцифрених непарних бројева до ${granica} је ${zbir}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Прво смо поставили почетне вредности за први непаран двоцифрени број (11) и збир (на почетку је нула). Пошто се унесе број који представља границу, у *while* петљи се пре сваког додавања броја на збир проверава да ли је непаран број и даље мањи од границе. Ако јесте, настављамо да извршавамо наредбе између витичастих заграда – тренутни непаран број се додаје на збир, а сам број повећавамо за два.
 
@@ -72,10 +82,9 @@ For петља
 
 Значи, прво се извршава наредба коју смо овде назвали *иницијализација*, затим се проверава услов и докле год је он испуњен, понављају се тело петље и наредба коју смо назвали *корак*. Према томе, претходни задатак можемо да решимо и овако:
 
-.. activecode:: zbir_dvocifrenih_neparnih_for_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: zbir_dvocifrenih_neparnih_for_js
 
+    main.js
     let zbir = 0;
     let granica = parseInt(prompt(`Унесите границу`));
     granica = Math.min(granica, 99);
@@ -83,6 +92,17 @@ For петља
         zbir = zbir + broj;
     }
     alert (`Збир двоцифрених непарних бројева до ${granica} је ${zbir}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Овај облик петље *for* је постао уобичајен и постоји већ дуго у разним програмским језицима, на пример *C*, *C++*, *C#*, *Java* и другим. У језику *JavaScript* поред облика петље *for* који смо управо упознали, постоје и посебни облици петље *for*, који служе за извршавање одређених наредби над сваким елементом сложене променљиве.
 
@@ -100,27 +120,47 @@ For петља
 Овде *променљива* узима редом вредности елемената низа, а *наредбе* се извршавају по једном за сваку од тих вредности. Ово је илустровано у следећих неколико једноставних примера:
 
 
-.. activecode:: for_of_niz_brojeva_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: for_of_niz_brojeva_js
 
+    main.js
     let brojevi = [2, 5, 3];
     let zbir = 0;
     for (let broj of brojevi) {
         zbir += broj;
     }
     alert(`Збир је ${zbir}.`)
-        
-.. activecode:: for_of_niz_imena_js
-    :language: javascript
-    :nocodelens:
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
+.. petlja-editor:: for_of_niz_imena_js
+
+    main.js
     let imena = ['Јован', 'Марко', 'Лука'];
     for (let ime of imena) {
         alert(ime);
     }
-        
-.. activecode:: for_of_string_js
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
+
+.. petlja-editor:: for_of_string_js
     :language: javascript
     :nocodelens:
 
@@ -128,6 +168,17 @@ For петља
     for (let slovo of tekst) {
         alert(slovo);
     }
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 За итерирање кроз поља објекта користи се петља ``for-in``, која има овај облик:
 
@@ -139,11 +190,21 @@ For петља
 
 Овде *променљива* узима као вредности редом називе поља објекта, а *наредбе* се извршавају по једном за свако од тих поља. Ево како то изгледа на примеру:
 
-.. activecode:: for_in_object_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: for_in_object_js
 
+    main.js
     let ucenik = {ime: "Петар", prezime: "Јовановић", god_rodj: 2003};
     for (let polje in ucenik) {
         alert(`${polje}: ${ucenik[polje]}`);
     }
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>

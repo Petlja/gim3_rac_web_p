@@ -17,44 +17,73 @@
 
 Низ се прави тако што се унутар угластих заграда наведу вредности које ће бити уписане у елементе низа:
 
-.. activecode:: niz_literal_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: niz_literal_js
 
+    main.js
     let a = [10, 8, 26, 5, 3, 12];
     alert(`a = ${a}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Број елемената низа добијамо кроз својство ``length``, на пример:
 
-.. activecode:: niz_duzina_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: niz_duzina_js
 
+    main.js
     let a = [10, 8, 26, 5, 3, 12];
     alert(`a.length = ${a.length}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Додавање елемената
 ------------------
 
 У следећем примеру ћемо полазећи од празног низа, у елементе са редним бројевима 0, 1 и 2 уписати неке вредности, а онда ћемо прочитати вредности из тих елемената, да бисмо их сабрали и приказали збир:
 
-.. activecode:: niz_bir_elemenata_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: niz_bir_elemenata_js
 
+    main.js
     let br = [];
     br[0] = 10;
     br[1] = 3;
     br[2] = 200;
     zbir = br[0] + br[1] + br[2];
     alert(`zbir = ${zbir}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 У неким језицима је приликом дефинисања низа потребно навести његову дужину (тј. колико ће имати елемената). У Јаваскрипту ово није потребно – сваки пут када покушате да упишете неку вредност у елемент низа са неким индексом, низ ће аутоматски бити проширен ако је то потребно, тако да има довољан број елемената. Ова особина *JavaScript* низова је илустрована у следећем примеру:
 
-.. activecode:: prosirivanje_niza_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: prosirivanje_niza_js
 
+    main.js
     let a = [];
     alert(`Број елемената у низу [${a}] је ${a.length}.`);
     a[0] = 4;
@@ -63,6 +92,17 @@
     a[7] = 91;
     alert(`Број елемената у низу [${a}] је ${a.length}.`);
     alert(`a[3] = ${a[3]}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Приметимо да елементи којима није додељена вредност (на пример ``a[3]``) имају вредност ``undefined``.
 
@@ -70,10 +110,9 @@
 
 За убацивање елемената се ипак чешће користи наредба ``a.push(x);``, која има исти ефекат, а на коју ћемо се ускоро поново осврнути каде буде речи о методама:
 
-.. activecode:: dodavanje_na_kraj_niza_js
-    :language: javascript
-    :nocodelens:
+.. petlja-editor:: dodavanje_na_kraj_niza_js
 
+    main.js
     let a = [];
     a[a.length] = 5;
     a[a.length] = 10;
@@ -81,22 +120,43 @@
     a.push(15);
     a.push(20);
     alert(`a = ${a}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 JSON приказ
 -----------
 
 ``JSON.stringify`` и ``JSON.parse`` се могу применити и на низове. У случају да користимо ``JSON.stringify``, низ ће бити исписан са угластим заградама око елемената:
 
-.. activecode:: json_konverzija_niza_js
-    :language: javascript
-    :nocodelens:
-    
+.. petlja-editor:: json_konverzija_niza_js
+
+    main.js
     let a = [2, 3, 4];
     let s = JSON.stringify(a);
     alert(`a = ${a}`); // bez zagrada
     alert(`s = ${s}`); // sa zagradama
     let b = JSON.parse(s); // iz stringa u niz
     alert(`b[1] = ${b[1]}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Низови и објектни модел документа
 ---------------------------------
@@ -107,10 +167,22 @@ JSON приказ
 
 **Пример – дохватање елемената кроз DOM помоћу низова**
 
-.. activecode:: DOM_nizovi_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: DOM_nizovi_html_js
 
+    main.js
+    let odeljci = document.body.children;
+    odeljci[1].style.backgroundColor = '#C0FFFF';
+    odeljci[1].style.color = 'blue';
+    odeljci[1].style.fontSize = "16pt";
+
+    odeljci[2].style.backgroundColor = '#FFFFC0';
+    odeljci[2].style.color = 'brown';
+
+    let odeljak3Paragrafi = odeljci[2].children;
+    odeljak3Paragrafi[1].style.color = 'red';
+    odeljak3Paragrafi[1].style.border = "1px solid red";
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
@@ -133,19 +205,7 @@ JSON приказ
           <p>Четврти одељак изгледа као и први.</p>
           <p>Њихов стил није програмски мењан.</p>
         </div>
-        <script>
-           let odeljci = document.body.children;
-           odeljci[1].style.backgroundColor = '#C0FFFF';
-           odeljci[1].style.color = 'blue';
-           odeljci[1].style.fontSize = "16pt";
-
-           odeljci[2].style.backgroundColor = '#FFFFC0';
-           odeljci[2].style.color = 'brown';
-        
-           let odeljak3Paragrafi = odeljci[2].children;
-           odeljak3Paragrafi[1].style.color = 'red';
-           odeljak3Paragrafi[1].style.border = "1px solid red";
-        </script>
+        <script src="main.js"></script>
       </body>
     </html>
 
@@ -164,6 +224,35 @@ JSON приказ
 
 **Пример – постављање величине слика**
 
+.. petlja-editor:: DOM_nizovi_vel_slika_html_js
+
+    main.js
+    let slike = document.images;
+    alert(`У документу има ${slike.length} слике/слика.` )
+    slike[0].style.width = '50px';
+    slike[0].style.height = '50px';
+    slike[2].style.width = '75px';
+    slike[2].style.height = '75px';
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html lang="sr">
+      <head>
+        <title>Слике</title>
+      </head>
+      <body>
+        <h2>Задавање величине слика</h2>
+           
+        <img src="../_images/emo1.png">
+        <img src="../_images/emo2.png">
+        <img src="../_images/emo3.png">
+
+        <p> Величине прве и последње слике су задате програмски. </p>
+
+        <script src="main.js"></script>
+      </body>
+    </html>
+
 .. activecode:: DOM_nizovi_vel_slika_html_js
     :language: html
     :nocodelens:
@@ -175,7 +264,7 @@ JSON приказ
       </head>
       <body>
         <h2>Задавање величине слика</h2>
-           
+
         <img src="../_images/emo1.png">
         <img src="../_images/emo2.png">
         <img src="../_images/emo3.png">
