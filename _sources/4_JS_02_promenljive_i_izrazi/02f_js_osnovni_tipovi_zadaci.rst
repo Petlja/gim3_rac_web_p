@@ -16,4 +16,12 @@
         // ...
         ~~~
         index.html
-        <script src="main.js"></script>
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src="main.js"></script>
+          </head>
+          <body>
+            <p>Садржај стране (који није обавезан).</p>
+          </body>
+        </html>

@@ -27,7 +27,15 @@
     alert(ucenik1.ime);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Направили смо две променљиве (``ucenik1`` и ``ucenik2``) које садрже објекте. Имена поља морају да буду у складу са правилима именовања променљивих у Јаваскрипту (тј. да почињу словима, доларом или доњом цртом, а после могу да садрже и цифре), а вредности могу да буду бројеви, стрингови или вредности било којег другог типа, укључујући и друге објекте.
 
@@ -43,7 +51,15 @@
     alert(ucenik.ime);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Пољима у објекту се може приступити по имену коришћењем тачке (нпр. ``ucenik.ime``).
 
@@ -63,7 +79,15 @@
     alert(ucenik.razred);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 У овом случају, вредност објекта је могла да буде промењена и једноставније:
 
@@ -79,7 +103,15 @@
     alert(ucenik.razred);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Ако покушамо да дохватимо вредност непостојећег поља у објекту, добићемо специјалну вредност ``undefined``. Вредност ``undefined`` треба схватити као одсуство вредности.
 
@@ -94,7 +126,15 @@
     alert(ucenik.eposta);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. infonote::
 
@@ -120,7 +160,15 @@
     alert(ucenik);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Да бисмо уместо резултата ``[object Object]`` добили смисленији запис објекта, треба писати:
 
@@ -135,7 +183,15 @@
     alert(JSON.stringify(ucenik));
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 Обрнуто, ако је ``s`` стринг који садржи запис објекта, овако можемо да формирамо објекат на основу таквог стринга и да користимо поља тог објекта (важно је да су у стрингу називи поља и вредности баш под овим, двоструким наводницима, као у примеру):
 
@@ -147,7 +203,15 @@
     alert(ucenik.ime);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
 
 .. infonote::
 
@@ -181,4 +245,12 @@
         ` ${ucenik.skola.izostanci.neopravdani} неоправданих изостанака.`);
     ~~~
     index.html
-    <script src="main.js"></script>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
