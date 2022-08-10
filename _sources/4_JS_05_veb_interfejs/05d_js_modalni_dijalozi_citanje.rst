@@ -96,10 +96,17 @@
 Следи комплетан *HTML* кôд примера, који можете директно да испробате:
 
 
-.. activecode:: modalni_dijalog_html_tb
+.. petlja-editor:: modalni_dijalog_html_tb
     :language: html
     :nocodelens:
 
+    main.js
+    function zatvori() {
+        alert("Pozvana funkcija zatvori");
+        $('#MojModalniDijalog').modal('hide')
+    }
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
     <head>
@@ -108,12 +115,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>
-            function zatvori() {
-                alert("Pozvana funkcija zatvori");
-                $('#MojModalniDijalog').modal('hide')
-            }
-        </script>
+        <script src="main.js"></script>
     </head>
 
     <body>

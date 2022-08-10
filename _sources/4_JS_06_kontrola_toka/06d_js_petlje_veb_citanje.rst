@@ -34,35 +34,82 @@
 
 Следи комплетно решење:
 
-.. activecode:: slajd_sou_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: slajd_sou_html_js
 
+    style.css
+    .omot_slajdova {
+      max-width: 300px;
+      position: relative;
+      margin: auto;
+    }
+
+    .tacka {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .aktivna_tacka, .tacka:hover {
+      background-color: #717171;
+    }
+    ~~~
+    main.js
+    let brSlajda = 0;
+
+    function prikaziSlajd(n, klik) {
+
+      // sakrij sve slajdove
+      let slajdovi = document.getElementsByClassName("slajd");
+      for (let i = 0; i < slajdovi.length; i++) {
+          slajdovi[i].style.display = "none";
+      }
+
+      // neka su sve tacke neaktivne
+      let tacke = document.getElementsByClassName("tacka");
+      for (let i = 0; i < tacke.length; i++) {
+          tacke[i].classList.remove("aktivna_tacka");
+      }
+
+      // prikazi tekucu sliku i oznaci odgovarajucu tacku
+      slajdovi[n].style.display = "block";
+      tacke[n].classList.add("aktivna_tacka");
+
+      // ako je kliknuto na tacku, zaustavi tajmer (trajno)
+      if (klik) {
+          clearInterval(tajmer);
+      }
+    }
+
+    function sledeciSlajd() {
+        brSlajda++;
+        let slajdovi = document.getElementsByClassName("slajd");
+        if (brSlajda == slajdovi.length) {
+            brSlajda = 0;
+        }
+        prikaziSlajd(brSlajda, false);
+    }
+
+    prikaziSlajd(0, false);
+    let tajmer = setInterval(sledeciSlajd, 1500);
+
+    document.getElementById('t0').addEventListener('click', function(dogadjaj) {
+        prikaziSlajd(0, true);
+    });
+    document.getElementById('t1').addEventListener('click', function(dogadjaj) {
+        prikaziSlajd(1, true);
+    });
+    document.getElementById('t2').addEventListener('click', function(dogadjaj) {
+        prikaziSlajd(2, true);
+    });
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
-        <style>
-          
-          .omot_slajdova {
-            max-width: 300px;
-            position: relative;
-            margin: auto;
-          }
-          
-          .tacka {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-          }
-          
-          .aktivna_tacka, .tacka:hover {
-            background-color: #717171;
-          }
-
-        </style>
+        <link rel="stylesheet" href="style.css"/>
       </head>
       <body>
 
@@ -78,56 +125,7 @@
           <span class="tacka" id="t2"></span> 
         </div>
 
-        <script>
-            let brSlajda = 0;
-
-            function prikaziSlajd(n, klik) {
-
-              // sakrij sve slajdove
-              let slajdovi = document.getElementsByClassName("slajd");
-              for (let i = 0; i < slajdovi.length; i++) {
-                  slajdovi[i].style.display = "none";  
-              }
-
-              // neka su sve tacke neaktivne
-              let tacke = document.getElementsByClassName("tacka");
-              for (let i = 0; i < tacke.length; i++) {
-                  tacke[i].classList.remove("aktivna_tacka");
-              }
-
-              // prikazi tekucu sliku i oznaci odgovarajucu tacku
-              slajdovi[n].style.display = "block";  
-              tacke[n].classList.add("aktivna_tacka");
-
-              // ako je kliknuto na tacku, zaustavi tajmer (trajno)
-              if (klik) {
-                  clearInterval(tajmer);
-              }
-            }
-
-            function sledeciSlajd() {
-                brSlajda++;
-                let slajdovi = document.getElementsByClassName("slajd");
-                if (brSlajda == slajdovi.length) {
-                    brSlajda = 0;
-                }
-                prikaziSlajd(brSlajda, false);
-            }
-
-            prikaziSlajd(0, false);
-            let tajmer = setInterval(sledeciSlajd, 1500);
-
-            document.getElementById('t0').addEventListener('click', function(dogadjaj) {
-                prikaziSlajd(0, true);
-            });
-            document.getElementById('t1').addEventListener('click', function(dogadjaj) {
-                prikaziSlajd(1, true);
-            });
-            document.getElementById('t2').addEventListener('click', function(dogadjaj) {
-                prikaziSlajd(2, true);
-            });
-
-        </script>
+        <script src="main.js"></script>
       </body>
     </html> 
 
@@ -193,57 +191,55 @@
     
 Следи комплетно решење:
 
-.. activecode:: kalendar_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: kalendar_html_js
 
+    main.js
+    function prikaziMesecniKalendar(datum) {
+        document.getElementById("nedelja").style.color = "red";
+
+        let meseci = [
+            "Јануар", "Фебруар", "Март", "Април", "Мај", "Јун",
+            "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"
+        ];
+        let mesec = datum.getMonth();
+        let godina = datum.getFullYear();
+        document.getElementById("mesec_i_godina").innerHTML = meseci[mesec] + " " + godina;
+
+        let teloTabele = document.getElementById("telo_tabele");
+        // nulti datum sledeceg meseca je u stvari poslednji tekuceg meseca
+        let brojDanaUMesecu = new Date(godina, mesec + 1, 0).getDate();
+        let prviDan = (new Date(godina, mesec)).getDay(); // 0=ned, 1=pon, 2=uto...
+        let datumPrveCelije = [-5, 1, 0, -1, -2, -3, -4]; // ako je prvi u nedelju, prva celija je 'minus peti' itd.
+
+        let dan = datumPrveCelije[prviDan];
+        while (dan <= brojDanaUMesecu) {
+            let redTabele = document.createElement("tr");
+            for (let kolona = 0; kolona < 7; kolona++) {
+                let celija = document.createElement("td");
+                let tekstCelije = document.createTextNode(dan);
+                if (dan < 1 || dan > brojDanaUMesecu) {
+                    tekstCelije = document.createTextNode("");
+                }
+                celija.appendChild(tekstCelije);
+                if (dan === datum.getDate()) {
+                    celija.style.border = "solid 1px";
+                }
+                redTabele.appendChild(celija);
+                dan++;
+            }
+            teloTabele.appendChild(redTabele);
+        }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        prikaziMesecniKalendar(new Date());
+    });
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="sr-Cyrl">
         <head>
             <title>Календар</title>
-            <script>
-
-                function prikaziMesecniKalendar(datum) {
-                    document.getElementById("nedelja").style.color = "red";
-
-                    let meseci = [
-                        "Јануар", "Фебруар", "Март", "Април", "Мај", "Јун",
-                        "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"
-                    ];
-                    let mesec = datum.getMonth();
-                    let godina = datum.getFullYear();
-                    document.getElementById("mesec_i_godina").innerHTML = meseci[mesec] + " " + godina;
-
-                    let teloTabele = document.getElementById("telo_tabele");
-                    // nulti datum sledeceg meseca je u stvari poslednji tekuceg meseca
-                    let brojDanaUMesecu = new Date(godina, mesec + 1, 0).getDate();
-                    let prviDan = (new Date(godina, mesec)).getDay(); // 0=ned, 1=pon, 2=uto...
-                    let datumPrveCelije = [-5, 1, 0, -1, -2, -3, -4]; // ako je prvi u nedelju, prva celija je 'minus peti' itd.
-
-                    let dan = datumPrveCelije[prviDan];
-                    while (dan <= brojDanaUMesecu) {
-                        let redTabele = document.createElement("tr");
-                        for (let kolona = 0; kolona < 7; kolona++) {
-                            let celija = document.createElement("td");
-                            let tekstCelije = document.createTextNode(dan);
-                            if (dan < 1 || dan > brojDanaUMesecu) {
-                                tekstCelije = document.createTextNode("");
-                            }
-                            celija.appendChild(tekstCelije);
-                            if (dan === datum.getDate()) {
-                                celija.style.border = "solid 1px";
-                            }
-                            redTabele.appendChild(celija);
-                            dan++;
-                        }
-                        teloTabele.appendChild(redTabele);
-                    }
-                }
-                document.addEventListener('DOMContentLoaded', function() {
-                    prikaziMesecniKalendar(new Date());
-                });
-
-            </script>
+            <script src="main.js"></script>
         </head>
         <body>
             <h1>Календар</h1>
@@ -260,11 +256,10 @@
                     <th id="nedelja">Нед</th>
                 </tr>
                 </thead>
-
                 <tbody id="telo_tabele">
                 </tbody>
             </table>
-            </body>
+        </body>
     </html>
 
 .. questionnote::
@@ -296,18 +291,71 @@
 - Функција ``popuni`` преузима вредности ставки и рокова из локалног складишта (ако постоје) и уписује их у табелу.
 - Коначно, функција ``posalji``, која је везана за клик на дугме из формулара, проверава исправност података и, ако су исправни, уписује их у табелу (позивом функције ``unesi``) и памти их у локалном складишту (позивом функције ``zapamti``).
 
-.. activecode:: todo_validation_and_storage_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: todo_validation_and_storage_html_js
 
+    style.css
+    input:invalid {
+        border: 2px dashed red;
+    }
+    input:valid {
+        border: 2px solid black;
+    }
+    ~~~
+    main.js
+    let stavke = [];
 
+    function posalji() {
+        let stavka = document.querySelector(`#stavka`);
+        let datum = document.querySelector(`#datum`);
+        if (stavka.checkValidity() && datum.checkValidity()) {
+            unesi(stavka.value, datum.value);
+            zapamti(stavka.value, datum.value);
+        } else {
+            alert('Унесите исправне податке');
+        }
+        return false;
+    }
+
+    function unesi(stavka, datum) {
+        let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+        let noviRed = tabela.insertRow(tabela.rows.length);
+
+        let novaCelija  = noviRed.insertCell(0);
+        let tekst  = document.createTextNode(stavka);
+        novaCelija.appendChild(tekst);
+
+        novaCelija  = noviRed.insertCell(1);
+        tekst  = document.createTextNode(datum);
+        novaCelija.appendChild(tekst);
+    }
+
+    function zapamti(stavka, datum) {
+        stavke.push({
+            stavka,
+            datum
+        });
+        localStorage.setItem("stavke", JSON.stringify(stavke));
+    }
+
+    function popuni() {
+        const sacuvaneStavke = JSON.parse(localStorage.getItem("stavke"));
+        console.log(stavke);
+        if (sacuvaneStavke) {
+            stavke = sacuvaneStavke;
+            for (let i = 0; i < stavke.length; i++) {
+                unesi(stavke[i].stavka, stavke[i].datum);
+            }
+        }
+    }
+
+    popuni();
+    document.getElementById('dugme_ok').addEventListener('click', posalji);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
-      <style>
-        input:invalid { border: 2px dashed red; }
-        input:valid { border: 2px solid black; }
-      </style>
+      <link rel="stylesheet" href="style.css"/>
       </head>
       <body>
         <form>
@@ -332,57 +380,7 @@
           <tbody>            
           </tbody>            
         </table>
-        <script>
-            let stavke = [];
-            
-            function posalji() {
-                let stavka = document.querySelector(`#stavka`);
-                let datum = document.querySelector(`#datum`);
-                if (stavka.checkValidity() && datum.checkValidity()) {
-                    unesi(stavka.value, datum.value);
-                    zapamti(stavka.value, datum.value);
-                } else {
-                    alert('Унесите исправне податке');
-                }
-                return false;
-            }
-            
-            function unesi(stavka, datum) {
-                let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
-                let noviRed = tabela.insertRow(tabela.rows.length);
-
-                let novaCelija  = noviRed.insertCell(0);
-                let tekst  = document.createTextNode(stavka);
-                novaCelija.appendChild(tekst);
-
-                novaCelija  = noviRed.insertCell(1);
-                tekst  = document.createTextNode(datum);
-                novaCelija.appendChild(tekst);
-            }
-
-            function zapamti(stavka, datum) {
-                stavke.push({
-                    stavka,
-                    datum
-                });
-                localStorage.setItem("stavke", JSON.stringify(stavke));
-            }
-
-            function popuni() {
-                const sacuvaneStavke = JSON.parse(localStorage.getItem("stavke"));
-                console.log(stavke);
-                if (sacuvaneStavke) {
-                    stavke = sacuvaneStavke;
-                    for (let i = 0; i < stavke.length; i++) {
-                        unesi(stavke[i].stavka, stavke[i].datum);
-                    }
-                }
-            }
-            
-            popuni();
-            document.getElementById('dugme_ok').addEventListener('click', posalji);
-
-        </script>
+        <script src="main.js"></script>
       </body>
     </html>
 

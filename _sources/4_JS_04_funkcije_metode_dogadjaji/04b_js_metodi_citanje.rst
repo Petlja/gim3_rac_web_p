@@ -52,9 +52,12 @@
 
 Већ смо се упознали са објектом ``document``, преко којег можемо да приступимо *HTML* елементима у страни помоћу неких поља тог објекта. Поред поља са вредностима, овај објекат има и разне методе. Једна од његових метода је и ``document.write``, која може да послужи за додавање садржаја веб-страни. У следећем примеру употребљена је ова метода да дода један параграф:
 
-.. activecode:: novi_tekst_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: novi_tekst_html_js
+
+    main.js
+    document.write('<p>Параграф дописан <i>JavaScript</i> наредбом.</p>');
+    ~~~
+    index.html
 
     <!DOCTYPE html>
     <html>
@@ -62,51 +65,50 @@
       </head>
       <body>
         <p>Обичан <i>HTML</i> параграф.</p>
-        <script>
-          document.write('<p>Параграф дописан <i>JavaScript</i> наредбом.</p>');
-        </script>
+
+        <script src="main.js"></script>
       </body>
     </html>
 
 На овај начин можемо да додајемо и сложеније структуре веб-страни:
 
-.. activecode:: nova_lista_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: nova_lista_html_js
 
+    main.js
+    document.write('<ul>');
+    document.write('    <li>Палеозоик');
+    document.write('        <ul>');
+    document.write('            <li>Камбријум</li>');
+    document.write('            <li>Ордовицијум</li>');
+    document.write('            <li>Силур</li>');
+    document.write('            <li>Девон</li>');
+    document.write('            <li>Карбонифер</li>');
+    document.write('            <li>Пермијум</li>');
+    document.write('        </ul>');
+    document.write('    </li>');
+    document.write('    <li>Мезозоик');
+    document.write('        <ul>');
+    document.write('            <li>Тријас</li>');
+    document.write('            <li>Јура</li>');
+    document.write('            <li>Креда</li>');
+    document.write('        </ul>');
+    document.write('    </li>');
+    document.write('    <li>Кенозоик');
+    document.write('        <ul>');
+    document.write('            <li>Терцијар</li>');
+    document.write('            <li>Квартар</li>');
+    document.write('        </ul>');
+    document.write('    </li>');
+    document.write('</ul>');
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
       </head>
       <body>
         <p>Обичан <i>HTML</i> параграф.</p>
-        <script>
-          document.write('<ul>');
-          document.write('    <li>Палеозоик');
-          document.write('        <ul>');
-          document.write('            <li>Камбријум</li>');
-          document.write('            <li>Ордовицијум</li>');
-          document.write('            <li>Силур</li>');
-          document.write('            <li>Девон</li>');
-          document.write('            <li>Карбонифер</li>');
-          document.write('            <li>Пермијум</li>');
-          document.write('        </ul>');
-          document.write('    </li>');
-          document.write('    <li>Мезозоик');
-          document.write('        <ul>');
-          document.write('            <li>Тријас</li>');
-          document.write('            <li>Јура</li>');
-          document.write('            <li>Креда</li>');
-          document.write('        </ul>');
-          document.write('    </li>');
-          document.write('    <li>Кенозоик');
-          document.write('        <ul>');
-          document.write('            <li>Терцијар</li>');
-          document.write('            <li>Квартар</li>');
-          document.write('        </ul>');
-          document.write('    </li>');
-          document.write('</ul>');
-        </script>
+        <script src="main.js"></script>
       </body>
     </html>
 
@@ -128,10 +130,13 @@
 
 Ове методе објекта ``document`` нам омогућавају да претражимо *HTML* документ по различитим критеријумима, нађемо елементе који одговарају неком критеријуму и променимо им нека својства, изглед или чак и садржај. У следећем примеру ћемо *JavaScript* програмом лоцирати одељак *вести* помоћу методе ``getElementById``, а затим ћемо том одељку променити боју позадине:
 
-.. activecode:: lociranje_elementa_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: lociranje_elementa_html_js
 
+    main.js
+    const odeljakVesti = document.getElementById("vesti");
+    odeljakVesti.style.backgroundColor = '#C0FFFF';
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="sr">
         <head>
@@ -150,10 +155,7 @@
             <p>Вест број 1</p>
             <p>Вест број 2</p>
           </div>
-          <script>
-            const odeljakVesti = document.getElementById("vesti");
-            odeljakVesti.style.backgroundColor = '#C0FFFF';
-          </script>
+          <script src="main.js"></script>
        </body>
     </html>
 
@@ -205,10 +207,20 @@
 
 Уместо постављања боје, могли смо, на пример, да убацимо параграф *Најновија вест* у одељак са вестима. Ради тога смо употребили и методе ``document.createElement()``, ``document.createTextNode()``, ``element.appendChild(cvor_dete)`` и ``element_roditelj.insertBefore(novi_element, element_dete)``, за које се не очекује да их у оквиру овог курса запамтите и детаљно познајете. У овом примеру, поменуте методе су употребљене само као илустрација и наговештај могућности употребе *JavaScript* програма у *HTML* странама. По потреби се увек можете вратити на овај пример, или сами пронаћи на интернету сличан пример и детаљнија објашњења.
 
-.. activecode:: nova_vest_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: nova_vest_html_js
 
+    main.js
+    // HTML параграф као објекат у DOM  моделу
+    // садржи чвор са текстом као своје поље
+    const novaVest = document.createElement("P");
+    const cvor = document.createTextNode("Најновија вест");
+    novaVest.appendChild(cvor);
+
+    // Убацујемо параграф 'novaVest' у одговарајући одељак
+    const odeljakVesti = document.getElementById("vesti");
+    odeljakVesti.insertBefore(novaVest, odeljakVesti.children[1]);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="sr">
         <head>
@@ -217,27 +229,17 @@
         <body>
           <h2>Убацивање текста</h2>
             
-          <div id='aktivnosti'>
+          <div id="aktivnosti">
             <h4>Наше активности</h4>
             <p>Активност број 1</p>
             <p>Активност број 2</p>
           </div>
-          <div id='vesti'>
+          <div id="vesti">
             <h4>Вести</h4>
             <p>Вест број 1</p>
             <p>Вест број 2</p>
           </div>
-          <script>
-            // HTML параграф као објекат у DOM  моделу
-            // садржи чвор са текстом као своје поље
-            const novaVest = document.createElement("P");
-            const cvor = document.createTextNode("Најновија вест");
-            novaVest.appendChild(cvor);
-            
-            // Убацујемо параграф 'novaVest' у одговарајући одељак
-            const odeljakVesti = document.getElementById("vesti");
-            odeljakVesti.insertBefore(novaVest, odeljakVesti.children[1]);
-          </script>
+          <script src="main.js"></script>
        </body>
     </html>
 

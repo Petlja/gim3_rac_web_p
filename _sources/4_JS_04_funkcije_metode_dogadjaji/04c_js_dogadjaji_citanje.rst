@@ -28,10 +28,30 @@
 
 Следећи *HTML* кôд садржи пример коришћења догађаја ``click``, ``mouseenter`` и ``mouseout``. Покрените пример и испробајте функционисање догађаја. Да не бисте мењали положај миша при затварању ``alert`` дијалога, за затварање користите тастер *Enter* или тастер *Escape*.
                                                     
-.. activecode:: dogadjaji_paragraf_html
-    :language: html
-    :nocodelens:
-    
+.. petlja-editor:: dogadjaji_paragraf_html
+
+    main.js
+    function klik(dogadjaj) {
+        alert(`Кликнули сте на параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
+    }
+
+    function dolazakMisa(dogadjaj) {
+        alert(`Наишли сте мишем на параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
+    }
+
+    function odlazakMisa(dogadjaj) {
+        alert(`Напустили сте мишем параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
+    }
+
+    const p1 = document.getElementById('prvi');
+    p1.addEventListener('click', klik);
+
+    const p2 = document.getElementById('drugi');
+    p2.addEventListener('click', klik);
+    p2.addEventListener('mouseenter', dolazakMisa);
+    p2.addEventListener('mouseout', odlazakMisa);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
         <head>
@@ -42,30 +62,9 @@
 
             <p id="prvi">Кликни на овај параграф.</p>
             <p id="drugi">Кликни или пређи мишем преко овог параграфа.</p>
-         </body>
-        <script>
 
-            function klik(dogadjaj) {
-                alert(`Кликнули сте на параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
-            }
-            
-            function dolazakMisa(dogadjaj) {
-                alert(`Наишли сте мишем на параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
-            }
-
-            function odlazakMisa(dogadjaj) {
-                alert(`Напустили сте мишем параграф у коме пише "${dogadjaj.currentTarget.innerText}"`);
-            }
-
-            const p1 = document.getElementById('prvi');
-            p1.addEventListener('click', klik);
-            
-            const p2 = document.getElementById('drugi');
-            p2.addEventListener('click', klik);
-            p2.addEventListener('mouseenter', dolazakMisa);
-            p2.addEventListener('mouseout', odlazakMisa);
-            
-        </script>
+            <script src="main.js"></script>
+        </body>
     </html>
 
 .. comment
@@ -134,24 +133,22 @@
 
 На пример, догађај ``DOMContentLoaded`` наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију ``ucitan`` на следећи начин:
 
-.. activecode:: dogadjaji_domcontentloaded
-    :language: html
-    :nocodelens:
+.. petlja-editor:: dogadjaji_domcontentloaded
 
+    main.js
+    function ucitan() {
+      const paragraf = document.querySelector('p');
+      paragraf.style.color = 'red';
+    }
+
+    document.addEventListener('DOMContentLoaded', ucitan);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
         <title>Догађаји</title>
-        <script>
-
-          function ucitan() {
-            const paragraf = document.querySelector('p');
-            paragraf.style.color = 'red';
-          }
-
-          document.addEventListener('DOMContentLoaded', ucitan);
-
-        </script>
+        <script src="main.js"></script>
       </head>
       <body>
         <p>Садржај стране</p>
@@ -171,32 +168,30 @@
 
 Осим методе ``document.addEventListener`` можемо да користимо и методу ``setInterval``. Ова метода се користи када неку *JavaScript* функцију желимо да извршавамо периодично, на сваких *n* милисекунди. Први аргумент методе ``setInterval`` је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе ``setInterval`` постижемо да се догађај часовника који је повезан са наведеном *JavaScript* функцијом генерише у задатим интервалима.
 
-.. activecode:: dogadjaji_set_interval
-    :language: html
-    :nocodelens:
+.. petlja-editor:: dogadjaji_set_interval
 
+    main.js
+    const boje = ['red', 'green', 'blue'];
+    let trenutna = 0;
+
+    function promeniBoju() {
+      const paragraf = document.querySelector('p');
+      paragraf.style.color = boje[trenutna];
+      trenutna = (trenutna + 1) % boje.length;
+    }
+
+    function ucitaj() {
+      setInterval(promeniBoju, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', ucitaj);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
         <title>Догађаји</title>
-        <script>
-
-          const boje = ['red', 'green', 'blue'];
-          let trenutna = 0;
-
-          function promeniBoju() {
-            const paragraf = document.querySelector('p');
-            paragraf.style.color = boje[trenutna];
-            trenutna = (trenutna + 1) % boje.length;
-          }
-
-          function ucitaj() {
-            setInterval(promeniBoju, 1000);
-          }
-
-          document.addEventListener('DOMContentLoaded', ucitaj);
-
-        </script>
+        <script src="main.js"></script>
       </head>
       <body>
         <p>Садржај стране</p>
@@ -213,40 +208,38 @@
 
 ...а на другом месту у кôду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију ``promeniBoju``:
 
-.. activecode:: dogadjaji_clear_interval
-    :language: html
-    :nocodelens:
+.. petlja-editor:: dogadjaji_clear_interval
 
+    main.js
+    const boje = ['red', 'green', 'blue'];
+    let trenutna = 0;
+    let intervalId = 0;
+
+    function promeniBoju() {
+      const paragraf = document.querySelector('p');
+      paragraf.style.color = boje[trenutna];
+      trenutna = (trenutna + 1) % boje.length;
+    }
+
+    function zaustavi() {
+      clearInterval(intervalId);
+    }
+
+    function ucitaj() {
+      intervalId = setInterval(promeniBoju, 1000);
+
+      const dugme = document.querySelector('button');
+      dugme.addEventListener('click', zaustavi);
+    }
+
+    document.addEventListener('DOMContentLoaded', ucitaj);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
         <title>Догађаји</title>
-        <script>
-
-          const boje = ['red', 'green', 'blue'];
-          let trenutna = 0;
-          let intervalId = 0;
-
-          function promeniBoju() {
-            const paragraf = document.querySelector('p');
-            paragraf.style.color = boje[trenutna];
-            trenutna = (trenutna + 1) % boje.length;
-          }
-
-          function zaustavi() {
-            clearInterval(intervalId);
-          }
-
-          function ucitaj() {
-            intervalId = setInterval(promeniBoju, 1000);
-
-            const dugme = document.querySelector('button');
-            dugme.addEventListener('click', zaustavi);
-          }
-
-          document.addEventListener('DOMContentLoaded', ucitaj);
-
-        </script>
+        <script src="main.js"></script>
       </head>
       <body>
         <p>Садржај стране</p>
@@ -321,6 +314,47 @@
         </script>
     </html>
 
+.. petlja-editor:: vece_i_manje_slike_html
+
+    main.js
+    // funkcija menja velicinu slike
+    function vel(slika, faktor) {
+        slika.style.width = `${slika.naturalWidth * faktor}px`;
+        slika.style.height = `${slika.naturalHeight * faktor}px`;
+    }
+
+    function dolazakMisa(dogadjaj) {
+        vel(dogadjaj.currentTarget, 2);
+    }
+    function odlazakMisa(dogadjaj) {
+        vel(dogadjaj.currentTarget, 1);
+    }
+
+    document.getElementById('emo1').addEventListener('mouseenter', dolazakMisa);
+    document.getElementById('emo1').addEventListener('mouseout', odlazakMisa);
+    document.getElementById('emo2').addEventListener('mouseenter', dolazakMisa);
+    document.getElementById('emo2').addEventListener('mouseout', odlazakMisa);
+    document.getElementById('emo3').addEventListener('mouseenter', dolazakMisa);
+    document.getElementById('emo3').addEventListener('mouseout', odlazakMisa);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html lang="sr">
+        <head>
+            <title>Слике</title>
+        </head>
+        <body>
+            <h2>Повећавање и смањивање слика</h2>
+
+            <img id="emo1" src="../_images/emo1.png" alt="Prva slika">
+            <img id="emo2" src="../_images/emo2.png" alt="Druga slika">
+            <img id="emo3" src="../_images/emo3.png" alt="Treca slika">
+
+            <p> Позиционирањем миша на слику, она се увећава. </p>
+         </body>
+        <script src="main.html"></script>
+    </html>
+
 Догађаји и анонимне функције
 ----------------------------
 
@@ -379,6 +413,57 @@
             });
 
         </script>
+    </html>
+
+.. petlja-editor:: vece_i_manje_slike_anonimne_funkcije_html
+
+    main.js
+    // funkcija menja velicinu slike
+    function vel(slika, faktor) {
+        slika.style.width = `${slika.naturalWidth * faktor}px`;
+        slika.style.height = `${slika.naturalHeight * faktor}px`;
+    }
+
+    let sl1 = document.getElementById('emo1');
+    sl1.addEventListener('mouseenter', function(dogadjaj) {
+        vel(sl1, 2);
+    });
+    sl1.addEventListener('mouseout', function(dogadjaj) {
+        vel(sl1, 1);
+    });
+
+    let sl2 = document.getElementById('emo2');
+    sl2.addEventListener('mouseenter', function(dogadjaj) {
+        vel(sl2, 2);
+    });
+    sl2.addEventListener('mouseout', function(dogadjaj) {
+        vel(sl2, 1);
+    });
+
+    let sl3 = document.getElementById('emo3');
+    sl3.addEventListener('mouseenter', function(dogadjaj) {
+        vel(sl3, 2);
+    });
+    sl3.addEventListener('mouseout', function(dogadjaj) {
+        vel(sl3, 1);
+    });
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html lang="sr">
+        <head>
+            <title>Слике</title>
+        </head>
+        <body>
+            <h2>Повећавање и смањивање слика</h2>
+
+            <img id="emo1" src="../_images/emo1.png" alt="Prva slika" >
+            <img id="emo2" src="../_images/emo2.png" alt="Druga slika">
+            <img id="emo3" src="../_images/emo3.png" alt="Treca slika">
+
+            <p> Позиционирањем миша на слику, она се увећава. </p>
+        </body>
+        <script src="main.js"></script>
     </html>
 
 

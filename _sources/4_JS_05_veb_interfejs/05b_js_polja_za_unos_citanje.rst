@@ -9,10 +9,9 @@
 
 У следећем примеру можете да испробате четири поља за унос података:
 
-.. activecode:: polja_za_unos_html
-    :language: html
-    :nocodelens:
-    
+.. petlja-editor:: polja_za_unos_html
+
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
@@ -42,10 +41,20 @@
 
 Претходни пример можемо да допунимо једним дугметом и следећим *JavaScript* кôдом, тако да се кликом на дугме исписују сви унети подаци. Функција ``prikaz`` проналази поља за унос, чита им вредности и приказује поруку да је ученик добио оцену датог дана.
 
-.. activecode:: polja_za_unos_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: polja_za_unos_html_js
 
+    main.js
+    function prikaz() {
+        let ime = document.querySelector('#ime').value;
+        let prezime = document.querySelector('#prezime').value;
+        let ocena = document.querySelector('#ocena').value;
+        let datum = document.querySelector('#datum').value;
+        alert(`${ime} ${prezime} је дана ${datum} добио-добила оцену ${ocena}`);
+    }
+
+    document.getElementById("dugme_ok").addEventListener('click', prikaz);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
@@ -67,19 +76,7 @@
         <button id="dugme_ok">Потврди</button>
       </body>
 
-      <script>
-
-        function prikaz() {
-            let ime = document.querySelector('#ime').value;
-            let prezime = document.querySelector('#prezime').value;
-            let ocena = document.querySelector('#ocena').value;
-            let datum = document.querySelector('#datum').value;
-            alert(`${ime} ${prezime} је дана ${datum} добио-добила оцену ${ocena}`);
-        }
-
-        document.getElementById("dugme_ok").addEventListener('click', prikaz);
-
-      </script>
+      <script src="main.js"></script>
 
     </html>
 
@@ -89,24 +86,41 @@
 
 Ево како би могло да се започне прављење веб-стране за одржавање листе актуелних послова (енгл. *to-do list*):
 
-.. activecode:: todo_lista_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: todo_lista_html_js
 
+    main.js
+    function unesi() {
+      let stavka = document.querySelector('#stavka');
+      let datum = document.querySelector('#datum');
+
+      let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+      let noviRed = tabela.insertRow(tabela.rows.length);
+
+      let novaCelija  = noviRed.insertCell(0);
+      let tekst  = document.createTextNode(stavka.value);
+      novaCelija.appendChild(tekst);
+
+      novaCelija  = noviRed.insertCell(1);
+      tekst  = document.createTextNode(datum.value);
+      novaCelija.appendChild(tekst);
+    }
+
+    document.getElementById("dugme_ok").addEventListener('click', unesi);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
-
       </head>
       <body>
-          <label for="stavka">Шта желиш да урадиш:</label><br>
-          <input type="text" id="stavka" required><br>
-          
-          <label for="datum">Рок:</label><br>
-          <input type="date" id="datum" required><br>
-          
-          <br>
-          <button id="dugme_ok">Унеси</button>
+        <label for="stavka">Шта желиш да урадиш:</label><br>
+        <input type="text" id="stavka" required><br>
+
+        <label for="datum">Рок:</label><br>
+        <input type="date" id="datum" required><br>
+
+        <br>
+        <button id="dugme_ok">Унеси</button>
         <br><br><br><br><br>
         <table id="tabela" border="solid 1px">
           <caption>Послови</caption>
@@ -120,26 +134,7 @@
           </tbody>            
         </table>
       </body>
-      <script>
-        function unesi() {
-            let stavka = document.querySelector('#stavka');
-            let datum = document.querySelector('#datum');
-
-            let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
-            let noviRed = tabela.insertRow(tabela.rows.length);
-
-            let novaCelija  = noviRed.insertCell(0);
-            let tekst  = document.createTextNode(stavka.value);
-            novaCelija.appendChild(tekst);
-
-            novaCelija  = noviRed.insertCell(1);
-            tekst  = document.createTextNode(datum.value);
-            novaCelija.appendChild(tekst);
-        }
-        
-        document.getElementById("dugme_ok").addEventListener('click', unesi);
-
-      </script>
+      <script src="main.js"></script>
     </html>
 
 Да би употреба ове стране била удобна, недостаје бар још памћење раније унетих ставки и поништавање (прецртавање или брисање или оба) урађених послова. На овај пример ћемо се вратити и дорадити га касније.

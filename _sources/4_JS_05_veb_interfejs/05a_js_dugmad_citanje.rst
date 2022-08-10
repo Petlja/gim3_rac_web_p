@@ -66,18 +66,41 @@
 
 У врху стране су три дугмета, помоћу којих бирамо на ком језику/писму ће бити приказана страна. Сва три дугмета покрећу исту функцију, али са различитим аргументом. Свако дугме као аргумент прослеђује идентификатор оне секције која треба да буде видљива. Функција најпре све одељке учини невидљивим, тако што им дода класу ``nevidljiv`` (стил те класе је ``display: none``, што значи да се елементи те класе не приказују), а затим ту класу уклони из одељка који треба да остане видљив.
 
-.. activecode:: biranje_jezika_i_pisma_html
-    :language: html
-    :nocodelens:
+.. petlja-editor:: biranje_jezika_i_pisma_html
 
+    main.js
+    function postaviPismo(izabranoPismo) {
+      document.querySelector('#cirilica').classList.add('nevidljiv');
+      document.querySelector('#latinica').classList.add('nevidljiv');
+      document.querySelector('#english').classList.add('nevidljiv');
+
+      document.querySelector(`#${izabranoPismo}`).classList.remove('nevidljiv');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        postaviPismo('cirilica');
+    });
+
+    document.getElementById('cir').addEventListener('click', function(d) {
+        postaviPismo('cirilica');
+    });
+    document.getElementById('lat').addEventListener('click', function(d) {
+        postaviPismo('latinica');
+    });
+    document.getElementById('eng').addEventListener('click', function(d) {
+        postaviPismo('english');
+    });
+    ~~~
+    style.css
+    .nevidljiv { display: none; }
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
         <head>
-            <style>
-              .nevidljiv { display: none; }
-            </style>
-
             <title>MultiLang</title>
+
+            <link rel="stylesheet" href="style.css"/>
         </head>
         <body>
             <button type="button" id="cir">Ћирилица</button>
@@ -108,28 +131,5 @@
               <p>…</p>
             </div>
         </body>
-        <script>
-        
-            function postaviPismo(izabranoPismo) {
-              document.querySelector('#cirilica').classList.add('nevidljiv');
-              document.querySelector('#latinica').classList.add('nevidljiv');
-              document.querySelector('#english').classList.add('nevidljiv');
-              
-              document.querySelector(`#${izabranoPismo}`).classList.remove('nevidljiv');
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-                postaviPismo('cirilica');
-            });
-
-            document.getElementById('cir').addEventListener('click', function(d) {
-                postaviPismo('cirilica');
-            });
-            document.getElementById('lat').addEventListener('click', function(d) {
-                postaviPismo('latinica');
-            });
-            document.getElementById('eng').addEventListener('click', function(d) {
-                postaviPismo('english');
-            });
-        </script>
+        <script src="main.js"></script>
     </html>
