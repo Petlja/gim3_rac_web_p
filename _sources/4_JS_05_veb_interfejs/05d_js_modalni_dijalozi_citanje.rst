@@ -97,8 +97,6 @@
 
 
 .. petlja-editor:: modalni_dijalog_html_tb
-    :language: html
-    :nocodelens:
 
     main.js
     function zatvori() {
