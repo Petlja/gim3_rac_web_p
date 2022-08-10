@@ -119,26 +119,18 @@
 
 Једно могуће решење је:
 
-.. activecode:: tacno_vreme_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: tacno_vreme_js
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Време</title>
-    </head>
-    <body>
-      <script>
-        function prikaziTacnoVreme() {
-          const sada = new Date();
-          alert(`Страница је отворена у ${sada.toLocaleTimeString()} сати.`);
-        }
+    main.js
+    function prikaziTacnoVreme() {
+      const sada = new Date();
+      alert(`Страница је отворена у ${sada.toLocaleTimeString()} сати.`);
+    }
 
-        prikaziTacnoVreme();
-      </script>
-    </body>
-    </html>
+    prikaziTacnoVreme();
+    ~~~
+    index.html
+    <script src="main.js"></script>
 
 .. questionnote::
 

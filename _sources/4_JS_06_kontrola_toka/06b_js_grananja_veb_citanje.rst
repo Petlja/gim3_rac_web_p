@@ -20,10 +20,19 @@
 
 У следећем решењу најпре проверавамо да ли је нека вредност већ уписана. Ако нема уписане вредности, уписујемо 0 као почетну вредност. Након тога поново читамо вредност (сада знамо да вредност постоји и да је то број), повећавамо је, приказујемо у веб-страни и памтимо увећану вредност у локалном складишту.
 
-.. activecode:: broj_otvaranja_strane_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: broj_otvaranja_strane_html_js
 
+    main.js
+    if (!localStorage.getItem('counter')) {
+        localStorage.setItem('counter', 0);
+    }
+
+    let counter = parseInt(localStorage.getItem('counter'));
+    counter++;
+    document.querySelector('#brp').innerHTML = counter;
+    localStorage.setItem('counter', counter);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="sr">
       <head>
@@ -31,16 +40,7 @@
       </head>
       <body>
         <h1>Број учитавања ове стране: <span id="brp">0</span></h1>
-        <script>
-          if (!localStorage.getItem('counter')) {
-              localStorage.setItem('counter', 0);
-          }
-
-          let counter = parseInt(localStorage.getItem('counter'));
-          counter++;
-          document.querySelector('#brp').innerHTML = counter;
-          localStorage.setItem('counter', counter);
-        </script>
+        <script src="main.js"></script>
       </body>
     </html>
 
@@ -103,17 +103,44 @@
 
 Следи комплетан кôд, који можете да испробате:
 
-.. activecode:: todo_validacija_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: todo_validacija_html_js
 
+    main.js
+    function posalji() {
+        let stavka = document.querySelector(`#stavka`);
+        let datum = document.querySelector(`#datum`);
+        if (stavka.checkValidity() && datum.checkValidity()) {
+            let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+            let noviRed = tabela.insertRow(tabela.rows.length);
+
+            let novaCelija  = noviRed.insertCell(0);
+            let tekst  = document.createTextNode(stavka.value);
+            novaCelija.appendChild(tekst);
+
+            novaCelija  = noviRed.insertCell(1);
+            tekst  = document.createTextNode(datum.value);
+            novaCelija.appendChild(tekst);
+        } else {
+            alert('Унесите исправне податке');
+        }
+        return false;
+    }
+
+    document.getElementById('dugme_ok').addEventListener('click', posalji);
+    ~~~
+    style.css
+    input:invalid {
+        border: 2px dashed red;
+    }
+    input:valid {
+        border: 2px solid black;
+    }
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html>
       <head>
-      <style>
-        input:invalid { border: 2px dashed red; }
-        input:valid { border: 2px solid black; }
-      </style>
+      <link rel="stylesheet" href="style.css"/>
       </head>
       <body>
         <form>
@@ -138,31 +165,8 @@
           <tbody>            
           </tbody>            
         </table>
+        <script src="main.js"></script>
       </body>
-      <script>
-        function posalji() {
-            let stavka = document.querySelector(`#stavka`);
-            let datum = document.querySelector(`#datum`);
-            if (stavka.checkValidity() && datum.checkValidity()) {
-                let tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
-                let noviRed = tabela.insertRow(tabela.rows.length);
-
-                let novaCelija  = noviRed.insertCell(0);
-                let tekst  = document.createTextNode(stavka.value);
-                novaCelija.appendChild(tekst);
-
-                novaCelija  = noviRed.insertCell(1);
-                tekst  = document.createTextNode(datum.value);
-                novaCelija.appendChild(tekst);
-            } else {
-                alert('Унесите исправне податке');
-            }
-            return false;
-        }
-        
-        document.getElementById('dugme_ok').addEventListener('click', posalji);
-
-      </script>
     </html>
 
 .. questionnote::
@@ -181,10 +185,47 @@
     
     Направите веб-страну која приказује функционалну штоперицу са два дугмета. Кликом на једно дугме се штоперица покреће и зауставља, а на друго се ресетује (враћа на 0).
 
-.. activecode:: stoperica_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: stoperica_html_js
 
+    main.js
+    let running = false;
+    let counter = 0;
+    let delta = 0;
+
+    function tik() {
+        counter += delta;
+        document.querySelector('h1').innerHTML = counter.toFixed(2);
+    }
+
+    document.getElementById('reset').addEventListener('click', function(dogadjaj) {
+        counter = 0;
+        delta = 0;
+    });
+
+    document.getElementById('start_stop').addEventListener('click', function(dogadjaj) {
+        if (running) {
+            running = false;
+            delta = 0;
+            this.innerHTML = "Старт";
+            this.style.backgroundColor = "green";
+            this.style.color = "white";
+            document.querySelector('#reset').disabled = false;
+        }
+        else {
+            running = true;
+            delta = 0.01;
+            this.innerHTML = "Стоп";
+            this.style.backgroundColor = "red";
+            this.style.color = "black";
+            document.querySelector('#reset').disabled = true;
+        }
+    });
+
+    document.querySelector('#start_stop').style.backgroundColor = "green";
+    document.querySelector('#start_stop').style.color = "white";
+    setInterval(tik, 10);
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="sr">
         <head>
@@ -194,47 +235,8 @@
             <h1>0</h1>
             <button id="start_stop">Старт</button>
             <button id="reset">Ресет</button>
+            <script src="main.js"></script>
         </body>
-            <script>
-
-                let running = false;
-                let counter = 0;
-                let delta = 0;
-                            
-                function tik() {
-                    counter += delta;
-                    document.querySelector('h1').innerHTML = counter.toFixed(2);
-                }
-
-                document.getElementById('reset').addEventListener('click', function(dogadjaj) {
-                    counter = 0;
-                    delta = 0;
-                });
-
-                document.getElementById('start_stop').addEventListener('click', function(dogadjaj) {
-                    if (running) {
-                        running = false;
-                        delta = 0;
-                        this.innerHTML = "Старт";
-                        this.style.backgroundColor = "green";
-                        this.style.color = "white";
-                        document.querySelector('#reset').disabled = false;
-                    }
-                    else {
-                        running = true;
-                        delta = 0.01;
-                        this.innerHTML = "Стоп";
-                        this.style.backgroundColor = "red";
-                        this.style.color = "black";
-                        document.querySelector('#reset').disabled = true;
-                    }
-                });
-
-                document.querySelector('#start_stop').style.backgroundColor = "green";
-                document.querySelector('#start_stop').style.color = "white";
-                setInterval(tik, 10);
-
-            </script>
     </html>
 
 .. questionnote::
@@ -284,6 +286,85 @@
 
 Следи комплетан кôд:
 
+.. petlja-editor:: tajmer_html_js
+
+    main.js
+    let tajmer = undefined;
+    let preostaloVreme = 0;
+
+    // promenjena vrednost tajmera
+    document.getElementById('vreme').addEventListener('change', function(dogadjaj) {
+        let checkBox = document.getElementById("prekidac");
+        checkBox.disabled = false;
+        checkBox.checked = false;
+        clearInterval(tajmer);
+    });
+
+    // promenjeno stanje prekidaca
+    document.getElementById('prekidac').addEventListener('click', function(dogadjaj) {
+        let ukljucen = document.getElementById("prekidac").checked;
+        if (ukljucen) {
+            let t = document.getElementById("vreme").value;
+            let hh = parseInt(t.slice(0, 2)) || 0;
+            let mm = parseInt(t.slice(3, 5)) || 0;
+            let ss = parseInt(t.slice(6, 8)) || 0;
+            preostaloVreme = ((hh * 60 + mm) * 60 + ss);
+            if (preostaloVreme == 0) {
+                sviraj();
+            } else {
+                tajmer = setInterval(tik, 1000);
+            }
+        }
+        else {
+            clearInterval(tajmer);
+        }
+    });
+
+    function tik() {
+        preostaloVreme--;
+        let n = preostaloVreme;
+        let ss = (n % 60).toString().padStart(2, '0');
+        n = Math.trunc(n/60);
+        let mm = (n % 60).toString().padStart(2, '0');
+        n = Math.trunc(n/60);
+        let hh = n.toString().padStart(2, '0');
+        let t = document.getElementById("vreme");
+        t.value = `${hh}:${mm}:${ss}`;
+        if (preostaloVreme == 0) {
+            sviraj();
+        }
+    }
+
+    function sviraj() {
+        document.getElementById("muzikica").play();
+        clearInterval(tajmer);
+        let checkBox = document.getElementById("prekidac");
+        checkBox.checked = false;
+        checkBox.disabled = true;
+    }
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html lang="sr-Cyrl">
+        <head>
+            <title>Тајмер</title>
+        </head>
+        <body>
+            <h1>Тајмер</h1>
+            <audio id="muzikica" controls>
+              <source src="../../_images/js/ding.mp3" type="audio/mpeg">
+              Ваш прегледач не подржава аудио елемент.
+            </audio>
+
+            <form>
+                <span margin-right="2px">Преостало време</span>
+                <input autofocus id="vreme" type="time" step="1" value="00:00:10"/>
+                Укључи: <input type="checkbox" id="prekidac"/>
+            </form>
+            <script src="main.js"></script>
+        </body>
+    </html>
+
 .. activecode:: tajmer_html_js
     :language: html
     :nocodelens:
@@ -310,7 +391,7 @@
 
                 let tajmer = undefined;
                 let preostaloVreme = 0;
-                
+
                 // promenjena vrednost tajmera
                 document.getElementById('vreme').addEventListener('change', function(dogadjaj) {
                     let checkBox = document.getElementById("prekidac");
@@ -336,7 +417,7 @@
                     }
                     else {
                         clearInterval(tajmer);
-                    } 
+                    }
                 });
 
                 function tik() {
@@ -352,10 +433,10 @@
                     if (preostaloVreme == 0) {
                         sviraj();
                     }
-                } 
+                }
 
                 function sviraj() {
-                    document.getElementById("muzikica").play(); 
+                    document.getElementById("muzikica").play();
                     clearInterval(tajmer);
                     let checkBox = document.getElementById("prekidac");
                     checkBox.checked = false;
@@ -372,6 +453,66 @@
     Направите веб-страну која омогућава да се у задато време активира аларм (аудио-фајл који одаберете).
 
 Пример је веома сличан претходном, тако да ћете га вероватно разумети и без објашњавања.
+
+.. petlja-editor:: alarm_html_js
+
+    main.js
+    let tajmer = undefined;
+
+    // promenjena vrednost tajmera
+    document.getElementById('vreme').addEventListener('change', function(dogadjaj) {
+        let checkBox = document.getElementById("prekidac");
+        checkBox.disabled = false;
+        checkBox.checked = false;
+    });
+
+    // promenjeno stanje prekidaca
+    document.getElementById('prekidac').addEventListener('click', function(dogadjaj) {
+        let aktiviran = document.getElementById("prekidac").checked;
+        if (aktiviran) {
+            let sada = new Date();
+            let t = document.getElementById("vreme").value;
+            let hh = parseInt(t.slice(0, 2)) || 0;
+            let mm = parseInt(t.slice(3, 5)) || 0;
+            let ss = parseInt(t.slice(6, 8)) || 0;
+            let zadato = new Date(sada.getFullYear(), sada.getMonth(), sada.getDate(), hh, mm, ss);
+            if (zadato < sada) {
+                zadato.setDate(zadato.getDate() + 1);
+            }
+            tajmer = setInterval(sviraj, zadato - sada);
+        }
+        else {
+            clearInterval(tajmer);
+        }
+    });
+
+    function sviraj() {
+        document.getElementById("muzikica").play();
+        document.getElementById("prekidac").checked = false;
+        clearInterval(tajmer);
+    }
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html lang="sr-Cyrl">
+        <head>
+            <title>Аларм</title>
+        </head>
+        <body>
+            <h1>Аларм</h1>
+            <audio id="muzikica" controls>
+              <source src="../../_images/js/ding.mp3" type="audio/mpeg">
+              Ваш прегледач не подржава аудио елемент.
+            </audio>
+
+            <form>
+                <span margin-right="2px">Време аларма</span>
+                <input autofocus id="vreme" type="time" step="1"/>
+                Укључи: <input type="checkbox" id="prekidac"/>
+            </form>
+            <script src="main.js"></script>
+        </body>
+    </html>
 
 .. activecode:: alarm_html_js
     :language: html
@@ -423,14 +564,14 @@
                     }
                     else {
                         clearInterval(tajmer);
-                    } 
+                    }
                 });
 
-                function sviraj() { 
-                    document.getElementById("muzikica").play(); 
+                function sviraj() {
+                    document.getElementById("muzikica").play();
                     document.getElementById("prekidac").checked = false;
                     clearInterval(tajmer);
-                } 
+                }
 
             </script>
     </html>

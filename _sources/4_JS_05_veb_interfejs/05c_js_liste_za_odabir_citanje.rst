@@ -27,10 +27,17 @@
 
 Дајемо и комплетан пример који можете да извршите. Сваким избором из листе се покреће анонимна *JavaScript* функција, у којој се проналази елемент ``<select>`` по идентификатору (``оквир``), чита се вредност из тренутно одабране ставке листе и онда се та вредност уписује као стил оквира елемента чији идентификатор је ``омот``.
 
-.. activecode:: izbor_okvira_iz_liste_html_js
-    :language: html
-    :nocodelens:
+.. petlja-editor:: izbor_okvira_iz_liste_html_js
 
+    main.js
+    const okvir = document.getElementById('okvir');
+    okvir.addEventListener('change', function(dogadjaj) {
+        const vrstaOkvira = okvir.value;
+        const omot = document.getElementById('omot');
+        omot.style.border = vrstaOkvira;
+    });
+    ~~~
+    index.html
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -39,13 +46,13 @@
         <body>
             <h2>Пример употребе елемента &lt;select&gt;</h2>
            
-            <div id="омот">
+            <div id="omot">
               <p>
                 Избором елемента из листе покреће се функција izabranOkvir(),
                 која подешава тип оквира око текста испод наслова и поља за избор.
               </p>
-              <label for="оквир">Одаберите тип оквира:</label>
-              <select id="оквир" name="border">
+              <label for="okvir">Одаберите тип оквира:</label>
+              <select id="okvir" name="border">
                 <option value="none">Без оквира</option>
                 <option value="solid">Пун оквир</option>
                 <option value="dashed">Оквир са цртицама</option>
@@ -54,15 +61,7 @@
               </select>
             </div>
          </body>
-        <script>
-
-            document.getElementById('оквир').addEventListener('change', function(dogadjaj) {
-                let vrstaOkvira = document.querySelector('#оквир').value;
-                let omot = document.querySelector('#омот');
-                omot.style.border = vrstaOkvira;
-            });
-
-        </script>
+        <script src="main.js"></script>
     </html>
     
 
