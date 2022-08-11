@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -424,128 +424,51 @@
 <h1>Текстуалне вредности и изрази<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Тип који садржи текстуалне вредности је тип <em>string</em>, па текстуалне вредности често називамо стринговима. Стрингови се пишу као низ слова и других симбола, наведених међу наводницима једне од три могуће врсте:</p>
 
-<div data-childcomponent="navodnici_js" class="course-box course-box-problem course-content">
+    <div id="navodnici_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(&apos;\u0408\u0435\u0434\u043d\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u0446\u0438 (\u0430\u043f\u043e\u0441\u0442\u0440\u043e\u0444\u0438)&apos;);\nalert(\"\u0414\u0432\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u0446\u0438\");\nalert(`\u041e\u0431\u0440\u043d\u0443\u0442\u0438 \u0430\u043f\u043e\u0441\u0442\u0440\u043e\u0444\u0438`);\nalert(`\u0420\u0435\u043a&apos;\u043e \u0458\u0435: \"\u0421\u0430\u0447\u0435\u043a\u0430\u0458 \u043c\u0435 \u0442\u0443!\" \u0438 \u043f\u043e\u0442\u0440\u0447&apos;\u043e.`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=navodnici_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert('Једноструки наводници (апострофи)');
-alert("Двоструки наводници");
-alert(`Обрнути апострофи`);
-alert(`Рек'о је: "Сачекај ме ту!" и потрч'о.`);
-</textarea>
-</div>
+    </div>
 <p>Обрнути апостроф (обрнути наводник, енгл. <em>backquote</em>) се на тастатурама обично налази лево од броја 1 (испод тастера <em>Esc</em>). Из последњег реда примера видимо да се наводници могу приказивати као и други симболи када се за означавање почетка и краја текста користи нека друга врста наводника. Наводници на почетку и крају текстуалног податка морају бити исте врсте.</p>
 <p>Када наводнике треба приказати као текст, то ћемо најједноставније учинити ако за почетак и крај стринга користимо наводнике неке друге врсте, као у последњем реду претходног примера. Ако је потребно, наводник се може појавити као део текста и између наводника своје врсте, али тада испред њега треба ставити знак <code class="docutils literal notranslate"><span class="pre">\</span></code>. На тај начин спречавамо да се наводник који желимо да прикажемо тумачи као крај стринга.</p>
 
-<div data-childcomponent="navodnici_escapechar_js" class="course-box course-box-problem course-content">
+    <div id="navodnici_escapechar_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(&apos;\u041f\u0440\u0432\u0438 \u043d\u0430\u0447\u0438\u043d: \u0410\u043f\u043e\u0441\u0442\u0440\u043e\u0444 \\&apos;, \u0434\u0432\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a \", \u043e\u0431\u0440\u043d\u0443\u0442\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a `&apos;);\nalert(\"\u0414\u0440\u0443\u0433\u0438 \u043d\u0430\u0447\u0438\u043d: \u0410\u043f\u043e\u0441\u0442\u0440\u043e\u0444 &apos;, \u0434\u0432\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a \\\", \u043e\u0431\u0440\u043d\u0443\u0442\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a `\");\nalert(`\u0422\u0440\u0435\u045b\u0438 \u043d\u0430\u0447\u0438\u043d: \u0410\u043f\u043e\u0441\u0442\u0440\u043e\u0444 &apos;, \u0434\u0432\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a \", \u043e\u0431\u0440\u043d\u0443\u0442\u0438 \u043d\u0430\u0432\u043e\u0434\u043d\u0438\u043a \\``);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=navodnici_escapechar_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert('Први начин: Апостроф \', двоструки наводник ", обрнути наводник `');
-alert("Други начин: Апостроф ', двоструки наводник \", обрнути наводник `");
-alert(`Трећи начин: Апостроф ', двоструки наводник ", обрнути наводник \``);
-</textarea>
-</div>
+    </div>
 <p>Изразе текстуалног типа најчешће формирамо надовезивањем стрингова (енгл. <em>string concatenation</em>), што се постиже употребом оператора <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p>
 
-<div data-childcomponent="concatenation_js" class="course-box course-box-problem course-content">
+    <div id="concatenation_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "x = &apos;Java&apos;\ny = \"Script\"\njs = x + \" \" + y;\nalert(js);         // Java Script\nalert(x + 2);      // Java2"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=concatenation_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-x = 'Java'
-y = "Script"
-js = x + " " + y;
-alert(js);         // Java Script
-alert(x + 2);      // Java2
-</textarea>
-</div>
+    </div>
 <p>Видимо да се оператор <code class="docutils literal notranslate"><span class="pre">+</span></code> може употребити и између стринга и броја. У том случају број ће бити претворен (конвертован) у одговарајући стринг (у примеру број <code class="docutils literal notranslate"><span class="pre">2</span></code> у стринг <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span></code>), а затим се врши надовезивање стрингова. Исто важи за надовезивање података било које друге врсте на стринг – они ће прво бити претворени у стринг (који садржи текстуалну репрезентацију исте вредности) а затим надовезани на претходни стринг.</p>
 <div class="section" id="id2">
 <h2>Форматирање исписа резултата<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Обрнути наводници имају и једну специјалну намену, по којој се разликују од апострофа и двоструких наводника. Наиме, користећи обрнуте наводнике, можемо да форматирамо исписивање резултата. Изразе које желимо да прикажемо треба навести унутар стринга између симбола <code class="docutils literal notranslate"><span class="pre">${</span></code> и <code class="docutils literal notranslate"><span class="pre">}</span></code>. Тако претходни пример можемо да напишемо и овако:</p>
 
-<div data-childcomponent="string_format_js" class="course-box course-box-problem course-content">
+    <div id="string_format_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "x = &apos;Java&apos;\ny = \"Script\"\njs = `${x} ${y}`;\nalert(js);         // Java Script\nalert(`${x}2`);    // Java2"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=string_format_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-x = 'Java'
-y = "Script"
-js = `${x} ${y}`;
-alert(js);         // Java Script
-alert(`${x}2`);    // Java2
-</textarea>
-</div>
+    </div>
 <p>Овакав начин прављења стринга се често користи, јер је на пример следећи израз који користи форматирање, на пример…</p>
 
-<div data-childcomponent="string_format_zbir1_js" class="course-box course-box-problem course-content">
+    <div id="string_format_zbir1_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let x = 2\nlet y = 3\nalert(`${x} + ${y} = ${x+y}`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=string_format_zbir1_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let x = 2
-let y = 3
-alert(`${x} + ${y} = ${x+y}`);
-</textarea>
-</div>
+    </div>
 <p>… прегледнији него (такође исправан) израз који користи надовезивање:</p>
 
-<div data-childcomponent="string_format_zbir2_js" class="course-box course-box-problem course-content">
+    <div id="string_format_zbir2_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let x = 2\nlet y = 3\nalert(x + \" + \" + y + \" = \" + (x+y));"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=string_format_zbir2_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let x = 2
-let y = 3
-alert(x + " + " + y + " = " + (x+y));
-</textarea>
-</div>
+    </div>
 <p>Наглашавамо да остале две врсте наводника не могу да се употребе за форматирање:</p>
 
-<div data-childcomponent="string_format_zbir3_js" class="course-box course-box-problem course-content">
+    <div id="string_format_zbir3_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let x = 2\nlet y = 3\nalert(&apos;${x} + ${y} = ${x+y}&apos;);\nalert(\"${x} + ${y} = ${x+y}\");"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=string_format_zbir3_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let x = 2
-let y = 3
-alert('${x} + ${y} = ${x+y}');
-alert("${x} + ${y} = ${x+y}");
-</textarea>
-</div>
+    </div>
 <p>Извршите сва три последња програмска сегмента да бисте боље разумели ову разлику.</p>
 <p>На основу свега реченог и датих примера јасно је да су обрнути наводници (бар по нечему) другачији од остале две врсте наводника. Осим тога, у већини програмских језика се користе само обични <code class="docutils literal notranslate"><span class="pre">'</span></code> и двоструки <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> наводници (у неким језицима равноправно, а у неким не), што обрнуте наводнике чини још више посебним. Због тога је <strong>уобичајено да се обрнути наводници користе само у ситуацијама када је потребно форматирати испис других података</strong>, мада сâм језик (као што смо видели) допушта и њихову употребу код обичних текстуалних података.</p>
 <hr class="docutils" />
 <p>Појединачне симболе (карактере) можемо да издвојимо из стринга користећи угласте заграде. Иза имена стринга треба у угластим заградама навести позицију жељеног карактера, водећи рачуна да се позиције броје од 0 (а не од 1). На пример, следећи програмчић исписује карактере са позиција 0 и 4 стринга „JavaScript“, а то су карактери „J“ и „S“.</p>
 
-<div data-childcomponent="indeksiranje_stringa_js" class="course-box course-box-problem course-content">
+    <div id="indeksiranje_stringa_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let jezik = &apos;JavaScript&apos;\nalert(jezik[0] + jezik[4]); // JS"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=indeksiranje_stringa_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let jezik = 'JavaScript'
-alert(jezik[0] + jezik[4]); // JS
-</textarea>
-</div>
+    </div>
 </div>
 </div>
 

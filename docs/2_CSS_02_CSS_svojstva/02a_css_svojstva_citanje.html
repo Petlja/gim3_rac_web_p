@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -430,11 +430,11 @@
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span> <span class="nt">12px</span>
 </pre></div>
 </div>
-<p>Постоји велики број својстава које можете поставити, а у овој лекцији ће бити објашњена нека најбитнија својства.</p>
+<p>Постоји велики број својстава које можете поставити, а у овој лекцији ће бити објашњена нека од најбитнијих својстава.</p>
 <div class="section" id="e-css">
 <h2>Често коришћенe вредности <em>CSS</em> својстава<a class="headerlink" href="#e-css" title="Permalink to this headline">¶</a></h2>
-<p>Вредности које се додељују својствима су најчешће неке специјалне речи. Скуп речи које се могу доделити својству као вредност зависи од самог својства, али неке вредности, као што су димензије и боје се често на исти начин дефинишу и додељују различитим својствима и зато ће овде бити укратко објашњене.</p>
-<p><strong>Вредности димензија</strong> су нумеричке вредности које се могу изразити као:</p>
+<p>Вредности које се додељују својствима су најчешће неке специјалне речи. Скуп речи које се могу доделити својству као вредност зависи од самог својства, али неке вредности, као што су димензије и боје, често се на исти начин дефинишу и додељују различитим својствима и зато ће овде бити укратко објашњене.</p>
+<p><strong>Вредности димензија</strong> су нумеричке вредности које се могу изразити:</p>
 <ul class="simple">
 <li><p>пикселима (нпр. <code class="docutils literal notranslate"><span class="pre">12px</span></code>),</p></li>
 <li><p>типографским тачкама (нпр. <code class="docutils literal notranslate"><span class="pre">10pt</span></code>),</p></li>
@@ -445,9 +445,9 @@
 <a class="reference external" href="https://www.w3schools.com/cssref/css_units.asp">страници о јединицама мере</a> сајта <em>W3CSchools</em>.</p>
 <p><strong>Вредности боја</strong> се могу дефинисати на више начина:</p>
 <ul class="simple">
-<li><p>Помоћу имена боја (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>)</p></li>
+<li><p>Помоћу имена боја (нпр. <code class="docutils literal notranslate"><span class="pre">red</span></code>, <code class="docutils literal notranslate"><span class="pre">blue</span></code>, <code class="docutils literal notranslate"><span class="pre">green</span></code>).</p></li>
 <li><p>Помоћу хексадецималних вредности боја, као на пример <code class="docutils literal notranslate"><span class="pre">#ff6347</span></code>. Прве две хексадецималне цифре означавају количину црвене, друге две количину зелене, а треће две количину плаве. Тако на пример, <code class="docutils literal notranslate"><span class="pre">#ff0000</span></code> означава црвену, а <code class="docutils literal notranslate"><span class="pre">#ffffff</span></code> белу боју.</p></li>
-<li><p>Помоћу вредности црвене, зелене и плаве нијансе без дефинисаног фактора непрозирности у облику <code class="docutils literal notranslate"><span class="pre">rgb(201,</span> <span class="pre">76,</span> <span class="pre">72)</span></code> (црвена: 201, зелена: 76, плава: 72) или са фактором непрозирности <code class="docutils literal notranslate"><span class="pre">rgba(201,</span> <span class="pre">76,</span> <span class="pre">72,</span> <span class="pre">0.3)</span></code> (0 за потптуно прозирну, тј. транспарентну боју, 1 за потпуно непрозирну).</p></li>
+<li><p>Помоћу вредности црвене, зелене и плаве нијансе без дефинисаног фактора непрозирности у облику <code class="docutils literal notranslate"><span class="pre">rgb(201,</span> <span class="pre">76,</span> <span class="pre">72)</span></code> (црвена: 201, зелена: 76, плава: 72), или са фактором непрозирности <code class="docutils literal notranslate"><span class="pre">rgba(201,</span> <span class="pre">76,</span> <span class="pre">72,</span> <span class="pre">0.3)</span></code> (0 за потптуно прозирну, тј. транспарентну боју, 1 за потпуно непрозирну).</p></li>
 <li><p>Помоћу <em>hsl</em> или <em>hsla</em> вредности. Прва три броја задају нијансу боје, засићеност и осветљеност, а четврти (код формата <em>hsla</em>) непрозирност, као код <em>rgba</em> формата.</p></li>
 </ul>
 <p>Више информација се може наћи на <a class="reference external" href="https://www.rapidtables.com/web/css/css-color.html">страници о бојама</a> сајта <em>W3CSchools</em>.</p>

@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -427,99 +427,31 @@
 <a class="reference internal image-reference" href="../_images/ucenik_kartoteka.png"><img alt="../_images/ucenik_kartoteka.png" class="align-center" src="../_images/ucenik_kartoteka.png" style="width: 600px;" /></a>
 <p>У језику <em>JavaScript</em> се овакви објекти праве тако што се у витичасте заграде ставе имена поља и вредности које ће бити у тим пољима:</p>
 
-<div data-childcomponent="js_objects_1" class="course-box course-box-problem course-content">
+    <div id="js_objects_1" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik1 = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    godiste: 1998,\n    telefon: \"012 345 678\"\n};\nlet ucenik2 = {\n    ime: \"\u041c\u0430\u0440\u043a\u043e \u041c\u0430\u0440\u043a\u043e\u0432\u0438\u045b\",\n    godiste: 1997,\n    telefon: \"098 765 432\"\n};\nalert(ucenik1.ime);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=js_objects_1 data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik1 = {
-    ime: "Петар Петровић",
-    godiste: 1998,
-    telefon: "012 345 678"
-};
-let ucenik2 = {
-    ime: "Марко Марковић",
-    godiste: 1997,
-    telefon: "098 765 432"
-};
-alert(ucenik1.ime);
-</textarea>
-</div>
+    </div>
 <p>Направили смо две променљиве (<code class="docutils literal notranslate"><span class="pre">ucenik1</span></code> и <code class="docutils literal notranslate"><span class="pre">ucenik2</span></code>) које садрже објекте. Имена поља морају да буду у складу са правилима именовања променљивих у Јаваскрипту (тј. да почињу словима, доларом или доњом цртом, а после могу да садрже и цифре), а вредности могу да буду бројеви, стрингови или вредности било којег другог типа, укључујући и друге објекте.</p>
 <p>Објекат можемо да направимо и тако што почнемо од потпуно празног објекта, a касније таквом објекту додајемо поља.</p>
 
-<div data-childcomponent="js_objects_2" class="course-box course-box-problem course-content">
+    <div id="js_objects_2" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {};\nucenik.ime = \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\";\nucenik.godiste = 1998;\nucenik.telefon = \"012 345 678\";\nalert(ucenik.ime);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=js_objects_2 data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {};
-ucenik.ime = "Петар Петровић";
-ucenik.godiste = 1998;
-ucenik.telefon = "012 345 678";
-alert(ucenik.ime);
-</textarea>
-</div>
+    </div>
 <p>Пољима у објекту се може приступити по имену коришћењем тачке (нпр. <code class="docutils literal notranslate"><span class="pre">ucenik.ime</span></code>).</p>
 <p>У следећем примеру можете да видите како се прави објекат, како се чита податак из њега и како се уписује вредност у неко поље објекта.</p>
 
-<div data-childcomponent="azuriranje_objekta_1_js" class="course-box course-box-problem course-content">
+    <div id="azuriranje_objekta_1_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    tel: \"012 345 678\",\n    razred: 6\n};\nlet razred = ucenik.razred;\nrazred = razred + 1;\nucenik.razred = razred;\nalert(ucenik.razred);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=azuriranje_objekta_1_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    ime: "Петар Петровић",
-    tel: "012 345 678",
-    razred: 6
-};
-let razred = ucenik.razred;
-razred = razred + 1;
-ucenik.razred = razred;
-alert(ucenik.razred);
-</textarea>
-</div>
+    </div>
 <p>У овом случају, вредност објекта је могла да буде промењена и једноставније:</p>
 
-<div data-childcomponent="azuriranje_objekta_2_js" class="course-box course-box-problem course-content">
+    <div id="azuriranje_objekta_2_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    tel: \"012 345 678\",\n    razred: 6\n};\nucenik.razred++;\nalert(ucenik.razred);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=azuriranje_objekta_2_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    ime: "Петар Петровић",
-    tel: "012 345 678",
-    razred: 6
-};
-ucenik.razred++;
-alert(ucenik.razred);
-</textarea>
-</div>
+    </div>
 <p>Ако покушамо да дохватимо вредност непостојећег поља у објекту, добићемо специјалну вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code>. Вредност <code class="docutils literal notranslate"><span class="pre">undefined</span></code> треба схватити као одсуство вредности.</p>
 
-<div data-childcomponent="nepostojece_polje_objekta_js" class="course-box course-box-problem course-content">
+    <div id="nepostojece_polje_objekta_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    tel: \"012 345 678\",\n    razred: 6\n};\nalert(ucenik.eposta);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=nepostojece_polje_objekta_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    ime: "Петар Петровић",
-    tel: "012 345 678",
-    razred: 6
-};
-alert(ucenik.eposta);
-</textarea>
-</div>
+    </div>
 
     <div class="note-wrapper infonote-type">
         <div class="note-icon-holder"> </div>
@@ -538,52 +470,19 @@ alert(ucenik.eposta);
 </div>
 <p>Приликом приказивања вредности објекта долази до претварања (конверзије) објекта у стринг, али не на нарочито користан начин:</p>
 
-<div data-childcomponent="ispisivanje_objekta_js" class="course-box course-box-problem course-content">
+    <div id="ispisivanje_objekta_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    tel: \"012 345 678\",\n    razred: 6\n};\nalert(ucenik);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=ispisivanje_objekta_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    ime: "Петар Петровић",
-    tel: "012 345 678",
-    razred: 6
-};
-alert(ucenik);
-</textarea>
-</div>
+    </div>
 <p>Да бисмо уместо резултата <code class="docutils literal notranslate"><span class="pre">[object</span> <span class="pre">Object]</span></code> добили смисленији запис објекта, треба писати:</p>
 
-<div data-childcomponent="ispisivanje_objekta_2_js" class="course-box course-box-problem course-content">
+    <div id="ispisivanje_objekta_2_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n    tel: \"012 345 678\",\n    razred: 6\n};\nalert(JSON.stringify(ucenik));"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=ispisivanje_objekta_2_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    ime: "Петар Петровић",
-    tel: "012 345 678",
-    razred: 6
-};
-alert(JSON.stringify(ucenik));
-</textarea>
-</div>
+    </div>
 <p>Обрнуто, ако је <code class="docutils literal notranslate"><span class="pre">s</span></code> стринг који садржи запис објекта, овако можемо да формирамо објекат на основу таквог стринга и да користимо поља тог објекта (важно је да су у стрингу називи поља и вредности баш под овим, двоструким наводницима, као у примеру):</p>
 
-<div data-childcomponent="ispisivanje_objekta_3_js" class="course-box course-box-problem course-content">
+    <div id="ispisivanje_objekta_3_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let s = &apos;{ \"ime\": \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\", \"tel\": \"012 345 678\", \"razred\": 6 }&apos;;\nlet ucenik = JSON.parse(s);\nalert(ucenik.ime);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=ispisivanje_objekta_3_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let s = '{ "ime": "Петар Петровић", "tel": "012 345 678", "razred": 6 }';
-let ucenik = JSON.parse(s);
-alert(ucenik.ime);
-</textarea>
-</div>
+    </div>
 
     <div class="note-wrapper infonote-type">
         <div class="note-icon-holder"> </div>
@@ -597,32 +496,9 @@ alert(ucenik.ime);
 <h2>Хијерархија објеката<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Поменули смо да вредности у објекту могу да буду други објекти. На тај начин објекти могу да формирају хијерархијску структуру. Ево како изгледа таква ситуација:</p>
 
-<div data-childcomponent="hijerarhija_objekta_js" class="course-box course-box-problem course-content">
+    <div id="hijerarhija_objekta_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {\n    licniPodaci: {\n        ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\",\n        tel: \"012 345 678\"\n    },\n    skola: {\n        razred: 6,\n        ocene: { srpski: 5, fizika: 4 },\n        izostanci: { opravdani: 27, neopravdani: 1 }\n    }\n};\n\n// \u0423\u0447\u0435\u043d\u0438\u043a \u0458\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u043e \u043d\u043e\u0432\u0438 \u043d\u0435\u043e\u043f\u0440\u0430\u0432\u0434\u0430\u043d\u0438 \u0438\u0437\u043e\u0441\u0442\u0430\u043d\u0430\u043a\nucenik.skola.izostanci.neopravdani++;\n\nalert(`\u0423\u0447\u0435\u043d\u0438\u043a ${ucenik.licniPodaci.ime} \u0438\u043c\u0430` +\n    ` ${ucenik.skola.izostanci.neopravdani} \u043d\u0435\u043e\u043f\u0440\u0430\u0432\u0434\u0430\u043d\u0438\u0445 \u0438\u0437\u043e\u0441\u0442\u0430\u043d\u0430\u043a\u0430.`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=hijerarhija_objekta_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {
-    licniPodaci: {
-        ime: "Петар Петровић",
-        tel: "012 345 678"
-    },
-    skola: {
-        razred: 6,
-        ocene: { srpski: 5, fizika: 4 },
-        izostanci: { opravdani: 27, neopravdani: 1 }
-    }
-};
-
-// Ученик је направио нови неоправдани изостанак
-ucenik.skola.izostanci.neopravdani++;
-
-alert(`Ученик ${ucenik.licniPodaci.ime} има` +
-    ` ${ucenik.skola.izostanci.neopravdani} неоправданих изостанака.`);
-</textarea>
-</div>
+    </div>
 </div>
 </div>
 

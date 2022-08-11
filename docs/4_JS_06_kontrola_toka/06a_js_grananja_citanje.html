@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -494,34 +494,9 @@
     </p></div></div>
 <p>Задатак можемо да решимо увођењем једне бројачке променљиве (то је променљива <em>brUspesnih</em>), а помоћу ње ћемо пребројати колико кандидата је положило тест.</p>
 
-<div data-childcomponent="pspTest_skracena_if_naredba_js" class="course-box course-box-problem course-content">
+    <div id="pspTest_skracena_if_naredba_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let poeni = 0, brUspesnih = 0;\n\npoeni = parseInt(prompt(&apos;\u041d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u043e\u0435\u043d\u0438 \u043f\u0440\u0432\u043e\u0433 \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0430: &apos;));\nif (poeni &lt;= 3)\n    brUspesnih++;\n\npoeni = parseInt(prompt(&apos;\u041d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u043e\u0435\u043d\u0438 \u0434\u0440\u0443\u0433\u043e\u0433 \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0430: &apos;));\nif (poeni &lt;= 3)\n    brUspesnih++;\n\npoeni = parseInt(prompt(&apos;\u041d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u043e\u0435\u043d\u0438 \u0442\u0440\u0435\u045b\u0435\u0433 \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0430: &apos;));\nif (poeni &lt;= 3)\n    brUspesnih++;\n\npoeni = parseInt(prompt(&apos;\u041d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438 \u043f\u043e\u0435\u043d\u0438 \u0447\u0435\u0442\u0432\u0440\u0442\u043e\u0433 \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0430: &apos;));\nif (poeni &lt;= 3)\n    brUspesnih++;\n\nalert(`\u0422\u0435\u0441\u0442 \u0458\u0435 \u043f\u043e\u043b\u043e\u0436\u0438\u043b\u043e ${brUspesnih} \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0430.`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=pspTest_skracena_if_naredba_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let poeni = 0, brUspesnih = 0;
-
-poeni = parseInt(prompt('Негативни поени првог кандидата: '));
-if (poeni <= 3)
-    brUspesnih++;
-
-poeni = parseInt(prompt('Негативни поени другог кандидата: '));
-if (poeni <= 3)
-    brUspesnih++;
-
-poeni = parseInt(prompt('Негативни поени трећег кандидата: '));
-if (poeni <= 3)
-    brUspesnih++;
-
-poeni = parseInt(prompt('Негативни поени четвртог кандидата: '));
-if (poeni <= 3)
-    brUspesnih++;
-
-alert(`Тест је положило ${brUspesnih} кандидата.`);
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -553,21 +528,9 @@ alert(`Тест је положило ${brUspesnih} кандидата.`);
     </p></div></div>
 <p>У наставку је дат програм који решава задатак:</p>
 
-<div data-childcomponent="puna_if_naredba_js" class="course-box course-box-problem course-content">
+    <div id="puna_if_naredba_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const sada = new Date();\nconst dan = sada.getDay();\nif (dan == 0 || dan == 6)\n    alert(\"\u0414\u0430\u043d\u0430\u0441 \u0458\u0435 \u0432\u0438\u043a\u0435\u043d\u0434.\");\nelse\n    alert(\"\u0414\u0430\u043d\u0430\u0441 \u0458\u0435 \u0440\u0430\u0434\u043d\u0438 \u0434\u0430\u043d.\");"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=puna_if_naredba_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-const sada = new Date();
-const dan = sada.getDay();
-if (dan == 0 || dan == 6)
-    alert("Данас је викенд.");
-else
-    alert("Данас је радни дан.");
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -604,25 +567,9 @@ else
     </p></div></div>
 <p>Следи програм који решава задатак:</p>
 
-<div data-childcomponent="produzena_if_naredba_js" class="course-box course-box-problem course-content">
+    <div id="produzena_if_naredba_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const sada = new Date();\nconst sati = sada.getHours();\nlet pozdrav;\nif (sati &lt; 10)\n    pozdrav = \"\u0414\u043e\u0431\u0440\u043e \u0458\u0443\u0442\u0440\u043e!\"\nelse if (sati &lt; 18)\n    pozdrav = \"\u0414\u043e\u0431\u0430\u0440 \u0434\u0430\u043d!\"\nelse\n    pozdrav = \"\u0414\u043e\u0431\u0440\u043e \u0432\u0435\u0447\u0435!\"\nalert(pozdrav);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=produzena_if_naredba_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-const sada = new Date();
-const sati = sada.getHours();
-let pozdrav;
-if (sati < 10)
-    pozdrav = "Добро јутро!"
-else if (sati < 18)
-    pozdrav = "Добар дан!"
-else
-    pozdrav = "Добро вече!"
-alert(pozdrav);
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -648,42 +595,9 @@ alert(pozdrav);
     </p></div></div>
 <p>Један од начина да решимо овај задатак је дат следећим прoграмом:</p>
 
-<div data-childcomponent="skracene_if_naredbe_lepo_vreme_js" class="course-box course-box-problem course-content">
+    <div id="skracene_if_naredbe_lepo_vreme_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let biloLepoVreme = false;\n\nconst tempBeograd = parseInt(prompt(&apos;\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430 \u0443 \u0411\u0435\u043e\u0433\u0440\u0430\u0434\u0443: &apos;));\nconst tempNoviSad = parseInt(prompt(&apos;\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430 \u0443 \u041d\u043e\u0432\u0438\u043c \u0421\u0430\u0434\u0443: &apos;));\nconst tempNis = parseInt(prompt(&apos;\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430 \u0443 \u041d\u0438\u0448\u0443: &apos;));\nlet odgovor = &apos;&apos;;\n\nif (tempBeograd &gt;= 20 &amp;&amp; tempBeograd &lt;= 27)\n{\n    odgovor = `\u0411\u0435\u043e\u0433\u0440\u0430\u0434: ${tempBeograd}`;\n    biloLepoVreme = true;\n}\nelse if (tempNoviSad &gt;= 20 &amp;&amp; tempNoviSad &lt;= 27)\n{\n    odgovor = `\u041d\u043e\u0432\u0438 \u0421\u0430\u0434: ${tempNoviSad}`;\n    biloLepoVreme = true;\n}\nelse if (tempNis &gt;= 20 &amp;&amp; tempNis &lt;= 27)\n{\n    odgovor = `\u041d\u0438\u0448: ${tempNis}`;\n    biloLepoVreme = true;\n}\n\nif (!biloLepoVreme)\n    odgovor = \"\u041d\u0438\u0458\u0435 \u0431\u0438\u043b\u043e \u043b\u0435\u043f\u043e \u0432\u0440\u0435\u043c\u0435.\";\n\nalert(odgovor);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=skracene_if_naredbe_lepo_vreme_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let biloLepoVreme = false;
-
-const tempBeograd = parseInt(prompt('Температура у Београду: '));
-const tempNoviSad = parseInt(prompt('Температура у Новим Саду: '));
-const tempNis = parseInt(prompt('Температура у Нишу: '));
-let odgovor = '';
-
-if (tempBeograd >= 20 && tempBeograd <= 27)
-{
-    odgovor = `Београд: ${tempBeograd}`;
-    biloLepoVreme = true;
-}
-else if (tempNoviSad >= 20 && tempNoviSad <= 27)
-{
-    odgovor = `Нови Сад: ${tempNoviSad}`;
-    biloLepoVreme = true;
-}
-else if (tempNis >= 20 && tempNis <= 27)
-{
-    odgovor = `Ниш: ${tempNis}`;
-    biloLepoVreme = true;
-}
-
-if (!biloLepoVreme)
-    odgovor = "Није било лепо време.";
-
-alert(odgovor);
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -714,25 +628,9 @@ alert(odgovor);
     </p></div></div>
 <p>Преписаћемо два дата објекта и упоредићемо поља у којима су уписани разреди. Ако је разред првог ученика већи, он је старији и приказаћемо његово име. У супротном, проверавамо да ли је други ученик старији и ако јесте, приказујемо његово име. Ако ни тај услов није испуњен, исписујемо да су та два ученика вршњаци.</p>
 
-<div data-childcomponent="stariji_ucenik_js" class="course-box course-box-problem course-content">
+    <div id="stariji_ucenik_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik1 = { ime: \"\u041f\u0435\u0442\u0430\u0440 \u041f\u0435\u0442\u0440\u043e\u0432\u0438\u045b\", tel: \"012 345 678\", razr: 6 };\nlet ucenik2 = { ime: \"\u041c\u0430\u0440\u043a\u043e \u041c\u0430\u0440\u043a\u043e\u0432\u0438\u045b\", tel: \"098 765 432\", razr: 4 };\n\nif (ucenik1.razr &gt; ucenik2.razr) {\n    alert(`\u0423\u0447\u0435\u043d\u0438\u043a ${ucenik1.ime} \u0458\u0435 \u0441\u0442\u0430\u0440\u0438\u0458\u0438`)\n} else if (ucenik1.razr &lt; ucenik2.razr) {\n    alert(`\u0423\u0447\u0435\u043d\u0438\u043a ${ucenik2.ime} \u0458\u0435 \u0441\u0442\u0430\u0440\u0438\u0458\u0438`)\n} else {\n    alert(`\u0423\u0447\u0435\u043d\u0438\u0446\u0438 ${ucenik1.ime} \u0438 ${ucenik2.ime} \u0441\u0443 \u0432\u0440\u0448\u045a\u0430\u0446\u0438`)\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=stariji_ucenik_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik1 = { ime: "Петар Петровић", tel: "012 345 678", razr: 6 };
-let ucenik2 = { ime: "Марко Марковић", tel: "098 765 432", razr: 4 };
-
-if (ucenik1.razr > ucenik2.razr) {
-    alert(`Ученик ${ucenik1.ime} је старији`)
-} else if (ucenik1.razr < ucenik2.razr) {
-    alert(`Ученик ${ucenik2.ime} је старији`)
-} else {
-    alert(`Ученици ${ucenik1.ime} и ${ucenik2.ime} су вршњаци`)
-}
-</textarea>
-</div>
+    </div>
 <p>Испробајте решење за разне вредности разреда ученика у прва два реда програма.</p>
 
     <div class="course-box course-box-special">
@@ -765,34 +663,9 @@ if (ucenik1.razr > ucenik2.razr) {
 <p>Честитка може да стане у коверту на два начина, као што показује слика. Та два начина можемо да сведемо на један, ако обезбедимо да је и код честитке и код коверте прва димензија мања а друга већа (или су једнаке). Након тога је довољно проверити да ли је прва димензија честитке мања од прве димензије коверте и друга димензија честитке мања од друге димензије коверте. Наиме, уколико честитка не може да стане у коверту на тај начин, неће моги ни на преостали начин (зашто?).</p>
 <p>Функцја <em>poRedu</em> прихвата два параметра и враћа их редом по величини (први резултат једнак је мањем од два параметра, а други већем).</p>
 
-<div data-childcomponent="koverta_i_cestitka_js" class="course-box course-box-problem course-content">
+    <div id="koverta_i_cestitka_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function poRedu(a, b) {\n    if (a &gt; b) return [b, a];\n\n    return [a, b];\n}\n\nlet cestitka_a = parseInt(prompt(`\u0428\u0438\u0440\u0438\u043d\u0430 \u0447\u0435\u0441\u0442\u0438\u0442\u043a\u0435:`));\nlet cestitka_b = parseInt(prompt(`\u0414\u0443\u0436\u0438\u043d\u0430 \u0447\u0435\u0441\u0442\u0438\u0442\u043a\u0435:`));\nlet koverta_a = parseInt(prompt(`\u0428\u0438\u0440\u0438\u043d\u0430 \u043a\u043e\u0432\u0435\u0440\u0442\u0435:`));\nlet koverta_b = parseInt(prompt(`\u0414\u0443\u0436\u0438\u043d\u0430 \u043a\u043e\u0432\u0435\u0440\u0442\u0435:`));\n\n[cestitka_a, cestitka_b] = poRedu(cestitka_a, cestitka_b);\n[koverta_a, koverta_b] = poRedu(koverta_a, koverta_b);\n\nif (cestitka_a &lt; koverta_a &amp;&amp; cestitka_b &lt; koverta_b) {\n    alert(&apos;\u0427\u0435\u0441\u0442\u0438\u0442\u043a\u0430 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0442\u0430\u043d\u0435 \u0443 \u043a\u043e\u0432\u0435\u0440\u0442\u0443&apos;);\n} else {\n    alert(&apos;\u0427\u0435\u0441\u0442\u0438\u0442\u043a\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0442\u0430\u043d\u0435 \u0443 \u043a\u043e\u0432\u0435\u0440\u0442\u0443&apos;);\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=koverta_i_cestitka_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-function poRedu(a, b) {
-    if (a > b) return [b, a];
-
-    return [a, b];
-}
-
-let cestitka_a = parseInt(prompt(`Ширина честитке:`));
-let cestitka_b = parseInt(prompt(`Дужина честитке:`));
-let koverta_a = parseInt(prompt(`Ширина коверте:`));
-let koverta_b = parseInt(prompt(`Дужина коверте:`));
-
-[cestitka_a, cestitka_b] = poRedu(cestitka_a, cestitka_b);
-[koverta_a, koverta_b] = poRedu(koverta_a, koverta_b);
-
-if (cestitka_a < koverta_a && cestitka_b < koverta_b) {
-    alert('Честитка може да стане у коверту');
-} else {
-    alert('Честитка не може да стане у коверту');
-}
-</textarea>
-</div>
+    </div>
 </div>
 </div>
 

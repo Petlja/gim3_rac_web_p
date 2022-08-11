@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -463,50 +463,9 @@
 <p>Назив догађаја је осетљив на мала и велика слова и важно је да буде написан тачно како је наведено.</p>
 <p>Следећи <em>HTML</em> кôд садржи пример коришћења догађаја <code class="docutils literal notranslate"><span class="pre">click</span></code>, <code class="docutils literal notranslate"><span class="pre">mouseenter</span></code> и <code class="docutils literal notranslate"><span class="pre">mouseout</span></code>. Покрените пример и испробајте функционисање догађаја. Да не бисте мењали положај миша при затварању <code class="docutils literal notranslate"><span class="pre">alert</span></code> дијалога, за затварање користите тастер <em>Enter</em> или тастер <em>Escape</em>.</p>
 
-<div data-childcomponent="dogadjaji_paragraf_html" class="course-box course-box-problem course-content">
+    <div id="dogadjaji_paragraf_html" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function klik(dogadjaj) {\n    alert(`\u041a\u043b\u0438\u043a\u043d\u0443\u043b\u0438 \u0441\u0442\u0435 \u043d\u0430 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0443 \u043a\u043e\u043c\u0435 \u043f\u0438\u0448\u0435 \"${dogadjaj.currentTarget.innerText}\"`);\n}\n\nfunction dolazakMisa(dogadjaj) {\n    alert(`\u041d\u0430\u0438\u0448\u043b\u0438 \u0441\u0442\u0435 \u043c\u0438\u0448\u0435\u043c \u043d\u0430 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0443 \u043a\u043e\u043c\u0435 \u043f\u0438\u0448\u0435 \"${dogadjaj.currentTarget.innerText}\"`);\n}\n\nfunction odlazakMisa(dogadjaj) {\n    alert(`\u041d\u0430\u043f\u0443\u0441\u0442\u0438\u043b\u0438 \u0441\u0442\u0435 \u043c\u0438\u0448\u0435\u043c \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444 \u0443 \u043a\u043e\u043c\u0435 \u043f\u0438\u0448\u0435 \"${dogadjaj.currentTarget.innerText}\"`);\n}\n\nconst p1 = document.getElementById(&apos;prvi&apos;);\np1.addEventListener(&apos;click&apos;, klik);\n\nconst p2 = document.getElementById(&apos;drugi&apos;);\np2.addEventListener(&apos;click&apos;, klik);\np2.addEventListener(&apos;mouseenter&apos;, dolazakMisa);\np2.addEventListener(&apos;mouseout&apos;, odlazakMisa);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0414\u043e\u0433\u0430\u0452\u0430\u0458\u0438&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h2&gt;\u041f\u0440\u0438\u043c\u0435\u0440 \u0434\u0435\u0444\u0438\u043d\u0438\u0441\u0430\u045a\u0430 \u0434\u043e\u0433\u0430\u0452\u0430\u0458\u0430&lt;/h2&gt;\n\n        &lt;p id=\"prvi\"&gt;\u041a\u043b\u0438\u043a\u043d\u0438 \u043d\u0430 \u043e\u0432\u0430\u0458 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444.&lt;/p&gt;\n        &lt;p id=\"drugi\"&gt;\u041a\u043b\u0438\u043a\u043d\u0438 \u0438\u043b\u0438 \u043f\u0440\u0435\u0452\u0438 \u043c\u0438\u0448\u0435\u043c \u043f\u0440\u0435\u043a\u043e \u043e\u0432\u043e\u0433 \u043f\u0430\u0440\u0430\u0433\u0440\u0430\u0444\u0430.&lt;/p&gt;\n\n        &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=dogadjaji_paragraf_html data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Догађаји&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h2&gt;Пример дефинисања догађаја&lt;/h2&gt;
-
-        &lt;p id=&quot;prvi&quot;&gt;Кликни на овај параграф.&lt;/p&gt;
-        &lt;p id=&quot;drugi&quot;&gt;Кликни или пређи мишем преко овог параграфа.&lt;/p&gt;
-     &lt;/body&gt;
-    &lt;script&gt;
-
-        function klik(dogadjaj) {
-            alert(`Кликнули сте на параграф у коме пише &quot;${dogadjaj.currentTarget.innerText}&quot;`);
-        }
-
-        function dolazakMisa(dogadjaj) {
-            alert(`Наишли сте мишем на параграф у коме пише &quot;${dogadjaj.currentTarget.innerText}&quot;`);
-        }
-
-        function odlazakMisa(dogadjaj) {
-            alert(`Напустили сте мишем параграф у коме пише &quot;${dogadjaj.currentTarget.innerText}&quot;`);
-        }
-
-        const p1 = document.getElementById(&#x27;prvi&#x27;);
-        p1.addEventListener(&#x27;click&#x27;, klik);
-
-        const p2 = document.getElementById(&#x27;drugi&#x27;);
-        p2.addEventListener(&#x27;click&#x27;, klik);
-        p2.addEventListener(&#x27;mouseenter&#x27;, dolazakMisa);
-        p2.addEventListener(&#x27;mouseout&#x27;, odlazakMisa);
-
-    &lt;/script&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <p>У овом примеру функције <code class="docutils literal notranslate"><span class="pre">klik</span></code>, <code class="docutils literal notranslate"><span class="pre">dolazakMisa</span></code> и <code class="docutils literal notranslate"><span class="pre">odlazakMisa</span></code> се позивају када наступи одговарајући догађај. Ове функције као параметар добијају објекат који садржи информације о догађају. Између осталог, поље <code class="docutils literal notranslate"><span class="pre">currentTarget</span></code> овог објекта представља <em>HTML</em> елемент на коме се десио догађај. На тај начин функција „зна“ одакле је позвана и може да прочита вредности атрибута или текстуални садржај прослеђеног елемента.</p>
 <p><em>JavaScript</em> објекти који представљају <em>HTML</em> елементе имају поље <code class="docutils literal notranslate"><span class="pre">innerHTML</span></code>, које представља садржај елемента. Коришћењем овог поља, функција може не само да чита него и да мења садржај елемента. Испробајте!</p>
 
@@ -526,34 +485,9 @@
 <p>Постоје догађаји који су везани за сам документ, па би за њих користили  методу <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code>. И у овом случају ћемо методи <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code> прослеђивати два аргумента: назив догађаја и назив функције коју на тај догађај желимо да извршимо.</p>
 <p>На пример, догађај <code class="docutils literal notranslate"><span class="pre">DOMContentLoaded</span></code> наступа када се садржај стране учита у објектни модел. Овом догађају можемо да придружимо функцију <code class="docutils literal notranslate"><span class="pre">ucitan</span></code> на следећи начин:</p>
 
-<div data-childcomponent="dogadjaji_domcontentloaded" class="course-box course-box-problem course-content">
+    <div id="dogadjaji_domcontentloaded" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function ucitan() {\n  const paragraf = document.querySelector(&apos;p&apos;);\n  paragraf.style.color = &apos;red&apos;;\n}\n\ndocument.addEventListener(&apos;DOMContentLoaded&apos;, ucitan);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;\u0414\u043e\u0433\u0430\u0452\u0430\u0458\u0438&lt;/title&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=dogadjaji_domcontentloaded data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Догађаји&lt;/title&gt;
-    &lt;script&gt;
-
-      function ucitan() {
-        const paragraf = document.querySelector(&#x27;p&#x27;);
-        paragraf.style.color = &#x27;red&#x27;;
-      }
-
-      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitan);
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Садржај стране&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <p>Овим постижемо да се функција <code class="docutils literal notranslate"><span class="pre">ucitan</span></code> изврши након учитавања стране у објектни модел. На овај начин можемо да извршавамо и разна почетна подешавања изгледа и садржаја веб-стране из <em>JavaScript</em> кôда убрзо по отварању те стране.</p>
 
     <div class="note-wrapper infonote-type">
@@ -570,42 +504,9 @@
 <h2>Периодично извршавање<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Осим методе <code class="docutils literal notranslate"><span class="pre">document.addEventListener</span></code> можемо да користимо и методу <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>. Ова метода се користи када неку <em>JavaScript</em> функцију желимо да извршавамо периодично, на сваких <em>n</em> милисекунди. Први аргумент методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> је име функције коју извршавамо, а други аргумент је интервал у милисекундама између узастопних покретања функције. Извршавањем методе <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> постижемо да се догађај часовника који је повезан са наведеном <em>JavaScript</em> функцијом генерише у задатим интервалима.</p>
 
-<div data-childcomponent="dogadjaji_set_interval" class="course-box course-box-problem course-content">
+    <div id="dogadjaji_set_interval" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const boje = [&apos;red&apos;, &apos;green&apos;, &apos;blue&apos;];\nlet trenutna = 0;\n\nfunction promeniBoju() {\n  const paragraf = document.querySelector(&apos;p&apos;);\n  paragraf.style.color = boje[trenutna];\n  trenutna = (trenutna + 1) % boje.length;\n}\n\nfunction ucitaj() {\n  setInterval(promeniBoju, 1000);\n}\n\ndocument.addEventListener(&apos;DOMContentLoaded&apos;, ucitaj);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;\u0414\u043e\u0433\u0430\u0452\u0430\u0458\u0438&lt;/title&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=dogadjaji_set_interval data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Догађаји&lt;/title&gt;
-    &lt;script&gt;
-
-      const boje = [&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;];
-      let trenutna = 0;
-
-      function promeniBoju() {
-        const paragraf = document.querySelector(&#x27;p&#x27;);
-        paragraf.style.color = boje[trenutna];
-        trenutna = (trenutna + 1) % boje.length;
-      }
-
-      function ucitaj() {
-        setInterval(promeniBoju, 1000);
-      }
-
-      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitaj);
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Садржај стране&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <p>У овом примеру постижемо да се догађај који покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code> генерише на сваких 1000 милисекунди, тј. једном у секунди. Свако генерисање овог догађаја покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code>.</p>
 <p>Ако постоји потреба да се касније престане са генерисањем овог догађаја, запамтићемо вредност коју враћа метода <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>…</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">tiktanje</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">promeniBoju</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
@@ -613,51 +514,9 @@
 </div>
 <p>…а на другом месту у кôду можемо на овај начин да прекинемо са генерисањем догађаја који покреће функцију <code class="docutils literal notranslate"><span class="pre">promeniBoju</span></code>:</p>
 
-<div data-childcomponent="dogadjaji_clear_interval" class="course-box course-box-problem course-content">
+    <div id="dogadjaji_clear_interval" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const boje = [&apos;red&apos;, &apos;green&apos;, &apos;blue&apos;];\nlet trenutna = 0;\nlet intervalId = 0;\n\nfunction promeniBoju() {\n  const paragraf = document.querySelector(&apos;p&apos;);\n  paragraf.style.color = boje[trenutna];\n  trenutna = (trenutna + 1) % boje.length;\n}\n\nfunction zaustavi() {\n  clearInterval(intervalId);\n}\n\nfunction ucitaj() {\n  intervalId = setInterval(promeniBoju, 1000);\n\n  const dugme = document.querySelector(&apos;button&apos;);\n  dugme.addEventListener(&apos;click&apos;, zaustavi);\n}\n\ndocument.addEventListener(&apos;DOMContentLoaded&apos;, ucitaj);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;\u0414\u043e\u0433\u0430\u0452\u0430\u0458\u0438&lt;/title&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435&lt;/p&gt;\n    &lt;button&gt;\u0421\u0442\u0430\u043d\u0438&lt;/button&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=dogadjaji_clear_interval data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Догађаји&lt;/title&gt;
-    &lt;script&gt;
-
-      const boje = [&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;];
-      let trenutna = 0;
-      let intervalId = 0;
-
-      function promeniBoju() {
-        const paragraf = document.querySelector(&#x27;p&#x27;);
-        paragraf.style.color = boje[trenutna];
-        trenutna = (trenutna + 1) % boje.length;
-      }
-
-      function zaustavi() {
-        clearInterval(intervalId);
-      }
-
-      function ucitaj() {
-        intervalId = setInterval(promeniBoju, 1000);
-
-        const dugme = document.querySelector(&#x27;button&#x27;);
-        dugme.addEventListener(&#x27;click&#x27;, zaustavi);
-      }
-
-      document.addEventListener(&#x27;DOMContentLoaded&#x27;, ucitaj);
-
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Садржај стране&lt;/p&gt;
-    &lt;button&gt;Стани&lt;/button&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -728,6 +587,10 @@
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div id="vece_i_manje_slike_html" class="petlja-editor" data='{"js": {"name": "main.js", "source": "// funkcija menja velicinu slike\nfunction vel(slika, faktor) {\n    slika.style.width = `${slika.naturalWidth * faktor}px`;\n    slika.style.height = `${slika.naturalHeight * faktor}px`;\n}\n\nfunction dolazakMisa(dogadjaj) {\n    vel(dogadjaj.currentTarget, 2);\n}\nfunction odlazakMisa(dogadjaj) {\n    vel(dogadjaj.currentTarget, 1);\n}\n\ndocument.getElementById(&apos;emo1&apos;).addEventListener(&apos;mouseenter&apos;, dolazakMisa);\ndocument.getElementById(&apos;emo1&apos;).addEventListener(&apos;mouseout&apos;, odlazakMisa);\ndocument.getElementById(&apos;emo2&apos;).addEventListener(&apos;mouseenter&apos;, dolazakMisa);\ndocument.getElementById(&apos;emo2&apos;).addEventListener(&apos;mouseout&apos;, odlazakMisa);\ndocument.getElementById(&apos;emo3&apos;).addEventListener(&apos;mouseenter&apos;, dolazakMisa);\ndocument.getElementById(&apos;emo3&apos;).addEventListener(&apos;mouseout&apos;, odlazakMisa);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0421\u043b\u0438\u043a\u0435&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h2&gt;\u041f\u043e\u0432\u0435\u045b\u0430\u0432\u0430\u045a\u0435 \u0438 \u0441\u043c\u0430\u045a\u0438\u0432\u0430\u045a\u0435 \u0441\u043b\u0438\u043a\u0430&lt;/h2&gt;\n\n        &lt;img id=\"emo1\" src=\"../_images/emo1.png\" alt=\"Prva slika\"&gt;\n        &lt;img id=\"emo2\" src=\"../_images/emo2.png\" alt=\"Druga slika\"&gt;\n        &lt;img id=\"emo3\" src=\"../_images/emo3.png\" alt=\"Treca slika\"&gt;\n\n        &lt;p&gt; \u041f\u043e\u0437\u0438\u0446\u0438\u043e\u043d\u0438\u0440\u0430\u045a\u0435\u043c \u043c\u0438\u0448\u0430 \u043d\u0430 \u0441\u043b\u0438\u043a\u0443, \u043e\u043d\u0430 \u0441\u0435 \u0443\u0432\u0435\u045b\u0430\u0432\u0430. &lt;/p&gt;\n     &lt;/body&gt;\n    &lt;script src=\"main.html\"&gt;&lt;/script&gt;\n&lt;/html&gt;"}}'>
+
+    </div>
 </div>
 </div>
 <div class="section" id="id6">
@@ -792,6 +655,10 @@
 &lt;/html&gt;
 </textarea>
 </div>
+
+    <div id="vece_i_manje_slike_anonimne_funkcije_html" class="petlja-editor" data='{"js": {"name": "main.js", "source": "// funkcija menja velicinu slike\nfunction vel(slika, faktor) {\n    slika.style.width = `${slika.naturalWidth * faktor}px`;\n    slika.style.height = `${slika.naturalHeight * faktor}px`;\n}\n\nlet sl1 = document.getElementById(&apos;emo1&apos;);\nsl1.addEventListener(&apos;mouseenter&apos;, function(dogadjaj) {\n    vel(sl1, 2);\n});\nsl1.addEventListener(&apos;mouseout&apos;, function(dogadjaj) {\n    vel(sl1, 1);\n});\n\nlet sl2 = document.getElementById(&apos;emo2&apos;);\nsl2.addEventListener(&apos;mouseenter&apos;, function(dogadjaj) {\n    vel(sl2, 2);\n});\nsl2.addEventListener(&apos;mouseout&apos;, function(dogadjaj) {\n    vel(sl2, 1);\n});\n\nlet sl3 = document.getElementById(&apos;emo3&apos;);\nsl3.addEventListener(&apos;mouseenter&apos;, function(dogadjaj) {\n    vel(sl3, 2);\n});\nsl3.addEventListener(&apos;mouseout&apos;, function(dogadjaj) {\n    vel(sl3, 1);\n});"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0421\u043b\u0438\u043a\u0435&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h2&gt;\u041f\u043e\u0432\u0435\u045b\u0430\u0432\u0430\u045a\u0435 \u0438 \u0441\u043c\u0430\u045a\u0438\u0432\u0430\u045a\u0435 \u0441\u043b\u0438\u043a\u0430&lt;/h2&gt;\n\n        &lt;img id=\"emo1\" src=\"../_images/emo1.png\" alt=\"Prva slika\" &gt;\n        &lt;img id=\"emo2\" src=\"../_images/emo2.png\" alt=\"Druga slika\"&gt;\n        &lt;img id=\"emo3\" src=\"../_images/emo3.png\" alt=\"Treca slika\"&gt;\n\n        &lt;p&gt; \u041f\u043e\u0437\u0438\u0446\u0438\u043e\u043d\u0438\u0440\u0430\u045a\u0435\u043c \u043c\u0438\u0448\u0430 \u043d\u0430 \u0441\u043b\u0438\u043a\u0443, \u043e\u043d\u0430 \u0441\u0435 \u0443\u0432\u0435\u045b\u0430\u0432\u0430. &lt;/p&gt;\n    &lt;/body&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n&lt;/html&gt;"}}'>
+
+    </div>
 </div>
 </div>
 

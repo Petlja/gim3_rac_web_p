@@ -271,7 +271,7 @@ lessons:
     file: 03b_css_selektori_identifikator_citanje.html
     guid: 6e3b1ceb-98c7-478c-9c77-a21d49a89adc
     src: 03b_css_selektori_identifikator_citanje.rst
-    title: Стилизовање идентификатора
+    title: Стилизовање елемената по идентификатору
     type: reading
   - description: ''
     file: 03c_css_selektori_klase_citanje.html

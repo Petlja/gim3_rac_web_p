@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -427,33 +427,9 @@
 <p>Елемент <code class="docutils literal notranslate"><span class="pre">&lt;label&gt;</span></code> представља текст који описује шта треба унети у поље за унос. Елементи овог типа имају атрибут <code class="docutils literal notranslate"><span class="pre">for</span></code>, који садржи вредност имена (атрибут <code class="docutils literal notranslate"><span class="pre">name</span></code> у пољу за унос) поља за унос на ког се односи. Овај елемент није само текст. Када кликнете на овај елемент, фокус ће се поставити на поље за које је везан, тако да можете да почнете да уносите податак.</p>
 <p>У следећем примеру можете да испробате четири поља за унос података:</p>
 
-<div data-childcomponent="polja_za_unos_html" class="course-box course-box-problem course-content">
+    <div id="polja_za_unos_html" class="petlja-editor" data='{"html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;label for=\"ime\"&gt;\u0418\u043c\u0435:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"text\" id=\"ime\" name=\"ime\"&gt;&lt;br&gt;\n\n    &lt;label for=\"prezime\"&gt;\u041f\u0440\u0435\u0437\u0438\u043c\u0435:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"text\" id=\"prezime\" name=\"prezime\"&gt;&lt;br&gt;\n\n    &lt;label for=\"ocena\"&gt;\u041e\u0446\u0435\u043d\u0430 (\u0438\u0437\u043c\u0435\u0452\u0443 1 \u0438 5):&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"number\" id=\"ocena\" name=\"ocena\" min=\"1\" max=\"5\"&gt;&lt;br&gt;\n\n    &lt;label for=\"datum\"&gt;\u0414\u0430\u0442\u0443\u043c \u0443\u043d\u043e\u0441\u0430:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"date\" id=\"datum\" name=\"datum\"&gt;&lt;br&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=polja_za_unos_html data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;label for=&quot;ime&quot;&gt;Име:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;text&quot; id=&quot;ime&quot; name=&quot;ime&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;prezime&quot;&gt;Презиме:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;text&quot; id=&quot;prezime&quot; name=&quot;prezime&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;ocena&quot;&gt;Оцена (између 1 и 5):&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;number&quot; id=&quot;ocena&quot; name=&quot;ocena&quot; min=&quot;1&quot; max=&quot;5&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;datum&quot;&gt;Датум уноса:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;date&quot; id=&quot;datum&quot; name=&quot;datum&quot;&gt;&lt;br&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <p>Свако поље има своју ознаку (лабелу) која га референцира путем атрибута <code class="docutils literal notranslate"><span class="pre">for</span></code>. Осим тога, свако поље за унос има и тип (атрибут <code class="docutils literal notranslate"><span class="pre">type</span></code>), којим се задаје врста садржаја. Иза сваке лабеле и поља за унос се налази по један <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br&gt;</span></code>. Тиме се обезбеђује да се свака лабела и свако поље постави у нови ред. Покрените (ако већ нисте) претходни <em>HTML</em> кôд кликом на дугме да бисте видели и испробали поља за унос текста.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -462,112 +438,16 @@
 <p>Пошто сви елементи имају свој идентификатор, можемо их у програму лоцирати помоћу методе <code class="docutils literal notranslate"><span class="pre">querySelector</span></code> (или <code class="docutils literal notranslate"><span class="pre">getElementById</span></code>), која ће вратити <em>JavaScript</em> објекат који представља то поље за унос. Враћени објекти имају поље <code class="docutils literal notranslate"><span class="pre">value</span></code> које садржи вредност која је унета у поље за унос текста.</p>
 <p>Претходни пример можемо да допунимо једним дугметом и следећим <em>JavaScript</em> кôдом, тако да се кликом на дугме исписују сви унети подаци. Функција <code class="docutils literal notranslate"><span class="pre">prikaz</span></code> проналази поља за унос, чита им вредности и приказује поруку да је ученик добио оцену датог дана.</p>
 
-<div data-childcomponent="polja_za_unos_html_js" class="course-box course-box-problem course-content">
+    <div id="polja_za_unos_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function prikaz() {\n    let ime = document.querySelector(&apos;#ime&apos;).value;\n    let prezime = document.querySelector(&apos;#prezime&apos;).value;\n    let ocena = document.querySelector(&apos;#ocena&apos;).value;\n    let datum = document.querySelector(&apos;#datum&apos;).value;\n    alert(`${ime} ${prezime} \u0458\u0435 \u0434\u0430\u043d\u0430 ${datum} \u0434\u043e\u0431\u0438\u043e-\u0434\u043e\u0431\u0438\u043b\u0430 \u043e\u0446\u0435\u043d\u0443 ${ocena}`);\n}\n\ndocument.getElementById(\"dugme_ok\").addEventListener(&apos;click&apos;, prikaz);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;label for=\"ime\"&gt;\u0418\u043c\u0435:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"text\" id=\"ime\" name=\"ime\"&gt;&lt;br&gt;\n\n    &lt;label for=\"prezime\"&gt;\u041f\u0440\u0435\u0437\u0438\u043c\u0435:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"text\" id=\"prezime\" name=\"prezime\"&gt;&lt;br&gt;\n\n    &lt;label for=\"ocena\"&gt;\u041e\u0446\u0435\u043d\u0430 (\u0438\u0437\u043c\u0435\u0452\u0443 1 \u0438 5):&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"number\" id=\"ocena\" name=\"ocena\" min=\"1\" max=\"5\"&gt;&lt;br&gt;\n\n    &lt;label for=\"datum\"&gt;\u0414\u0430\u0442\u0443\u043c \u0443\u043d\u043e\u0441\u0430:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"date\" id=\"datum\" name=\"datum\"&gt;&lt;br&gt;\n\n    &lt;br&gt;\n    &lt;button id=\"dugme_ok\"&gt;\u041f\u043e\u0442\u0432\u0440\u0434\u0438&lt;/button&gt;\n  &lt;/body&gt;\n\n  &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=polja_za_unos_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;label for=&quot;ime&quot;&gt;Име:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;text&quot; id=&quot;ime&quot; name=&quot;ime&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;prezime&quot;&gt;Презиме:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;text&quot; id=&quot;prezime&quot; name=&quot;prezime&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;ocena&quot;&gt;Оцена (између 1 и 5):&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;number&quot; id=&quot;ocena&quot; name=&quot;ocena&quot; min=&quot;1&quot; max=&quot;5&quot;&gt;&lt;br&gt;
-
-    &lt;label for=&quot;datum&quot;&gt;Датум уноса:&lt;/label&gt;&lt;br&gt;
-    &lt;input type=&quot;date&quot; id=&quot;datum&quot; name=&quot;datum&quot;&gt;&lt;br&gt;
-
-    &lt;br&gt;
-    &lt;button id=&quot;dugme_ok&quot;&gt;Потврди&lt;/button&gt;
-  &lt;/body&gt;
-
-  &lt;script&gt;
-
-    function prikaz() {
-        let ime = document.querySelector(&#x27;#ime&#x27;).value;
-        let prezime = document.querySelector(&#x27;#prezime&#x27;).value;
-        let ocena = document.querySelector(&#x27;#ocena&#x27;).value;
-        let datum = document.querySelector(&#x27;#datum&#x27;).value;
-        alert(`${ime} ${prezime} је дана ${datum} добио-добила оцену ${ocena}`);
-    }
-
-    document.getElementById(&quot;dugme_ok&quot;).addEventListener(&#x27;click&#x27;, prikaz);
-
-  &lt;/script&gt;
-
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <div class="section" id="id3">
 <h2>Пример – Листа послова<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Ево како би могло да се започне прављење веб-стране за одржавање листе актуелних послова (енгл. <em>to-do list</em>):</p>
 
-<div data-childcomponent="todo_lista_html_js" class="course-box course-box-problem course-content">
+    <div id="todo_lista_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function unesi() {\n  let stavka = document.querySelector(&apos;#stavka&apos;);\n  let datum = document.querySelector(&apos;#datum&apos;);\n\n  let tabela = document.getElementById(&apos;tabela&apos;).getElementsByTagName(&apos;tbody&apos;)[0];\n  let noviRed = tabela.insertRow(tabela.rows.length);\n\n  let novaCelija  = noviRed.insertCell(0);\n  let tekst  = document.createTextNode(stavka.value);\n  novaCelija.appendChild(tekst);\n\n  novaCelija  = noviRed.insertCell(1);\n  tekst  = document.createTextNode(datum.value);\n  novaCelija.appendChild(tekst);\n}\n\ndocument.getElementById(\"dugme_ok\").addEventListener(&apos;click&apos;, unesi);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;label for=\"stavka\"&gt;\u0428\u0442\u0430 \u0436\u0435\u043b\u0438\u0448 \u0434\u0430 \u0443\u0440\u0430\u0434\u0438\u0448:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"text\" id=\"stavka\" required&gt;&lt;br&gt;\n\n    &lt;label for=\"datum\"&gt;\u0420\u043e\u043a:&lt;/label&gt;&lt;br&gt;\n    &lt;input type=\"date\" id=\"datum\" required&gt;&lt;br&gt;\n\n    &lt;br&gt;\n    &lt;button id=\"dugme_ok\"&gt;\u0423\u043d\u0435\u0441\u0438&lt;/button&gt;\n    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;\n    &lt;table id=\"tabela\" border=\"solid 1px\"&gt;\n      &lt;caption&gt;\u041f\u043e\u0441\u043b\u043e\u0432\u0438&lt;/caption&gt;\n      &lt;thead&gt;\n        &lt;tr&gt;\n          &lt;th&gt;\u0428\u0442\u0430&lt;/th&gt;\n          &lt;th&gt;\u0414\u043e \u043a\u0430\u0434&lt;/th&gt;\n        &lt;/tr&gt;\n      &lt;/thead&gt;\n      &lt;tbody&gt;\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  &lt;/body&gt;\n  &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=todo_lista_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;label for=&quot;stavka&quot;&gt;Шта желиш да урадиш:&lt;/label&gt;&lt;br&gt;
-      &lt;input type=&quot;text&quot; id=&quot;stavka&quot; required&gt;&lt;br&gt;
-
-      &lt;label for=&quot;datum&quot;&gt;Рок:&lt;/label&gt;&lt;br&gt;
-      &lt;input type=&quot;date&quot; id=&quot;datum&quot; required&gt;&lt;br&gt;
-
-      &lt;br&gt;
-      &lt;button id=&quot;dugme_ok&quot;&gt;Унеси&lt;/button&gt;
-    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-    &lt;table id=&quot;tabela&quot; border=&quot;solid 1px&quot;&gt;
-      &lt;caption&gt;Послови&lt;/caption&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Шта&lt;/th&gt;
-          &lt;th&gt;До кад&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/body&gt;
-  &lt;script&gt;
-    function unesi() {
-        let stavka = document.querySelector(&#x27;#stavka&#x27;);
-        let datum = document.querySelector(&#x27;#datum&#x27;);
-
-        let tabela = document.getElementById(&#x27;tabela&#x27;).getElementsByTagName(&#x27;tbody&#x27;)[0];
-        let noviRed = tabela.insertRow(tabela.rows.length);
-
-        let novaCelija  = noviRed.insertCell(0);
-        let tekst  = document.createTextNode(stavka.value);
-        novaCelija.appendChild(tekst);
-
-        novaCelija  = noviRed.insertCell(1);
-        tekst  = document.createTextNode(datum.value);
-        novaCelija.appendChild(tekst);
-    }
-
-    document.getElementById(&quot;dugme_ok&quot;).addEventListener(&#x27;click&#x27;, unesi);
-
-  &lt;/script&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 <p>Да би употреба ове стране била удобна, недостаје бар још памћење раније унетих ставки и поништавање (прецртавање или брисање или оба) урађених послова. На овај пример ћемо се вратити и дорадити га касније.</p>
 </div>
 </div>

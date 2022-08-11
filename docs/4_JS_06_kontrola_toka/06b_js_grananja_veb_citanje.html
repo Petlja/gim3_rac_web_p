@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -444,34 +444,9 @@
 </ul>
 <p>У следећем решењу најпре проверавамо да ли је нека вредност већ уписана. Ако нема уписане вредности, уписујемо 0 као почетну вредност. Након тога поново читамо вредност (сада знамо да вредност постоји и да је то број), повећавамо је, приказујемо у веб-страни и памтимо увећану вредност у локалном складишту.</p>
 
-<div data-childcomponent="broj_otvaranja_strane_html_js" class="course-box course-box-problem course-content">
+    <div id="broj_otvaranja_strane_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "if (!localStorage.getItem(&apos;counter&apos;)) {\n    localStorage.setItem(&apos;counter&apos;, 0);\n}\n\nlet counter = parseInt(localStorage.getItem(&apos;counter&apos;));\ncounter++;\ndocument.querySelector(&apos;#brp&apos;).innerHTML = counter;\nlocalStorage.setItem(&apos;counter&apos;, counter);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr\"&gt;\n  &lt;head&gt;\n    &lt;title&gt;\u0411\u0440\u043e\u0458\u0430\u0447&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;h1&gt;\u0411\u0440\u043e\u0458 \u0443\u0447\u0438\u0442\u0430\u0432\u0430\u045a\u0430 \u043e\u0432\u0435 \u0441\u0442\u0440\u0430\u043d\u0435: &lt;span id=\"brp\"&gt;0&lt;/span&gt;&lt;/h1&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=broj_otvaranja_strane_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;sr&quot;&gt;
-  &lt;head&gt;
-    &lt;title&gt;Бројач&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Број учитавања ове стране: &lt;span id=&quot;brp&quot;&gt;0&lt;/span&gt;&lt;/h1&gt;
-    &lt;script&gt;
-      if (!localStorage.getItem(&#x27;counter&#x27;)) {
-          localStorage.setItem(&#x27;counter&#x27;, 0);
-      }
-
-      let counter = parseInt(localStorage.getItem(&#x27;counter&#x27;));
-      counter++;
-      document.querySelector(&#x27;#brp&#x27;).innerHTML = counter;
-      localStorage.setItem(&#x27;counter&#x27;, counter);
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="note-wrapper infonote-type">
         <div class="note-icon-holder"> </div>
@@ -530,72 +505,9 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 </div>
 <p>Следи комплетан кôд, који можете да испробате:</p>
 
-<div data-childcomponent="todo_validacija_html_js" class="course-box course-box-problem course-content">
+    <div id="todo_validacija_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function posalji() {\n    let stavka = document.querySelector(`#stavka`);\n    let datum = document.querySelector(`#datum`);\n    if (stavka.checkValidity() &amp;&amp; datum.checkValidity()) {\n        let tabela = document.getElementById(&apos;tabela&apos;).getElementsByTagName(&apos;tbody&apos;)[0];\n        let noviRed = tabela.insertRow(tabela.rows.length);\n\n        let novaCelija  = noviRed.insertCell(0);\n        let tekst  = document.createTextNode(stavka.value);\n        novaCelija.appendChild(tekst);\n\n        novaCelija  = noviRed.insertCell(1);\n        tekst  = document.createTextNode(datum.value);\n        novaCelija.appendChild(tekst);\n    } else {\n        alert(&apos;\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0438\u0441\u043f\u0440\u0430\u0432\u043d\u0435 \u043f\u043e\u0434\u0430\u0442\u043a\u0435&apos;);\n    }\n    return false;\n}\n\ndocument.getElementById(&apos;dugme_ok&apos;).addEventListener(&apos;click&apos;, posalji);"}, "css": {"name": "style.css", "source": "input:invalid {\n    border: 2px dashed red;\n}\ninput:valid {\n    border: 2px solid black;\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n  &lt;link rel=\"stylesheet\" href=\"style.css\"/&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;form&gt;\n      &lt;label for=\"stavka\"&gt;\u0428\u0442\u0430 \u0436\u0435\u043b\u0438\u0448 \u0434\u0430 \u0443\u0440\u0430\u0434\u0438\u0448:&lt;/label&gt;&lt;br&gt;\n      &lt;input type=\"text\" id=\"stavka\" required&gt;&lt;br&gt;\n\n      &lt;label for=\"datum\"&gt;\u0420\u043e\u043a:&lt;/label&gt;&lt;br&gt;\n      &lt;input type=\"date\" id=\"datum\" required&gt;&lt;br&gt;\n\n      &lt;br&gt;\n      &lt;button type=\"button\" id=\"dugme_ok\"&gt;\u0423\u043d\u0435\u0441\u0438&lt;/button&gt;\n    &lt;form&gt;\n    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;\n    &lt;table id=\"tabela\" border=\"solid 1px\"&gt;\n      &lt;caption&gt;\u041f\u043e\u0441\u043b\u043e\u0432\u0438&lt;/caption&gt;\n      &lt;thead&gt;\n        &lt;tr&gt;\n          &lt;th&gt;\u0428\u0442\u0430&lt;/th&gt;\n          &lt;th&gt;\u0414\u043e \u043a\u0430\u0434&lt;/th&gt;\n        &lt;/tr&gt;\n      &lt;/thead&gt;\n      &lt;tbody&gt;\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=todo_validacija_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;style&gt;
-    input:invalid { border: 2px dashed red; }
-    input:valid { border: 2px solid black; }
-  &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;form&gt;
-      &lt;label for=&quot;stavka&quot;&gt;Шта желиш да урадиш:&lt;/label&gt;&lt;br&gt;
-      &lt;input type=&quot;text&quot; id=&quot;stavka&quot; required&gt;&lt;br&gt;
-
-      &lt;label for=&quot;datum&quot;&gt;Рок:&lt;/label&gt;&lt;br&gt;
-      &lt;input type=&quot;date&quot; id=&quot;datum&quot; required&gt;&lt;br&gt;
-
-      &lt;br&gt;
-      &lt;button type=&quot;button&quot; id=&quot;dugme_ok&quot;&gt;Унеси&lt;/button&gt;
-    &lt;form&gt;
-    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-    &lt;table id=&quot;tabela&quot; border=&quot;solid 1px&quot;&gt;
-      &lt;caption&gt;Послови&lt;/caption&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Шта&lt;/th&gt;
-          &lt;th&gt;До кад&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/body&gt;
-  &lt;script&gt;
-    function posalji() {
-        let stavka = document.querySelector(`#stavka`);
-        let datum = document.querySelector(`#datum`);
-        if (stavka.checkValidity() &amp;&amp; datum.checkValidity()) {
-            let tabela = document.getElementById(&#x27;tabela&#x27;).getElementsByTagName(&#x27;tbody&#x27;)[0];
-            let noviRed = tabela.insertRow(tabela.rows.length);
-
-            let novaCelija  = noviRed.insertCell(0);
-            let tekst  = document.createTextNode(stavka.value);
-            novaCelija.appendChild(tekst);
-
-            novaCelija  = noviRed.insertCell(1);
-            tekst  = document.createTextNode(datum.value);
-            novaCelija.appendChild(tekst);
-        } else {
-            alert(&#x27;Унесите исправне податке&#x27;);
-        }
-        return false;
-    }
-
-    document.getElementById(&#x27;dugme_ok&#x27;).addEventListener(&#x27;click&#x27;, posalji);
-
-  &lt;/script&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -622,66 +534,9 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 
     </p></div></div>
 
-<div data-childcomponent="stoperica_html_js" class="course-box course-box-problem course-content">
+    <div id="stoperica_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let running = false;\nlet counter = 0;\nlet delta = 0;\n\nfunction tik() {\n    counter += delta;\n    document.querySelector(&apos;h1&apos;).innerHTML = counter.toFixed(2);\n}\n\ndocument.getElementById(&apos;reset&apos;).addEventListener(&apos;click&apos;, function(dogadjaj) {\n    counter = 0;\n    delta = 0;\n});\n\ndocument.getElementById(&apos;start_stop&apos;).addEventListener(&apos;click&apos;, function(dogadjaj) {\n    if (running) {\n        running = false;\n        delta = 0;\n        this.innerHTML = \"\u0421\u0442\u0430\u0440\u0442\";\n        this.style.backgroundColor = \"green\";\n        this.style.color = \"white\";\n        document.querySelector(&apos;#reset&apos;).disabled = false;\n    }\n    else {\n        running = true;\n        delta = 0.01;\n        this.innerHTML = \"\u0421\u0442\u043e\u043f\";\n        this.style.backgroundColor = \"red\";\n        this.style.color = \"black\";\n        document.querySelector(&apos;#reset&apos;).disabled = true;\n    }\n});\n\ndocument.querySelector(&apos;#start_stop&apos;).style.backgroundColor = \"green\";\ndocument.querySelector(&apos;#start_stop&apos;).style.color = \"white\";\nsetInterval(tik, 10);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0428\u0442\u043e\u043f\u0435\u0440\u0438\u0446\u0430&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;0&lt;/h1&gt;\n        &lt;button id=\"start_stop\"&gt;\u0421\u0442\u0430\u0440\u0442&lt;/button&gt;\n        &lt;button id=\"reset\"&gt;\u0420\u0435\u0441\u0435\u0442&lt;/button&gt;\n        &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=stoperica_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;sr&quot;&gt;
-    &lt;head&gt;
-        &lt;title&gt;Штоперица&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;0&lt;/h1&gt;
-        &lt;button id=&quot;start_stop&quot;&gt;Старт&lt;/button&gt;
-        &lt;button id=&quot;reset&quot;&gt;Ресет&lt;/button&gt;
-    &lt;/body&gt;
-        &lt;script&gt;
-
-            let running = false;
-            let counter = 0;
-            let delta = 0;
-
-            function tik() {
-                counter += delta;
-                document.querySelector(&#x27;h1&#x27;).innerHTML = counter.toFixed(2);
-            }
-
-            document.getElementById(&#x27;reset&#x27;).addEventListener(&#x27;click&#x27;, function(dogadjaj) {
-                counter = 0;
-                delta = 0;
-            });
-
-            document.getElementById(&#x27;start_stop&#x27;).addEventListener(&#x27;click&#x27;, function(dogadjaj) {
-                if (running) {
-                    running = false;
-                    delta = 0;
-                    this.innerHTML = &quot;Старт&quot;;
-                    this.style.backgroundColor = &quot;green&quot;;
-                    this.style.color = &quot;white&quot;;
-                    document.querySelector(&#x27;#reset&#x27;).disabled = false;
-                }
-                else {
-                    running = true;
-                    delta = 0.01;
-                    this.innerHTML = &quot;Стоп&quot;;
-                    this.style.backgroundColor = &quot;red&quot;;
-                    this.style.color = &quot;black&quot;;
-                    document.querySelector(&#x27;#reset&#x27;).disabled = true;
-                }
-            });
-
-            document.querySelector(&#x27;#start_stop&#x27;).style.backgroundColor = &quot;green&quot;;
-            document.querySelector(&#x27;#start_stop&#x27;).style.color = &quot;white&quot;;
-            setInterval(tik, 10);
-
-        &lt;/script&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">
@@ -733,6 +588,10 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 <p>Осим ове две функције, потребна је још функција која се извршава сваке секунде (док траје одбројавање) и ажурира преостало време (функција <code class="docutils literal notranslate"><span class="pre">tik</span></code>), и функција која покреће аудио и искључује тајмер (функција <code class="docutils literal notranslate"><span class="pre">sviraj</span></code>).</p>
 <p>У оквиру ове веб-странице можете да испробате сву функционалност осим покретања звучног фајла. Да би пример био потпуно функционалан, предлажемо да га копирате у неки фајл са екстензијом <em>.html</em> на вашем рачунару, а затим да измените атрибут <em>src</em> елемента <em>source</em>, тако да садржи путању до постојећег фајла на вашем рачунару.</p>
 <p>Следи комплетан кôд:</p>
+
+    <div id="tajmer_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let tajmer = undefined;\nlet preostaloVreme = 0;\n\n// promenjena vrednost tajmera\ndocument.getElementById(&apos;vreme&apos;).addEventListener(&apos;change&apos;, function(dogadjaj) {\n    let checkBox = document.getElementById(\"prekidac\");\n    checkBox.disabled = false;\n    checkBox.checked = false;\n    clearInterval(tajmer);\n});\n\n// promenjeno stanje prekidaca\ndocument.getElementById(&apos;prekidac&apos;).addEventListener(&apos;click&apos;, function(dogadjaj) {\n    let ukljucen = document.getElementById(\"prekidac\").checked;\n    if (ukljucen) {\n        let t = document.getElementById(\"vreme\").value;\n        let hh = parseInt(t.slice(0, 2)) || 0;\n        let mm = parseInt(t.slice(3, 5)) || 0;\n        let ss = parseInt(t.slice(6, 8)) || 0;\n        preostaloVreme = ((hh * 60 + mm) * 60 + ss);\n        if (preostaloVreme == 0) {\n            sviraj();\n        } else {\n            tajmer = setInterval(tik, 1000);\n        }\n    }\n    else {\n        clearInterval(tajmer);\n    }\n});\n\nfunction tik() {\n    preostaloVreme--;\n    let n = preostaloVreme;\n    let ss = (n % 60).toString().padStart(2, &apos;0&apos;);\n    n = Math.trunc(n/60);\n    let mm = (n % 60).toString().padStart(2, &apos;0&apos;);\n    n = Math.trunc(n/60);\n    let hh = n.toString().padStart(2, &apos;0&apos;);\n    let t = document.getElementById(\"vreme\");\n    t.value = `${hh}:${mm}:${ss}`;\n    if (preostaloVreme == 0) {\n        sviraj();\n    }\n}\n\nfunction sviraj() {\n    document.getElementById(\"muzikica\").play();\n    clearInterval(tajmer);\n    let checkBox = document.getElementById(\"prekidac\");\n    checkBox.checked = false;\n    checkBox.disabled = true;\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr-Cyrl\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0422\u0430\u0458\u043c\u0435\u0440&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;\u0422\u0430\u0458\u043c\u0435\u0440&lt;/h1&gt;\n        &lt;audio id=\"muzikica\" controls&gt;\n          &lt;source src=\"../../_images/js/ding.mp3\" type=\"audio/mpeg\"&gt;\n          \u0412\u0430\u0448 \u043f\u0440\u0435\u0433\u043b\u0435\u0434\u0430\u0447 \u043d\u0435 \u043f\u043e\u0434\u0440\u0436\u0430\u0432\u0430 \u0430\u0443\u0434\u0438\u043e \u0435\u043b\u0435\u043c\u0435\u043d\u0442.\n        &lt;/audio&gt;\n\n        &lt;form&gt;\n            &lt;span margin-right=\"2px\"&gt;\u041f\u0440\u0435\u043e\u0441\u0442\u0430\u043b\u043e \u0432\u0440\u0435\u043c\u0435&lt;/span&gt;\n            &lt;input autofocus id=\"vreme\" type=\"time\" step=\"1\" value=\"00:00:10\"/&gt;\n            \u0423\u043a\u0459\u0443\u0447\u0438: &lt;input type=\"checkbox\" id=\"prekidac\"/&gt;\n        &lt;/form&gt;\n        &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"}}'>
+
+    </div>
 
 <div data-childcomponent="tajmer_html_js" class="course-box course-box-problem course-content">
 
@@ -832,6 +691,10 @@ document.getElementById(&#39;dugme_ok&#39;).addEventListener(&#39;click&#39;, po
 
     </p></div></div>
 <p>Пример је веома сличан претходном, тако да ћете га вероватно разумети и без објашњавања.</p>
+
+    <div id="alarm_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let tajmer = undefined;\n\n// promenjena vrednost tajmera\ndocument.getElementById(&apos;vreme&apos;).addEventListener(&apos;change&apos;, function(dogadjaj) {\n    let checkBox = document.getElementById(\"prekidac\");\n    checkBox.disabled = false;\n    checkBox.checked = false;\n});\n\n// promenjeno stanje prekidaca\ndocument.getElementById(&apos;prekidac&apos;).addEventListener(&apos;click&apos;, function(dogadjaj) {\n    let aktiviran = document.getElementById(\"prekidac\").checked;\n    if (aktiviran) {\n        let sada = new Date();\n        let t = document.getElementById(\"vreme\").value;\n        let hh = parseInt(t.slice(0, 2)) || 0;\n        let mm = parseInt(t.slice(3, 5)) || 0;\n        let ss = parseInt(t.slice(6, 8)) || 0;\n        let zadato = new Date(sada.getFullYear(), sada.getMonth(), sada.getDate(), hh, mm, ss);\n        if (zadato &lt; sada) {\n            zadato.setDate(zadato.getDate() + 1);\n        }\n        tajmer = setInterval(sviraj, zadato - sada);\n    }\n    else {\n        clearInterval(tajmer);\n    }\n});\n\nfunction sviraj() {\n    document.getElementById(\"muzikica\").play();\n    document.getElementById(\"prekidac\").checked = false;\n    clearInterval(tajmer);\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"sr-Cyrl\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0410\u043b\u0430\u0440\u043c&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;\u0410\u043b\u0430\u0440\u043c&lt;/h1&gt;\n        &lt;audio id=\"muzikica\" controls&gt;\n          &lt;source src=\"../../_images/js/ding.mp3\" type=\"audio/mpeg\"&gt;\n          \u0412\u0430\u0448 \u043f\u0440\u0435\u0433\u043b\u0435\u0434\u0430\u0447 \u043d\u0435 \u043f\u043e\u0434\u0440\u0436\u0430\u0432\u0430 \u0430\u0443\u0434\u0438\u043e \u0435\u043b\u0435\u043c\u0435\u043d\u0442.\n        &lt;/audio&gt;\n\n        &lt;form&gt;\n            &lt;span margin-right=\"2px\"&gt;\u0412\u0440\u0435\u043c\u0435 \u0430\u043b\u0430\u0440\u043c\u0430&lt;/span&gt;\n            &lt;input autofocus id=\"vreme\" type=\"time\" step=\"1\"/&gt;\n            \u0423\u043a\u0459\u0443\u0447\u0438: &lt;input type=\"checkbox\" id=\"prekidac\"/&gt;\n        &lt;/form&gt;\n        &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"}}'>
+
+    </div>
 
 <div data-childcomponent="alarm_html_js" class="course-box course-box-problem course-content">
 

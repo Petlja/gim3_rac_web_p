@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -431,8 +431,8 @@
 </div>
 <div class="section" id="id1">
 <h1>Повезивање одвојеног CSS-а<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Препоручени начин дизајна модерних веб страна је формирање одвојеног <em>CSS</em> фајла који садржи дефиниције стилова. Овим се обезбеђује конзистентан изглед свих страна у великим сајтовима, јер више <em>HTML</em> фајлова може да укључи исти <em>CSS</em> документ, па више веб страна користи исти стил дефинисан на једном месту - у <em>CSS</em> документу.</p>
-<p>У случају повезивања са <em>CSS</em> фајлом је потребно користити елемент <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code>, којим се у <em>HTML</em> документу дефинише где се налази <em>CSS</em> фајл са стиловима.</p>
+<p>Препоручени начин дизајна модерних веб-страна је формирање одвојеног <em>CSS</em> фајла који садржи дефиниције стилова. Овим се обезбеђује конзистентан изглед свих страна у великим сајтовима, јер више <em>HTML</em> фајлова може да укључи исти <em>CSS</em> документ, па више веб-страна користи исти стил дефинисан на једном месту - у <em>CSS</em> документу.</p>
+<p>У случају повезивања са <em>CSS</em> фајлом потребно је користити елемент <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code>, којим се у <em>HTML</em> документу дефинише где се налази <em>CSS</em> фајл са стиловима.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -462,12 +462,12 @@
 <p>Апсолутни линкови се често користе у случају да је фајл са стиловима јавно доступан на неком сајту и желите да директно искористите те стилове уместо да копирате тај фајл у ваше локално окружење. Довољно је само да ставите <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> елемент који садржи локацију <em>CSS</em> фајла, као у претходном примеру.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Мана оваквог приступа је то што је, чак и за веб стране сачуване на вашем рачунару, за правилан приказ потребан приступ интернету.</p>
+<p>Мана оваквог приступа је то што је, чак и за веб-стране сачуване на вашем рачунару, за правилан приказ потребан приступ интернету.</p>
 </div>
 </div>
 <div class="section" id="css-style">
 <h1><em>CSS</em> у <code class="docutils literal notranslate"><span class="pre">style</span></code> елементу<a class="headerlink" href="#css-style" title="Permalink to this headline">¶</a></h1>
-<p>Стилови могу да се дефинишу у самом <em>HTML</em> документу помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span></code> у заглављу стране, као што је приказано у следећем коду, који можете одмах да испробате:</p>
+<p>Стилови могу да се дефинишу у самом <em>HTML</em> документу помоћу елемента <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span></code> у заглављу стране, као што је приказано у следећем кôду, који можете одмах да испробате:</p>
 
 <div data-childcomponent="stilovi_u_html_fajlu" class="course-box course-box-problem course-content">
 
@@ -506,7 +506,7 @@
 </pre></div>
 </div>
 <p>Задавање стила помоћу атрибута <code class="docutils literal notranslate"><span class="pre">style</span></code> у HTML елементу је познато као инлајн стил (енгл. <em>inline CSS</em>).</p>
-<p>Употреба <em>HTML</em> елемента <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span></code> у заглављу веб стране и атрибута <code class="docutils literal notranslate"><span class="pre">style</span></code> у њеним елементима <strong>се данас сматра лошом праксом и не треба их користити при дизајнирању сајтова</strong>. Овакав начин задавања стила може узроковати неконзистентност у изгледу страна и захтева експертско знање да би се идентификовали проблеми. Овај приступ је имао више смисла у почетку развоја веба, када је због спорог интернета било важно да се све што је потребно за дефинисање изгледа и садржаја стране налази у једном фајлу, и када су сајтови били мањи и једноставнији него данас.</p>
+<p>Употреба <em>HTML</em> елемента <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span></code> у заглављу веб-стране и атрибута <code class="docutils literal notranslate"><span class="pre">style</span></code> у њеним елементима <strong>се данас сматра лошом праксом и не треба их користити при дизајнирању сајтова</strong>. Овакав начин задавања стила може узроковати неконзистентност у изгледу страна и захтева експертско знање да би се идентификовали проблеми. Овај приступ је имао више смисла у почетку развоја веба, када је због спорог интернета било важно да се све што је потребно за дефинисање изгледа и садржаја стране налази у једном фајлу, и када су сајтови били мањи и једноставнији него данас.</p>
 <p>Овај начин дефинисања стилова и даље може бити погодан за једноставне примере, у којима се у једном документу у потпуности дефинише и структура и изглед стране. Ми ћемо за наше примере користити овај начин у наставку, а сличне примере можете наћи и на сајтовима као што је <em>W3CSchools</em>.</p>
 <p>Још једном наглашавамо да у пројектима који садрже више страна (на пример, ако правите једноставан сајт ради вежбе) треба да користите само препоручени начин рада, а то је држање <em>CSS</em> кода у посебном фајлу.</p>
 </div>

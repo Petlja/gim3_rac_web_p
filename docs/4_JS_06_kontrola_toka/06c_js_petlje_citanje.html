@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -448,24 +448,9 @@
     </p></div></div>
 <p>Ево како задатак можемо да решимо уз помоћ петље <em>while</em>:</p>
 
-<div data-childcomponent="zbir_dvocifrenih_neparnih_while_js" class="course-box course-box-problem course-content">
+    <div id="zbir_dvocifrenih_neparnih_while_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let broj = 11;\nlet zbir = 0;\nlet granica = parseInt(prompt(`\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0433\u0440\u0430\u043d\u0438\u0446\u0443`));\ngranica = Math.min(granica, 99);\nwhile (broj &lt;= granica) {\n    zbir += broj;\n    broj += 2;\n}\nalert (`\u0417\u0431\u0438\u0440 \u0434\u0432\u043e\u0446\u0438\u0444\u0440\u0435\u043d\u0438\u0445 \u043d\u0435\u043f\u0430\u0440\u043d\u0438\u0445 \u0431\u0440\u043e\u0458\u0435\u0432\u0430 \u0434\u043e ${granica} \u0458\u0435 ${zbir}`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=zbir_dvocifrenih_neparnih_while_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let broj = 11;
-let zbir = 0;
-let granica = parseInt(prompt(`Унесите границу`));
-granica = Math.min(granica, 99);
-while (broj <= granica) {
-    zbir += broj;
-    broj += 2;
-}
-alert (`Збир двоцифрених непарних бројева до ${granica} је ${zbir}`);
-</textarea>
-</div>
+    </div>
 <p>Прво смо поставили почетне вредности за први непаран двоцифрени број (11) и збир (на почетку је нула). Пошто се унесе број који представља границу, у <em>while</em> петљи се пре сваког додавања броја на збир проверава да ли је непаран број и даље мањи од границе. Ако јесте, настављамо да извршавамо наредбе између витичастих заграда – тренутни непаран број се додаје на збир, а сам број повећавамо за два.</p>
 </div>
 <div class="section" id="for">
@@ -487,22 +472,9 @@ alert (`Збир двоцифрених непарних бројева до ${g
 </div>
 <p>Значи, прво се извршава наредба коју смо овде назвали <em>иницијализација</em>, затим се проверава услов и докле год је он испуњен, понављају се тело петље и наредба коју смо назвали <em>корак</em>. Према томе, претходни задатак можемо да решимо и овако:</p>
 
-<div data-childcomponent="zbir_dvocifrenih_neparnih_for_js" class="course-box course-box-problem course-content">
+    <div id="zbir_dvocifrenih_neparnih_for_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let zbir = 0;\nlet granica = parseInt(prompt(`\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0433\u0440\u0430\u043d\u0438\u0446\u0443`));\ngranica = Math.min(granica, 99);\nfor (let broj = 11; broj &lt;= granica; broj = broj + 2) {\n    zbir = zbir + broj;\n}\nalert (`\u0417\u0431\u0438\u0440 \u0434\u0432\u043e\u0446\u0438\u0444\u0440\u0435\u043d\u0438\u0445 \u043d\u0435\u043f\u0430\u0440\u043d\u0438\u0445 \u0431\u0440\u043e\u0458\u0435\u0432\u0430 \u0434\u043e ${granica} \u0458\u0435 ${zbir}`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=zbir_dvocifrenih_neparnih_for_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let zbir = 0;
-let granica = parseInt(prompt(`Унесите границу`));
-granica = Math.min(granica, 99);
-for (let broj = 11; broj <= granica; broj = broj + 2) {
-    zbir = zbir + broj;
-}
-alert (`Збир двоцифрених непарних бројева до ${granica} је ${zbir}`);
-</textarea>
-</div>
+    </div>
 <p>Овај облик петље <em>for</em> је постао уобичајен и постоји већ дуго у разним програмским језицима, на пример <em>C</em>, <em>C++</em>, <em>C#</em>, <em>Java</em> и другим. У језику <em>JavaScript</em> поред облика петље <em>for</em> који смо управо упознали, постоје и посебни облици петље <em>for</em>, који служе за извршавање одређених наредби над сваким елементом сложене променљиве.</p>
 </div>
 <div class="section" id="id2">
@@ -515,48 +487,38 @@ alert (`Збир двоцифрених непарних бројева до ${g
 </div>
 <p>Овде <em>променљива</em> узима редом вредности елемената низа, а <em>наредбе</em> се извршавају по једном за сваку од тих вредности. Ово је илустровано у следећих неколико једноставних примера:</p>
 
-<div data-childcomponent="for_of_niz_brojeva_js" class="course-box course-box-problem course-content">
+    <div id="for_of_niz_brojeva_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let brojevi = [2, 5, 3];\nlet zbir = 0;\nfor (let broj of brojevi) {\n    zbir += broj;\n}\nalert(`\u0417\u0431\u0438\u0440 \u0458\u0435 ${zbir}.`)"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=for_of_niz_brojeva_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let brojevi = [2, 5, 3];
-let zbir = 0;
-for (let broj of brojevi) {
-    zbir += broj;
-}
-alert(`Збир је ${zbir}.`)
-</textarea>
+    </div>
+
+    <div id="for_of_niz_imena_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let imena = [&apos;\u0408\u043e\u0432\u0430\u043d&apos;, &apos;\u041c\u0430\u0440\u043a\u043e&apos;, &apos;\u041b\u0443\u043a\u0430&apos;];\nfor (let ime of imena) {\n    alert(ime);\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
+
+    </div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">F:\petlja\git\net_kabinet\3 gimnazije\gim3_rac_web_p\_intermediate\4_JS_06_kontrola_toka\06c_js_petlje_citanje.rst</span>, line 168)</p>
+<p>Error in „petlja-editor” directive:
+unknown option: „language”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. petlja-editor:: for_of_string_js
+    :language: javascript
+    :nocodelens:
+
+    let tekst = &#39;JavaScript&#39;;
+    for (let slovo of tekst) {
+        alert(slovo);
+    }
+    ~~~
+    index.html
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;Садржај стране (који није обавезан).&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</pre></div>
 </div>
-
-<div data-childcomponent="for_of_niz_imena_js" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=for_of_niz_imena_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let imena = ['Јован', 'Марко', 'Лука'];
-for (let ime of imena) {
-    alert(ime);
-}
-</textarea>
-</div>
-
-<div data-childcomponent="for_of_string_js" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=for_of_string_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let tekst = 'JavaScript';
-for (let slovo of tekst) {
-    alert(slovo);
-}
-</textarea>
 </div>
 <p>За итерирање кроз поља објекта користи се петља <code class="docutils literal notranslate"><span class="pre">for-in</span></code>, која има овај облик:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nx">променљива</span> <span class="k">in</span> <span class="nx">објекат</span><span class="p">)</span> <span class="p">{</span>
@@ -566,19 +528,9 @@ for (let slovo of tekst) {
 </div>
 <p>Овде <em>променљива</em> узима као вредности редом називе поља објекта, а <em>наредбе</em> се извршавају по једном за свако од тих поља. Ево како то изгледа на примеру:</p>
 
-<div data-childcomponent="for_in_object_js" class="course-box course-box-problem course-content">
+    <div id="for_in_object_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let ucenik = {ime: \"\u041f\u0435\u0442\u0430\u0440\", prezime: \"\u0408\u043e\u0432\u0430\u043d\u043e\u0432\u0438\u045b\", god_rodj: 2003};\nfor (let polje in ucenik) {\n    alert(`${polje}: ${ucenik[polje]}`);\n}"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=for_in_object_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let ucenik = {ime: "Петар", prezime: "Јовановић", god_rodj: 2003};
-for (let polje in ucenik) {
-    alert(`${polje}: ${ucenik[polje]}`);
-}
-</textarea>
-</div>
+    </div>
 </div>
 </div>
 

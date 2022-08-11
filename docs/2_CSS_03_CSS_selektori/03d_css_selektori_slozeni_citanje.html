@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сложени селектори</title>
+    <title>Сложени CSS селектори</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -420,8 +420,8 @@
   
     <div id="main-content">
     
-  <div class="section" id="id1">
-<h1>Сложени селектори<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="css">
+<h1>Сложени CSS селектори<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h1>
 <p>Селектори елемената, идентификатора и класа се могу међусобно комбиновати. Погледајмо пример једне класе <code class="docutils literal notranslate"><span class="pre">pozadina</span></code> која се користи на неколико начина:</p>
 <ol class="arabic simple">
 <li><p>селектор <code class="docutils literal notranslate"><span class="pre">.pozadina</span></code> ће доделити беж позадинску боју елементу који садржи класу <code class="docutils literal notranslate"><span class="pre">pozadina</span></code>,</p></li>
@@ -435,7 +435,7 @@
 <p>У горњем примеру параграф има плаву позадину. Иако само селектор <code class="docutils literal notranslate"><span class="pre">.pozadina</span></code> дефинише боју беж, <code class="docutils literal notranslate"><span class="pre">p.pozadina</span></code> има већи приоритет зато што специфицира стилове за параграфе који имају класу.</p>
 <p>Слично се дешава у тексту унутар параграфа који има зелену боју. Селектор <code class="docutils literal notranslate"><span class="pre">.pozadina</span></code> се такође односи на елемент <code class="docutils literal notranslate"><span class="pre">span</span></code> који има класу <code class="docutils literal notranslate"><span class="pre">pozadina</span></code>, међутим селектор <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">.pozadina</span></code> има већи приоритет јер селектује сваки елемент са класом <code class="docutils literal notranslate"><span class="pre">pozadina</span></code> унутар параграфа.</p>
 <p>Детаљнија правила о приоритетима можете погледати на страни веб сајта <a class="reference external" href="https://www.w3schools.com/css/css_specificity.asp">W3Schools - CSS приоритети</a>.</p>
-<p>Ово су само неки од основних начина које можете да користите како бисте дефинисали на које елементе треба применити стил. Више информација о селекторима и начинима на који се могу комбиновати можете наћи на веб страни
+<p>Ово су само неки од основних начина које можете да користите како бисте дефинисали на које елементе треба применити стил. Више информација о селекторима и начинима на који се могу комбиновати можете наћи на веб-страни
 <a class="reference external" href="https://www.w3schools.com/css/css_selectors.asp">W3CSchools - селектори</a>.</p>
 </div>
 

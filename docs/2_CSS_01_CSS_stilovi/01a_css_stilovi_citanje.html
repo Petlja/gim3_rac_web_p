@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Веб дизајн</title>
+    <title>CSS стилови</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -420,28 +420,27 @@
   
     <div id="main-content">
     
-  <div class="section" id="id1">
-<h1>Веб дизајн<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="css">
+<h1>CSS стилови<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Веб-дизајн<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Ако распоредите <em>HTML</em> елементе у документу као што је описано у претходним лекцијама, ти елементи ће бити постављени један испод другог и прегледач ће користити неке подразумеване стиловe (боје, величине слова, размаке) како би их приказао.</p>
-<p>Елементе на правим веб странама је често потребно распоредити и стилизовати у складу са наменом сајта. <strong>Веб дизајн</strong> је активност којом се описује како ће страна и елементи на њој изгледати. Веб дизајн је тесно повезан и са другим областима дизајна као што је организација информација на сајту и правила за једноставно коришћење сајта (енгл. <em>User Experience</em>).</p>
+<p>Елементе на правим веб-странама је често потребно распоредити и стилизовати у складу са наменом сајта. <strong>Веб-дизајн</strong> је активност којом се описује како ће страна и елементи на њој изгледати. Веб-дизајн је тесно повезан и са другим областима дизајна као што је организација информација на сајту и правила за једноставно коришћење сајта (енгл. <em>User Experience</em>).</p>
+</div>
 <div class="section" id="css-cascading-style-sheets">
 <h2>CSS (Cascading Style Sheets)<a class="headerlink" href="#css-cascading-style-sheets" title="Permalink to this headline">¶</a></h2>
-<p>Као што је <em>HTML</em> језик којим се описује структура и садржај елемената који ће бити приказани на веб страни, тако постоји и посебан језик који се користи за описивање изгледа и геометријског распореда ових елемената. Овај језик се назива <em>CSS</em> (енгл. Cascading Style Sheets).</p>
-<p>Језиком <em>CSS</em> се представљају правила која дефинишу како треба да изгледају елементи на веб страни. На пример, на језику <em>CSS</em> се <em>HTML</em> елементима додељују својства као што су <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">background-color</span></code> и слично, како би се дефинисало којом бојом треба приказати текст у елементу, или која ће бити боја позадине.</p>
+<p>Као што је <em>HTML</em> језик којим се описује структура и садржај елемената који ће бити приказани на веб-страни, тако постоји и посебан језик који се користи за описивање изгледа и геометријског распореда ових елемената. Овај језик се назива <em>CSS</em> (енгл. Cascading Style Sheets).</p>
+<p>Језиком <em>CSS</em> се представљају правила која дефинишу како треба да изгледају елементи на веб-страни. На пример, на језику <em>CSS</em> се <em>HTML</em> елементима додељују својства као што су <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">background-color</span></code> и слично, како би се дефинисало којом бојом треба приказати текст у елементу, или која ће бити боја позадине.</p>
 </div>
 <div class="section" id="id2">
 <h2>Инспектор<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>У сваком веб прегледачу можете да пронађете <em>HTML</em> код било ког елемента приказане веб стране и да испитате која својства има тај елемент и зашто баш тако изгледа. Код већине прегледача притиском на тастер <em>F12</em> отвара се додатни прозор у доњем делу прегледача, као на следећој слици:</p>
+<p>У сваком веб-прегледачу можете да пронађете <em>HTML</em> кôд било ког елемента приказане веб-стране и да испитате која својства има тај елемент и зашто баш тако изгледа. Код већине прегледача притиском на тастер <em>F12</em> отвара се додатни прозор у доњем делу прегледача, као на следећој слици:</p>
 <a class="reference internal image-reference" href="../_images/browser_inspect.png"><img alt="../_images/browser_inspect.png" class="align-center" src="../_images/browser_inspect.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>На пример, у прегледачу <em>Chrome</em> се у доњем делу отвара прозор у коме се види <em>HTML</em> кôд којим је описана структура елемената стране, као и стилови (доле десно) који су примењени на те елементе да би се добио жељени изглед стране.</p>
-<p>Померајте миша преко <em>HTML</em> кода и посматрајте шта се дешава. Ако, на пример, задржите миша изнад текста</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Никола Тесла<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>(означено стрелицом и бројем 2), тај део кода постаје осенчен, а биће означен и одговарајући део документа (наслов) у приказу у горњем делу прегледача. Изглед наслова је дефинисан кодом на десној страни.</p>
+<p>Померајте миша преко <em>HTML</em> кôда и посматрајте шта се дешава. Ако, на пример, задржите миша изнад текста <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;Никола</span> <span class="pre">Тесла&lt;/h1&gt;</span></code> (означено стрелицом и бројем 2), тај део кôда постаје осенчен, а биће означен и одговарајући део документа (наслов) у приказу у горњем делу прегледача. Изглед наслова је дефинисан кодом на десној страни.</p>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span> <span class="p">{</span>
   <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
   <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>

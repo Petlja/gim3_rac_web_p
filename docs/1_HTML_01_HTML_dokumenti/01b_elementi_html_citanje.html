@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -422,7 +422,7 @@
     
   <div class="section" id="html">
 <h1>Елементи <em>HTML</em> документа<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h1>
-<p>Сваки <em>HTML</em> документ се састоји од <em>HTML</em> <strong>елемената</strong>. <em>HTML</em> елементи су делови веб страна или компоненте које се приказују на веб страни. <em>HTML</em> елементи могу да буду наслов стране који видите у прегледачу, пасус (параграф) текста, табела, или слика која је приказана на страни.</p>
+<p>Сваки <em>HTML</em> документ се састоји од <em>HTML</em> <strong>елемената</strong>. <em>HTML</em> елементи су делови веб-страна или компоненте које се приказују на веб-страни. <em>HTML</em> елементи могу да буду наслов стране који видите у прегледачу, пасус (параграф) текста, табела, или слика која је приказана на страни.</p>
 <p><em>HTML</em> елементи могу да садрже текст или друге елементе, а њихов садржај говори прегледачу шта треба да прикаже.</p>
 
 <div data-childcomponent="paragraf_html" class="course-box course-box-problem course-content">
@@ -430,14 +430,14 @@
 <textarea data-component="activecode" id=paragraf_html data-lang="htmlmixed" 
       data-timelimit=25000    
     data-audio=''   
-         data-caption='Пример само текста и текста у комбинацији са другим HTML елементом.'      data-hidehistory=true
+         data-caption='Пример само текста и текста у комбинацији са другим HTML елементом'      data-hidehistory=true
        >
 &lt;p&gt;Текст који се појављује у веб страни&lt;/p&gt;
 &lt;p&gt;Текст који се прелама.&lt;br/&gt;Овај текст је у новом реду.&lt;/p&gt;
 </textarea>
 </div>
 <p>Прегледач ће прочитати вредност који се налази између ознака <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code> и закључити да текст између њих треба приказати као параграф.</p>
-<p>Већина <em>HTML</em> елемената има ознаку - <strong>таг</strong>. Тагови означавају границе <em>HTML</em> елемента и тиме одређују који текст и који други <em>HTML</em> елементи припадају датом <em>HTML</em> елементу. Ове ознаке су неке унапред дефинисане речи. Почетни (отварајући) и завршни (затварајући) тагови морају да буду упарени, као заграде у математичким изразима. Ако <em>HTML</em> елемент почиње ознаком <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, негде у <em>HTML</em> документу мора да постоји и ознака <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code>, којом се тај елемент завршава.</p>
+<p>Већина <em>HTML</em> елемената има ознаку, која се назива <strong>таг</strong>. Тагови означавају границе <em>HTML</em> елемента и тиме одређују који текст и који други <em>HTML</em> елементи припадају датом <em>HTML</em> елементу. Ове ознаке су неке унапред дефинисане речи. Почетни (отварајући) и завршни (затварајући) тагови морају да буду упарени, као заграде у математичким изразима. Ако <em>HTML</em> елемент почиње ознаком <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, негде у <em>HTML</em> документу мора да постоји и ознака <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code>, којом се тај елемент завршава.</p>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Елементи са отварајућим и затварајућим таговима</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -464,7 +464,7 @@
 </tr>
 </tbody>
 </table>
-<p>Неки елементи се цели састоје само од једног тага. За такав таг кажемо да је <strong>самозатварајући</strong>, јер се он не састоји од пара одговарајућих тагова, него представља целину за себе (цео елемент). Самозатварајући таг почиње знаком <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и завршава знаком <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>, на пример <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code>. <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code> (скраћено од енгл. <em>break</em>, прекини) се користи за прекидање исписа у текућем реду и прелазак у нови ред.</p>
+<p>Неки елементи се цели састоје само од једног тага. За такав таг кажемо да је <strong>самозатварајући</strong>, јер се он не састоји од пара одговарајућих тагова, него представља целину за себе (цео елемент). Самозатварајући таг почиње знаком <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> и завршава знаком <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>, на пример: <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code>. <em>HTML</em> елемент <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code> (скраћено од енгл. <em>break</em>, прекини) се користи за прекидање исписа у текућем реду и прелазак у нови ред.</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Елементи са самозатварајућим таговима</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -490,7 +490,7 @@
 <h1>Угњеждавање елемената<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Пошто <em>HTML</em> елементи могу само да следе један за другим или да садрже један другог, парови одговарајућих тагова не смеју да се опкорачују. Последњи отварајући таг мора пре осталих да буде упарен истоименим затварајућим тагом.</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Пример неисправног HTML записа</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Пример неисправног HTML записа:</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -498,7 +498,7 @@
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Пример исправног HTML записа</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Пример исправног HTML записа:</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -520,16 +520,16 @@
         <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
         <div class="course-content">
             <p>
-<p>Веб прегледачи нису сасвим строги и често умеју да се изборе са ситнијим неправилностима ове врсте, али о редоследу тагова треба водити рачуна и из других разлога. Веб прегледачи нису једини програми који читају <em>HTML</em> документе.</p>
+<p>Веб-прегледачи нису сасвим строги и често умеју да се изборе са ситнијим неправилностима ове врсте, али о редоследу тагова треба водити рачуна и из других разлога. Веб-прегледачи нису једини програми који читају <em>HTML</em> документе.</p>
 
     </p></div></div>
-<p><em>HTML</em> елементи дају неки додатни смисао тексту који је у њима, тако да прегледач „зна” како да прикаже тај текст. Осим тога, <em>HTML</em> елементи су важни и за претраживаче (<em>Google</em>, <em>Bing</em>), јер претраживачи на основу припадности текста одређеним <em>HTML</em> елементима одлучују о значају тог текста за нечију претрагу.</p>
+<p><em>HTML</em> елементи дају неки додатни смисао тексту који је у њима, тако да прегледач „зна“ како да прикаже тај текст. Осим тога, <em>HTML</em> елементи су важни и за претраживаче (<em>Google</em>, <em>Bing</em>), јер претраживачи, на основу припадности текста одређеним <em>HTML</em> елементима одлучују о значају тог текста за нечију претрагу.</p>
 </div>
 <div class="section" id="id2">
 <h1>Атрибути<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <p>Елементи некада имају и додатне информације у тзв. <strong>атрибутима</strong>. На пример, у <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> елемент можемо да упишемо информацију о језику на коме је написан текст тог документа.</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">lang</span></code> атрибут говори да је документ написан на енглеском језику</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">lang</span></code> атрибут говори да је документ написан на енглеском језику:</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
      ...
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -537,7 +537,7 @@
 </div>
 </div>
 <p>Овај атрибут није неопходан, а помаже претраживачима као што је <em>Google</em> или <em>Bing</em> да схвате на ком језику је написан текст у страни, тако да знају како да га индексирају. У наредним лекцијама ћемо видети неке много битније атрибуте, који су неопходни и не могу се изоставити из елемената.</p>
-<p>Језик <em>HTML</em> није осетљив на то да ли се тагови, атрибути и вредности пишу малим или великим словима (могу да се пишу чак и мешано), али је уобичајено да се све што није сам садржај документа пише малим словима.</p>
+<p>Језик <em>HTML</em> није осетљив на то да ли се тагови, атрибути и вредности пишу малим или великим словима (могу да се пишу чак и мешано), али је уобичајено да се све што није сâм садржај документа пише малим словима.</p>
 </div>
 
 

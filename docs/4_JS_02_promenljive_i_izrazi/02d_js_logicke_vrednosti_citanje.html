@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -466,71 +466,26 @@
 </table>
 <p>Ознаке <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">===</span></code>, <code class="docutils literal notranslate"><span class="pre">!==</span></code> се у прогрaмирању често називају релацијским операторима, или операторима поређења. Међутим, мада се у математици запис облика <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code> назива релација, у програмирању овакве записе треба звати логичким изразима. Тиме се наглашава да овде није реч о констатовању или претпостављању односа између датих бројева, него о израчунавању тог односа. Према томе, запис <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code> треба да схватимо као <strong>израз</strong> чија је вредност у сваком конкретном случају „тачно“ или „нетачно“. Вредности таквих израза могу да се исписују на исти начин као и било које друге вредности. На пример, следећи програм учитава два цела броја и исписује вредност израза <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code>:</p>
 
-<div data-childcomponent="relacija_js" class="course-box course-box-problem course-content">
+    <div id="relacija_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let a = parseInt(prompt(&apos;a=?&apos;));\nlet b = parseInt(prompt(&apos;b=?&apos;));\nalert(a &lt; b);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=relacija_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let a = parseInt(prompt('a=?'));
-let b = parseInt(prompt('b=?'));
-alert(a < b);
-</textarea>
-</div>
+    </div>
 <p>Нагласимо да, када се користе оператори <code class="docutils literal notranslate"><span class="pre">===</span></code> и  <code class="docutils literal notranslate"><span class="pre">!==</span></code>, вредности различитог типа се сматрају различитим. На пример:</p>
 
-<div data-childcomponent="precizna_jednakost_js" class="course-box course-box-problem course-content">
+    <div id="precizna_jednakost_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(`2 === 2: ${2 === 2}`);\nalert(`2 === \"2\": ${2 === \"2\"}`);\n\nalert(`2 !== 2: ${2 !== 2}`);\nalert(`2 !== \"2\": ${2 !== \"2\"}`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=precizna_jednakost_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert(`2 === 2: ${2 === 2}`);
-alert(`2 === "2": ${2 === "2"}`);
-
-alert(`2 !== 2: ${2 !== 2}`);
-alert(`2 !== "2": ${2 !== "2"}`);
-</textarea>
-</div>
+    </div>
 <p>Вероватно ћете у програмима на језику <em>JavaScript</em> наилазити и на операторе <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">!=</span></code>, који такође служе за проверу да ли су две вредности једнаке, односно да ли су различите. За разлику од претходних, код ових оператора (као и код оператора <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>) се пре поређења покушава свођење двеју вредности на исти тип. Упоредимо резултат извршавања претходног примера са следећим:</p>
 
-<div data-childcomponent="neprecizna_jednakost_js" class="course-box course-box-problem course-content">
+    <div id="neprecizna_jednakost_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(`2 == 2: ${2 == 2}`);\nalert(`2 == \"2\": ${2 == \"2\"}`);\n\nalert(`2 != 2: ${2 != 2}`);\nalert(`2 != \"2\": ${2 != \"2\"}`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=neprecizna_jednakost_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert(`2 == 2: ${2 == 2}`);
-alert(`2 == "2": ${2 == "2"}`);
-
-alert(`2 != 2: ${2 != 2}`);
-alert(`2 != "2": ${2 != "2"}`);
-</textarea>
-</div>
+    </div>
 <p>Можемо рећи да се оператори <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">!=</span></code> понашају донекле слично као оператор <code class="docutils literal notranslate"><span class="pre">+</span></code> између стринга и броја (знамо да израз <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span> <span class="pre">+</span> <span class="pre">3</span></code> има вредност <code class="docutils literal notranslate"><span class="pre">&quot;23&quot;</span></code>).</p>
 <p>На жалост, показало се да је употреба оператора <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">!=</span></code> у извесном смислу варљива. Наиме, алгоритам свођења разнородних података на исти тип (који се користи код ових оператора) није једноставан и садржи нека правила која могу да буду изненађујућа. Тако се дешава да при употреби оператора <code class="docutils literal notranslate"><span class="pre">==</span></code> и <code class="docutils literal notranslate"><span class="pre">!=</span></code> понекад добијемо неочекиван резултат. Навешћемо само један мали пример, уз напомену да има и необичнијих.</p>
 <p>На основу транзитивности једнакости у математици, очекивали бисмо да када логички изрази <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">==</span> <span class="pre">c</span></code> имају вредност „тачно“, да онда и израз <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">c</span></code> мора да има вредност „тачно“. Да то није тако, видимо покретањем следећег програма:</p>
 
-<div data-childcomponent="jednakost_nije_tranzitivna_js" class="course-box course-box-problem course-content">
+    <div id="jednakost_nije_tranzitivna_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const a = \"0\";\nconst b = 0;\nconst c = \"\";\n\nconst s1 = `a == b: ${a == b}\\n`;\nconst s2 = `b == c: ${b == c}\\n`;\nconst s3 = `a == c: ${a == c}\\n`;\nalert(s1 + s2 + s3);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=jednakost_nije_tranzitivna_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-const a = "0";
-const b = 0;
-const c = "";
-
-const s1 = `a == b: ${a == b}\n`;
-const s2 = `b == c: ${b == c}\n`;
-const s3 = `a == c: ${a == c}\n`;
-alert(s1 + s2 + s3);
-</textarea>
-</div>
+    </div>
 <p>Поменимо узгред да текст <code class="docutils literal notranslate"><span class="pre">\n</span></code> има специјално значење – тај текст се не приказује онако како је написан, већ уместо тога изазива прелазак у следећи ред.</p>
 
     <div class="note-wrapper infonote-type">

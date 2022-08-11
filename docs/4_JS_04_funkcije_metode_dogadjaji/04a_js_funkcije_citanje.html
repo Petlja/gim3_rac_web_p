@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -446,30 +446,9 @@
     </p></div></div>
 <p>Уз нешто знања физике не би требало да буде тешко да се разуме дато решење:</p>
 
-<div data-childcomponent="slozeno_kretanje_1_js" class="course-box course-box-problem course-content">
+    <div id="slozeno_kretanje_1_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function put(tPoc, tZav, vPoc, vZav) {\n    let t = tZav - tPoc;\n    let vsr = (vPoc + vZav) / 2;\n    let predjeniPut = vsr * t;\n    return predjeniPut;\n}\n\n// \u0434\u0430\u0442\u0438 \u043f\u043e\u0434\u0430\u0446\u0438\nlet t0 = 0, t1 = 4, t2 = 11, t3 = 14;\nlet v0 = 2, v1 = 11, v2 = 13, v3 = 5;\n\nlet s1 = put(t0, t1, v0, v1);\nlet s2 = put(t1, t2, v1, v2);\nlet s3 = put(t2, t3, v2, v3);\nalert(`\u0423\u043a\u0443\u043f\u0430\u043d \u043f\u0440\u0435\u0452\u0435\u043d\u0438 \u043f\u0443\u0442 \u0458\u0435 ${(s1+s2+s3).toFixed(2)}.`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=slozeno_kretanje_1_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-function put(tPoc, tZav, vPoc, vZav) {
-    let t = tZav - tPoc;
-    let vsr = (vPoc + vZav) / 2;
-    let predjeniPut = vsr * t;
-    return predjeniPut;
-}
-
-// дати подаци
-let t0 = 0, t1 = 4, t2 = 11, t3 = 14;
-let v0 = 2, v1 = 11, v2 = 13, v3 = 5;
-
-let s1 = put(t0, t1, v0, v1);
-let s2 = put(t1, t2, v1, v2);
-let s3 = put(t2, t3, v2, v3);
-alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
-</textarea>
-</div>
+    </div>
 <p>Када је потребно да функција врати више од једног резултата, те резултате можемо да наведемо у угластим заградама (као низ). Променљиве које примају враћене вредности на месту позива функције такође наводимо у угластим заградама.</p>
 
     <div class="course-box course-box-special">
@@ -489,32 +468,9 @@ alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
 
     </p></div></div>
 
-<div data-childcomponent="slozeno_kretanje_2_js" class="course-box course-box-problem course-content">
+    <div id="slozeno_kretanje_2_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function putIZavrsnaBrzina(t, vpoc, a) {\n    let vzav = vpoc + a*t;        // \u0431\u0440\u0437\u0438\u043d\u0430 \u043f\u043e\u0441\u043b\u0435 t \u0441\u0435\u043a\u0443\u043d\u0434\u0438 (\u0437\u0430\u0432\u0440\u0448\u043d\u0430)\n    let vsr = (vpoc + vzav) / 2;  // \u0441\u0440\u0435\u0434\u045a\u0430 \u0431\u0440\u0437\u0438\u043d\u0430\n    put = vsr * t;                // \u043f\u0440\u0435\u0452\u0435\u043d\u0438 \u043f\u0443\u0442\n    return [put, vzav];\n}\n\n// \u0434\u0430\u0442\u0438 \u043f\u043e\u0434\u0430\u0446\u0438\nlet a01 = 2, a12 = 0, a23 = -6;\nlet t01 = 3, t12 = 10;\nlet v0 = 0;\n\nlet [s1, v1] = putIZavrsnaBrzina(t01, v0, a01);\nlet [s2, v2] = putIZavrsnaBrzina(t12, v1, a12);\nlet t23 = v2 / Math.abs(a23);\nlet [s3, v3] = putIZavrsnaBrzina(t23, v2, a23);\nalert(`\u0423\u043a\u0443\u043f\u0430\u043d \u043f\u0440\u0435\u0452\u0435\u043d\u0438 \u043f\u0443\u0442 \u0458\u0435 ${(s1+s2+s3).toFixed(2)}.`);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=slozeno_kretanje_2_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-function putIZavrsnaBrzina(t, vpoc, a) {
-    let vzav = vpoc + a*t;        // брзина после t секунди (завршна)
-    let vsr = (vpoc + vzav) / 2;  // средња брзина
-    put = vsr * t;                // пређени пут
-    return [put, vzav];
-}
-
-// дати подаци
-let a01 = 2, a12 = 0, a23 = -6;
-let t01 = 3, t12 = 10;
-let v0 = 0;
-
-let [s1, v1] = putIZavrsnaBrzina(t01, v0, a01);
-let [s2, v2] = putIZavrsnaBrzina(t12, v1, a12);
-let t23 = v2 / Math.abs(a23);
-let [s3, v3] = putIZavrsnaBrzina(t23, v2, a23);
-alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
-</textarea>
-</div>
+    </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -534,31 +490,9 @@ alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
     </p></div></div>
 <p>Једно могуће решење је:</p>
 
-<div data-childcomponent="tacno_vreme_js" class="course-box course-box-problem course-content">
+    <div id="tacno_vreme_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "function prikaziTacnoVreme() {\n  const sada = new Date();\n  alert(`\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0458\u0435 \u043e\u0442\u0432\u043e\u0440\u0435\u043d\u0430 \u0443 ${sada.toLocaleTimeString()} \u0441\u0430\u0442\u0438.`);\n}\n\nprikaziTacnoVreme();"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=tacno_vreme_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Време&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;script&gt;
-    function prikaziTacnoVreme() {
-      const sada = new Date();
-      alert(`Страница је отворена у ${sada.toLocaleTimeString()} сати.`);
-    }
-
-    prikaziTacnoVreme();
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">

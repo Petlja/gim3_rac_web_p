@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -423,7 +423,7 @@
   <div class="section" id="id1">
 <h1>Листе<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Текст нису само наслови и пасуси. У великом броју случајева потребно је додати и неке листе у текст. У овој лекцији ћете научити како се користе <em>HTML</em> елементи који представљају сложеније текстуалне структуре попут листи.</p>
-<p>У овом контексту <strong>листа</strong> представља низ кратких текстова, који се приказују један испод другог. Листе се користе при набрајању, задавању неких корака, и слично. Погледајмо као пример следећи текст о почасним докторатима које је добио Никола Тесла (преузето са сајта Википедија):</p>
+<p>У овом случају, <strong>листа</strong> представља низ кратких текстова, који се приказују један испод другог. Листе се користе при набрајању, задавању неких корака и слично. Погледајмо као пример следећи текст о почасним докторатима које је добио Никола Тесла (преузето са сајта Википедија):</p>
 <a class="reference internal image-reference" href="../_images/wiki_pocasni_doktorati.png"><img alt="../_images/wiki_pocasni_doktorati.png" class="align-center" src="../_images/wiki_pocasni_doktorati.png" style="width: 425px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -435,9 +435,9 @@
 <p>Сви елементи листе се стављају у посебан <em>HTML</em> елемент који означава листу као целину. У <em>HTML</em> језику се за представљање целе листе најчешће користи један од ова два елемента:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code> елемент, који представља неуређену листу (енгл. <em>unordered list</em>), у којој се елементи приказују без индексирања. Садржај у оваквим листама се окружује <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/ul&gt;</span></code> ознакама.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code> елемент, који представља уређену, односно нумерисану листу (енгл. <em>ordered list</em>), у којој се елементи листе приказују у неком редоследу обележени словима (а, б, ц) или редним бројевима (1, 2, 3). Садржај у овим листама се окружује <code class="docutils literal notranslate"><span class="pre">&lt;оl&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/оl&gt;</span></code> ознакама.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code> елемент, који представља уређену, односно нумерисану листу (енгл. <em>ordered list</em>), у којој се елементи листе приказују у неком редоследу, обележени словима (а, б, ц) или редним бројевима (1, 2, 3). Садржај у овим листама се окружује <code class="docutils literal notranslate"><span class="pre">&lt;оl&gt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&lt;/оl&gt;</span></code> ознакама.</p></li>
 </ul>
-<p>Имајући у виду ова правила, листа са слике би могла да буде задата помоћу <em>HTML</em> кода овако:</p>
+<p>Имајући у виду ова правила, листа са слике би могла да буде задата помоћу <em>HTML</em> кôда овако:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Техничка школа, Беч, 1908.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Универзитет у Београду, 1926.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>

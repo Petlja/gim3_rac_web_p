@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -508,67 +508,26 @@
 </table>
 <p>На пример, следећи програм исписује вредност 5, јер је <span class="math notranslate nohighlight">\(\sqrt{3^2 + 4^2} = 5\)</span>.</p>
 
-<div data-childcomponent="koren_primer_js" class="course-box course-box-problem course-content">
+    <div id="koren_primer_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const x = 3;\nconst y = 4;\nalert(Math.sqrt(x ** 2 + y ** 2));"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=koren_primer_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-const x = 3;
-const y = 4;
-alert(Math.sqrt(x ** 2 + y ** 2));
-</textarea>
-</div>
+    </div>
 <p>Приоритет операција је у суштини исти као у математици. Ако нисте сигурни у вези са приоритетом, користите заграде (непотребне заграде нису грешка).</p>
 <p>Поред ових оператора који имају своје парњаке у математици, у Јаваскрипту постоје још неки оператори.</p>
 <p>Оператор <code class="docutils literal notranslate"><span class="pre">%</span></code> представља рачунање остатка при дељењу. На пример, остатак при дељењу 7 са 3 је један, па израз <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">3</span></code> има вредност један. Проверимо:</p>
 
-<div data-childcomponent="ostatak_js" class="course-box course-box-problem course-content">
+    <div id="ostatak_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(7 % 3); // 1"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=ostatak_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert(7 % 3); // 1
-</textarea>
-</div>
+    </div>
 <p>Оператор <code class="docutils literal notranslate"><span class="pre">++</span></code> повећава дату вредност за један (ово је унарни оператор, што значи да се примењује на једну нумеричку вредност). Слично томе, оператор <code class="docutils literal notranslate"><span class="pre">--</span></code> смањује дату вредност за један. Извршавањем следећег примера потврдите своје разумевање ових оператора.</p>
 
-<div data-childcomponent="plusplus_minusminus_js" class="course-box course-box-problem course-content">
+    <div id="plusplus_minusminus_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let a = 5;\na++;\na++;\nalert(a); // 7\na--;\nalert(a); // 6"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=plusplus_minusminus_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let a = 5;
-a++;
-a++;
-alert(a); // 7
-a--;
-alert(a); // 6
-</textarea>
-</div>
+    </div>
 <p>Оператор <code class="docutils literal notranslate"><span class="pre">+=</span></code> је бинарни оператор којим се вредност лево од оператора (која мора бити променљива) увећава за вредност десно од оператора. На пример, наредбом <code class="docutils literal notranslate"><span class="pre">а+=3;</span></code> се вредност <code class="docutils literal notranslate"><span class="pre">a</span></code> увећава за 3. На сличан начин, операторима <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code> и <code class="docutils literal notranslate"><span class="pre">/=</span></code> се лева вредност умањује, множи или дели десном вредношћу. Проверите ово на следећем примеру:</p>
 
-<div data-childcomponent="plusjednako_js" class="course-box course-box-problem course-content">
+    <div id="plusjednako_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let a = 0;\na += 3;\na *= 4;\nalert(a); // 12\na -= 4;\na /= 2;\nalert(a); // 4"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=plusjednako_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let a = 0;
-a += 3;
-a *= 4;
-alert(a); // 12
-a -= 4;
-a /= 2;
-alert(a); // 4
-</textarea>
-</div>
+    </div>
 <p><strong>Специјалне вредности</strong> типа <em>number</em></p>
 <p>У Јаваскрипту у тип <em>number</em> додатно спадају и специјалне вредности <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code> и <code class="docutils literal notranslate"><span class="pre">Nan</span></code>. Ове вредности нису бројеви, али су корисна и смислена допуна скупа бројчаних вредности.</p>
 <table class="colwidths-given docutils align-left" id="id4">
@@ -596,18 +555,9 @@ alert(a); // 4
 </table>
 <p>Ове вредности се могу добити као резултат неких рачунских операција, на пример:</p>
 
-<div data-childcomponent="specijalne_vrednosti_js" class="course-box course-box-problem course-content">
+    <div id="specijalne_vrednosti_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "alert(1/0); // \u043f\u043b\u0443\u0441 \u0431\u0435\u0441\u043a\u043e\u043d\u0430\u0447\u043d\u043e\nalert(-1/0); // \u043c\u0438\u043d\u0443\u0441 \u0431\u0435\u0441\u043a\u043e\u043d\u0430\u0447\u043d\u043e\nalert(Math.sqrt(-1)); // \u043d\u0435-\u0431\u0440\u043e\u0458"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=specijalne_vrednosti_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-alert(1/0); // плус бесконачно
-alert(-1/0); // минус бесконачно
-alert(Math.sqrt(-1)); // не-број
-</textarea>
-</div>
+    </div>
 <p>Наведене операције (дељење нулом, кореновање негативног броја) немају резултат у скупу реалних бројева, па би, када специјалних вредности не би било, програм морао да пријави грешку током извршавања и пукне (<em>runtime error</em>). Увођењем специјалних вредности омогућено је да програм настави да ради на смислен начин. Уколико се нека од специјалних вредности појави међу резултатима, она може имати смисла за корисника иако она није број.</p>
 </div>
 

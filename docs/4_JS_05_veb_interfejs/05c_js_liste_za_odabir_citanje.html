@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -440,48 +440,9 @@
 <p>Овде смо догађај <code class="docutils literal notranslate"><span class="pre">change</span></code> елемента <code class="docutils literal notranslate"><span class="pre">&lt;select&gt;</span></code> повезали са функцијом која реагује на промену избора. Ово не морамо (не треба) да радимо када је елемент <code class="docutils literal notranslate"><span class="pre">&lt;select&gt;</span></code> део формулара, јер се тада акција обично покреће након свих избора притиском на одговарајуће дугме.</p>
 <p>Дајемо и комплетан пример који можете да извршите. Сваким избором из листе се покреће анонимна <em>JavaScript</em> функција, у којој се проналази елемент <code class="docutils literal notranslate"><span class="pre">&lt;select&gt;</span></code> по идентификатору (<code class="docutils literal notranslate"><span class="pre">оквир</span></code>), чита се вредност из тренутно одабране ставке листе и онда се та вредност уписује као стил оквира елемента чији идентификатор је <code class="docutils literal notranslate"><span class="pre">омот</span></code>.</p>
 
-<div data-childcomponent="izbor_okvira_iz_liste_html_js" class="course-box course-box-problem course-content">
+    <div id="izbor_okvira_iz_liste_html_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const okvir = document.getElementById(&apos;okvir&apos;);\nokvir.addEventListener(&apos;change&apos;, function(dogadjaj) {\n    const vrstaOkvira = okvir.value;\n    const omot = document.getElementById(&apos;omot&apos;);\n    omot.style.border = vrstaOkvira;\n});"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;\u0418\u0437\u0431\u043e\u0440 \u0438\u0437 \u043b\u0438\u0441\u0442\u0435&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h2&gt;\u041f\u0440\u0438\u043c\u0435\u0440 \u0443\u043f\u043e\u0442\u0440\u0435\u0431\u0435 \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430 &amp;lt;select&amp;gt;&lt;/h2&gt;\n\n        &lt;div id=\"omot\"&gt;\n          &lt;p&gt;\n            \u0418\u0437\u0431\u043e\u0440\u043e\u043c \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430 \u0438\u0437 \u043b\u0438\u0441\u0442\u0435 \u043f\u043e\u043a\u0440\u0435\u045b\u0435 \u0441\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0458\u0430 izabranOkvir(),\n            \u043a\u043e\u0458\u0430 \u043f\u043e\u0434\u0435\u0448\u0430\u0432\u0430 \u0442\u0438\u043f \u043e\u043a\u0432\u0438\u0440\u0430 \u043e\u043a\u043e \u0442\u0435\u043a\u0441\u0442\u0430 \u0438\u0441\u043f\u043e\u0434 \u043d\u0430\u0441\u043b\u043e\u0432\u0430 \u0438 \u043f\u043e\u0459\u0430 \u0437\u0430 \u0438\u0437\u0431\u043e\u0440.\n          &lt;/p&gt;\n          &lt;label for=\"okvir\"&gt;\u041e\u0434\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0442\u0438\u043f \u043e\u043a\u0432\u0438\u0440\u0430:&lt;/label&gt;\n          &lt;select id=\"okvir\" name=\"border\"&gt;\n            &lt;option value=\"none\"&gt;\u0411\u0435\u0437 \u043e\u043a\u0432\u0438\u0440\u0430&lt;/option&gt;\n            &lt;option value=\"solid\"&gt;\u041f\u0443\u043d \u043e\u043a\u0432\u0438\u0440&lt;/option&gt;\n            &lt;option value=\"dashed\"&gt;\u041e\u043a\u0432\u0438\u0440 \u0441\u0430 \u0446\u0440\u0442\u0438\u0446\u0430\u043c\u0430&lt;/option&gt;\n            &lt;option value=\"dotted\"&gt;\u0422\u0430\u0447\u043a\u0430\u0441\u0442 \u043e\u043a\u0432\u0438\u0440&lt;/option&gt;\n            &lt;option value=\"double\"&gt;\u0414\u0432\u043e\u0441\u0442\u0440\u0443\u043a\u0438 \u043e\u043a\u0432\u0438\u0440&lt;/option&gt;\n          &lt;/select&gt;\n        &lt;/div&gt;\n     &lt;/body&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=izbor_okvira_iz_liste_html_js data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;title&gt;Избор из листе&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h2&gt;Пример употребе елемента &amp;lt;select&amp;gt;&lt;/h2&gt;
-
-        &lt;div id=&quot;омот&quot;&gt;
-          &lt;p&gt;
-            Избором елемента из листе покреће се функција izabranOkvir(),
-            која подешава тип оквира око текста испод наслова и поља за избор.
-          &lt;/p&gt;
-          &lt;label for=&quot;оквир&quot;&gt;Одаберите тип оквира:&lt;/label&gt;
-          &lt;select id=&quot;оквир&quot; name=&quot;border&quot;&gt;
-            &lt;option value=&quot;none&quot;&gt;Без оквира&lt;/option&gt;
-            &lt;option value=&quot;solid&quot;&gt;Пун оквир&lt;/option&gt;
-            &lt;option value=&quot;dashed&quot;&gt;Оквир са цртицама&lt;/option&gt;
-            &lt;option value=&quot;dotted&quot;&gt;Тачкаст оквир&lt;/option&gt;
-            &lt;option value=&quot;double&quot;&gt;Двоструки оквир&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-     &lt;/body&gt;
-    &lt;script&gt;
-
-        document.getElementById(&#x27;оквир&#x27;).addEventListener(&#x27;change&#x27;, function(dogadjaj) {
-            let vrstaOkvira = document.querySelector(&#x27;#оквир&#x27;).value;
-            let omot = document.querySelector(&#x27;#омот&#x27;);
-            omot.style.border = vrstaOkvira;
-        });
-
-    &lt;/script&gt;
-&lt;/html&gt;
-</textarea>
-</div>
+    </div>
 
     <div class="course-box course-box-special">
         <div class="course-content">

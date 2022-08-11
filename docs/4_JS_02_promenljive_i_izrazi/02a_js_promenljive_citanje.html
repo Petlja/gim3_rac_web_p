@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -450,54 +450,23 @@
 <h2>Иницијализација<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Често се променљивој одмах при декларацији додељује и почетна вредност. На пример, уместо:</p>
 
-<div data-childcomponent="let_i_poc_vrednost1_js" class="course-box course-box-problem course-content">
+    <div id="let_i_poc_vrednost1_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let x, y, z;\nx = parseInt(prompt(&apos;x=?&apos;));\ny = parseInt(prompt(&apos;y=?&apos;));\nz = x + y;\nalert(z);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=let_i_poc_vrednost1_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let x, y, z;
-x = parseInt(prompt('x=?'));
-y = parseInt(prompt('y=?'));
-z = x + y;
-alert(z);
-</textarea>
-</div>
+    </div>
 <p>… можемо да пишемо:</p>
 
-<div data-childcomponent="let_i_poc_vrednost2_js" class="course-box course-box-problem course-content">
+    <div id="let_i_poc_vrednost2_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "let x = parseInt(prompt(&apos;x=?&apos;));\nlet y = parseInt(prompt(&apos;y=?&apos;));\nlet z = x + y;\nalert(z);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=let_i_poc_vrednost2_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-let x = parseInt(prompt('x=?'));
-let y = parseInt(prompt('y=?'));
-let z = x + y;
-alert(z);
-</textarea>
-</div>
+    </div>
 <p>Додељивање почетне вредности променљивој назива се <strong>иницијализација</strong>. Препоручује се да променљиве иницијализујемо одмах при декларацији кад год то логика програма допушта.</p>
 </div>
 <div class="section" id="id4">
 <h2>Константе<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Понекад је у програмима иницијализација променљиве једино додељивање вредности тој променљивој. Када не намеравамо да мењамо вредност променљиве у наставку програма, добро је у декларацији уместо речи <code class="docutils literal notranslate"><span class="pre">let</span></code> писати реч <code class="docutils literal notranslate"><span class="pre">const</span></code>.</p>
 
-<div data-childcomponent="let_i_poc_vrednost3_js" class="course-box course-box-problem course-content">
+    <div id="let_i_poc_vrednost3_js" class="petlja-editor" data='{"js": {"name": "main.js", "source": "const x = parseInt(prompt(&apos;x=?&apos;));\nconst y = parseInt(prompt(&apos;y=?&apos;));\nconst z = x + y;\nalert(z);"}, "html": {"name": "index.html", "source": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;\u0421\u0430\u0434\u0440\u0436\u0430\u0458 \u0441\u0442\u0440\u0430\u043d\u0435 (\u043a\u043e\u0458\u0438 \u043d\u0438\u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d).&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"}}'>
 
-<textarea data-component="activecode" id=let_i_poc_vrednost3_js data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-               data-hidehistory=true
-       >
-const x = parseInt(prompt('x=?'));
-const y = parseInt(prompt('y=?'));
-const z = x + y;
-alert(z);
-</textarea>
-</div>
+    </div>
 <p>Тиме програм додатно постаје јаснији за читање, а неки теже ухватљиви багови се могу претворити у грешке у току извршавања (енгл. <em>runtime errors</em>, пуцање програма). Као што је раније речено, ако већ имамо грешке у програму, онда је боље да су то грешке о којима добијамо поруку (као што су синтаксне грешке и пуцање програма), јер ћемо уз помоћ тих порука грешке лакше исправити.</p>
 </div>
 <div class="section" id="id5">

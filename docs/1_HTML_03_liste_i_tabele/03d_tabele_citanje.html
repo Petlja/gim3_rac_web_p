@@ -303,7 +303,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_CSS_03_CSS_selektori/03a_css_selektori_citanje.html><div class="studioLecture" id=activity-03a_css_selektori_citanje><i class="fas fa-file-alt activity-icon"></i>CSS селектори</div></a>
-                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање идентификатора</div></a>
+                <a href=../2_CSS_03_CSS_selektori/03b_css_selektori_identifikator_citanje.html><div class="studioLecture" id=activity-03b_css_selektori_identifikator_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање елемената по идентификатору</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03c_css_selektori_klase_citanje.html><div class="studioLecture" id=activity-03c_css_selektori_klase_citanje><i class="fas fa-file-alt activity-icon"></i>Стилизовање класа елемената</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03d_css_selektori_slozeni_citanje.html><div class="studioLecture" id=activity-03d_css_selektori_slozeni_citanje><i class="fas fa-file-alt activity-icon"></i>Сложени CSS селектори</div></a>
                 <a href=../2_CSS_03_CSS_selektori/03e_css_selektori_pitanja.html><div class="studioLecture" id=activity-03e_css_selektori_pitanja><i class="far fa-question-circle activity-icon"></i>CSS селектори - питања</div></a>
@@ -422,7 +422,7 @@
     
   <div class="section" id="id1">
 <h1>Табеле<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Поред обичног текста и листи, у веб стране често додајемо и табеле. Сада ћемо научити како то може да се уради и који <em>HTML</em> елементи се користе за то.</p>
+<p>Поред обичног текста и листи, у веб-стране често додајемо и табеле. Сада ћемо научити како то може да се уради и који <em>HTML</em> елементи се користе за то.</p>
 <p><strong>Табеле</strong> представљају податке организоване у облику редова и колона.</p>
 <a class="reference internal image-reference" href="../_images/tabela.png"><img alt="../_images/tabela.png" class="align-center" src="../_images/tabela.png" style="width: 600px;" /></a>
 <p>Први ред у табели садржи називе колона и назива се <strong>заглавље</strong> (енгл. <em>heading</em>) табеле. Испод овог реда се налазе редови који садрже податке у својим <strong>ћелијама</strong> (енгл. <em>cells</em>).</p>
@@ -477,7 +477,7 @@
 </table>
 <p>Цела табела је окружена тагом <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>. Унутар сваке табеле се налази заглавље (елемент <code class="docutils literal notranslate"><span class="pre">&lt;thead&gt;</span></code>) и <strong>тело</strong> (елемент <code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code>). Унутар заглавља и тела се налазе <strong>редови</strong>.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Табела са заглављем и телом</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Табела са заглављем и телом:</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
          ...
@@ -492,7 +492,7 @@
 <p>Ред се описује елементом <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code> и у њему се налазе ћелије колона табеле.</p>
 <p>Унутар заглавља табеле, ћелије табеле су окружене елементом <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code> и биће приказане подебљаним текстом.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Заглавље табеле са једним редом и 3 колоне</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Заглавље табеле са једним редом и 3 колоне:</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Назив<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -505,7 +505,7 @@
 </div>
 <p>Унутар тела табеле (<code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code>), ћелије табеле су окружене елементом <code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Тело табеле са редом и 3 колоне</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Тело табеле са редом и 3 колоне:</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
      …
      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
@@ -576,7 +576,7 @@
     </p></div></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Употреба атрибута <code class="docutils literal notranslate"><span class="pre">border</span></code> није препоручени начин стилизовања табеле и налази се на листи застарелих атрибута. Можете га користити приликом вежбања да би јасније видели табеле.</p>
+<p>Употреба атрибута <code class="docutils literal notranslate"><span class="pre">border</span></code> није препоручени начин стилизовања табеле и налази се на листи застарелих атрибута. Можете га користити приликом вежбања да бисте јасније видели табеле.</p>
 </div>
 </div>
 
