@@ -10,10 +10,9 @@
 
     Промените дату табелу тако што ћете променити редослед колона и последњу колону у којој су наведене године поставите као прву колону. 
 
-.. activecode:: tabela_okvir_zad2_html
-   :language: html
-   :nocodelens:
+.. petlja-editor:: tabela_okvir_zad2_html
 
+    index.html
     <!DOCTYPE html>
     <html>
     <head>
@@ -55,10 +54,9 @@
     - Орден белог орла I класе, Краљевина Југославија, 1936.
     - Медаља Универзитета Св. Климент, Софија, 1939.
 
-.. activecode:: tabela_okvir_zad3_html
-   :language: html
-   :nocodelens:
+.. petlja-editor:: tabela_okvir_zad3_html
 
+    index.html
     <!DOCTYPE html>
     <html>
     <head>
@@ -94,10 +92,9 @@
 
     Проширите дату табелу тако што ћете додати прву колону (``<th>`` ... ``</th>``) у заглавље (``<thead>`` ... ``</thead>``) и у сваки ред, како бисте добили табелу са четири колоне. У прву колону упишите редне бројеве.
 
-.. activecode:: tabela_okvir_zad4_html
-   :language: html
-   :nocodelens:
+.. petlja-editor:: tabela_okvir_zad4_html
 
+    index.html
     <!DOCTYPE html>
     <html>
     <head>
@@ -133,10 +130,9 @@
 
     Направите нову табелу са пет колона (по једну колону за сваки радни дан у недељи) и направите свој распоред часова за ову недељу. 
 
-.. activecode:: tabela_okvir_zad5_html
-   :language: html
-   :nocodelens:
+.. petlja-editor:: tabela_okvir_zad5_html
 
+    index.html
     <!DOCTYPE html>
     <html>
     <head>

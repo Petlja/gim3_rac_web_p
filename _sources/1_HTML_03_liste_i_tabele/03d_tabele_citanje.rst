@@ -78,37 +78,41 @@
 
 Табела која приказује ордење које је добио Никола Тесла и која има три колоне и три реда је приказана у следећем примеру:
 
-.. activecode:: tabela_html
-   :language: html
-   :nocodelens:
+.. petlja-editor:: tabela_html
 
-    <table border="solid 1px">
-        <thead>
-            <tr>
-                <th>Назив</th>
-                <th>Земља</th>
-                <th>Година</th>
-            <tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Орден Светог Саве</td>
-                <td>Србија</td>
-                <td>1892</td>
-            </tr>
-            <tr>
-                <td>Медаља Универзитета у Паризу</td>
-                <td>Француска</td>
-                <td>1937</td>
-            </tr>
-            <tr>
-                <td>Орден белог лава</td>
-                <td>Чехословачка</td>
-                <td>1937</td>
-            </tr>
-        </tbody>
-    </table>
-    <caption>Ордени и медаље додељени Николи Тесли</caption>
+   index.html
+   <!doctype html>
+   <html>
+     <body>
+       <table border="solid 1px">
+         <thead>
+           <tr>
+             <th>Назив</th>
+             <th>Земља</th>
+             <th>Година</th>
+           <tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>Орден Светог Саве</td>
+             <td>Србија</td>
+             <td>1892</td>
+           </tr>
+           <tr>
+             <td>Медаља Универзитета у Паризу</td>
+             <td>Француска</td>
+             <td>1937</td>
+           </tr>
+           <tr>
+             <td>Орден белог лава</td>
+             <td>Чехословачка</td>
+             <td>1937</td>
+           </tr>
+         </tbody>
+       </table>
+       <caption>Ордени и медаље додељени Николи Тесли</caption>
+     </body>
+   </html>
 
 .. infonote::
     Атрибут ``border`` са вредношћу ``solid 1px`` описује да ивице табеле и ћелија треба да буду једнобојне (енгл. *solid*) величине једног пиксела.

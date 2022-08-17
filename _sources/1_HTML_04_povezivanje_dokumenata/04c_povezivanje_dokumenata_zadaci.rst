@@ -16,10 +16,10 @@
         https://sr.wikipedia.org/sr-ec/Женска_одбојкашка_репрезентација_Србије
         https://sr.wikipedia.org/sr-ec/Женска_ватерполо_репрезентација_Србије
 
-    .. activecode:: links_sport_html
-        :language: html
-        :nocodelens:
+    .. petlja-editor:: links_sport_html
 
+        index.html
+        <!doctype html>
         <html>
         <body>
             <p>Репрезентације Србије у кошарци, одбојци и ватерполу:</p>
@@ -33,16 +33,16 @@
 
     **Задатак 1.4.2**
 
-    У HTML кôд у прозору испод додајте везу ка овој веб-страници (преузмите је из адресне траке прегледача). Покрените пример и испробајте везу. Приметите да атрибут ``target="blank"`` налаже прегледачу да страницу отвори у новом табу.
+    У HTML кôд у прозору испод додајте везу ка овој веб-страници (преузмите је из адресне траке прегледача). Покрените пример и испробајте везу. Приметите да атрибут ``target="_blank"`` налаже прегледачу да страницу отвори у новом табу.
 
-    .. activecode:: internal_links_html
-        :language: html
-        :nocodelens:
+    .. petlja-editor:: internal_links_html
 
+        index.html
+        <!doctype html>
         <html>
             <body>
             
-                <a ... target="blank">Ова веб страна у новом табу</a> 
+                <a ... target="_blank">Ова веб страна у новом табу</a>
 
             </body>
         </html>

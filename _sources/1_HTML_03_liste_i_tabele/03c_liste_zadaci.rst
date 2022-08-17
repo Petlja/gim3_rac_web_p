@@ -13,10 +13,10 @@
     | в) Сада уместо тага ``<ol>`` упишите ``<ol type="I">``. Приметите да је листа и даље уређена, али су ставке сада означене римским бројевима.
     | г) Испробајте и остале могуће вредности атрибута ``type``, а то су ``"1"`` (подразумевана вредност), ``"a"``, ``"A"``, ``"i"`` и приметите промене у приказу листе.
     
-    .. activecode:: ordered_list_type_html
-        :language: html
-        :nocodelens:
+    .. petlja-editor:: ordered_list_type_html
 
+        index.html
+        <!doctype html>
         <html>
           <body>
             <p>Почасни докторати које је добио Никола Тесла:</p>
@@ -36,30 +36,29 @@
     
     У овом примеру појављују се уметнуте (угњеждене) листе. Додајте кокошке, патке и ћурке у подлисту ставке *живина*.
 
-    .. activecode:: nested_lists_animals_html
-        :language: html
-        :nocodelens:
+    .. petlja-editor:: nested_lists_animals_html
 
+        index.html
         <html>
-        <body>
+          <body>
             <ol>
             <li>живина</li>
             <li>ситна стока
-                <ol type="a">
+              <ol type="a">
                 <li>овце</li>
                 <li>свиње</li>
                 <li>козе</li>
-                </ol>
+              </ol>
             </li>
             <li>крупна стока
-                <ol type="a">
+              <ol type="a">
                 <li>краве</li>
                 <li>коњи</li>
                 <li>магарци</li>
-                </ol>
+              </ol>
             </li>
             </ol>
-        </body>
+          </body>
         </html>
 
     
@@ -89,17 +88,16 @@
 
     У следећи HTML кôд додајте угњеждену листу у два нивоа, која садржи дате називе честица.
 
-    .. activecode:: nested_lists_particles_html
-        :language: html
-        :nocodelens:
+    .. petlja-editor:: nested_lists_particles_html
 
+        index.html
+        <!doctype html>
         <html>
-        <body>
+          <body>
             <p>Елементарне честице материје (фермиони)</p>
 
             <!-- овде убацити листу -->
-
-        </body>
+          </body>
         </html>
 
 
