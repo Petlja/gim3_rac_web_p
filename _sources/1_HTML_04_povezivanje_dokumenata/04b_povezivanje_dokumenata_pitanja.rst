@@ -39,14 +39,14 @@
     Релативан линк је:
 
 
+.. mchoice:: linkovi_q4
+    :answer_a: naucnici/MihajloPupin.html#Pronalasci
+    :answer_b: https://sr.wikipedia.org/sr-ec/Михајло_Пупин?Списак_патената
+    :answer_c: https://sr.wikipedia.org/wiki/Никола_Тесла;Биографија
+    :answer_d: https://sr.wikipedia.org/sr-ec/Борислав_Станковић#Административна_каријера
+    :correct: a, d
 
-.. fillintheblank:: linkovi_q4
-
-    Који симбол, при референцирању на одређену секцију у оквиру неке друге стране, раздваја адресу те веб-стране и идентификатор секције на тој страни?
-
-    - :^#$: Тачан одговор!
-      :.*: Покушај поново.
-
+    Који од понуђених линкова референцирају на одређену секцију у оквиру неке друге стране?
 
 
 .. mchoice:: linkovi_q5
