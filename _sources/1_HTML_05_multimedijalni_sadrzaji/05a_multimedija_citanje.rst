@@ -15,10 +15,18 @@
     
 Елемент ``<img>`` нема садржај, тј. ништа не наводимо између отварајућег и затварајућег тага. Зато се овај елемент може написати и као самозатварајући таг, овако:
 
-.. code-block:: html
-   :caption: Слика Николе Тесле - самозатварајући таг:
+.. petlja-editor:: slika_nikola_tesla_html
 
-    <img src="NikolaTesla.jpg" alt="Nikola Tesla"/>
+    index.html
+    <!doctype html>
+    <html>
+      <body>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg" alt="Nikola Tesla" width="300"/>
+        <p>
+          Autor: Martin van Meytes, Public domain, via Wikimedia Commons
+        </p>
+      </body>
+    </html>
 
 .. infonote::
 
@@ -52,13 +60,18 @@
 
 *HTML* језик нам омогућава да у веб-страну поставимо видео-материјале који се могу приказати у тој страни. Као и слике, видео-фајлови се снимају одвојено од *HTML* докумената (нпр. видео може да буде снимљен као посебан фајл ``movie.mp4``). У том случају је потребно у *HTML* документ ставити *HTML* елемент ``<video>``, који ће у себи имати везу ка видео-фајлу.
 
-.. code-block:: html
-   :caption: ``video`` елемент који показује ``mp4`` формат релативне путање ``film.mp4``
+.. petlja-editor:: video_fajl_html
 
-    <video controls>
-        <source src="film.mp4" type="video/mp4" />
-        Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
-    </video>
+    index.html
+    <!doctype html>
+    <html>
+      <body>
+        <video controls width="500">
+          <source src="http://localhost:1234/video.mp4" type="video/mp4" />
+          Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
+        </video>
+      </body>
+    </html>
 
 Елемент ``<video>`` у себи садржи *HTML* елемент ``<source>`` (представља се самозатварајућим тагом), који представља линк на видео-фајл који треба приказати.
 
@@ -75,16 +88,29 @@
 ============  =====================================================================
 ``controls``  Приказује алатку са контролама за покретанје и заустављање видеа
 ``autoplay``  Дефинише да је потребно покренути видео чим се учита
+``loop``      Стално понавља видео из почетка
 ``poster``    Представља слику која ће бити приказана пре него што се видео покрене
 ============  =====================================================================
 
-.. code-block:: html
-   :caption: Пример ``video`` елемента са додатним својствима:
+Пример видео-фајла са контролама, који се стално понавља, има постер и пример превода:
 
-    <video controls autoplay poster="/images/naslov.jpg">
-        <source src="film.mp4" type="video/mp4" />
-        Ако видите овај текст, онда видео не може да се прикаже.
-    </video>
+.. petlja-editor:: video_fajl_kontrole_html
+
+    index.html
+    <!doctype html>
+    <html>
+      <body>
+        <video controls loop poster="http://localhost:1234/video-poster.jpg" width="500">
+          <source src="http://localhost:1234/video.mp4" type="video/mp4" />
+          <!-- Српски превод - WEBVTT формат превода -->
+          <track
+            default kind="captions"
+            srclang="rs" label="Српски"
+            src="http://localhost:1234/video.vtt" />
+          Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
+        </video>
+      </body>
+    </html>
 
 Више информација о елементу ``video`` можете наћи на
 `страни о елементу video <https://www.w3schools.com/tags/tag_video.asp>`_ sajta *W3 schools*.
@@ -100,15 +126,21 @@
 
     Da li treba da se postavi link na interni video (mediastorage)?
 
-.. code-block:: html
+.. petlja-editor:: iframe_yt_embed_html
 
-    <iframe src="https://www.youtube.com/embed/s9KCMku_StY?list=PLWXhVV6d5_uXFh9vOfagoU4FzJJlV3oWz">
-    </iframe>
+    index.html
+    <!doctype html>
+    <html>
+      <body>
+        <iframe src="https://www.youtube.com/embed/s9KCMku_StY?list=PLWXhVV6d5_uXFh9vOfagoU4FzJJlV3oWz">
+        </iframe>
+      </body>
+    </html>
     
 Ове елементе је лако додати у *HTML* стране када желите да убаците у страну неки *YouTube* видео. Довољно је да одете до видеа који желите да убаците, одаберете *Share* (подели) опцију и као начин за дељење одаберете *Embed* (убачени) тип дељења:
 
-.. image:: ../../_images/html/chrome_share_embed_video.png
-    :width: 600px
+.. image:: ../../_images/html/ff_share_embed_video.gif
+    :width: 480px
     :align: center
 
 Све што је потребно да урадите је да овај *HTML* кôд убаците у вашу страну и *YouTube* видео ће бити пуштен.
@@ -126,12 +158,21 @@
         Ако видите овај текст, онда ваш прегледач не подржава <audio> елемент.
     </audio>
 
-Елемент ``<audio>`` омогућава да пустите („одсвирате“) аудио-материјале у *MP3*, *WAV* и *OGG* формату, мада различити прегледачи могу да имају подршку за само неке од ових формата. Због тога се у оквиру елемента ``<audio>`` обично наводи неколико аудио-фајлова, како би прегледач могао да употреби фајл чији формат подржава. У случају да прегледач подржава елемент ``<audio>``, видећете нешто попут приказа на следећој слици:
-
-.. image:: ../../_images/html/audio.png
-    :width: 600px
-    :align: center
+Елемент ``<audio>`` омогућава да пустите („одсвирате“) аудио-материјале у *MP3*, *WAV* и *OGG* формату, мада различити прегледачи могу да имају подршку за само неке од ових формата. Због тога се у оквиру елемента ``<audio>`` обично наводи неколико аудио-фајлова, како би прегледач могао да употреби фајл чији формат подржава.
 
 Као и у случају елемента ``<video>``, постоји неколико својстава помоћу којих можемо да задамо прегледачу како да прикаже контролу и пусти аудио-запис. На пример, ``controls`` дефинише да је потребно приказати контроле за покретање и заустављање аудио-материјала, ``loop`` да је потребно стално понављати аудио материјал, док ``autoplay`` задаје да аудио-запис треба одмах покренути чим се садржај учита.
+
+.. petlja-editor:: audio_html
+
+   index.html
+   <!doctype html>
+   <html>
+     <body>
+       <audio controls loop>
+         <source src="http://localhost:1234/ding.mp3" type="audio/mpeg" />
+         Ако видите овај текст, онда ваш прегледач не може да прикаже аудио.
+       </audio>
+     </body>
+   </html>
 
 Више информација о елементу ``audio`` можете наћи на `страни о аудио елементу <https://www.w3schools.com/tags/tag_audio.asp>`_ сајта *W3 schools*.
