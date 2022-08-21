@@ -202,11 +202,11 @@ lessons:
         guid: 9f453fa0-ed97-4832-b008-7b0a2c335a73
       - type: quiz
         title: CSS селектори – питања
-        file: 03e_css_selektori_pitanja.rst
+        file: 03f_css_selektori_pitanja.rst
         guid: 8f6017b8-d952-4b54-b267-ac898124867a
       - type: reading ### tasks?
         title: CSS селектори – задаци
-        file: 03f_css_selektori_zadaci.rst
+        file: 03g_css_selektori_zadaci.rst
         guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
   - title: CSS-4 Распоред елемената
     folder: 2_CSS_04_raspored_elemenata
@@ -223,15 +223,15 @@ lessons:
         guid: 5dd92aa6-5760-4f96-83a8-34fa8f66e9bf
       - type: quiz
         title: Распоред елемената – питања
-        file: 04b_raspored_elemenata_pitanja.rst
+        file: 04c_raspored_elemenata_pitanja.rst
         guid: 2a4df725-d5c1-4e17-a451-9ce23c9bf426
       - type: reading ### tasks?
         title: Распоред елемената – задаци
-        file: 04c_raspored_elemenata_zadaci.rst
+        file: 04d_raspored_elemenata_zadaci.rst
         guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
       - type: reading
         title: Flexbox
-        file: 04d_raspored_elemenata_flexbox_citanje.rst
+        file: 04e_raspored_elemenata_flexbox_citanje.rst
         guid: 723b6866-6ec7-4c37-b937-0ef184d8dcf2
       - type: reading
         title: Flexbox – примери
