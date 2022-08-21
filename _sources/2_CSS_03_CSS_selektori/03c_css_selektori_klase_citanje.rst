@@ -26,14 +26,22 @@
         background-color: skyblue;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <p class="levi">
-        Параграф са зеленом позадином
-    </p>
-    <p class="desni">
-        Параграф са плавом позадином
-    </p>
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <p class="levi">
+            Параграф са зеленом позадином
+        </p>
+        <p class="desni">
+            Параграф са плавом позадином
+        </p>
+    </body>
+    </html>
 
 Пошто се имена група постављају у оквиру атрибута ``class``, овакве групе елемената називамо **класе** и кажемо да елемент има одређену класу, да припада класи, или да је те класе. Атрибут ``class`` може да садржи једно или више имена класа, на основу којих ће његовом елементу бити постављена својства.
 
@@ -53,14 +61,22 @@
         background-color: skyblue;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <p class="levi blok">
-        Параграф са зеленом позадином
-    </p>
-    <p class="desni blok">
-        Параграф са плавом позадином
-    </p>
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <p class="levi blok">
+            Параграф са зеленом позадином
+        </p>
+        <p class="desni blok">
+            Параграф са плавом позадином
+        </p>
+    </body>
+    </html>
 
 Селекторе класа користимо када постоји више елемената на страни (или различитим странама), који треба да изгледају исто. У том случају треба на једном месту дефинисати стил који се односи на класу елемената и ту класу додати свим елементима које желимо да стилизујемо на тај начин.
 

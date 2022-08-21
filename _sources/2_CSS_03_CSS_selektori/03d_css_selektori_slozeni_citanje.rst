@@ -22,14 +22,21 @@
         background-color: lime;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <div class="pozadina">
-        Беж позадина јер није параграф.
-    </div>
-    <p class="pozadina">
-        Параграф има плаву позадину. Овај текст <span class="pozadina">има зелену позадину</span>.
-    </p>
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="pozadina">
+            Беж позадина јер није параграф.
+        </div>
+        <p class="pozadina">
+            Параграф има плаву позадину. Овај текст <span class="pozadina">има зелену позадину</span>.
+        </p>
+    </body>
 
 
 У горњем примеру параграф има плаву позадину. Иако само селектор ``.pozadina`` дефинише боју беж, ``p.pozadina`` има већи приоритет зато што специфицира стилове за параграфе који имају класу.

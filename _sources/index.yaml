@@ -196,12 +196,16 @@ lessons:
         title: Сложени CSS селектори
         file: 03d_css_selektori_slozeni_citanje.rst
         guid: 03885150-dcf2-4884-9322-a61e0a242aa7
+      - type: reading
+        title: CSS селектори – примери
+        file: 03e_css_selektori_primeri.rst
+        guid: 9f453fa0-ed97-4832-b008-7b0a2c335a73
       - type: quiz
-        title: CSS селектори - питања
+        title: CSS селектори – питања
         file: 03e_css_selektori_pitanja.rst
         guid: 8f6017b8-d952-4b54-b267-ac898124867a
       - type: reading ### tasks?
-        title: CSS селектори - задаци
+        title: CSS селектори – задаци
         file: 03f_css_selektori_zadaci.rst
         guid: 58b7d53e-2d68-4adc-8f06-00125ed4004a
   - title: CSS-4 Распоред елемената
@@ -213,18 +217,26 @@ lessons:
         title: Распоред елемената
         file: 04a_raspored_elemenata_citanje.rst
         guid: 24396313-c689-4095-bd3b-d04ee23a850a
+      - type: reading
+        title: Распоред елемената – пример
+        file: 04b_raspored_elemenata_primeri.rst
+        guid: 5dd92aa6-5760-4f96-83a8-34fa8f66e9bf
       - type: quiz
-        title: Распоред елемената - питања
+        title: Распоред елемената – питања
         file: 04b_raspored_elemenata_pitanja.rst
         guid: 2a4df725-d5c1-4e17-a451-9ce23c9bf426
       - type: reading ### tasks?
-        title: Распоред елемената - задаци
+        title: Распоред елемената – задаци
         file: 04c_raspored_elemenata_zadaci.rst
         guid: a9b8eeae-71a9-4890-b1ad-323fb27df858
       - type: reading
         title: Flexbox
         file: 04d_raspored_elemenata_flexbox_citanje.rst
         guid: 723b6866-6ec7-4c37-b937-0ef184d8dcf2
+      - type: reading
+        title: Flexbox – примери
+        file: 04f_raspored_elemenata_flexbox_primeri.rst
+        guid: f853bc0d-c5be-456d-9190-066288f9db77
 ### JavaScript
   - title: JS_1 Јава скрипт
     folder: 4_JS_01_izvrsavanje

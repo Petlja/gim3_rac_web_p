@@ -16,22 +16,30 @@ Flexbox
         border: 1px solid grey;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <div class="flex">
-        <div class="kolona">
-            Kolona 1
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="flex">
+            <div class="kolona">
+                Kolona 1
+            </div>
+            <div class="kolona">
+                Kolona 2
+            </div>
+            <div class="kolona">
+                Kolona 3
+            </div>
+            <div class="kolona">
+                Kolona 4
+            </div>
         </div>
-        <div class="kolona">
-            Kolona 2
-        </div>
-        <div class="kolona">
-            Kolona 3
-        </div>
-        <div class="kolona">
-            Kolona 4
-        </div>
-    </div>
+    </body>
+    </html>
 
 .. questionnote::
 
@@ -95,23 +103,30 @@ Flexbox
         border: 1px solid red;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <div class="flex plavi">
-        <div class="leva-kolona plavi">
-            <header>Википедија – слободна енциклопедија</heading>
-            <nav>Линкови за навигацију</nav>
-        </div>
-        <div class="kolona plavi">
-            <nav>Линкови за навигацију на врху</nav>
-            <div>Картице и претрага сајта</div>
-            <div>Добродошли</div>
-            <div class="flex crveni">
-                <div class="kolona crveni">Случајни чланци</div>
-                <div class="kolona crveni">Недавни догађаји</div>
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="flex plavi">
+            <div class="leva-kolona plavi">
+                <header>Википедија – слободна енциклопедија</heading>
+                <nav>Линкови за навигацију</nav>
+            </div>
+            <div class="kolona plavi">
+                <nav>Линкови за навигацију на врху</nav>
+                <div>Картице и претрага сајта</div>
+                <div>Добродошли</div>
+                <div class="flex crveni">
+                    <div class="kolona crveni">Случајни чланци</div>
+                    <div class="kolona crveni">Недавни догађаји</div>
+                </div>
             </div>
         </div>
-    </div>
+    </body>
+    </html>
 
 Својства родитељског елемента
 -----------------------------
@@ -143,16 +158,24 @@ Flexbox
         width: 100px;
     }
     ~~~
-    test.html
-    <link rel="stylesheet" href="style.css"/>
-    <div class="flex">
-        <div class="leva">
-            Лева колона у два реда.
+    index.html
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="flex">
+            <div class="leva">
+                Лева колона у два реда.
+            </div>
+            <div class="desna">
+                Десна колона
+            </div>
         </div>
-        <div class="desna">
-            Десна колона
-        </div>
-    </div>
+    </body>
+    </html>
 
 .. questionnote::
 
