@@ -14,7 +14,9 @@
     main.js
     document.title = 'Ово је наслов стране';
     let body = document.body;
+    // CSS својство background-color (боја позадине)
     body.style.backgroundColor = 'black';
+    // CSS својство color (боја текста)
     body.style.color = 'lightgreen';
 
     let boja = document.body.style.color;
@@ -35,46 +37,42 @@
 
 За сада ћемо употребити својства ``firstElementChild`` за дохватање првог „детета“ и ``nextElementSibling`` за дохватање следећег елемента у истом нивоу хијерархије (следећи „брат“ или „сестра“). Ова два својства *DOM* објеката су довољна за дохватање било ког елемента, а ускоро ћемо упознати и удобније начине за манипулисање *DOM* објектима.
 
-.. petlja-editor:: DOM_hijerarhija_html_js
+Елементима који имају идентификатор можемо приступити помоћу објекта ``window``. У наредном примеру имамо елемент са идентификатором ``navigacija`` и он ће бити доступан као својство ``window`` објекта, нпр. ``window.navigacija``. Ово није препоручен начин приступа елементима са идентификатором али послужиће док не научимо неке напредне методе у наредним лекцијама.
+
+.. petlja-editor:: DOM_hijerarhija_html_js_1
 
     main.js
-    let prviOdeljak = document.body.firstElementChild;
-    let drugiOdeljak = prviOdeljak.nextElementSibling;
-    let treciOdeljak = drugiOdeljak.nextElementSibling;
-    let p31 = treciOdeljak.firstElementChild;
-    let p32 = p31.nextElementSibling;
-    drugiOdeljak.style.backgroundColor = '#C0FFFF';
-    drugiOdeljak.style.color = 'blue';
-    drugiOdeljak.style.fontSize = "16pt";
+    // елемент div са идентификатором navigacija
+    let navigacija = window.navigacija;
 
-    treciOdeljak.style.backgroundColor = '#FFFFC0';
-    treciOdeljak.style.color = 'brown';
-    p32.style.color = 'red';
-    p32.style.border = '1px solid red';
+    // први линк: firstElementChild селектује први елемент у навигацији
+    let prviLink = navigacija.firstElementChild;
+    prviLink.style.backgroundColor = 'red';
+    prviLink.style.color = 'white';
+
+    // други линк: nextElementSibling селектује следећи елемент
+    // у истом нивоу хијерархије
+    let drugiLink = prviLink.nextElementSibling;
+    drugiLink.style.backgroundColor = 'lime';
+
+    // трећи линк: nextElementSibling селектује следећи елемент
+    // у истом нивоу хијерархије
+    let treciLink = drugiLink.nextElementSibling;
+    treciLink.style.backgroundColor = 'skyblue';
     ~~~
     index.html
     <!DOCTYPE html>
     <html>
-      <head>
-      </head>
-      <body>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div id="navigacija">
+            <a href="https://google.com">Први линк</a>
+            <a href="https://google.com">Други линк</a>
+            <a href="https://google.com">Трећи линк</a>
         <div>
-          <p>Овај документ има четири одељка.</p>
-          <p>Ово је други параграф првог одељка.</p>
-        </div>
-        <div>
-          <p>Ово је други одељак.</p>
-          <p>Стил другог и трећег одељка је подешен програмски.</p>
-        </div>
-        <div>
-          <p>Ово је трећи одељак.</p>
-          <p>У трећем одељку други параграф је посебно стилизован.</p>
-          <p>У осталим деловима трећег одељка примењује се стил одељка.</p>
-        </div>
-        <div>
-          <p>Четврти одељак изгледа као и први.</p>
-          <p>Њихов стил није програмски мењан.</p>
-        </div>
         <script src="main.js"></script>
-      </body>
+    </body>
     </html>
+

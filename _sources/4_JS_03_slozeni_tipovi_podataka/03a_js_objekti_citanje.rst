@@ -73,34 +73,11 @@
         tel: "012 345 678",
         razred: 6
     };
-    let razred = ucenik.razred;
-    razred = razred + 1;
-    ucenik.razred = razred;
-    alert(ucenik.razred);
-    ~~~
-    index.html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <script src="main.js"></script>
-      </head>
-      <body>
-        <p>Садржај стране (који није обавезан).</p>
-      </body>
-    </html>
-
-У овом случају, вредност објекта је могла да буде промењена и једноставније:
-
-.. petlja-editor:: azuriranje_objekta_2_js
-
-    main.js
-    let ucenik = {
-        ime: "Петар Петровић",
-        tel: "012 345 678",
-        razred: 6
-    };
-    ucenik.razred++;
-    alert(ucenik.razred);
+    // ученик прелази у следећи разред
+    ucenik.razred = ucenik.razred + 1;
+    // или
+    // ucenik.razred++;
+    alert(`Ученик ${ucenik.ime} је у ${ucenik.razred}. разреду.`);
     ~~~
     index.html
     <!DOCTYPE html>
@@ -145,9 +122,53 @@
         let n;
         var m;
 
-|
+Хијерархија објеката
+--------------------
 
-Приликом приказивања вредности објекта долази до претварања (конверзије) објекта у стринг, али не на нарочито користан начин:
+Поменули смо да вредности у објекту могу да буду други објекти. На тај начин објекти могу да формирају хијерархијску структуру.
+
+Погледајмо пример у ком ученик похађа школу. Можемо да ученику доделимо поље ``skolskaGodina`` која ће бити објекат и представљаће оцене и изостанке тренутне школске године. Оцене се заводе под предметима па нам је потребно да оцене такође буду објекат. Када желимо да приступимо оценама морамо да испратимо хијерархију: ученик → школска година → оцене → предмет.
+
+.. petlja-editor:: hijerarhija_objekta_js
+
+    main.js
+    let ucenik = { 
+        licniPodaci: {
+            ime: "Петар Петровић",
+            tel: "012 345 678"
+        },
+        skolskaGodina: {
+            izostanci: { opravdani: 27, neopravdani: 1 },
+            ocene: { srpski: 5, fizika: 4 }
+        }
+    };
+
+    // Ученик је направио нови неоправдани изостанак
+    ucenik.skolskaGodina.izostanci.neopravdani++;
+
+    // Ученик је добио петицу из физике
+    ucenik.skolskaGodina.ocene.fizika = 5;
+
+    alert(`Ученик ${ucenik.licniPodaci.ime} има` + 
+        ` ${ucenik.skolskaGodina.izostanci.neopravdani} неоправданих изостанака.`);
+    alert(`Ученик ${ucenik.licniPodaci.ime} има оцену` +
+        ` ${ucenik.skolskaGodina.ocene.fizika} из физике.`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
+
+Објекат као стринг
+------------------
+
+Приликом приказивања вредности објекта долази до претварања (конверзије) објекта у стринг, али не на нарочито користан начин. Резултат конверзије било ког објекта у стринг је ``[object Object]``.
 
 .. petlja-editor:: ispisivanje_objekta_js
 
@@ -170,17 +191,42 @@
       </body>
     </html>
 
-Да бисмо уместо резултата ``[object Object]`` добили смисленији запис објекта, треба писати:
+Да бисмо добили смисленији запис објекта на располагању нам је метода ``JSON.stringify``. *JSON* је настао у оквиру језика *JavaScript* (скраћеница *JSON* долази од *JavaScript Object Notation*), али се често користи и у другим програмским језицима. Предност *JSON* формата је његова могућност да опише комплексне структуре података и притом одржи читљивост.
+
+.. code-block:: json
+    :caption: Ученик представљен форматом *JSON*
+
+    {
+      "licniPodaci": {
+        "ime": "Петар Петровић",
+        "tel": "012 345 678"
+      },
+      "skolskaGodina": {
+        "izostanci": {
+          "opravdani": 27,
+          "neopravdani": 1
+        },
+        "ocene": {
+          "srpski": 5,
+          "fizika": 4
+        }
+      }
+    }
 
 .. petlja-editor:: ispisivanje_objekta_2_js
 
     main.js
     let ucenik = {
-        ime: "Петар Петровић",
-        tel: "012 345 678",
-        razred: 6
+        licniPodaci: {
+            ime: "Петар Петровић",
+            tel: "012 345 678"
+        },
+        skolskaGodina: {
+            izostanci: { opravdani: 27, neopravdani: 1 },
+            ocene: { srpski: 5, fizika: 4 }
+        }
     };
-    alert(JSON.stringify(ucenik));
+    alert(JSON.stringify(ucenik, null, 2));
     ~~~
     index.html
     <!DOCTYPE html>
@@ -201,48 +247,6 @@
     let s = '{ "ime": "Петар Петровић", "tel": "012 345 678", "razred": 6 }';
     let ucenik = JSON.parse(s);
     alert(ucenik.ime);
-    ~~~
-    index.html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <script src="main.js"></script>
-      </head>
-      <body>
-        <p>Садржај стране (који није обавезан).</p>
-      </body>
-    </html>
-
-.. infonote::
-
-    JSON је постао опште прихваћен као начин записивања сложених вредности, а настао је управо у оквиру језика *JavaScript* (скраћеница *JSON* долази од *JavaScript Object Notation*).
-
-
-Хијерархија објеката
---------------------
-
-Поменули смо да вредности у објекту могу да буду други објекти. На тај начин објекти могу да формирају хијерархијску структуру. Ево како изгледа таква ситуација:
-
-.. petlja-editor:: hijerarhija_objekta_js
-
-    main.js
-    let ucenik = { 
-        licniPodaci: {
-            ime: "Петар Петровић",
-            tel: "012 345 678"
-        },
-        skola: { 
-            razred: 6, 
-            ocene: { srpski: 5, fizika: 4 },
-            izostanci: { opravdani: 27, neopravdani: 1 }
-        }
-    };
-
-    // Ученик је направио нови неоправдани изостанак
-    ucenik.skola.izostanci.neopravdani++;
-
-    alert(`Ученик ${ucenik.licniPodaci.ime} има` + 
-        ` ${ucenik.skola.izostanci.neopravdani} неоправданих изостанака.`);
     ~~~
     index.html
     <!DOCTYPE html>
