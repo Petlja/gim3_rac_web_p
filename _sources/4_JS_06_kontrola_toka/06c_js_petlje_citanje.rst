@@ -161,9 +161,8 @@ For петља
     </html>
 
 .. petlja-editor:: for_of_string_js
-    :language: javascript
-    :nocodelens:
 
+    main.js
     let tekst = 'JavaScript';
     for (let slovo of tekst) {
         alert(slovo);
