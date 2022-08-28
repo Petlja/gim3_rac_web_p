@@ -1,7 +1,9 @@
 Догађаји
 ========
 
-До сада смо видели један мали део могућности језика *JavaScript* у манипулисању садржајем и изгледом веб-страна. Највећи недостатак у досадашњим примерима је што се програмски кôд извршава одмах по учитавању стране. Сада ћемо видети како можемо да пишемо *JavaScript* кôд који ће се извршавати као одговор на задати догађај, чиме наше веб-стране постају интерактивне.
+.. comment
+
+    До сада смо видели један мали део могућности језика *JavaScript* у манипулисању садржајем и изгледом веб-страна. Највећи недостатак у досадашњим примерима је што се програмски кôд извршава одмах по учитавању стране. Сада ћемо видети како можемо да пишемо *JavaScript* кôд који ће се извршавати као одговор на задати догађај, чиме наше веб-стране постају интерактивне.
 
 *JavaScript* нам омогућава да дефинишемо каква акција треба да се изврши када се нешто деси у веб-страни или на неком њеном елементу. Примери таквих догађаја су: завршено учитавање веб-стране, клик на неки елемент, прелазак мишем преко неког елемента, истек неког задатог времена и слично.
 
@@ -271,49 +273,6 @@
 
 За сваку слику догађај наиласка мишем на слику (``onmouseover``) и догађај одласка миша из области слике (``onmouseout``) повезани су са функцијом која мења величину слике. Конкретно, при наиласку мишем на слику, она постаје два пута већа од њене природне величине, а при одласку миша са слике она се враћа на природну величину.
 
-.. activecode:: vece_i_manje_slike_html
-    :language: html
-    :nocodelens:
-
-    <!DOCTYPE html>
-    <html lang="sr">
-        <head>
-            <title>Слике</title>
-        </head>
-        <body>
-            <h2>Повећавање и смањивање слика</h2>
-           
-            <img id="emo1" src="../_images/emo1.png" alt="Prva slika">
-            <img id="emo2" src="../_images/emo2.png" alt="Druga slika">
-            <img id="emo3" src="../_images/emo3.png" alt="Treca slika">
-
-            <p> Позиционирањем миша на слику, она се увећава. </p>
-         </body>
-        <script>
-
-            // funkcija menja velicinu slike
-            function vel(slika, faktor) {
-                slika.style.width = `${slika.naturalWidth * faktor}px`;
-                slika.style.height = `${slika.naturalHeight * faktor}px`;
-            }
-            
-            function dolazakMisa(dogadjaj) {
-                vel(dogadjaj.currentTarget, 2);
-            }
-            function odlazakMisa(dogadjaj) {
-                vel(dogadjaj.currentTarget, 1);
-            }
-
-            document.getElementById('emo1').addEventListener('mouseenter', dolazakMisa);
-            document.getElementById('emo1').addEventListener('mouseout', odlazakMisa);
-            document.getElementById('emo2').addEventListener('mouseenter', dolazakMisa);
-            document.getElementById('emo2').addEventListener('mouseout', odlazakMisa);
-            document.getElementById('emo3').addEventListener('mouseenter', dolazakMisa);
-            document.getElementById('emo3').addEventListener('mouseout', odlazakMisa);
-
-        </script>
-    </html>
-
 .. petlja-editor:: vece_i_manje_slike_html
 
     main.js
@@ -360,60 +319,19 @@
 
 Исти ефекат привременог повећавања слике при преласку мишем преко ње може да се постигне и мало другачијим кôдом. Као други параметар методе ``addEventListener`` уместо назива функције можемо да наведемо комплетну дефиницију функције. Приметимо да тако уметнуте функције нигде нису именоване, па су због тога познате као анонимне функције (а понекад их називамо и ламбда-функције). Пошто немају име, анонимне функције се могу користити само на једном месту у кôду и само у једну сврху (за употребу функције на другим местима у кôду потребно је да функција има име).
 
+.. code-block:: javascript
+    :caption: Анонимна функција
+
+    const slika = document.getElementById('emo1');
+
+    // догађај mouseenter позива анонимну функцију
+    // анонимна функција ради исто што и dolazakMisa у претходном примеру
+    // осим што нема име и дефинише се на самом месту коришћења
+    slika.addEventListener('mouseenter', function (dogadjaj) {
+        vel(dogadjaj.currentTarget, 2);
+    });
+
 Употреба анонимних функција (навођење целе функције тамо где се очекује њено име) је честа у језику *JavaScript*, а следећи пример показује како та употреба изгледа:
-
-.. activecode:: vece_i_manje_slike_anonimne_funkcije_html
-    :language: html
-    :nocodelens:
-
-    <!DOCTYPE html>
-    <html lang="sr">
-        <head>
-            <title>Слике</title>
-        </head>
-        <body>
-            <h2>Повећавање и смањивање слика</h2>
-           
-            <img id="emo1" src="../_images/emo1.png" alt="Prva slika" >
-            <img id="emo2" src="../_images/emo2.png" alt="Druga slika">
-            <img id="emo3" src="../_images/emo3.png" alt="Treca slika">
-
-            <p> Позиционирањем миша на слику, она се увећава. </p>
-         </body>
-        <script>
-
-            // funkcija menja velicinu slike
-            function vel(slika, faktor) {
-                slika.style.width = `${slika.naturalWidth * faktor}px`;
-                slika.style.height = `${slika.naturalHeight * faktor}px`;
-            }
-
-            let sl1 = document.getElementById('emo1');
-            sl1.addEventListener('mouseenter', function(dogadjaj) {
-                vel(sl1, 2);
-            });
-            sl1.addEventListener('mouseout', function(dogadjaj) {
-                vel(sl1, 1);
-            });
-
-            let sl2 = document.getElementById('emo2');
-            sl2.addEventListener('mouseenter', function(dogadjaj) {
-                vel(sl2, 2);
-            });
-            sl2.addEventListener('mouseout', function(dogadjaj) {
-                vel(sl2, 1);
-            });
-
-            let sl3 = document.getElementById('emo3');
-            sl3.addEventListener('mouseenter', function(dogadjaj) {
-                vel(sl3, 2);
-            });
-            sl3.addEventListener('mouseout', function(dogadjaj) {
-                vel(sl3, 1);
-            });
-
-        </script>
-    </html>
 
 .. petlja-editor:: vece_i_manje_slike_anonimne_funkcije_html
 

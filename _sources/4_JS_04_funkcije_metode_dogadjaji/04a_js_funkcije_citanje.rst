@@ -9,7 +9,34 @@
     :width: 500px
     :align: center
 
-Параметри су вредности које можемо да пошаљемо функцији када је позовемо. Функција на основу параметара може (а не мора) да врати неки резултат помоћу наредбе ``return``. У следећих пар примера ћемо видети како се пишу и позивају функције које враћају резултат:
+Параметри су вредности које можемо да пошаљемо функцији када је позовемо. Функција на основу параметара може (а не мора) да врати неки резултат помоћу наредбе ``return``.
+
+.. petlja-editor:: pitagorina_teorema_js
+
+    main.js
+    function izracunajHipotenuzu(a, b) {
+        const hipotenuza = Math.sqrt(a ** 2 + b ** 2);
+        return hipotenuza;
+    }
+
+    // дати подаци
+    const a = 3;
+    const b = 4;
+    const c = izracunajHipotenuzu(a, b);
+    alert(`Хипотенуза троугла са страницама a=${a} b=${b} је: ${c}`);
+    ~~~
+    index.html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="main.js"></script>
+      </head>
+      <body>
+        <p>Садржај стране (који није обавезан).</p>
+      </body>
+    </html>
+
+Функција се зове ``izracunajHipotenuzu`` и прима два параметра ``a`` и ``b``. Тело функције рачуна хипотенузу на основу параметара и враћа вредност коришћењем наредбе ``return``.
 
 .. questionnote::
 
@@ -29,21 +56,33 @@
 .. petlja-editor:: slozeno_kretanje_1_js
 
     main.js
+    /*
+     * Рачуна пређени пут на основу параметара.
+     * @param {number} tPoc - почетно време
+     * @param {number} tZav - завршно време
+     * @param {number} vPoc - почетна брзина
+     * @param {number} vZav - завршна брзина
+     * @returns {number} Пређени пут
+     */
     function put(tPoc, tZav, vPoc, vZav) {
-        let t = tZav - tPoc;
-        let vsr = (vPoc + vZav) / 2;
-        let predjeniPut = vsr * t;
+        // време преласка за које рачунамо пут
+        const t = tZav - tPoc;
+        // средња брзина између две тачке
+        const vsr = (vPoc + vZav) / 2;
+        // пут = средња брзина * време између две тачке
+        const predjeniPut = vsr * t;
         return predjeniPut;
     }
 
     // дати подаци
-    let t0 = 0, t1 = 4, t2 = 11, t3 = 14;
-    let v0 = 2, v1 = 11, v2 = 13, v3 = 5;
+    const t0 = 0, t1 = 4, t2 = 11, t3 = 14;
+    const v0 = 2, v1 = 11, v2 = 13, v3 = 5;
 
-    let s1 = put(t0, t1, v0, v1);
-    let s2 = put(t1, t2, v1, v2);
-    let s3 = put(t2, t3, v2, v3);
-    alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
+    const s1 = put(t0, t1, v0, v1);
+    const s2 = put(t1, t2, v1, v2);
+    const s3 = put(t2, t3, v2, v3);
+    const ukupno = s1 + s2 + s3;
+    alert(`Укупан пређени пут је ${ukupno.toFixed(2)}.`);
     ~~~
     index.html
     <!DOCTYPE html>
@@ -55,25 +94,6 @@
         <p>Садржај стране (који није обавезан).</p>
       </body>
     </html>
-
-.. comment
-
-    Nizovi su pokriveni u prethodnoj lekciji, ali petlje nisu :(
-
-    .. questionnote::
-
-        **Вежба**
-
-        Пробајте да сами у претходном примеру напишете функцију која ће рачунати пут на основу низа вредности нпр:
-
-        .. code-block:: javascript
-
-            let ukupanPut = izracunajPut([
-                [t0, t1, v0, v1],
-                [t1, t2, v1, v2],
-                [t2, t3, v2, v3]
-            ]);
-
 
 Када је потребно да функција врати више од једног резултата, те резултате можемо да наведемо у угластим заградама (као низ). Променљиве које примају враћене вредности на месту позива функције такође наводимо у угластим заградама.
 
@@ -92,23 +112,35 @@
 .. petlja-editor:: slozeno_kretanje_2_js
 
     main.js
+    /*
+     * Рачуна пређени пут и завршну брзину на основу параметара.
+     * @param {number} t - време путовања
+     * @param {number} vpoc - почетна брзина
+     * @param {number} a - убрзање
+     * @returns {array} Пређени пут и завршна брзина
+     */
     function putIZavrsnaBrzina(t, vpoc, a) {
-        let vzav = vpoc + a*t;        // брзина после t секунди (завршна)
-        let vsr = (vpoc + vzav) / 2;  // средња брзина
-        put = vsr * t;                // пређени пут
+        // брзина после t секунди (завршна)
+        const vzav = vpoc + a * t;
+        // средња брзина
+        const vsr = (vpoc + vzav) / 2;
+        // пређени пут
+        const put = vsr * t;
+        // резултат је низ са 2 елемента
         return [put, vzav];
     }
 
     // дати подаци
-    let a01 = 2, a12 = 0, a23 = -6;
-    let t01 = 3, t12 = 10;
-    let v0 = 0;
+    const a01 = 2, a12 = 0, a23 = -6;
+    const t01 = 3, t12 = 10;
+    const v0 = 0;
 
-    let [s1, v1] = putIZavrsnaBrzina(t01, v0, a01);
-    let [s2, v2] = putIZavrsnaBrzina(t12, v1, a12);
-    let t23 = v2 / Math.abs(a23);
-    let [s3, v3] = putIZavrsnaBrzina(t23, v2, a23);
-    alert(`Укупан пређени пут је ${(s1+s2+s3).toFixed(2)}.`);
+    const [s1, v1] = putIZavrsnaBrzina(t01, v0, a01);
+    const [s2, v2] = putIZavrsnaBrzina(t12, v1, a12);
+    const t23 = v2 / Math.abs(a23);
+    const [s3, v3] = putIZavrsnaBrzina(t23, v2, a23);
+    const ukupno = s1 + s2 + s3;
+    alert(`Укупан пређени пут је ${ukupno.toFixed(2)}.`);
     ~~~
     index.html
     <!DOCTYPE html>

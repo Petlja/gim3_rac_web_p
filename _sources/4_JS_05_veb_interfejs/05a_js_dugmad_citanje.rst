@@ -59,10 +59,58 @@
     *w3schools* страни `о дугметима <https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp>`_ или 
     *Bootstrap* `документацији о дугметима <https://getbootstrap.com/docs/4.1/components/buttons/>`_.
 
+Пример – Слике
+''''''''''''''
+
+На следећој веб-страни налазе се слика и дугме за прелазак на следећу слику. Кликом на дугме повећавамо бројач ``trenutna`` за 1. Тренутну слику бирамо из низа, а коју по реду ћемо изабрати добијамо рачунањем остатка са дељењем бројача и броја слика.
+
+.. csv-table:: Рачунање редног броја слике која се приказује
+    :header: "Бројач", "Модуо"
+    :widths: 20, 80
+    :align: left
+
+    ``0``,  :math:`0 \mod 3 = 0`
+    ``1``,  :math:`1 \mod 3 = 1`
+    ``2``,  :math:`2 \mod 3 = 2`
+    ``3``,  :math:`3 \mod 3 = 0`
+    ``4``,  :math:`4 \mod 3 = 1`
+
+.. petlja-editor:: rotacija_slika_html
+
+    main.js
+    const slike = [
+        'http://localhost:8000/_images/emo11.png',
+        'http://localhost:8000/_images/emo21.png',
+        'http://localhost:8000/_images/emo31.png'
+    ];
+    let trenutna = 0;
+
+    const slika = document.getElementById('slika');
+    document.getElementById('sledeca').addEventListener('click', function () {
+        trenutna++;
+        slika.src = slike[trenutna % slike.length];
+    });
+    ~~~
+    index.html
+    <!doctype html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+
+        <img id="slika" src="http://localhost:8000/_images/emo11.png" alt=""/>
+        <br/>
+        <button id="sledeca">Следећа</button>
+
+        <script src="main.js"></script>
+    </body>
+    </html>
+
+
 Пример – Вишејезична страна
 '''''''''''''''''''''''''''
 
-На следећој веб-страни се у засебним одељцима налази исти садржај на ћирилици, латиници и на енглеском. Садржај је, у ствари, само започет, али јасно је да се он лако може допунити. Сваки одељак има одговарајући идентификатор (``cirilica``, ``latinica``, или ``english``).
+На следећој веб-страни се у засебним одељцима налази исти садржај на ћирилици, латиници и на енглеском. Сваки одељак има одговарајући идентификатор (``cirilica``, ``latinica``, или ``english``).
 
 У врху стране су три дугмета, помоћу којих бирамо на ком језику/писму ће бити приказана страна. Сва три дугмета покрећу исту функцију, али са различитим аргументом. Свако дугме као аргумент прослеђује идентификатор оне секције која треба да буде видљива. Функција најпре све одељке учини невидљивим, тако што им дода класу ``nevidljiv`` (стил те класе је ``display: none``, што значи да се елементи те класе не приказују), а затим ту класу уклони из одељка који треба да остане видљив.
 
