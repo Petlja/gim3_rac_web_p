@@ -162,6 +162,7 @@ For петља
 
 .. petlja-editor:: for_of_string_js
 
+    main.js
     let tekst = 'JavaScript';
     for (let slovo of tekst) {
         alert(slovo);
