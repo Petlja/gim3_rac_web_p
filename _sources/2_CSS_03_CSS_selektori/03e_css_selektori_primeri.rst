@@ -6,9 +6,10 @@ CSS селектори – примери
 
 У једној од претходних лекција направили смо мобилну апликацију за приказивање слика кућних љубимаца, и тада смо користили елементе као што су ``main``, ``nav`` и ``section``. Следи исти пример где ћемо користити идентификаторе и класе.
 
-.. image:: ../../_images/css/primer_kucni_ljubimci.png
+.. figure:: ../../_images/css/primer_kucni_ljubimci.png
     :width: 450px
     :align: center
+    :class: screenshot-shadow
 
 .. petlja-editor:: css_selektori_slike_ljubimaca
 
@@ -103,9 +104,10 @@ CSS селектори – примери
 
 Направити табелу предмета трећег семестра смера одсека Рачунарска техника и информатика са Електротехничког факултета.
 
-.. image:: ../../_images/css/primer_tabela_etf.png
-    :width: 600px
+.. figure:: ../../_images/css/primer_tabela_etf.png
+    :width: 780px
     :align: center
+    :class: screenshot-shadow
 
 .. petlja-editor:: css_selektori_tabela
 
@@ -212,10 +214,11 @@ CSS селектори – примери
 
 Направићемо мени са ставкама „Измени“, „Обриши“ и „Подешавања“.
 
-.. image:: ../../_images/css/primer_meni.png
+.. figure:: ../../_images/css/primer_meni.png
     :width: 300px
     :align: center
-
+    :class: screenshot-shadow
+    
 Да унапредимо изглед менија користићемо иконе коју пружа бесплатна библотека `Material Icons <https://fonts.google.com/icons?selected=Material+Icons>`_. Можете прочитати `упутство за додавање библиотеке <https://developers.google.com/fonts/docs/material_icons#setup_method_1_using_via_google_fonts>`_.
 
 .. petlja-editor:: css_selektori_meni

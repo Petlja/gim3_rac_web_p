@@ -5,7 +5,7 @@
 
 У језику *JavaScript* се функције креирају тако што се иза имена функције у облим заградама наведе листа параметара, а затим у витичастим заградама скуп наредби које треба извршити када се та функција позове.
 
-.. image:: ../../_images/js/funkcija_sintaksa.png
+.. figure:: ../../_images/js/funkcija_sintaksa.png
     :width: 500px
     :align: center
 
@@ -157,7 +157,7 @@
     
 Функције у претходним примерима на основу датих параметара израчунавају неки резултат и враћају га на место позива:
 
-.. image:: ../../_images/js/funkcija_ulaz_izlaz.png
+.. figure:: ../../_images/js/funkcija_ulaz_izlaz.png
     :width: 400px
     :align: center
 

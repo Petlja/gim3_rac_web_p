@@ -4,10 +4,11 @@ Flexbox – примери
 YouTube видео
 -------------
 
-.. image:: ../../_images/css/primer_youtube.jpg
-    :width: 700
+.. figure:: ../../_images/css/primer_youtube.jpg
+    :width: 780
     :align: center
-
+    :class: screenshot-shadow
+    
 .. petlja-editor:: css_flexbox_youtube
 
     style.css
@@ -220,9 +221,10 @@ YouTube видео
 
 Пример веб-сајта `Петље <https://petlja.org>`_ приказан је у лекцији `Распоред Елемената – примери <./04b_raspored_elemenata_primeri.html>`_ користећи *float*. Погледајмо исти пример користећи *flexbox*.
 
-.. image:: ../../_images/css/primer_petlja_org.jpg
-    :width: 600px
+.. figure:: ../../_images/css/primer_petlja_org.jpg
+    :width: 780px
     :align: center
+    :class: screenshot-shadow
 
 .. petlja-editor:: css_flexbox_petlja_org
 

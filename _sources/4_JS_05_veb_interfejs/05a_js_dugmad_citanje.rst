@@ -79,9 +79,9 @@
 
     main.js
     const slike = [
-        'http://localhost:8000/_images/emo11.png',
-        'http://localhost:8000/_images/emo21.png',
-        'http://localhost:8000/_images/emo31.png'
+        '../_images/emo1.png',
+        '../_images/emo2.png',
+        '../_images/emo3.png'
     ];
     let trenutna = 0;
 
@@ -98,7 +98,7 @@
     </head>
     <body>
 
-        <img id="slika" src="http://localhost:8000/_images/emo11.png" alt=""/>
+        <img id="slika" src="../_images/emo1.png" alt=""/>
         <br/>
         <button id="sledeca">Следећа</button>
 

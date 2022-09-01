@@ -20,11 +20,11 @@ CSS (Cascading Style Sheets)
 
 У сваком веб-прегледачу можете да пронађете *HTML* кôд било ког елемента приказане веб-стране и да испитате која својства има тај елемент и зашто баш тако изгледа. Код већине прегледача притиском на тастер *F12* отвара се додатни прозор у доњем делу прегледача, као на следећој слици:
 
-.. image:: ../../_images/css/browser_inspect.png
-    :width: 600px
+.. figure:: ../../_images/css/browser_inspect.png
+    :width: 780px
     :align: center
+    :class: screenshot-shadow
 
-|
 
 На пример, у прегледачу *Chrome* се у доњем делу отвара прозор у коме се види *HTML* кôд којим је описана структура елемената стране, као и стилови (доле десно) који су примењени на те елементе да би се добио жељени изглед стране.
 
@@ -43,6 +43,7 @@ CSS (Cascading Style Sheets)
 
 У самом инспектору је могуће мењати својства и видети промену тренутно без снимања стране. Пример промене боје наслова из плаве у црвену:
 
-.. image:: ../../_images/css/browser_inspect_promena.gif
+.. figure:: ../../_images/css/browser_inspect_promena.gif
     :width: 600px
     :align: center
+    :class: screenshot-shadow

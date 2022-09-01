@@ -67,7 +67,7 @@
     <html>
       <body>
         <video controls width="500">
-          <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/SampleVideo.mp4" type="video/mp4" />
+          <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/video.mp4" type="video/mp4" />
           Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
         </video>
       </body>
@@ -100,13 +100,13 @@
     <!doctype html>
     <html>
       <body>
-        <video controls loop poster="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/sample.jpg" width="500">
-          <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/SampleVideo.mp4" type="video/mp4" />
+        <video controls loop poster="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/video-poster.jpg" width="500">
+          <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/video.mp4" type="video/mp4" />
           <!-- Српски превод - WEBVTT формат превода -->
           <track
             default kind="captions"
             srclang="rs" label="Српски"
-            src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/sample.vtt" />
+            src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/video.vtt" />
           Ако видите овај текст, онда ваш прегледач не може да прикаже видео.
         </video>
       </body>
@@ -139,9 +139,10 @@
     
 Ове елементе је лако додати у *HTML* стране када желите да убаците у страну неки *YouTube* видео. Довољно је да одете до видеа који желите да убаците, одаберете *Share* (подели) опцију и као начин за дељење одаберете *Embed* (убачени) тип дељења:
 
-.. image:: ../../_images/html/ff_share_embed_video.gif
+.. figure:: ../../_images/html/ff_share_embed_video.gif
     :width: 480px
     :align: center
+    :class: screenshot-shadow
 
 Све што је потребно да урадите је да овај *HTML* кôд убаците у вашу страну и *YouTube* видео ће бити пуштен.
 
@@ -169,7 +170,7 @@
    <html>
      <body>
        <audio controls loop>
-         <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/SampleAudio_0.4mb.mp3" type="audio/mpeg" />
+         <source src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/ding.mp3" type="audio/mpeg" />
          Ако видите овај текст, онда ваш прегледач не може да прикаже аудио.
        </audio>
      </body>

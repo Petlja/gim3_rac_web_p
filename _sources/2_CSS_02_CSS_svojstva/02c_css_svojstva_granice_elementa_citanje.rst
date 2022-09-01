@@ -10,9 +10,10 @@ CSS Својства која дефинишу границе елемента
 
 На следећој слици је приказано шта би елемент који има подешена својства урадио са својим садржајем и неким околним елементима:
 
-.. image:: ../../_images/css/margin-padding.png
-    :width: 600px
+.. figure:: ../../_images/css/margin-padding.png
+    :width: 780px
     :align: center
+    :class: screenshot-shadow
 
 Својство ``border`` може, на пример, да дефинише да је оквир елемента зелене боје и дебљине 5 пиксела. Садржај елемента неће моћи да се постави од ивице до ивице, него ће бити одмакнут од ивица за вредност која је постављена у својству ``padding``. Елементи који се налазе око овог елемента неће моћи да се поставе уз ивицу него ће бити одмакнути за вредност која је постављена у својству ``margin``.
 
@@ -103,9 +104,10 @@ CSS Својства која дефинишу границе елемента
 
 Искористимо знање из ове и претходних лекција да направимо банер добродошлице на Википедију.
 
-.. image:: ../../_images/css/wiki_baner_dobrodoslice.png
-    :width: 600px
+.. figure:: ../../_images/css/wiki_baner_dobrodoslice.png
+    :width: 780px
     :align: center
+    :class: screenshot-shadow
 
 У овом примеру као главни елемент банера користимо ``div`` (скраћено од енгл. *division*, што значи подела или одељак). Да би елемент изгледао као на слици, потребно је да доделимо боју ивице, позадинску боју и позадинску слику. Да одвојимо садржај банера од ивица искористићемо својство ``padding``.
 
@@ -121,7 +123,7 @@ CSS Својства која дефинишу границе елемента
 
         /* Позадинска боја и слика */
         background-color: #f8f9fa;
-        background-image: url(http://localhost:1234/wikipedia_slova.svg);
+        background-image: url(https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/wikipedia_slovo.svg);
 
         /* Величина подручја унутар елемента
            32px горе и доле

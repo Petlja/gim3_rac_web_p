@@ -8,7 +8,7 @@ CSS Димензије елемената
 .. image:: ../../_images/css/test_responsive.png
     :width: 320px
     :align: center
-
+    :class: screenshot-shadow
 
 Врсте елемената
 ---------------
@@ -256,10 +256,10 @@ CSS Димензије елемената
             </nav>
 
             <section>
-                <img src="http://localhost:1234/macka_1.jpeg" alt="Мачка која лежи"/>
-                <img src="http://localhost:1234/macka_2.jpeg" alt="Мачка која се смеје"/>
-                <img src="http://localhost:1234/macka_3.jpeg" alt="Мачка задовољна ручком"/>
-                <img src="http://localhost:1234/macka_4.jpeg" alt="Мачка задовољна ручком"/>
+                <img src="../image/macka_1.jpeg" alt="Мачка која лежи"/>
+                <img src="../image/macka_2.jpeg" alt="Мачка која се смеје"/>
+                <img src="../image/macka_3.jpeg" alt="Мачка задовољна ручком"/>
+                <img src="../image/macka_4.jpeg" alt="Мачка задовољна ручком"/>
             </section>
         </main>
 
