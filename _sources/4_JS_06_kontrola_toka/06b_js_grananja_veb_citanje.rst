@@ -312,6 +312,8 @@
 
 .. code-block:: html
 
+    <!doctype html>
+    <html>
     <body>
         <h1>Тајмер</h1>
         <audio id="muzikica" controls>
@@ -321,10 +323,11 @@
 
         <form>
             <span margin-right="2px">Преостало време</span>
-            <input autofocus id="vreme" type="time" step="1" value="00:00:10""/>
+            <input autofocus id="vreme" type="time" step="1" value="00:00:10"/>
             Укључи: <input type="checkbox" id="prekidac"/>
         </form>
     </body>
+    </html>
 
 Функција везана за промену вредности тајмера зауставља претходно одбројавање (ако је било покренуто) и омогућава кориснику да укључи тајмер и тиме почне, односно настави одбројавање.
 
