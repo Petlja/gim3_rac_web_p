@@ -4,12 +4,22 @@ CSS селектори – примери
 Слике љубимаца
 --------------
 
-У једној од претходних лекција направили смо мобилну апликацију за приказивање слика кућних љубимаца, и тада смо користили елементе као што су ``main``, ``nav`` и ``section``. Следи исти пример где ћемо користити идентификаторе и класе.
+.. questionnote::
 
-.. figure:: ../../_images/css/primer_kucni_ljubimci.png
-    :width: 450px
-    :align: center
-    :class: screenshot-shadow
+    У једној од претходних лекција направили смо мобилну апликацију за приказивање слика кућних љубимаца, и тада смо користили елементе као што су ``main``, ``nav`` и ``section``.
+
+    Направити исти пример користећи класе и идентификаторе.
+
+    .. figure:: ../../_images/css/primer_kucni_ljubimci.png
+        :width: 450px
+        :align: center
+        :class: screenshot-shadow
+
+У *HTML* додајемо идентификаторе на елементе за које очекујемо да ће се појавити само једном на страни. На пример, идентификатор ``navigacija`` означава навигациону траку која ће садржати линкове ка врстама кућних љубимаца.
+
+Класе користимо на елементима који ће се понављати као што су слике кућних љубимаца којима смо доделили класу ``ljubimac``.
+
+Линкове унутар навигације смо стилизовали сложеним селектором ``#navigacija a`` који селектује сваки линк (елемент ``a``) унутар елемента са идентификатором ``navigacija``.
 
 .. petlja-editor:: css_selektori_slike_ljubimaca
 
@@ -89,10 +99,10 @@ CSS селектори – примери
             </div>
 
             <div id="slike">
-                <img class="ljubimac" src="http://localhost:1234/macka_1.jpeg" alt="Мачка која лежи"/>
-                <img class="ljubimac" src="http://localhost:1234/macka_2.jpeg" alt="Мачка која се смеје"/>
-                <img class="ljubimac" src="http://localhost:1234/macka_3.jpeg" alt="Мачка задовољна ручком"/>
-                <img class="ljubimac" src="http://localhost:1234/macka_4.jpeg" alt="Мачка задовољна ручком"/>
+                <img class="ljubimac" src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_1.jpeg" alt="Мачка која лежи"/>
+                <img class="ljubimac" src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_2.jpeg" alt="Мачка која се смеје"/>
+                <img class="ljubimac" src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_3.jpeg" alt="Мачка задовољна ручком"/>
+                <img class="ljubimac" src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_4.jpeg" alt="Мачка задовољна ручком"/>
             </div>
         </div>
 
@@ -102,12 +112,41 @@ CSS селектори – примери
 Табела
 ------
 
-Направити табелу предмета трећег семестра смера одсека Рачунарска техника и информатика са Електротехничког факултета.
+.. questionnote::
 
-.. figure:: ../../_images/css/primer_tabela_etf.png
-    :width: 780px
-    :align: center
-    :class: screenshot-shadow
+    Направити табелу предмета трећег семестра смера одсека Рачунарска техника и информатика са Електротехничког факултета.
+
+    .. figure:: ../../_images/css/primer_tabela_etf.png
+        :width: 780px
+        :align: center
+        :class: screenshot-shadow
+
+Табела има један ред у заглављу са именом колона (Шифра, Предмет...) и тело са редовима који описују садржај.
+
+Ћелије заглавља и ћелије тела деле неки стил као што је дебљина и боја ивице и простор унутар ћелије. Могуће је искористити сложени селектор који ће једном написан стил применити на одвојене селекторе.
+
+.. code-block:: css
+
+    .tabela th, .tabela td {
+        margin: 0;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    /** уместо да смо понављали стил: **/
+    .tabela th {
+        margin: 0;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .tabela td {
+        margin: 0;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+Ћелије у којима је садржај центриран стилизовали смо класом ``centriran``. Класу је такође могуће додати на ред као у случају класе ``tabela-ukupno`` која ће центрирати и подебљати садржај сваке ћелије унутар реда.
 
 .. petlja-editor:: css_selektori_tabela
 
@@ -212,14 +251,31 @@ CSS селектори – примери
 Мени
 ----
 
-Направићемо мени са ставкама „Измени“, „Обриши“ и „Подешавања“.
+.. questionnote::
 
-.. figure:: ../../_images/css/primer_meni.png
-    :width: 300px
-    :align: center
-    :class: screenshot-shadow
-    
-Да унапредимо изглед менија користићемо иконе коју пружа бесплатна библотека `Material Icons <https://fonts.google.com/icons?selected=Material+Icons>`_. Можете прочитати `упутство за додавање библиотеке <https://developers.google.com/fonts/docs/material_icons#setup_method_1_using_via_google_fonts>`_.
+    Направити мени са ставкама „Измени“, „Обриши“ и „Подешавања“.
+
+    .. figure:: ../../_images/css/primer_meni.png
+        :width: 300px
+        :align: center
+        :class: screenshot-shadow
+
+Да унапредимо изглед менија користићемо иконе коју пружа бесплатна библотека `Material Icons <https://fonts.google.com/icons?selected=Material+Icons>`_. Потребно је додати референцу ка *CSS* библиотеци и онда по упутству писати *HTML* за коришћење икона.
+
+.. code-block:: html
+
+    <!-- Укључивање библиотеке -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+
+    <!-- Икона за измену -->
+    <span class="material-icons">
+    edit
+    </span>
+
+Можете прочитати детаљније `упутство за додавање библиотеке <https://developers.google.com/fonts/docs/material_icons#setup_method_1_using_via_google_fonts>`_.
+
+Да би постигли да се унутар ставке у једном реду приказују икона, текст и пречица, на све елементе унутар ставке додали смо ``display: inline-block`` и додали величине елемената сходно њиховом садржају. Напреднији начин стилизовања оваквог распореда елемената обрадићемо у некој од наредних лекција.
 
 .. petlja-editor:: css_selektori_meni
 
@@ -257,7 +313,7 @@ CSS селектори – примери
         background-color: rgba(0, 0, 0, 0.12);
     }
 
-    .meni .ikona {
+    .meni .material-icons {
         width: 32px;
     }
 
@@ -276,7 +332,7 @@ CSS селектори – примери
         font-size: 16px;
     }
 
-    .meni .ikona, .meni .precica {
+    .meni .material-icons, .meni .precica {
         color: rgba(0, 0, 0, 0.54);
     }
     ~~~
@@ -292,14 +348,14 @@ CSS селектори – примери
     <body>
         <ul class="meni">
             <li>
-                <span class="ikona material-icons">
+                <span class="material-icons">
                 edit
                 </span>
                 <span class="tekst">Измени</span>
                 <span class="precica">Ctrl+I</span>
             </li>
             <li>
-                <span class="ikona material-icons">
+                <span class="material-icons">
                 remove_circle
                 </span>
                 <span class="tekst">Обриши</span>
@@ -307,7 +363,7 @@ CSS селектори – примери
             </li>
             <hr/>
             <li>
-                <span class="ikona material-icons">
+                <span class="material-icons">
                 settings
                 </span>
                 <span class="tekst">Подешавања</span>

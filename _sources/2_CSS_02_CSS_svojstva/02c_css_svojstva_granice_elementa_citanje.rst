@@ -123,7 +123,7 @@ CSS Својства која дефинишу границе елемента
 
         /* Позадинска боја и слика */
         background-color: #f8f9fa;
-        background-image: url(https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/wikipedia_slovo.svg);
+        background-image: url(https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/_static/wikipedia_slova.svg);
 
         /* Величина подручја унутар елемента
            32px горе и доле

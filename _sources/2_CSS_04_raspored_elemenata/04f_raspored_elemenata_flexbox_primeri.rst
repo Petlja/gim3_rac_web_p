@@ -4,11 +4,17 @@ Flexbox – примери
 YouTube видео
 -------------
 
-.. figure:: ../../_images/css/primer_youtube.jpg
-    :width: 780
-    :align: center
-    :class: screenshot-shadow
-    
+.. questionnote::
+
+    Стилизовати део стране са веб-сајта *YouTube* која обухвата видео-фајл, опис и контролну траку видеа као што је приказано на слици.
+
+    .. figure:: ../../_images/css/primer_youtube.jpg
+        :width: 780
+        :align: center
+        :class: screenshot-shadow
+
+Контролна трака је ``flex`` елемент чији су елементи вертикално центрирани (``align-items: center``) и између којих постоји празан простор тако да се леви и десни део примакну ивицама (``justify-content: space-between``).
+
 .. petlja-editor:: css_flexbox_youtube
 
     style.css
@@ -120,6 +126,30 @@ YouTube видео
 Мени
 ----
 
+.. questionnote::
+
+    Направити мени са ставкама „Измени“, „Обриши“ и „Подешавања“.
+
+    .. figure:: ../../_images/css/primer_meni_flexbox.png
+        :width: 300px
+        :align: center
+        :class: screenshot-shadow
+
+Ово је пример који смо обрадили у претходној лекцији када смо причали о селекторима, и тада је коришћен ``inline-block``.
+
+Ставке менија су ``flex`` елементи који центрирају садржај вертикално (``align-items: center``). Икона и текст пречице имају фиксирану ширину, док текст ставке попуњава простор између јер користимо ``flex: 1 1 auto``. Подсећамо да је то скраћеница за:
+
+.. code-block:: css
+
+    flex: 1 1 auto;
+
+    /** или написати овако **/
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+Својстом ``flex`` је описано да елемент може да повећа своју ширину уколико има простора. Да би упоредили разлику, измените ширину менија са 250 пиксела на 350 пиксела и видећете да се пречица увек лепи уз десну страну ивице ставке.
+
 .. petlja-editor:: css_flexbox_meni
 
     style.css
@@ -215,16 +245,38 @@ YouTube видео
     </html>
 
 
-
 Петља веб-сајт
 --------------
 
-Пример веб-сајта `Петље <https://petlja.org>`_ приказан је у лекцији `Распоред Елемената – примери <./04b_raspored_elemenata_primeri.html>`_ користећи *float*. Погледајмо исти пример користећи *flexbox*.
+.. questionnote::
 
-.. figure:: ../../_images/css/primer_petlja_org.jpg
-    :width: 780px
-    :align: center
-    :class: screenshot-shadow
+    Пример веб-сајта `Петље <https://petlja.org>`_ приказан је у лекцији `Распоред Елемената – примери <./04b_raspored_elemenata_primeri.html>`_ користећи *float*. Направити исти пример користећи *flexbox*.
+
+    .. figure:: ../../_images/css/primer_petlja_org.jpg
+        :width: 780px
+        :align: center
+        :class: screenshot-shadow
+
+Навигациона трака распоређује леве и десне линкове исто као у примеру *YouTube* користећи својство ``justify-content: space-between``.
+
+Испод навигационе траке налази се садржај који се дели у две колоне које су одвојене размаком (``gap``) од 20 пиксела. Десна колона (вести) је фиксирана на 25 процената својством ``flex: 0 0 25%``. Лева колона ће, као у претходном примеру менија, својством ``flex: 1 1 auto`` да заузме остатак простора.
+
+.. code-block:: css
+
+    .sadrzaj {
+        display: flex;
+        gap: 20px;
+    }
+
+    .levi-sadrzaj {
+        flex: 1 1 auto;
+    }
+
+    .desni-sadrzaj {
+        flex: 0 0 25%;
+    }
+
+Курсеви су подељени на колоне између којих је размак (``gap``) једнак 10 пиксела. Обзиром да све 3 колоне имају својство ``flex: 1``, резултат је да ће све колоне имати исту ширину.
 
 .. petlja-editor:: css_flexbox_petlja_org
 
@@ -290,7 +342,7 @@ YouTube видео
     }
 
     .kurs {
-        flex: 1 1 auto;
+        flex: 1;
         border-radius: 4px;
         background-color: #f2f2f2;
         padding: 0px 10px;

@@ -5,7 +5,7 @@ CSS Димензије елемената
 
 При употреби ових својстава је важно је да се проверава како веб-страна изгледа у прозорима различите величине. Брз и једноставан начин да симулирамо гледање стране на уређајима са различитом резолуцијом је **да мењамо величину прозора прегледача**. Кликом на икону са два екрана у прозору са алатима за развој приказану на слици испод, добијамо  прецизну контролу величине екрана симулираног циљног уређаја.
 
-.. image:: ../../_images/css/test_responsive.png
+.. figure:: ../../_images/css/test_responsive.png
     :width: 320px
     :align: center
     :class: screenshot-shadow
@@ -162,15 +162,22 @@ CSS Димензије елемената
 
 Приметићемо да се први и други параграф разликују у ширини. Кроз инспектор можемо да видимо да је први параграф ширине 272 пиксела, а други 250 пиксела, иако оба имају дефиницију ``width: 250px``.
 
-.. image:: ../../_images/css/box_sizing.png
+.. figure:: ../../_images/css/box_sizing.png
     :width: 300px
     :align: center
+    :class: screenshot-shadow
 
 Прегледач је израчунао ширину од 272 пиксела зато што:
 
 - ``width: 250px`` даје основну ширину садржаја,
 - ``padding: 10px`` дефинише простор унутар параграфа од леве и десне ивице; 10 пиксела по страни нам даје 20 пиксела,
 - ``border: 1px solid green`` дефинише дебљину ивице; 1 пиксел по страни нам даје 2 пиксела.
+
+Да би избегли овакве ситуације где морамо да рачунамо на задат простор унутар параграфа и ивице, често се у пракси користи ``box-sizing: border-box``. На пример, популарна CSS библиотека Bootstrap на свим елементима дефинише својство на свим елементима користећи универзални селектор ``*``.
+
+.. code-block:: css
+
+    * { box-sizing: border-box; }
 
 На *W3CSchools* сајту пронађите више информација о `моделу оквира <https://www.w3schools.com/css/css_boxmodel.asp>`_ и о `димензијама <https://www.w3schools.com/css/css_dimension.asp>`_.
 
@@ -256,10 +263,10 @@ CSS Димензије елемената
             </nav>
 
             <section>
-                <img src="../image/macka_1.jpeg" alt="Мачка која лежи"/>
-                <img src="../image/macka_2.jpeg" alt="Мачка која се смеје"/>
-                <img src="../image/macka_3.jpeg" alt="Мачка задовољна ручком"/>
-                <img src="../image/macka_4.jpeg" alt="Мачка задовољна ручком"/>
+                <img src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_1.jpeg" alt="Мачка која лежи"/>
+                <img src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_2.jpeg" alt="Мачка која се смеје"/>
+                <img src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_3.jpeg" alt="Мачка задовољна ручком"/>
+                <img src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_4.jpeg" alt="Мачка задовољна ручком"/>
             </section>
         </main>
 

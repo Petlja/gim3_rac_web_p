@@ -15,16 +15,13 @@
     
 Елемент ``<img>`` нема садржај, тј. ништа не наводимо између отварајућег и затварајућег тага. Зато се овај елемент може написати и као самозатварајући таг, овако:
 
-.. petlja-editor:: slika_nikola_tesla_html
+.. petlja-editor:: slika_html
 
     index.html
     <!doctype html>
     <html>
       <body>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg" alt="Nikola Tesla" width="300"/>
-        <p>
-          Autor: Martin van Meytes, Public domain, via Wikimedia Commons
-        </p>
+        <img src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-drustveni/_static/macka_1.jpeg" alt="Мачка" width="300"/>
       </body>
     </html>
 
