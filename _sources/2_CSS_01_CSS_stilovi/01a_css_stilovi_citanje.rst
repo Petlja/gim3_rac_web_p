@@ -44,6 +44,6 @@ CSS (Cascading Style Sheets)
 У самом инспектору је могуће мењати својства и видети промену тренутно без снимања стране. Пример промене боје наслова из плаве у црвену:
 
 .. figure:: ../../_images/css/browser_inspect_promena.gif
-    :width: 600px
+    :width: 640px
     :align: center
     :class: screenshot-shadow

@@ -137,7 +137,7 @@
 Ове елементе је лако додати у *HTML* стране када желите да убаците у страну неки *YouTube* видео. Довољно је да одете до видеа који желите да убаците, одаберете *Share* (подели) опцију и као начин за дељење одаберете *Embed* (убачени) тип дељења:
 
 .. figure:: ../../_images/html/ff_share_embed_video.gif
-    :width: 480px
+    :width: 640px
     :align: center
     :class: screenshot-shadow
 
