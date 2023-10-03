@@ -1,9 +1,9 @@
 # Veb dizajn i klijentsko veb programiranje za treći razred gimnazije 
 Ovaj repozitorijum posvećen je kursu za Veb dizajn i klijentsko veb programiranje za treći razred gimnazije. 
 
-Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/kurs/488/0](https://petlja.org/kurs/488/)
+Kurs je na Petljinom portalu dotupan ovde: [https://petlja.org/kurs/488/0](https://petlja.org/kurs/488/)
 
-Kurs možete itegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/gim3_rac_web_p/releases
+Kurs možete integrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/gim3_rac_web_p/releases
 
 ## Konverzija u *HTML*
 
