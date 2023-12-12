@@ -311,7 +311,7 @@
 
             <p> Позиционирањем миша на слику, она се увећава. </p>
          </body>
-        <script src="main.html"></script>
+        <script src="main.js"></script>
     </html>
 
 Догађаји и анонимне функције
