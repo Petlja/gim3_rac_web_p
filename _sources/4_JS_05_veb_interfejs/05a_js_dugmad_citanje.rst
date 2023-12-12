@@ -78,10 +78,12 @@
 .. petlja-editor:: rotacija_slika_html
 
     main.js
+    const url = 'https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/'
+    
     const slike = [
-        '../_images/emo1.png',
-        '../_images/emo2.png',
-        '../_images/emo3.png'
+        url + 'emo1.png',
+        url + 'emo2.png',
+        url + 'emo3.png'
     ];
     let trenutna = 0;
 
