@@ -100,7 +100,7 @@
     </head>
     <body>
 
-        <img id="slika" src="../_images/emo1.png" alt=""/>
+        <img id="slika" src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/kurs-treci-gim-prirodni/emo1.png" alt=""/>
         <br/>
         <button id="sledeca">Следећа</button>
 
